@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Last Tweets</title>
+<link href="my_lat_tweets.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<!--box twitter-->
+<div id="mylasttweets" class="mylasttweets">
+<ul id="twitter_content"><div id="twitter_entries"><li>Loading...</li></div></ul>
+</div>
+
+<script type="text/javascript" src="mylatesttweets.js"></script>
+<script type="text/javascript">
+var twitter;
+YAHOO.util.Event.onDOMReady(
+	function() {
+		window.twitter_callback_search = function (twitter_object) {
+			twitter.CallBack(twitter_object);
+		};
+		if (twitter == undefined) {
+			twitter = new MyLatestTweets('twitter');
+		}
+
+		//Settings: ###########################
+		twitter.SearchTag = 'from:josmi'; //change "josmi" to your user name.
+		twitter.MaxResultsNumber = 6;
+//		if you want to set the language, just delete the "//" in the next line:
+//		twitter.Language = 'en';
+		//Settings End. ###########################
+		
+		twitter.TwitterCall(undefined, '', 'twitter_callback_search');
+});
+</script>
+
+<!--box twitter-->
+</body>
+</html>

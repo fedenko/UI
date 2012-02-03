@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>jQuery siteFeature</title>
+<link rel="stylesheet" type="text/css" href="css/siteFeature.style_screen.css" />
+<script src="js/jquery-1.3.2.min.js" type="text/javascript"></script>
+<script src="js/jquery.siteFeature.js" type="text/javascript"></script>
+
+<!-- the following CSS / JS are for the siteFeature demo -->
+<link rel="stylesheet" type="text/css" href="css/demo.css" />
+<script src="js/demo.js" type="text/javascript"></script>
+
+</head>
+<body>
+
+<div id="DemoContainer">
+
+	<h3 class="title">Default Example</h3>
+<!-- 
+	This is the HTML that becomes the siteFeature 
+	Each DIV becomes a Tab, taking it's description text from the Image's TITLE.
+-->
+	<div id="preFeature">
+		<div>
+			<img src="images/image01.jpg" alt="alt text" title="This is a much shorter text description."/>
+			<h3>Tab number #1</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis eget tellus pharetra porttitor. Praesent dui arcu, egestas quis, adipiscing a.</p>
+			<a href="http://www.google.com/">Link #1</a>
+		</div>
+		
+		<div>
+			<img src="images/image02.jpg" alt="alt text" title="This is a much shorter text description."/>
+			<h3>Tab number #2</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis eget tellus pharetra porttitor. Praesent dui arcu, egestas quis, adipiscing a.</p>
+			<a href="http://www.yahoo.com/">Link #2</a>
+		</div>
+		
+		<div>
+			<img src="images/image03.jpg" alt="alt text" title="This is a much shorter text description."/>
+			<h3>Tab number #3</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis eget tellus pharetra porttitor. Praesent dui arcu, egestas quis, adipiscing a.</p>
+			<a href="http://www.bing.com/">Link #3</a>
+		</div>
+		
+		<div>
+			<img src="images/image04.jpg" alt="alt text" title="This is a much shorter text description."/>
+			<h3>Tab number #4</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin et felis eget tellus pharetra porttitor. Praesent dui arcu, egestas quis, adipiscing a.</p>
+			<a href="http://www.ask.com/">Link #4</a>
+		</div>
+	</div>
+<!-- // end -->
+	
+</div>
+
+<ul id="DemoOptions">
+	<li>
+		<a href="#">Example #1: Using only Default values</a>
+		<pre><code>$('#preFeature').siteFeature();</code></pre>
+	</li>
+	<li>
+		<a href="#">Example #2: Progressive Enhancement style (no javascript)</a>
+		<pre><code>// javascript turned off</code></pre>
+	</li>
+	<li>
+		<a href="#horz">Example #3: Mix of Vertical and Horizontal Text Boxes (default values)</a>
+		<pre><code>$('#preFeature').siteFeature();</code></pre>
+	</li>
+	<li>
+		<a href="#horz">Example #4: Different Animation Options w/ AutoPlay</a>
+		<pre><code>$('#preFeature').siteFeature({
+	txtBoxAnimateInType: 'slideDown',
+	txtBoxAnimateOutType: 'slideDown',
+	txtBoxAnimateInHorzType: 'fade',
+	txtBoxAnimateOutHorzType: 'blink',
+	txtBoxPauseBetweenInOut: 0,
+	autoPlay: true,
+	autoPlayInterval: 3000
+});</code></pre>
+	</li>
+	<li>
+		<a href="#">Example #5: Moving the Tabs to the Right and styling to match the Default</a>
+		<pre><code>$('#preFeature').siteFeature({
+	tabsLocation: 'right',
+	tabBgImg: 'images/arrow-right.png',
+	tabBgImgIE6: 'images/arrow-right.gif',
+	txtBoxAnimateInType: 'slideRight',
+	txtBoxAnimateOutType: 'slideLeft'
+});
+</code></pre>
+	</li>
+	<li>
+		<a href="#">Example #6: endCreateFunction callback</a>
+		<pre><code>$('#preFeature').siteFeature({
+	endCreateFunction: function(options){
+		$('#' + options.tabIdPrefix + 'Container a h4').prepend('***').append('***').css({'color':'#ff0000'});
+	},
+	autoPlay: true,
+	autoPlayInterval: 3000
+});
+</code></pre>
+	</li>
+	<li>
+		<a href="#bg">Example #7: Fade-To-Color effect (as requested by users)</a>
+		<pre><code>$('#preFeature').siteFeature({
+	imgBgsAnimateInDuration: 1250,
+	imgBgsAnimateOutDuration: 100,
+	txtBoxAnimateOutDuration: 0,
+	txtBoxPauseBetweenInOut: 1000
+});</code></pre>
+	</li>
+	<li>
+		<a href="#bg">Example #8: Change on Hover (as requested by users)</a>
+		<pre><code>$('#preFeature').siteFeature({
+	tabControl: 'hover'
+});</code></pre>
+	</li>
+</ul>
+	
+</body>
+</html>

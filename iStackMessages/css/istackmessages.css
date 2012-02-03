@@ -1,0 +1,12 @@
+div.stack-messages { width: 300px; font-family: Tahoma; }
+div.stack-messages-closebox { text-align: center; padding: 5px 0; border: 1px solid #ddd; display: none; margin: 15px; color: #555; font-size: 10px; font-family: verdana;
+							border-radius: 5px; -mox-border-radius: 5px; -webkit-border-radius: 5px; background: #ffffc0; cursor: pointer }
+
+div.stack-messages div.message { padding: 10px 15px; border-radius: 5px; -mox-border-radius: 5px; -webkit-border-radius: 5px; margin: 15px; border-width: 1px; border-style: solid; }
+div.stack-messages div.message a.close-btn { float: right; font-weight: bold; font-size: 11px; color: #555; text-decoration: none; }
+div.stack-messages div.message h1 { padding: 0; margin: 0 0 6px 0; font-size: 17px; font-weight: normal; }
+div.stack-messages div.message div { font-size: 10px; font-family: verdana; }
+div.stack-messages div.message-error { background: #ffcece; color: #665252; border-color: #df8f8f;  }
+div.stack-messages div.message-success { background: #d5ffce; color: #556652; border-color: #9adf8f;  }
+div.stack-messages div.message-info { background: #dbe3ff; color: #585b66; border-color: #a2b4ee;  }
+div.stack-messages div.message-attention { background: #ffffc0; color: #999999; border-color: #ccc;  }

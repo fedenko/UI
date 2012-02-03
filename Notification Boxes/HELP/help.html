@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Notification Boxes - Documentation by Michele Ivani v3.0</title>
+<link rel="stylesheet" type="text/css" href="assets/style.css"/>
+</head>
+
+<body>
+	
+	<div class="container">
+ 		<h3>Notification Boxes- Documentation by Michele Ivani v3.0</h3>
+		<img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+  		<h1>Notification Boxes</h1>
+        <div class="header">
+        	<div class="info">
+            	<p class="paragraph">
+					<span class="highlight">Created</span>: 8/18/2010<br>
+					<span class="highlight">By</span>: Michele Ivani<br>
+					<span class="highlight">Email</span>: <a href="mailto:info@evographics.net">info@evographics.net</a>
+            	</p>
+            </div><!--end info-->
+            <div class="thanks">
+            	<p class="paragraph">Thank you for purchasing my project. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/evoG" target="_blank">here</a>. Thanks so much!</p>
+            </div><!--end thanks-->
+        </div><!--end header-->
+		<div class="index">
+       	  <h2 id="top">Table of Contents</h2>
+			<ol class="paragraph">
+            	<li><a href="#features">* Version 3.0 - Features *</a></li>
+            	<li><a href="#templates">Templates</a>
+                	<ul style="list-style-type:decimal">
+                    	<li><a href="#nb">Notification Box - without Description</a></li>
+                    	<li><a href="#nb_t1">Notification Box - with Description Template 1</a></li>
+                    	<li><a href="#nb_t2">Notification Box - with Description Template 2</a>            	</li>
+                	</ul>
+            	</li>
+				<li><a href="#cssFiles">CSS Files and Structure</a></li>
+				<li><a href="#javascript">Javascript &amp; Plugins</a></li>
+				<li><a href="#psdFiles">PSD Files</a></li>
+                <li><a href="#bugs">Bugs</a></li>
+				<li><a href="#credits">Sources &amp; Credits</a></li>
+            </ol>
+			<img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+		</div><!--end index-->
+        <div class="sections">
+        
+       	  <div id="features">
+				<h4>A) * Version 3.0 - Features * - <a href="#top">INDEX</a></h4>
+			<p class="paragraph">
+				"Notication Boxes" v3.0 has some new features:
+			  </p>
+			  <ul style="list-style-type: disc; padding-left: 40px; margin-bottom:10px" class="paragraph">
+				  <li>
+                  Added <strong>Notification Template:</strong>
+                  	<ul>
+                    	<li>- Notification Box without Description</li>
+                    	<li>- Notification Box with description (Template 1)</li>
+                    	<li>- Notification Box with description (Template 2)</li>
+                    </ul>
+                  </li>
+				  <li>Added auto height for more line of text</li>
+					<li>Added auto width (<strong>only</strong> for  Notification Box Template without description)</li>
+			  </ul>
+			</div><!--end A-->
+        	<img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+          <div id="templates">
+           	<h4>B) Templates - <a href="#top">INDEX</a></h4>
+            <p class="paragraph">This project contains 3 Notification Boxes Teamplates located in the HTML folder.</p>
+            <ul style="list-style-type: disc; padding-left: 40px; margin-bottom:10px" class="paragraph">
+              <li>Notification Box - without Description - (path: HTML/NO-DESCRIPTION)</li>
+              <li> Notification Box with description (Template 1) - (path: HTML/WITH-DESCRIPTION/TEMPLATE_1)</li>
+              <li> Notification Box with description (Template 2) - (path: HTML/WITH-DESCRIPTION/TEMPLATE_2)</li>
+			  </ul>            
+            </div><!--end B-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+            
+            <div id="nb">
+           	<h4>B.1) Notification Box - without Description - <a href="#top">INDEX</a></h4>
+            <p class="paragraph"><strong>HTML Structure</strong></p>
+            <p class="paragraph">To insert a notification box in a html page, create a DIV tag and apply the class &quot;notification&quot;. After that, choose a notication type applying one of the class below: </p>
+<ul style="margin-left: 15px;" class="paragraph">
+                	<li><strong>"success"</strong>: for success notification.</li>
+                    <li><strong>"warning"</strong>: for warning notification.</li>
+                    <li><strong>"tip"</strong>: for quick tip notification.</li>
+                    <li><strong>"error"</strong>: for error notification.</li>
+                    <li><strong>"secure"</strong>: for secure area notification.</li>
+                    <li><strong>"info"</strong>: for info notification.</li>
+					<li><strong>"message"</strong>: for message notification.</li>
+					<li><strong>"download"</strong>: for download notification.</li>
+                    <li><strong>"purchase"</strong>: for purchase notification.</li>
+                    <li><strong>"print"</strong>: for print notification.</li>
+              </ul>
+              <p class="paragraph">To compleate the Notification Box follow the example below.</p>
+                <img src="assets/img01.png" alt="img01" width="720" height="120" style="margin: 10px 0px 10px 10px;" />
+                <p class="paragraph"><strong>Line 2</strong>: The SPAN tag is used for the close button.<br />
+              <strong>Line 3-5</strong>: The DIV tag with class "text" contains the Notification Box message<br />
+              <strong>Line 4</strong>: The STRONG tag contains the title of Notification Box</p>
+                <p class="paragraph"><strong>Note</strong>:<br />
+              </p>
+                <p class="paragraph">Apply the CLASS "<strong>autoWidth</strong>" to the main div tag to fit Notification Box to bowser windodw.</p>
+                <p class="code">&lt;div class=&quot;notification success autoWidth&quot;&gt;&lt;/div&gt;</p>
+          </div><!--end B1-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+            
+          <div id="nb_t1">
+       	    <h4>B.2) Notification Box - with Description (Template 1) - <a href="#top">INDEX</a></h4>
+            	<p class="paragraph">The Notification Box with description Template 1 contains a section that allows to insert more information about notification message. </p>
+            <p class="paragraph"><strong>HTML Structure</strong></p>
+              <p class="paragraph">The box is wrapped in a main DIV tag with a class: "<strong>notification-wrap</strong>". After that insert the structure of &quot;Notification Box without description&quot; (previously described), and an other DIV tag with a class &quot;<strong>description</strong>&quot; that contains info message. <br />
+            Follow the example below.</p>
+              <img src="assets/img02.png" alt="img02" width="720" height="260" style="margin: 10px 0px 10px 10px;" />
+          </div>
+            <!--end B2-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+            
+          <div id="nb_t2">
+            	<h4>B.3) Notification Box - with Description (Template 2) - <a href="#top">INDEX</a></h4>
+            <p class="paragraph"><strong>HTML Structure</strong></p>
+            	<p class="paragraph">The Notification Box with description Template 2 has the same structure as Template 1, but there are some modifications: As you can see in the example below, at line 6 there is a EM tag. It contains the text for button that allows to slide up and slide down message description. </p>
+              <img src="assets/img04.png" alt="img04" width="720" height="260" style="margin: 10px 0px 10px 10px;" />
+              <p class="paragraph">You can customize the EM tag editing two javascript variables: go to script.js file and edit the variables text &quot;<strong>infoText_slideDown</strong>&quot; &quot;<strong>infoText_slideUp</strong>&quot;.</p>
+              <img src="assets/img05.png" alt="img05" width="590" height="40" style="margin: 10px 0px 10px 10px;" />
+            </div><!--end B3-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+		  <div id="cssFiles">
+				<h4>C) CSS Files and Structure - <a href="#top">INDEX</a></h4>
+				<p class="paragraph">The CCS file are in the &quot;css&quot; folder. The notification boxes are based on CSS so link the file &quot;style.css&quot; in the HEAD tag.
+                <img src="assets/img06.png" alt="img06" width="460" height="50" style="margin: 10px 0px 10px 10px;" />
+                </p>
+          </div><!--end C-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+<div id="javascript">	
+				<h4>D) Javascript &amp; Plugins - <a href="#top">INDEX</a></h4>
+				<p class="paragraph">The theme uses the JQuery library. The file &quot;<strong>script.js</strong>&quot; contains the code used  for animations and effects. Add to HEAD tag jQuery library and script.js file.</p>
+              <img src="assets/img07.png" alt="img07" width="780" height="100" style="margin: 10px 0px 10px 10px;" />
+          </div><!--end D-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+			<div id="psdFiles">
+				<h4>E) PSD Files - <a href="#top">INDEX</a></h4>
+				<p class="paragraph">The project contains two .psd files located in &quot;PSD&quot; folder. All notification boxes are designed in Photoshop so they can be modify.</p>
+            </div><!--end E-->
+			<img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+	  <div id="bugs">
+		<h4>F) Bugs - <a href="#top">INDEX</a></h4>
+				<p class="paragraph">To fix a Internet Explorer bug the theme use a &quot;if&quot; condition. In IE 7 and below the notification icons do not appear. So applying &quot;IE8.js&quot; file the problem is fixed.<br />
+	    <img src="assets/img03.png" alt="img02" width="640" height="52" style="margin: 10px 0px 10px 10px;" /></p>
+		  </div><!--end F-->
+            <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+			<div id="credits">
+				<h4>G) Sources &amp; Credits - <a href="#top">INDEX</a></h4>
+				<p class="paragraph">
+				I've used the following library:
+				</p>
+				<ul style="list-style-type: disc; padding-left: 40px; margin-bottom:10px" class="paragraph">
+					<li>jQuery - <a href="http://jquery.com/" target="_blank">http://jquery.com/</a> <span class="desc">(for fade out effect)</span></li>
+				</ul>
+				<p class="paragraph">Do not forget to check the official website <a href="http://www.evographics.net" target="_blank">www.evographics.net</a></p>
+			</div><!--end G-->
+            
+        </div><!--end sections-->
+        <img src="assets/line.jpg" alt="line" width="790" height="2" style="margin: 15px 0px 15px 0px;" />
+        <p class="paragraph">Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the &quot;Item Discussion&quot; section. <br />Enjoy!</p>
+        <p class="signature">Michele Ivani</p>
+        <p class="rights">&copy; EvoGraphics - All rights reserved</p> 
+	</div><!--END CONTAINER-->
+</body>
+</html>

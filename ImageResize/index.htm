@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>ImageResize - Readme</title>
+<style type="text/css" media="all">
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 82.5%;
+	font-family: 'Lucida Grand', Arial;
+	text-align: center;
+	line-height: 150%;
+}
+
+div#container {
+	margin: 0 auto;
+	width: 600px;
+	text-align: left;
+}
+
+div#header {
+	height: 40px;
+	width: 600px;
+	padding-bottom: 10px;
+	background: white;
+	border-bottom: 1px solid #999;
+	position: fixed;
+}
+
+div#content {
+	padding-top: 60px;
+}
+
+h1 {
+	margin: 20px 0;
+}
+
+h2 {
+	margin: 15px 0;
+}
+
+h3 {
+	margin: 10px 0;
+}
+
+p {
+	margin: 10px 0;
+	font-size: 12px;
+}
+
+code {
+	font-size: 12px;
+	background: #fcff68;
+}
+
+hr {
+	height: 0px;
+	border-top: 1px dashed #999;
+	border-bottom: 0px solid #ccc;
+	margin: 30px 0;
+}
+
+div.columns {
+	height: 1%;
+	overflow: hidden;
+	border: 3px solid #ddd;
+	background: #eee;
+	padding: 10px 0;
+}
+
+div.third {
+	width: 33%;
+	float: left;
+	text-align: center;
+}
+
+div.columns p {
+	margin: 0;
+}
+
+pre {
+	font-size: 12px;
+	margin: 10px 0;
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="container">
+	<div id="header">
+		<h1>ImageResize - Readme</h1>
+	</div>
+	<div id="content">
+		<h2>Overview</h2>
+		<p>ImageResize is a php class which enables any image within any subfolder to be resized to any proportion. Images won't be stretched (by default) and are cached. The script is unobtrusive; no modification is necessary to the storage location and/or uri of an image and the script only runs when query string parameters are added to an image uri.</p>
+		<hr />
+		<h2>Installation</h2>
+		<p>Copy the files <code>class.resize.php</code>, <code>.htaccess</code> and <code>resize.php</code> and the <code>cache</code> folder to any folder within your website root. If there is already a <code>.htaccess</code> file, add the contents of the new <code>.htaccess file</code> to the end of the existing file.</p>
+		<p>You will now be able to append <code>width</code>, <code>height</code>, <code>quality</code> and <code>mode</code> to the url and the image displayed will be resized as expected.</p>
+		<hr />
+		<h2>Resizing Modes</h2>
+		<p>There are three modes available, specified using the <code>mode</code> querystring: <i>fit</i> (default), <i>stretch</i> and <i>crop</i>.</p>
+		<h3>Fit</h3>
+		<p><i>Fit</i> takes the original image and resizes it to fit within the specified <code>width</code> and <code>height</code> dimensions:</p>
+		<pre>/path/to/image/spitfire.jpg?width=100&height=100&mode=fit</pre>
+		<div class="columns">
+			<div class="third">
+				<h4>Original:</h4>
+				<img src="images/spitfire.jpg?height=200" />
+				<p>156 x 200 pixels</p>
+			</div>
+			<div class="third">
+				<h4>At size:</h4>
+				<img src="images/blank.jpg?width=100&height=100&mode=stretch" />
+				<p>100 x 100</p>
+			</div>
+			<div class="third">
+				<h4>Output:</h4>
+				<img src="images/spitfire.jpg?width=100&height=100" />
+				<p>77 x 100</p>
+			</div>
+		</div>
+		<h3>Stretch</h3>
+		<p><i>Stretch</i> takes the original image and stretches (or shrinks) it to the <code>width</code> and <code>height</code> dimensions. The aspect ratio of the image is not maintained:</p>
+		<pre>/path/to/image/spitfire.jpg?width=100&height=100&mode=stretch</pre>
+		<div class="columns">
+			<div class="third">
+				<h4>Original:</h4>
+				<img src="images/spitfire.jpg?height=200" />
+				<p>156 x 200 pixels</p>
+			</div>
+			<div class="third">
+				<h4>At size:</h4>
+				<img src="images/blank.jpg?width=100&height=100&mode=stretch" />
+				<p>100 x 100</p>
+			</div>
+			<div class="third">
+				<h4>Output:</h4>
+				<img src="images/spitfire.jpg?width=100&height=100&mode=stretch" />
+				<p>100 x 100</p>
+			</div>
+		</div>
+		<h3>Crop</h3>
+		<p><i>Crop</i> takes the original image and resizes it to the <code>width</code> and <code>height</code> dimensions, trimming off any excess around the edges:</p>
+		<pre>/path/to/image/spitfire.jpg?width=100&height=100&mode=crop</pre>
+		<div class="columns">
+			<div class="third">
+				<h4>Original:</h4>
+				<img src="images/spitfire.jpg?height=200" />
+				<p>156 x 200 pixels</p>
+			</div>
+			<div class="third">
+				<h4>At size:</h4>
+				<img src="images/blank.jpg?width=100&height=100&mode=stretch" />
+				<p>100 x 100</p>
+			</div>
+			<div class="third">
+				<h4>Output:</h4>
+				<img src="images/spitfire.jpg?width=100&height=100&mode=crop" />
+				<p>100 x 100</p>
+			</div>
+		</div>
+		<hr />
+		<h2>Changing the quality of an image</h2>
+		<p>If you want to change the quality of the output image (and therefore the filesize) add a <code>quality</code> parameter to the url:</p>
+		<pre>/path/to/image/spitfire.jpg?width=100&height=100&quality=50</pre>
+		<div class="columns">
+			<div class="third">
+				<h4>Original:</h4>
+				<img src="images/spitfire.jpg?height=200" />
+				<p>3,952 bytes</p>
+			</div>
+			<div class="third">
+				<h4>Quality = 50%</h4>
+				<img src="images/spitfire.jpg?height=200&quality=50" />
+				<p>2,740 bytes</p>
+			</div>
+			<div class="third">
+				<h4>Quality = 25%</h4>
+				<img src="images/spitfire.jpg?height=200&quality=25" />
+				<p>2,191 bytes</p>
+			</div>
+		</div>
+		<p>The default quality is 80%</p>
+		<hr />
+		<h2>Caching</h2>
+		<p>ImageResize supports caching - generated files are saved into a cache folder to avoid having to keep regenerating the same resized image. The cache folder location is stored in <code>class.resize.php</code> in the variable <code>$this->cache_folder</code>. The maximum age of the cached files is stored in <code>$this->cache_age</code>.</p>
+		<hr />
+		<h2>Possible errors and debugging</h2>
+		<p>If a resized image does not appear, open the image in a new window and add <code>&debug</code> to the end of the url. A set of data will be shown, including an error log. If there is nothing obvious, copy and paste this into an email to me at <a href="mailto:adam.hopkinson@gmail.com" title="Contact me">adam.hopkinson@gmail.com</a> and I'll do my best to help.</p>
+		<hr />
+		<h2>Other stuff</h2>
+		<p>All work is my own, including the spitfire image &copy; Adam Hopkinson 2009</p>
+	</div>
+</div>
+
+</body>
+</html>

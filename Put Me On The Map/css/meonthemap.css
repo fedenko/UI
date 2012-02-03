@@ -1,0 +1,50 @@
+.map {
+    width: 710px;
+    height: 300px;
+    border: 10px solid #273035;
+    overflow: hidden;
+}
+
+.tooltip {
+    font-family: "Lucida Sans", "Lucida Sans Unicode", arial;
+    font-size: 9pt;
+    width: 170px;
+    overflow: hidden;
+}
+
+.tooltip .top{
+    background: url(../images/bubble.png) no-repeat;
+    height: 5px;
+    overflow: hidden;
+}
+
+.tooltip .middle{
+    background: url(../images/bg.png) repeat;
+    background-position: -173px top;
+    padding: 0px 5px;
+    color: #FFF;
+}
+
+.tooltip .middle img{
+    margin: 5px 0px;
+    clear: both;
+}
+
+.tooltip .bottom{
+    background: url(../images/bubble.png) no-repeat;
+    height: 25px;
+    background-position: left bottom;
+    overflow: hidden;
+}
+
+.tooltip .IE6 {
+    background: url(../images/bubble.gif) no-repeat;
+}
+
+.tooltip .BOTTOMIE6 {
+    background: url(../images/bubble.gif) no-repeat left bottom;
+}
+
+.tooltip .MIDDLEIE6 {
+    background: #1A1A1A;
+}

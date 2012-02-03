@@ -1,0 +1,190 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>jNotice Example</title>
+<script src="jquery.js" type="text/javascript" language="javascript"></script>
+<script src="jnotice.js" type="text/javascript" language="javascript"></script>
+<script language="javascript" type="text/javascript">
+
+	$().ready(function() {
+
+		$(".login_notice").jnotice({openClickElement: ".action1",
+									closeClickElement: ".action2, .button_red", 
+									toggleClickElement: ".action3",
+									position: "top", 
+									animation:"fade", 
+									animationSpeed: 400});
+					
+		$(".rss_notice").jnotice({ openClickElement: ".action4",
+									closeClickElement: ".action5, .close_rss",
+									toggleClickElement: ".action6",
+									position: "top", 
+									animation:"none", animationSpeed: 4000});
+									
+		$(".rss_notice").jnotice({openClickElement: ".action7", 
+									autoClose: 5000,
+									position: "top", 
+									animation:"slide",
+									animationSpeed: 400});
+									
+		$(".buy_notice").jnotice({openClickElement: ".action8",
+									closeClickElement: ".action9", 
+									toggleClickElement: ".action10",
+									animation:"slide", 
+									animationSpeed: 400});
+									
+		$(".login_notice").jnotice({openClickElement: ".action11",
+									closeClickElement: ".action12",
+									position: "top", 
+									animation:"fade", 
+									animationSpeed: 400,
+									openCallback:windowOpen,
+									closeCallback:windowClose});
+									
+		$(".login_notice").jnotice({openClickElement: ".action13",
+									closeClickElement: ".action14",
+									position: "top", 
+									animation:"size", 
+									animationSpeed: 400});
+									
+		
+	});
+	
+	function windowOpen(){
+		alert("Login is opened");
+	}
+	
+	function windowClose(){
+		alert("Login is closed");
+	}
+	
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+.style1 {font-family: Verdana, Arial, Helvetica, sans-serif}
+-->
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+  <div id="maincontent">
+    <h2><span class="content style1">jNotice</span></h2>
+    <p>jNotice is the plugin for you, if you like to use some nifty popup's on your websites or applications. This plugin is very customizable because you can select a div that you want to use as popup. In this div you can place whatever content you want. </p>
+    <ul>
+      <li>Very customizable</li>
+      <li>Cross-browser (yes, also IE6 :D)</li>
+      <li>Animations</li>
+      <li>Autoclose popup's after x seconds</li>
+      <li>Position the popup top or bottom</li>
+      <li>Callback functions on open or close</li>
+    </ul>
+    <h2>Examples</h2>
+    <p>Click on the links below to see some examples that i build with jNotice. </p>
+    <ul>
+      <li><a href="javascript:void();" class="action1">Fade  login in</a></li>
+      <li><a href="javascript:void();" class="action2">Fade login out</a></li>
+      <li><a href="javascript:void();" class="action3">Toggle fade login</a></li>
+      <li><a href="javascript:void();" class="action4">Show RSS subscription</a></li>
+      <li><a href="javascript:void();" class="action5">Hide RSS subscription</a></li>
+      <li><a href="javascript:void();" class="action6">Toggle RSS subscription</a></li>
+      <li><a href="javascript:void();" class="action7">Slide in RSS subscription and auto hide after 5 seconds</a></li>
+      <li><a href="javascript:void();" class="action8">Slide in messagebox bottom</a></li>
+      <li><a href="javascript:void();" class="action9">Slide out messagebox bottom</a></li>
+      <li><a href="javascript:void();" class="action10">Toggle slide messagebox bottom</a></li>
+      <li><a href="javascript:void();" class="action11">Fade login in with callback</a></li>
+      <li><a href="javascript:void();" class="action12">Fade login out with callback</a></li>
+      <li><a href="javascript:void();" class="action13">Size animation show login</a></li>
+      <li><a href="javascript:void();" class="action14">Size animation hide login</a></li>
+    </ul>
+    <p>&nbsp;</p>
+    <h2>How to use</h2>
+    <p>jNotice is very easy to use. You create a div with some content that you like to use as popup. Place this div just above the &lt;/body&gt; tag. Now you include jQuery and the jNotice plugin and call you call $(&quot;.popup&quot;).jnotice({settings}) when the page is loaded. Where .popup is the class/id name that you set on you popup div.</p>
+    <p>The last thing you need to do is replace {settings} with the settings you want to use. Below you find a list of the possible settings.<br />
+    </p>
+    <ul>
+      <li><strong>openClickElement:</strong> A list of classes or id sepperated by comma's you want to use to open the popup<br />
+      </li>
+      <li><strong>toggleClickElement:</strong> A list of classes or id sepperated by comma's you want to use to toggle the popup<br />
+      </li>
+      <li><strong>closeClickElement:</strong> A list of classes or id sepperated by comma's you want to use to close the popup<br />
+      </li>
+      <li><strong>animation: </strong>none=no animation, slide=slide animation, fade=fade animation, size=size animation<br />
+      </li>
+      <li><strong>animationSpeed:</strong> Speed of the animation in miliseconds<br />
+      </li>
+      <li><strong>autoClose:</strong> Auto close the popup after x miliseconds, 0= don't autoclose<br />
+      </li>
+      <li><strong>position:</strong> top=show popup on top of page, bottom=show popup on bottom of page<br />
+        </li>
+      <li><strong>openNow:</strong> automaticly open the popup when the page is loaded</li>
+      <li><strong>openCallback:</strong> trigger a function when the popup is open</li>
+      <li><strong>closeCallback:</strong> trigger a function when the popup is closed</li>
+    </ul>
+    <p>Example of a configuration:</p>
+    <p class="code">$().ready(function() {<br />
+$(&quot;.login_notice&quot;).jnotice({<br />
+openClickElement: '.open_popup',<br />
+toggleClickElement: '.toggle_popup',<br />
+closeClickElement: '.close_popup',<br />
+animation: &quot;fade&quot;,<br />
+animationSpeed: 200,<br />
+autoClose: 5000,<br />
+position: &quot;top&quot;,<br />
+openNow: false<br />
+});<br />
+}</p>
+    <h2>CSS Reset</h2>
+    <p>To create popups like the login an subscribe one this page it's best that you do a CSS reset. You can do that by adding the following lines to the top of your CSS stylesheet.</p>
+    <p class="code">body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul,ol, li, dl, dt, dd, form, a, fieldset, input, th, td{<br />
+margin: 0;<br />
+padding: 0;<br />
+border: 0;<br />
+outline: none;<br />
+}</p>
+  </div>
+</div>
+
+
+<div class="rss_notice">
+	<div class="wrapper">
+      <div class="title">Subscribe to RSS</div>
+        <div class="description">Et harum quidem rerum facilis est et  expedita distinctio. Nam libero tempore, cum soluta <a href="#" class="close_rss"><strong>Close</strong></a> est eligendi.</div>
+        <div class="icon"><a href="#" class="close_rss"><img src="images/rss.png" alt="RSS feed" width="45" height="45" /></a></div>
+      <div class="spacer"><!-- SPACER --></div>
+    </div>
+</div>
+
+<div class="login_notice">
+    <div class="wrapper">
+   	  <div class="left">
+        	<div class="title">CMS Login</div>
+          <div class="description">Et harum quidem rerum facilis est et  expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi  optio cumque nihil impedit quo minus id quod maxime. </div>
+        </div>
+        <div class="right">
+          <table width="100%" border="0" cellspacing="0" cellpadding="4">
+            <tr>
+              <td width="50%"><label for="username">Username</label>
+          <input type="text" name="username" id="username" />
+          <label for="password">Password</label>
+          <input type="text" name="password" id="password" /></td>
+              <td width="50%" valign="bottom"><input type="button" class="button_green" name="button" id="button" value="Log in" /><input type="submit" class="button_red" name="button" id="button" value="Close" /></td>
+            </tr>
+          </table>
+        </div>
+    </div>
+</div>
+
+<div class="buy_notice">
+	<div class="wrapper">
+    	<div class="content">
+        	<div class="title">jNotice</div>
+            <div class="description">Show some nifty popups.</div>
+        </div>
+    </div>
+</div>
+
+
+</body></html>

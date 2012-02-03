@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+background:#000000;
+}
+
+
+.input-wrapper
+{
+width:255px;
+height:60px;
+background:none;
+}
+
+.input-mask
+{
+background:url(../images/input-mask.png);
+width:255px;
+height:60px;
+}
+
+.living-input
+{
+padding:5px;
+margin:16px 0px 0px 12px;
+width:217px;
+background:none;
+border:none;
+color:#CCCCCC;
+font-size:15px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+#validation
+{
+width:255px;
+height:60px;
+background:url(../images/background.png);
+}

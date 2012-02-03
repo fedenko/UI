@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+
+/*
+*
+* Required CSS for the EasyAjaxForm 
+*
+*/
+
+#FormContainer {		/*This is the parent div of the form in this example*/
+	position:relative;		/*NOTE: YOU NEED TO GIVE THE FORM PARENT ELEMENT A POSITIONING CONTEXT TO CONSTRAIN THE LOADING OVERLAY TO THE PARENT*/
+	padding: 1.2em 5px;	/*NOTE: LEFT AND RIGHT PADDING ON THE FORM PARENT ELEMENT IS RECCOMMENDED FOR RESPONSES FROM THE SERVER SIDE SCRIPT*/ 
+	min-height:470px;       /*NOTE: USING A MIN-HEIGHT ON THE FORM PARENT ELEMENT LOOKS BETTER WHEN THE AJAX LOADING OVERLAY IS APPLIED. Not supported in ie6*/
+	width: 700px;
+}
+
+input, textarea, select { /*Needed in order to align validation pass/fail messages next to each form field*/
+	float: left;
+}
+
+label {                
+	clear: both;
+	float: left;
+}
+
+form {                    /*Not always needed but makes sure that the form will fade in and out gracefully during Ajax communication*/
+	display: inline-block;
+}
+
+.AJAX_TIMEOUT {		/*Style Ajax timeout error*/
+	font-weight: bold;
+}
+
+.AJAX_RESPONSE {		/*Style successful responses from server side script*/
+	font-weight: bold;	
+}
+
+#FORM_LOAD  {		/*This acts as a modal type overlay added during ajax processing. It's attached to the form's parent element.*/
+	position: absolute;
+	height: 100%;
+	top:0;
+	bottom:0;
+	left:0;
+	width: 100%;
+	background: url(images/EA_Form_Load.gif) no-repeat center;    /*NOTE: CUSTOMIZE YOUR LOADING IMAGE AT www.ajaxload.info */
+	background-color: #545454;     /*Take out background-color and opacity rules (the next three) to remove the 'modal' overlay.  Only will show icon*/
+	opacity: .55;                  /*Adjust opacity of the overlay with the following three rules*/
+	-moz-opacity:0.55;
+	filter:alpha(opacity=55);
+	/*z-index:1001;*/		      /*NOTE: z-index may need to be used if you are using serveral absolutely placed elements*/
+	-moz-border-radius: 8px;      /*NOTE: these border radius rules are optional and not supported by internet explorer*/
+	-webkit-border-radius: 8px;
+}
+
+.PASS {		/*Class that is added if input for this field is valid*/
+	background: url(images/EA_Form_Pass.png) no-repeat scroll 0 0;
+	height:16px;
+	margin-left:7px;
+	width:23px;
+	float:left;
+}
+
+.FAIL {		/*Class that is added if input for this field is not valid*/
+	background: url(images/EA_Form_Error.png) no-repeat scroll 0 0;
+	color:red;
+	font-size: 14px !important;
+	height:16px;
+	margin-left:7px;
+	padding-left:20px;
+	float:left;
+}
+
+/*
+*
+* IE6 fixes for EasyAjax_Form.js  
+*
+*/
+
+*html #FORM_LOAD  {
+	height: 488px;		/*NOTE: Width and height may have to be set for this IE6 fix.  Unfortunately you will have to some testing here.  IE6 will be dead soon!*/   
+       
+}
+
+* html #FormContainer{   /*IE6 CSS fix as IE6 does not support min-height*/		 
+	height:470px;
+	overflow: hidden;    /*NOTE: Reccomend overflow:auto for most projects.  Should only come into play if large text is used by the user for ie6.*/
+}
+
+/*
+*
+* Optional EasyAjax_Form styling.
+*
+* All remaining EasyAjax_Form class markers are used primarily for the EA_Form javaScript Object but
+* you can also give them CSS values to visually group fields that are alike.  Any marker class that you 
+* add to the html class attributes for input fields (including textarea, select, etc.) can be used in this way.
+*
+*/
+
+.REQUIRED {                   
+	background: #ffffe6;  
+	border: solid 1px #CCC;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+}
+
+.OPTIONAL {
+	background: #fafafa;
+	border: solid 1px #CCC;
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px;
+}

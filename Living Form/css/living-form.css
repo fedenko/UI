@@ -1,0 +1,69 @@
+@charset "utf-8";
+/* CSS Document */
+
+*:focus {outline: none;}
+
+
+
+.input-wrapper
+{
+width:275px;
+height:80px;
+background:url(../images/input-bg.png);
+margin-left:10px;
+}
+
+.input-mask
+{
+background:url(../images/input-mask.png);
+width:275px;
+height:80px;
+}
+
+.living-input
+{
+padding:5px 5px 5px 12px;
+margin:27px 0px 0px 24px;
+width:217px;
+background:none;
+border:none;
+color:#CCCCCC;
+font-size:16px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+float:left;
+}
+
+.living-textarea
+{
+padding:5px;
+margin:16px 0px 0px 12px;
+width:500px;
+height:160px;
+background:none;
+border:none;
+color:#CCCCCC;
+font-size:15px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.textarea-wrapper
+{
+width:534px;
+height:206px;
+background:none;
+margin-left:19px;
+}
+
+.button
+{
+background:url(../images/button-png.png);
+border:0;
+width:85px;
+height:25px;
+float:right;
+font-weight:bold;
+font-family:Arial, Helvetica, sans-serif;
+margin-right:10px;
+margin-top:20px;
+}

@@ -1,0 +1,190 @@
+.timeline {
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    color: #FFF;
+    font-family: "Lucida Grande", Lucida Sans Unicode, Tahoma, Arial;
+    font-size: 8pt;
+}
+
+.timeline_arrows {
+    overflow: hidden;
+    padding-left: 2px; 
+    padding-bottom: 10px;
+    zoom: 1;
+}
+
+.timeline_arrows div {
+    float: left;
+}
+
+.timeline_date {
+    height: 20px;
+    color: #fff;
+    background-color: #000;
+    padding: 0px 15px 0px 15px;
+    line-height: 1.6em;
+}
+
+.timeline_lastyear,
+.timeline_lastmonth,
+.timeline_nextmonth,
+.timeline_nextyear {
+    cursor: pointer;
+    width: 15px;
+    height: 20px;
+    background: url(../images/arrows.png) no-repeat;
+}
+
+.timeline_lastyear {
+    border-right: 1px solid #000;
+}
+
+.timeline_lastyear:hover {
+    background-position: 0px -20px;
+}
+
+.timeline_lastmonth,
+.timeline_nextmonth {
+    background-position: -15px 0px;
+}
+
+.timeline_lastmonth:hover,
+.timeline_nextmonth:hover {
+    background-position: -15px -20px;
+}
+
+.timeline_nextyear {
+    background-position: -30px 0px;
+    border-left: 1px solid #000;
+}
+
+.timeline_nextyear:hover {
+    background-position: -30px -20px;
+}
+
+.timeline_top {
+    overflow : hidden;
+    display: block;
+}
+
+.timeline_bottom {
+    overflow : hidden;
+    display: block;
+}
+
+.timeline_top ul, 
+.timeline_bottom ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.timeline_top li, 
+.timeline_bottom li {
+    float: left;
+    margin-right: 2px;
+    padding: 3px 2px 0px 2px;
+    border-bottom: 1px solid #FFF;
+}
+
+.timeline_bottom li {
+    border: none;
+}
+
+.timeline_bottom li {
+    padding: 0px 2px 3px 2px !important;
+}
+
+.timeline_top li div, 
+.timeline_bottom li div {
+    text-transform: uppercase;
+    text-align: center;
+    width: 20px;
+}
+
+.timeline_top div {
+    background: url(../images/normal.gif) no-repeat left top;
+    padding: 3px 0px 5px 0px !important;
+} 
+
+.timeline_bottom div {
+    background: url(../images/normal.gif) no-repeat left bottom;
+    padding: 5px 0px 3px 0px !important;
+}
+
+.timeline_top .today {
+    background: url(../images/today.gif) no-repeat left top;
+    padding: 3px 0px 5px 0px !important;
+} 
+
+.timeline_bottom .today {
+    background: url(../images/today.gif) no-repeat left bottom;
+    padding: 5px 0px 3px 0px !important;
+}
+
+.timeline_top .event, 
+.timeline_bottom .event {
+    color: #C1E20D;
+    cursor: pointer;
+}
+
+.timeline_bubble {
+    display: none;   
+    overflow: hidden;
+    width: 142px; 
+    position: absolute; 
+    font-family: "Lucida Grande", Lucida Sans Unicode, Tahoma, Arial;
+    font-size: 8pt;
+}
+
+.timeline_bubble .bubble_top,
+.timeline_bubble .bubble_bottom,
+.timeline_bubble .bubble_mid {
+    background: url(../images/bubble.png) repeat-y;
+    overflow: hidden;
+}
+
+.bubbleIE6 {
+    background-image: url(../images/bubble.gif) !important;
+}
+
+.timeline_bubble .bubble_top{
+    height: 10px;
+    background-position: -142px 0px;
+}
+
+.timeline_bubble .bubble_bottom{
+    height: 10px;
+    background-position: -142px -38px;
+}
+
+.timeline_bubble .bubble_mid {
+    background-position: -284px -1px;
+    overflow: hidden;
+}
+
+.timeline_bubble .event_title{
+    cursor: pointer;
+    color: #FFF;
+    padding: 3px 0px 3px 0px;
+    margin: 0px 5px 0px 5px;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+}
+
+.timeline_bubble .event_title:hover{
+    color: #C1E20D;
+}
+
+.timeline_bubble .event_title:hover + next{
+    display: block;
+}
+
+.timeline_bubble .event_data {
+    overflow: hidden;
+    display: none;
+    color: #fff;
+    font-weight: normal;
+    margin: 3px 0px 0px 0px;
+}

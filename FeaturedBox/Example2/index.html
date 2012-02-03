@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 2</title>
+<script src="js/jquery.js"></script>
+<script src="js/featuredbox.js"></script>
+<script>
+$(document).ready(function() {
+	$("#example1").featuredbox({width: 400,
+			height: 300,
+			slidesAnimation: "slide-right",
+			slidesSpeed: "slow",
+			descriptionAnimation: "slide-bottom",
+			descriptionSpeed: "slow",
+			rotateInterval: 0});			   
+});
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style >
+body{
+	text-align: center;
+	background-image: url(images/bg.jpg);
+	color:#FFF;
+	font-family:Georgia,serif;
+	font-size:14px;
+	line-height:18px;
+}
+h1 {
+	color:#FFF;
+	font-size:32px;
+	margin:0 0 20px;
+}
+p{
+	line-height:18px;
+	padding: 6px 0px 12px 0px;
+	text-align: justify;
+}
+#box-wrap{
+	text-align: left;
+	margin: 50px auto;
+	width: 620px;
+}
+.border{
+	padding: 10px;
+	background:transparent url(images/bg.png) repeat scroll 0 0;
+	border-top: solid 1px #000;
+	border-left: solid 1px #000;
+	border-right: solid 1px #414141;
+	border-bottom: solid 1px #414141;
+}
+.spacer{
+	clear: both;
+}
+.small{
+	font-style: italic;
+	font-size: 12px;
+	padding: 4px 0px 14px 0px;
+}
+
+</style>
+</head>
+<body>
+<div id="box-wrap">
+	<h1>Featured Box 2</h1>
+	<p>On this page you can see an example of using different contents as slides. This is another advantage of feature box. Your not limited to images only. You can also use the div element or even a flash movie.</p>
+  <p>Below you find an example where we used 4 different types of content.</p>
+  <div class="border">
+    <div class="featuredbox-wrapper" id="example1">
+      <ul>
+        <li>
+   		  <div class="slide">
+                	<h2>Registration form</h2>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui  blanditiis  corrupti quos dolores  et quas molestias excepturi sint. Occaecati cupiditate non provident,  similique sunt in  quidem rerum facilis est et expedita  distinctio.</p>
+                
+            <a href="#" class="button">Create account   		    </a></div>
+       	  		<div>
+                	<h2>Use HTML content</h2>
+                    <p>In this exaple you can see how we used HTML content in this feature box slide.</p>
+                </div>
+                <div>
+                	<h2>HTML Content</h2>
+                    <p>Use HTML as content</p>
+                </div>
+            </li>
+            <li>
+                <img src="images/flower.jpg" alt="Flower" />
+              	<div>
+                	<h2>Use Image Content</h2>
+                    <p>In this example we used an image as content in this feature box slide.</p>
+                </div>
+              	<div>
+                	<h2>Image</h2>
+                    <p>Use an image as content</p>
+                </div>
+            </li>
+            <li>
+            	<div class="video-wrap">
+                	<embed src="http://blip.tv/play/grldq9UHAg" type="application/x-shockwave-flash" width="400" height="300"></embed>
+                </div>
+           	  <div></div>
+              <div>
+                	<h2>Video</h2>
+                	<p>Use an video player</p>
+              </div>
+            </li>
+            <li>
+            	<div class="video-wrap"><embed src="featurebox.swf" type="application/x-shockwave-flash" width="400" height="300"></embed></div>
+              <div>
+                	<h2>Use flash as content</h2>
+                    <p>In this example we used a flash as content in this feature box slide.</p>
+                </div>
+              <div>
+                	<h2>Flash content</h2>
+                    <p>Use flash as content</p>
+                </div>
+            </li>
+        </ul>
+ 	</div>
+  </div>
+  <div class="small">Example of different content types</div>
+  <div class="spacer"><!-- SPACER --></div>
+</div>
+</body>
+</html>

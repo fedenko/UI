@@ -1,0 +1,159 @@
+body{
+	background:#FFFFFF;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	margin:0px;
+	height:100%;
+}
+a:focus {
+	outline:0px;
+}
+focus {
+	outline:0px;
+}
+#YTV_movies{
+	display:block;
+	position:relative;
+	clear:both;
+	width:619px;
+	height:540px;
+	overflow:hidden;
+	margin:10px auto 10px;
+}
+	#YTV_playback {
+		display:block;
+		position:relative;
+		clear:both;
+		width:617px;
+		height:500px;
+		overflow:visible;
+		border:1px #666666 solid;
+		-moz-border-radius-topleft:5px; 
+		-webkit-border-top-left-radius: 5px;
+		-moz-border-radius-topright:5px; 
+		-webkit-border-top-right-radius:5px;
+	}
+		#YTV_playlist{
+			display:block;
+			position:absolute;
+			top:6px;
+			left:-500px;
+			width:350px;
+			height:440px;
+			overflow:hidden;
+			background: url(images/playlist_bg.png);
+			clear:both;
+			-moz-border-radius-topright:5px; 
+			-webkit-border-top-right-radius: 5px;
+			-moz-border-radius-bottomright:5px; 
+			-webkit-border-bottom-right-radius:5px;	
+			border:1px #FFF solid;
+			padding:10px;			
+		}
+			#YTV_playlist ul{
+				display:block;
+				position:relative;
+				margin:0px;
+				padding:0px;
+			}
+				#YTV_playlist li{
+					display:block;
+					position:relative;
+					clear:both;
+					margin:5px 0px 5px;
+					width:330px;
+					padding:0px;
+					line-height:16px;
+					padding-right:25px;
+					border-bottom:1px #333333 dotted;
+				}
+				#YTV_playlist a{
+					display:block;
+					position:relative;
+					clear:both;
+					margin-bottom:2px;
+					color:#FFFFFF;
+					font-size:12px;
+					text-decoration:none;
+				}
+				#YTV_playlist a.selected{
+					font-weight:bold;
+					text-decoration:underline;
+				}
+				#YTV_playlist a.link_repeat{
+					color:#0d6edc;
+				}
+				#YTV_playlist a.repeat{
+					display:block;
+					position:absolute;
+					top:0px;
+					right:5px;
+					width:16px;
+					height:16px;
+					background-image:url(images/repeat.png);
+					background-position:bottom;
+					background-repeat:no-repeat;
+				}
+				#YTV_playlist a.repeat_on{
+					background-position:top;
+				}
+				
+		#infoPanel{
+			display:block;
+			position:relative;
+			clear:both;
+			height:40px;
+			background:#000000;
+			-moz-border-radius-bottomleft:5px; 
+			-webkit-border-bottom-left-radius: 5px;
+			-moz-border-radius-bottomright:5px; 
+			-webkit-border-bottom-right-radius:5px;	
+			color:#FFF;
+			line-height:40px;
+			padding-left:20px;
+			font-size:11px;			
+		}	
+			.playlist{
+				display:block;
+				position:absolute;
+				top:10px;
+				right:10px;
+				width:22px;
+				height:22px;
+				background-image:url(images/playlist.png);
+				background-position:bottom;
+				float:right;
+			}
+			.playlist_on{
+				background-position:top;
+			}
+			.playlist_repeat{
+				display:block;
+				position:absolute;
+				width:24px;
+				height:24px;
+				top:8px;
+				right:40px;
+				background-image:url(images/repeat_playlist.png);
+				background-position:bottom;
+				background-repeat:no-repeat;
+			}
+			.playlist_repeat_on{
+				background-position:top;
+			}
+
+.YTV_tips{
+	display:block;
+	position:relative;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	text-align:left;
+	-moz-border-radius:5px; 
+	-webkit-border-radius:5px;
+	border:1px #333333 solid;
+	background:#FFFFFF;
+	padding:3px 5px 3px;	
+}	
+	.YTV_tips .tip-text{
+		display:none;
+	}		
+			

@@ -1,0 +1,23 @@
+Sliding Tabs Changelog
+----------------------
+
+v1.0.3 - 14 December 2010
+
+	* Improved the offset functionality. You can now set a offset value for each sliding direction (up, down, left and right).
+
+
+v1.0.2 - 8 December 2010
+	
+	* Fixed a CSS bug with the vertical tabs.
+
+
+v1.0.1 - 30 November 2010
+	
+	* Added option to change the tab class.
+	* Changed the tab 'href' and tab view ID names.		
+	* Using the tab's URL hash instead of the ID attribute to display content.  
+
+
+v1.0 - 29 November 2010
+
+	* Sliding Tabs jQuery plugin released.

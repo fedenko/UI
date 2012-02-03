@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 3</title>
+<script src="js/jquery.js"></script>
+<script src="js/featuredbox.js"></script>
+<script>
+$(document).ready(function() {
+	$("#example1").featuredbox({width: 440,
+			height: 300,
+			slidesAnimation: "slide-left",
+			slidesSpeed: "slow",
+			descriptionAnimation: "slide-right",
+			descriptionSpeed: "slow",
+			rotateInterval: 0});			   
+});
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style >
+body {
+	text-align: center;
+	background-image: url(images/bg.jpg);
+	color:#FFF;
+	font-family:Georgia, serif;
+	font-size:14px;
+	line-height:18px;
+}
+h1 {
+	color:#FFF;
+	font-size:32px;
+	margin:0 0 20px;
+}
+p {
+	line-height:18px;
+	padding: 6px 0px 12px 0px;
+	text-align: justify;
+}
+#box-wrap {
+	text-align: left;
+	margin: 50px auto;
+	width: 620px;
+}
+.border {
+	padding: 10px;
+	background:transparent url(images/bg.png) repeat scroll 0 0;
+	border-top: solid 1px #000;
+	border-left: solid 1px #000;
+	border-right: solid 1px #414141;
+	border-bottom: solid 1px #414141;
+}
+.spacer {
+	clear: both;
+}
+.small {
+	font-style: italic;
+	font-size: 12px;
+	padding: 4px 0px 14px 0px;
+}
+</style>
+</head>
+<body>
+<div id="box-wrap">
+  <h1>Featured Box 2</h1>
+  <p>On this page you can see an example of how you can place the navigation part wherever you want. In this example we created a box to highlight products. This can be used for example in a webshop.</p>
+  <div class="border">
+    <div class="featuredbox-wrapper" id="example1">
+      <ul>
+        <li> 
+          <img src="images/slide1.jpg" alt="Slide 1" />
+          <div><a href="#">Order this item now</a></div>
+          <div>Feature slide 1</div>
+        </li>
+        <li>
+          <img src="images/slide2.jpg" alt="Slide 2" />
+          <div><a href="#">Order this item now</a></div>
+          <div>Feature slide 2</div>
+        </li>
+        <li>
+          <img src="images/slide3.jpg" alt="Slide 3" />
+          <div><a href="#">Order this item now</a></div>
+          <div>Feature slide 3</div>
+        </li>
+        <li>
+          <img src="images/slide4.jpg" alt="Slide 4" />
+          <div><a href="#">Order this item now</a></div>
+          <div>Feature slide 4</div>
+        </li>
+        <li>
+          <img src="images/slide5.jpg" alt="Slide 5" />
+          <div><a href="#">Order this item now</a></div>
+          <div>Feature slide 5</div>
+        </li>
+        <li>
+          <img src="images/slide6.jpg" alt="Slide 6" />
+          <div><a href="#">Order this item now</a></div>
+          <div>Feature slide 6</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="small">Place navigation where you want</div>
+  <div class="spacer">
+    <!-- SPACER -->
+  </div>
+</div>
+</body>
+</html>

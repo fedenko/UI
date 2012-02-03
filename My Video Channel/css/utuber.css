@@ -1,0 +1,82 @@
+.mychannel {
+    background: #000;
+    padding: 10px 0px 0px 10px;
+    width: 520px;
+    font-family: Arial;
+    font-weight: bold;
+    overflow: hidden;
+}
+
+.mychannel a {
+    text-decoration: none;
+    outline: none;
+}
+
+.videos {
+    overflow: hidden;
+    padding: 2px 0px;
+    margin-bottom: 5px;
+    position: relative; 
+    height: 0px;
+}
+
+.videos .scroll {
+    overflow: hidden;
+    position: relative;
+    width: 520px;
+}
+
+.scroll li {
+    float: left;
+}
+
+.videos .title {
+    cursor: pointer;
+    float: left;
+    width: 120px;
+    height: 126px;
+    overflow: hidden;
+    margin: 1px 2px 1px 0px;
+    border: 1px solid #222;
+    padding: 2px;
+    background-position: 2px 2px;
+}
+
+.title p {
+    line-height: 1.3em;
+    font-size: 9pt;
+    font-weight: bold;
+    color: #FFF;
+    background-color: #222;
+    height: 30px;
+    overflow: hidden;
+    margin-top: 93px;
+    padding: 1px 3px;
+}
+
+.mychannel .showVideoPanel {
+    text-align: right;
+    overflow: hidden;
+    height: 0px;
+}
+
+.showVideoPanel a {
+    color: #FFF;
+    display: none;
+    font-size: 10pt;
+    margin-right: 10px;
+    float: right;
+}
+
+.showVideoPanel .loading {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+    float: right;
+}
+
+.player {
+    display: block;
+    overflow: hidden;
+    height: 0px;
+}

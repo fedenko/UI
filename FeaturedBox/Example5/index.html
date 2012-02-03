@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 5</title>
+<script src="js/jquery.js"></script>
+<script src="js/featuredbox.js"></script>
+<script>
+$(document).ready(function() {
+	$("#example1").featuredbox({width: 600,
+			height: 300,
+			slidesAnimation: "fade",
+			slidesSpeed: "slow",
+			descriptionAnimation: "fade",
+			descriptionSpeed: "slow",
+			rotateInterval: 0,
+			next: ".next"});			   
+});
+</script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style >
+body {
+	text-align: center;
+	background-image: url(images/bg.jpg);
+	color:#FFF;
+	font-family:Georgia, serif;
+	font-size:14px;
+	line-height:18px;
+}
+h1 {
+	color:#FFF;
+	font-size:32px;
+	margin:0 0 20px;
+}
+p {
+	line-height:18px;
+	padding: 6px 0px 12px 0px;
+	text-align: justify;
+}
+#box-wrap {
+	text-align: left;
+	margin: 50px auto;
+	width: 620px;
+}
+.border {
+	padding: 10px;
+	background:transparent url(images/bg.png) repeat scroll 0 0;
+	border-top: solid 1px #000;
+	border-left: solid 1px #000;
+	border-right: solid 1px #414141;
+	border-bottom: solid 1px #414141;
+}
+.spacer {
+	clear: both;
+}
+.small {
+	font-style: italic;
+	font-size: 12px;
+	padding: 4px 0px 14px 0px;
+}
+</style>
+</head>
+<body>
+<div id="box-wrap">
+  <h1>Featured Box 5</h1>
+  <p>Create your own interactive quiz or poll with featurebox.</p>
+  <div class="border">
+    <div class="featuredbox-wrapper" id="example1">
+      <ul>
+        <li> 
+          <div>
+          	<p><strong>A.</strong> This is answer a.</p>
+            <p><strong>B.</strong> This is answer b.</p>
+            <p><strong>C.</strong> This is answer c.</p>
+            <p><strong>D.</strong> This is answer d.</p>
+            <p><a href="#" class="next button">Next question</a></p>
+          </div>
+          <div>
+          		<h2>Did you eat lunch today?</h2>
+                <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire.</p>
+          </div>
+          <div></div>
+        </li>
+        <li>
+          <div>
+          	<p><strong>A.</strong> Is this the answer.</p>
+            <p><strong>B.</strong> Aswer b.</p>
+            <p><strong>C.</strong> This is another answer.</p>
+            <p><a href="#" class="next button">Next question</a></p>
+          </div>
+          <div>
+          		<h2>What food do you like?</h2>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+          </div>
+          <div></div>
+        </li>
+        <li>
+          <div>
+          	<p><strong>A.</strong> This is answer a.</p>
+            <p><strong>B.</strong> This is answer b.</p>
+            <p><strong>C.</strong> This is answer c.</p>
+            <p><strong>D.</strong> This is answer d.</p>
+            <p><a href="#" class="next button">Show my score</a></p>
+          </div>
+          <div>
+          		<h2>Do you have coffee for breakfast?</h2>
+                <p>When our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided.</p>
+          </div>
+          <div></div>
+        </li>
+        <li>
+          <div>
+          	<p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+            <p>You are <strong>95%</strong> healty</p>
+            <p><a href="#" class="next button">Do the test again</a></p>
+          </div>
+          <div></div>
+          <div></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="small">Interactive poll</div>
+  <div class="spacer">
+    <!-- SPACER -->
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+.deviant {
+	width: 150px;
+	z-index: 100;
+}
+
+.deviant, .deviant li {
+	position: relative;
+}
+
+.deviant, .deviant ul, .deviant ul li {		
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.deviant ul li ul {
+	position: absolute;
+	left: 150px;
+	top: 0px;
+	display: none;
+}
+
+.deviant ul li:hover > ul { 
+	display: block;
+}
+
+
+.deviant a {
+	height: auto;
+	display: block;
+	white-space: nowrap;
+	width: 100%;
+}

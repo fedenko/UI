@@ -1,0 +1,165 @@
+/*
+Item Name : HoverMe - Collection of CSS3 Hover Effects
+Author URI : http://themeforest.net/user/Keliah
+Version : 1.0
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+01 SIMPLE BORDER
+02 SHADOW & ZOOM
+03 BORDER & ZOOM
+
+*/
+
+
+
+/* DEFAULTS PAGE STYLING - FOR DEMO ONLY */
+
+/* You can safely remove / modify the following markup as it's only for the demo purpose */
+
+body {
+	background:#121212;
+	font-family:Arial, Helvetica, sans-serif;
+	_behavior: url("ie/csshover3.htc"); /* For IE6 only, it enables hover on non anchor tags */
+}
+.container {
+	width:960px;
+	margin:30px auto;
+}
+.container ul li {
+	float:left;
+	margin-right: 20px; 
+}
+h1 {
+	font-size:30px;
+	letter-spacing:-1px;
+	margin:20px 0px 20px 0px;
+	color:#FFFFFF;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 40px;
+}
+
+
+
+/*  _______________________________________
+
+	01 SIMPLE BORDER
+    _______________________________________  */
+
+
+
+.border img {
+	border:10px solid #FFFFFF;
+	
+	/* The demo imges have a size of 300x200px, we remove here 20px 
+	   because of the border to keep the exact 300x200px size */
+	width:280px;
+	height:180px;
+	
+	/* CSS3 transitions working only for modern browsers */
+	-webkit-transition: border 0.4s ease;
+	-moz-transition: border 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: border 0.4s ease;
+}
+.border img:hover {
+	border:10px solid #000000; /* Changing the border color on mouse hover */
+}
+
+
+/* 2. BOX SHADOW */
+
+
+.boxshadow img {
+	
+	/* Setting a black blur effect around images */ 
+	-moz-box-shadow: 0 0 20px #000000;  
+	-webkit-box-shadow: 0 0 20px #000000;   
+	box-shadow:0px 0px 20px #000000;
+	/* Transitions for modern browsers */
+	-webkit-transition: -webkit-box-shadow 0.4s ease;
+	-moz-transition: -moz-box-shadow 0.4s ease-in-out;
+}
+.boxshadow img:hover {
+	/* Changing the color of the blur on mouse hover */
+	-moz-box-shadow: 0 0 20px #666666;  
+	-webkit-box-shadow: 0 0 20px #666666; 
+	box-shadow:0px 0px 30px #666666;
+}
+
+
+
+/*  _______________________________________
+
+	02 SHADOW & ZOOM
+    _______________________________________  */
+
+
+
+.zoom img {
+	/* CSS3 transitions to resize the image and set a glow,
+	   the "scale" is the ratio to resize the image, the box shadow
+	   is the glow effect and the duration the timing of the effect
+	   on mouse hover */
+	-webkit-transform:scale(0.9);
+	-webkit-box-shadow:0px 0px 30px #000000;
+	-webkit-transition-duration: 0.5s;
+	-moz-transform:scale(0.9);
+	-moz-box-shadow:0px 0px 30px #000000;
+	-moz-transition-duration: 0.5s;
+	-o-transform:scale(0.9);
+	-o-transition-duration: 0.5s;
+	box-shadow:0px 0px 30px #000000;
+}
+.zoom img:hover{
+	/* On pouse hover, the scale mkes the image grow
+	   and the box shadow makes the glow lighter with the #666666 color */
+	-webkit-box-shadow:0px 0px 30px #666666;
+	-webkit-transform:scale(1);
+	-moz-box-shadow:0px 0px 30px #666666;
+	-moz-transform:scale(1);
+	-o-transform:scale(1);
+	box-shadow:0px 0px 30px #666666;
+}
+
+
+
+/*  _______________________________________
+
+	03 BORDER & ZOOM
+    _______________________________________  */
+
+
+
+.zoom_border img {
+	
+	/* Same as above with an additional border, we set a smaller
+	   width and height to keep a 300x200px size with the 10px border */
+	border:10px solid #FFFFFF;
+	width:280px;
+	height:180px;
+
+	-webkit-transform:scale(0.9);
+	-webkit-transition-duration: 0.5s;
+	-moz-transform:scale(0.9);
+	-moz-transition-duration: 0.5s;
+	-o-transform:scale(0.9);
+	-o-transition-duration: 0.5s;
+}
+.zoom_border img:hover{
+	border:10px solid #AAAAAA; /* Changes the color border on mouse hover */
+
+	-webkit-transform:scale(1);
+	-moz-transform:scale(1);
+	-o-transform:scale(1);
+}
+

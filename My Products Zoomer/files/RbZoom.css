@@ -1,0 +1,43 @@
+img {
+	border: 0px;
+}
+.Clear { clear:both}
+
+/* Zoomed image */
+.RbZoom { 
+	outline: 0; 
+	display: block; 
+	text-decoration: none;
+}
+
+/* Zoomed area */
+.RbZoomImageCont {
+	border: 3px solid #666;
+}
+
+/* Small looking glass square under mouse */
+.RbZoomPop {
+	border: 1px solid #aaa;
+	background: #ffffff;
+	cursor: pointer;
+}
+
+/* Begin : Products Block  */
+.RbProdThumbs a {
+	border: 1px solid #CCC;
+	height: 30px;
+	width: 30px;
+	padding:2px;
+	text-align: center;
+	margin: 20px 2px;
+	float: left;
+	cursor: pointer;
+}
+.RbProdThumbs a:hover {
+	border: 1px solid #900;
+}
+.RbProdThumbs .Current {
+	border: 1px solid #900;
+	
+}
+/* End : Products Block  */

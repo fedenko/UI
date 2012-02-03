@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+	    <title>DENON STUDIO - Flip menu</title>
+	    <link href="css/flipmenu.css" type="text/css" rel="stylesheet" />
+        <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+        <script type="text/javascript" src="js/flipmenu-min.js"></script>
+	    <script type="text/javascript">
+            $(document).ready(function(){
+                var menu1 = new Flipmenu("flip_menu1");
+                var menu2 = new Flipmenu("flip_menu2");
+            });
+	    </script>
+	    
+	    <style type="text/css">
+	       h1 {
+               font-family: arial;
+               font-size: 14pt;
+               color: #318DF2;
+               margin-top: 35px;
+	       }
+	       
+	       #wrap {
+               margin : 0px auto;
+	           width : 200px;
+	       }
+	    </style>
+	    
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>No active menu item</h1>
+            <div id="flip_menu1">
+                <a href="http://www.envato.com/">Envato</a>
+                <a href="http://www.themeforest.net/">Theme Forest</a>
+                <a href="http://www.flashden.net/">Flash Den</a>
+                <a href="http://www.audiojungle.net/">Audio Jungle</a>
+                <a href="http://www.videohive.net/">Video Hive</a>
+                <a href="http://www.graphicriver.net/">Graphic River</a>
+                <a href="http://www.nettuts.com/">Net Tuts</a>
+                <a href="http://www.psdtuts.com/">PSD Tuts</a>
+                <a href="http://vector.tutsplus.com/">Vector Tuts</a>
+                <a href="http://audio.tutsplus.com/">Audio Tuts</a>
+            </div>
+            <h1>With active menu item</h1>
+            <div id="flip_menu2">
+                <a href="http://www.envato.com/">Envato</a>
+                <a class="active" href="http://www.themeforest.net/">Theme Forest</a>
+                <a href="http://www.flashden.net/">Flash Den</a>
+                <a href="http://www.audiojungle.net/">Audio Jungle</a>
+                <a href="http://www.videohive.net/">Video Hive</a>
+                <a href="http://www.graphicriver.net/">Graphic River</a>
+                <a href="http://www.nettuts.com/">Net Tuts</a>
+                <a href="http://www.psdtuts.com/">PSD Tuts</a>
+                <a href="http://vector.tutsplus.com/">Vector Tuts</a>
+                <a href="http://audio.tutsplus.com/">Audio Tuts</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en"><head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Example 2</title>
+<meta name="description" content="Computer tips, tricks en tutorials voor de gevorderde computer gebruikers." />
+<meta name="keywords" content="computerfaq, leren, handleidingen, programmeren, php, webdevlopment, scripting, handleidingen" />
+<script type="text/javascript" src="js/jquery.js"></script> 
+<script type="text/javascript" src="js/dropmenu.js"></script> 
+<script>
+$(document).ready(function(){
+	$("#nav-one").dropmenu({openAnimation: "size",
+							closeAnimation: "size"});
+});
+</script>
+<link rel="stylesheet" id="smthemenewprint-css"  href="style.css" type="text/css" />
+</head>
+
+<body>
+<ul id="nav-one" class="dropmenu"> 
+			<li> 
+				<a href="#item1">Home</a> 
+			</li> 
+			<li> 
+				<a href="#">Forum</a> 
+				<ul> 
+					<li><a href="#">Support</a></li> 
+					<li><a href="#">Help</a></li> 
+					<li><a href="#">Examples</a></li>
+					<li><a href="#">Your work</a></li>
+				</ul> 
+			</li> 
+			<li> 
+				<a href="#">Downloads</a> 
+				<ul> 
+					<li><a href="#">Tools</a></li> 
+					<li><a href="#">Office</a></li> 
+					<li><a href="#">Custom projects</a></li> 
+				</ul> 
+			</li>  	 
+		</ul> 
+</html>

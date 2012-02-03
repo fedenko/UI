@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>HoverMe - Collection of CSS3 Hover Effects</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;HoverMe - Collection of CSS3 Hover Effects&rdquo; Documentation by &ldquo;Keliah&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;HoverMe - Collection of CSS3 Hover Effects&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created : 11/02/2010<br>
+					By: Keliah<br>
+					Email: <a href="mailto:keliahdesign@gmail.com">keliahdesign@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/keliah">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		<p><strong>NOTICE</strong> : you'll find an additional file in the "ie" subfolder of each version, it is required only if you choose to support Internet Explorer 6.</p>		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#structure">Folder Structure</a></li>
+			<li><a href="#html">HTML Markup</a></li>
+			<li><a href="#css">CSS Files and Structure</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="structure"><strong>A) Folder Structure</strong> - <a href="#toc">top</a></h3>
+        
+        <p>I've separated hovers effects by type and you'll get 3 folders as following :</p>
+        <ul>
+        <li>Borders</li>
+        <li>Overlays</li>
+        <li>Slides</li>
+        </ul>
+        
+        <p>The <strong>Borders</strong> folder contains the CSS markup with examples of effects on boders and using the CSS3 box shadow feature.</p>
+        <p>The <strong>Overlays</strong> folder is for effects displaying content above the images (texts, titles, other images or shadows).</p>
+        <p>The <strong>Slides</strong> folder contain all effects when the picture slides in any direction to reveal content (it can be another image or texts).</p>
+        
+        <p>Some effects can be used at the same time and all those effects can be used simply by using the appropriate CSS class.</p>
+        
+        <p>Those effects have been tested in all major browsers and due to the lack of support of CSS3 properties, some effects such as slidings or opacity won't work the same way in older browsers but the hidden content (for example in the <strong>Slides</strong> folder) will appear but there won't be any sliding transition. So the end user will still see all the content.</p>
+        
+        <p>Here is the list of browsers supporting (almost) fully all effects :</p>
+        <ul>
+        <li>Firefox 4 (Beta)</li>
+        <li>Chrome 4, 5, 6 and 7</li>
+        <li>Safari 4 and 5</li>
+        <li>Opera (latest version)</li>
+        </ul>
+        
+        <p>And here is the list of browsers which will display the hidden content on hover but without effects :</p>
+        <ul>
+        <li>Internet Explorer 6, 7, 8 and 9</li>
+        <li>Firefox 2, 3, 3.5, 3.6</li>
+        </ul>
+        <p>However, Firefox supports some CSS3 features but no transitions until the version 3.6</p>
+        
+        <p>This list contains all browsers I've tested manually with native installations.</p>
+        
+		<hr>
+
+		<h3 id="html"><strong>B) HTML Markup</strong> - <a href="#toc">top</a></h3>
+        
+        <p>In each HTML file, you'll find that all the content is wrapped in a "container", this is just for the demo and you don't need to use it. The same applies to the "clear" DIV after each list, it's just here to space elements.</p>
+        <p>I've used for all effects lists containing each time 3 items, sometimes the class containing the effect is applied to the UL element, sometimes to the LI element (or a nested DIV) but it would be the same using only DIVs.</p>
+        
+        <h3>BORDERS</h3>
+        
+        <p>The effects are simply applied to the image container, in all cases it's the LI element and the structure is always the same :</p>
+
+<pre>
+&lt;ul&gt;
+    &lt;li class="effect name"&gt;&lt;img src="yourimage" alt="" /&gt;/li&gt;
+    &lt;li class="effect name"&gt;&lt;img src="yourimage" alt="" /&gt;/li&gt;
+    &lt;li&gt; ... &lt;/li&gt;
+&lt;/ul&gt;
+</pre>        
+
+        <h3>OVERLAYS</h3>
+        
+        <p>These effects are more complex and some content is revealed on mouse hover so here we have to separate the "default" and the "hidden" content.</p>
+        
+        <h4>Information Boxes</h4>
+        
+        <p>For this effect, there are 2 variants, the black and the white one. A surrounding background is appearing on mouse hover and shows some text under the image. In the following example, we see an image and a "details" DIV showing on hover, this DIV can contain text, a H2 heading title and a small paragraph in this example (you can change the "black" class by the "white" class) :</p> 
+
+<pre>
+&lt;ul&gt;
+
+    &lt;li class="info"&gt;
+    
+        &lt;a href="#"&gt;&lt;img src="your image" alt="" /&gt;&lt;/a&gt;
+        
+        &lt;div class="details black"&gt;
+            &lt;h2&gt;This is a title&lt;/h2&gt;
+            &lt;p>Here comes a short description&lt;/p&gt;
+        &lt;/div&gt;
+        
+    &lt;/li&gt;
+
+&lt;/ul&gt;
+</pre>        
+        
+        <p>The principle is the same for the "Bottom Overlay", "Top Overlay" and "Full Overlay" effects.</p>
+        
+        <p>In this folder, there are 2 additional effects : the "Lomo" and "Image Stack". The first one works like the borders effects we have seen before, simply apply the "lomo" class to the parent container of the image. The "Image Stack" contains 2 images, the second one is showing above the first one on mouse hover. In this case, the "stack" effect is applied the the UL element containing the 2 LI, each one containing 1 image.</p>
+
+        <h3>SLIDES</h3>
+        
+        <p>These effects work in the same way, the image is sliding in a specific direction to reveal some content is revealed on mouse hover so here we have to separate the "image" and the "hidden" content.</p>
+        
+        <p>Again, we'll use here a UL element and we apply the "slide" class combined with another class which will specify in which direction the image will slide (moveup, moveleft, movedown, etc.)</p>
+        
+        <p>Then this UL element will contain 2 LI elements which can contain an image or some text. Here is an example :</p>
+        
+<pre>
+&lt;ul class="slide moveright"&gt;
+
+      &lt;li&gt;&lt;p&gt;This text is revealed on mouse hover.&lt;/p&gt;&lt;/li&gt;
+      
+      &lt;li&gt;&lt;img class="top" src="your image" alt="" /&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+</pre>        
+        <p>In the above example, the image will slide to the right and reveal the paragraph text. Instead of a text, we can put a second image which will appear on mouse hover :</p>
+        
+<pre>
+&lt;ul class="slide moveup"&gt;
+
+      &lt;li&gt;&lt;img class="bottom" src="your 2nd image" alt="" /&gt;&lt;/li&gt;
+      
+      &lt;li&gt;&lt;img class="top" src="your 1st image" alt="" /&gt;&lt;/li&gt;
+
+&lt;/ul&gt;
+</pre>        
+        
+		<hr>
+
+		<h3 id="css"><strong>C) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+        
+        <p>You'll find in each folder a "reset" CSS file, it is not necessary to use it but I would recommend you to do so, in that case it must be the very first CSS file linked from your HTML page.</p>
+        <p>Then you'll find all effects in "border.css", "slides.css" and "overlays.css" files. Each effect has a number in the HTML file and in the CSS so it's much easier for you to copy and paste the code you need.</p>
+        <p>All images used here have a 300 x 200px size, that means that when you find a specific width or height for an effect (all slides effects, the first border effect and most of the "overlays" effects), you have to change it according to the size of your image.</p>
+        <p>Otherwise, you may need to adjust colors according to your needs, keep in mind that in each CSS, the first part contain default styling used for this demo only (font, font size, typography), I've tried to keep it as simple as possible, now you'll find comments within the CSS to help you modify all effects according to your needs.</p>
+        
+		<hr>
+
+		<h3 id="credits"><strong>D) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.</p>
+		
+		<ul>
+			<li><a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">Reset CSS</a></li>
+			<li><a href="http://www.sohtanaka.com/web-design/popout-details-on-hover-w-css/">Popout Details on Hover w/ CSS</a></li>
+			<li><a href="http://nimbupani.com/vignettes-with-css3-box-shadows.html">Vignettes with CSS3 Box Shadows </a></li>
+		</ul>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Keliah</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

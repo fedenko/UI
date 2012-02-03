@@ -1,0 +1,114 @@
+.featuredbox-wrapper,
+.featuredbox{
+	width: 600px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    font-family:  Verdana, Tahoma, "Lucida Sans";
+    font-size: 9pt;
+    font-weight: normal;	
+	background:transparent url(images/background.jpg) no-repeat scroll 0 0;
+} 
+.featuredbox .description{
+	top: 0px;
+	left: 0px;
+	font-size: 12px;
+	color: #FFF;
+	width: 224px;
+	height: 300px;
+	position: absolute;
+	padding: 18px;
+	background:transparent url(images/description.jpg) no-repeat scroll 0 0;
+}
+.featuredbox .description h2{
+	margin: 0px;
+	padding: 15px 0px;
+	font-size: 16px;
+	text-align: right;
+	width: 192px;
+	line-height: 20px;
+}
+.featuredbox .description p{
+	margin: 0px;
+	padding: 0px;
+	text-align: right;
+	width: 192px;
+}
+.featuredbox-wrapper .navigation{
+	bottom:15px;
+	right:15px;
+	padding:0px;
+	position:absolute;
+	z-index:100;	
+	height: 20px;
+	width: 80px;
+}
+.featuredbox-wrapper .navigation ul{
+	list-style: none;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+}
+.featuredbox-wrapper .navigation li{
+	float: left;
+	height: 20px;
+	width: 20px;
+	margin: 0px 5px 0px 0px;
+	padding: 0px;
+	background-color: #FF0000;
+	background:transparent url(images/inactive.html) no-repeat scroll 0 0;
+}
+.featuredbox-wrapper .navigation li.hover{
+
+}
+.featuredbox-wrapper .navigation li.active{
+	background:transparent url(images/active.html) no-repeat scroll 0 0;
+}
+.featuredbox .box-slide1,
+.featuredbox .box-slide2 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 220px;
+    width: 220px;
+    z-index: -1;
+	color: #000;
+	padding: 30px 50px 50px 330px;
+}
+.featuredbox .box-slide1 p,
+.featuredbox .box-slide2 p {
+    padding: 10px 0px;
+	margin: 0px;
+	text-align: left;
+}
+
+.featuredbox .box-slide1 a.button:link, 
+.featuredbox .box-slide1 a.button:visited, 
+.featuredbox .box-slide1 a.button:active,
+.featuredbox .box-slide2 a.button:link, 
+.featuredbox .box-slide2 a.button:visited, 
+.featuredbox .box-slide2 a.button:active{
+	color: #FFF;
+	text-decoration: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	margin: 10px 30px 0px 0px;
+	padding: 5px;
+	width: 180px;
+	text-align: center;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #000;
+	color: #FFF;
+	float: right;
+}
+.featuredbox .box-slide1 a.button:hover,
+.featuredbox .box-slide2 a.button:hover{
+	background-color: #d12313;
+}
+.featuredbox .box-slide1 div,
+.featuredbox .box-slide2 div{
+	background-color: #FFFFFF;
+	width: 220px;
+	height: 220px;
+}

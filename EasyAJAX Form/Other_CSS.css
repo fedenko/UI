@@ -1,0 +1,96 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, code, img, small, strong, dl dt, dd, ol, ul, li, fieldset, form, label {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1em; 
+	background: url(images/green_Back_Long.png) repeat-x 0 0 #82A982;
+	font-size: 1.1em;
+}
+
+p {
+	margin-bottom: 1.5em;	
+}
+
+#dropWrap{                      /*Wrapping div added at run-time to show semi-transparent, rounded border*/
+	position:relative;
+	margin-top: 20px;
+	width: 700px;
+	margin-right: auto; 
+	margin-left: auto;
+	padding-left:20px;
+	padding-right:30px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
+}
+
+* html #dropWrap {
+	padding-bottom:0px;
+	padding-right: 10px;
+}
+
+#FormContainer h1 {		  
+	text-align: center;
+	font-size: 1.6em;
+	color: #148C14;
+	margin-bottom: 0;
+	font-weight:bolder;
+}
+#Ribbon {
+	position: absolute;
+	top: -12px;
+	right: -11px; 
+	width: 176px;
+	height: 175px;
+	background: url(images/EAFormRibbon.png) no-repeat 0 0;
+	z-index: 1000;
+}
+* html #Ribbon { /*Take out ribbon for IE6*/
+	display: none;
+}
+form {
+	margin-left: 25px;
+}
+.subHead {
+	margin-top: .8em;
+	text-align:center; 
+	margin-bottom: 2em;	
+}
+.req_input {		
+	color: red;	
+	font-size: .8em;
+}
+label {                     /*Gives consistent width to all form labels.*/
+	display: block;
+	width: 150px;
+	margin-bottom: .8em;
+}
+input[type="text"], select {   /*input[type="text"] not supported in IE6, text input will display at default IE6 width*/
+	width: 200px;
+}
+textarea {
+	width: 410px;
+	height: 100px;
+}
+#SubmitButton {     /*Pushes the submit button under the last input area (in this case the <textarea> and aligns it*/
+	clear: both;
+	margin-left: 150px;
+	margin-top: 1.5em;
+}
+#Ajax_Disclaimer {
+	position: absolute;
+	bottom: 15px;	
+}
+
+
+

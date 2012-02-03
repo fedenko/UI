@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+    <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>HandScroller demo</title>
+            
+            <script src="handscroller/handscroller.js"></script>
+            
+            <style type="text/css">
+                body {background:black url(demo-images/bg.png);color:#EEE;font:0.8em Arial,Verdana,Sans-Serif;margin:0;padding:0px; height: 100%;}
+                #container {
+                    width: 900px;
+                    padding: 20px;
+                    margin: 0 auto;
+                }
+                h1,h2 { padding: 10px; margin: 10px 0 0; color: white; border-bottom: 4px solid white; clear:both; }
+                h1 { font-size: 2.2em; text-align: center; border:none; }
+                h2 { font-size: 1.5em; }
+                a { color: #D0FF46; font-weight: 700; text-decoration: none; }
+                a:hover, a:focus { text-decoration: underline; }
+                #scroller1, #scroller2, #scroller3 {
+                    height: 150px;
+                    border: 1px solid white;
+                    padding: 10px;
+                    margin: 0;
+                    float: left;
+                    overflow: auto;
+                }
+                #scroller1, #scroller3 {
+                    width: auto;
+                    float: none;
+                }
+                #handle {
+                    height: 172px;
+                    background: url(demo-images/bg2.png) 1px 3px;
+                    width: 50px;
+                    float: left;
+                }
+                .box, .box2, #box {
+                    margin: 10px;
+                    float: left;
+                    display: inline;
+                    width: 273px;
+                    height: 130px;
+                    overflow: hidden;
+                    border: 3px solid white;
+                }
+                #box {
+                    float: right;
+                }
+                .nojs {
+                    color: black;
+                    font-weight: 700;
+                    padding: 20px;
+                    border: 3px solid red;
+                    margin: 10px;
+                    background: white;
+                    text-align: center;
+                    font-size: 1.4em;
+                }
+                body.js .nojs { display: none; }
+            </style>
+            
+    </head>
+    <body>
+        <script>document.body.className = 'js';</script>
+        
+        <!-- <body content> -->
+        <div id="container">
+            <div class="nojs">JavaScript is required in order to see this component in action!</div>
+            <h1>HandScroller Demo</h1>
+            <p>(Hover over different sections, press down on the mouse then drag...)</p>
+            <h2>Regular (default setup)</h2>
+            <div id="scroller1">
+                <p>Lorem ipsum <a href="http://google.com/">This is a working LINK!</a> amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, <a href="http://google.com/">Another working LINK!</a> vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, ultricies vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+                <p>Lorem ipsum <a href="http://google.com/">This is a working LINK!</a> amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, <a href="http://google.com/">Another working LINK!</a> vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+            </div>
+            
+            <h2>With individual images</h2>
+            <div class="box"><img src="demo-images/pic.jpg" alt="An image" /></div>
+            <div class="box"><img src="demo-images/pic.jpg" alt="An image" /></div>
+            <div class="box"><img src="demo-images/pic.jpg" alt="An image" /></div>
+            
+            <h2>Regular with handle-bar AND vertical mouse-wheel scrolling</h2>
+            
+            <div id="scroller2">
+                <p>Lorem ipsum <a href="http://google.com/">This is a working LINK!</a> amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, <a href="http://google.com/">Another working LINK!</a> vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, ultricies vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+                <p>Lorem ipsum <a href="http://google.com/">This is a working LINK!</a> amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, <a href="http://google.com/">Another working LINK!</a> vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+            </div><br style="clear:left;"/>
+            
+            <h2>All images controlling each-other</h2>
+            <div class="box2"><img src="demo-images/pic.jpg" alt="An image" /></div>
+            <div class="box2"><img src="demo-images/pic.jpg" alt="An image" /></div>
+            <div class="box2"><img src="demo-images/pic.jpg" alt="An image" /></div>
+        
+            <h2>Regular with nested scrolling image</h2>
+            
+            <div id="scroller3">
+                <p>Lorem ipsum <a href="http://google.com/">This is a working LINK!</a> amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, <a href="http://google.com/">Another working LINK!</a> vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+                <div id="box"><img src="demo-images/pic.jpg" alt="An image" /></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, ultricies vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+                <p>Lorem ipsum <a href="http://google.com/">This is a working LINK!</a> amet, consectetur adipiscing elit. Sed ultrices, metus sit amet lacinia pellentesque, erat massa interdum dolor, eget tincidunt nisi mi ultrices nulla. Ut quis erat ut turpis euismod sagittis. Vestibulum ultrices risus in sem ullamcorper pellentesque. Duis at odio ligula, eu porta turpis. Mauris fermentum facilisis dapibus. Maecenas fermentum arcu id urna pellentesque mattis. Vivamus at massa nunc, et laoreet sapien. Praesent metus massa, placerat at commodo quis, <a href="http://google.com/">Another working LINK!</a> vel arcu. Duis ipsum magna, ornare a consectetur eu, ullamcorper eu lorem. Praesent rutrum tellus nec justo tempus egestas. Morbi sollicitudin venenatis velit quis dignissim. Mauris suscipit placerat laoreet. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed augue tellus, varius nec volutpat a, lobortis a odio. </p>
+            </div>
+            <script>
+            handScroller({className:'box'});handScroller({className:'box2'},{controls:{className:'box2'}});handScroller(document.getElementById('scroller1'),{styles:{overflow:'hidden'}});var handle=document.createElement('div'),scroller=document.getElementById('scroller2');handle.id='handle';scroller.style.overflow='hidden';scroller.parentNode.insertBefore(handle,scroller.nextSibling);scroller.style.overflow='hidden';scroller.style.width='828px';handScroller(handle,{controls:scroller,mousewheel:'y'});handScroller(document.getElementById('box'));handScroller(document.getElementById('scroller3'),{styles:{overflow:'hidden'}});
+            </script>
+            <h2 style="border-bottom: none; border-top: 4px solid white; margin: 50px 0;">&copy; James Padolsey | Buy it on TF!</h2>
+        
+        </div>
+            
+        <!-- </body content> -->
+        
+        
+        
+
+        
+    </body>
+</html>

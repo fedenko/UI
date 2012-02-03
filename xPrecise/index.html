@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>X-Precise</title>
+<link rel="stylesheet" type="text/css" media="all" href="_ui/css/main.css" />
+<link rel="stylesheet" type="text/css" media="print" href="_ui/css/print.css" />
+<!--[if lte IE 7]>
+  <link rel="stylesheet" type="text/css" media="all" href="_ui/css/ie.css" />
+  <![endif]-->
+<!--[if lte IE 6]>
+  <link rel="stylesheet" type="text/css" media="all" href="_ui/css/ie6.css" />
+  <![endif]-->
+</head>
+<body>
+<div class="container">
+    <ol id="accessibility-nav">
+        <li><a href="#navigation">Skip to navigation</a></li>
+        <li><a href="#content">Skip to content</a></li>
+        <li><a href="#sidebar">Skip to sidebar</a></li>
+    </ol>
+    <!-- / accessibility-nav -->
+    <hr />
+    <div id="header">
+        <div class="x-team">
+            <h3 class="ir x-team-logo">X-Team<span></span></h3>
+            <p>Bring your creative visions to life with X-Team</p>
+        </div>
+        <h1 class="site-name">X-Precise<span></span></h1>
+    </div>
+    <!-- / header -->
+    <hr />
+    <div id="navigation">
+        <ul>
+            <li><a href="#works">How it <strong>works</strong>?</a></li>
+            <li><a href="#install">How to <strong>install</strong>?</a></li>
+            <li><a href="#use">How to <strong>use</strong>?</a></li>
+        </ul>
+    </div>
+    <!-- / navigation -->
+    <hr />
+    <div id="content">
+        <p class="intro">X-Precise is a simple yet effective method to achieve pixel precise results in your PSD to XHTML/CSS projects. By overlaying or underlaying a developed page with a semi-transparent image of the original design you can immediately see and repair any differences from the client's design. Using X-Precise as a method to ensure quality will save you both time and money, and your customers will be happier for it, too!</p>
+        <h2 id="works">How it <em>works</em>?</h2>
+        <p>X-Precise interface is initialized by attaching one JavaScript file to the page. An appearance of the interface can be seen on this sample page.</p>
+        <h2 id="install">How to <em>install</em>?</h2>
+        <p>Download the latest version of X-Precise. Unpack <code>_xprecise</code> folder to the root directory of your project. Attach xprecise.min.js to the page to load the X-Precise interface. X-Precise requires jQuery to run, other libraries are packed in <code>xprecise.min.js</code>.</p>
+        <div class="code"> <code> &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;<br />
+            &lt;script src="_xprecise/xprecise.min.js" type="text/javascript"&gt;&lt;/script&gt; </code> </div>
+        <p>Create overlay images for pages you are coding. Grayscale images are recommended to see the differences better. Use JPG for the overlay and save it with the same name as the page your are working on to X-Precise folder <code>/_xprecise/</code>. X-Precise will automatically try to load a JPG with the same name as the page has <code>(index.html -> index.jpg)</code> from this folder. Of course you can load an image with different name, too. Just be sure to change the path in X-Precise interface. </p>
+        <h2 id="use">How to <em>use</em>?</h2>
+        <p>The main feature of X-Precise is that it automatically stores and remembers all its settings so you should have everything at the same place with the same settings when you reload the page to check your changes. You can:</p>
+        <ul>
+            <li>Open / Close X-Precise interface</li>
+            <li>Position X-Precise interface at the screen by dragging it around</li>
+            <li>Set the overlay image and choose whether it should over or underlay the page</li>
+            <li>Switch the overlay image on/off - and work with the page as you normally would</li>
+            <li>Position the overlay image by dragging or changing its Top and Left coordinates</li>
+            <li>Fine-tune the position of the overlay image, use W S A D keys when hovering over the image</li>
+            <li>Change opacity of the overlay image</li>
+            <li>Change opacity of the page</li>
+        </ul>
+        <p>Any time you do any of the actions above the settings are automatically stored to a cookie. The settings are stored individually for every page you are using X-Precise with.</p>
+        <h3>Recommendations:</h3>
+        <ul>
+            <li>Try to fix the biggest differences from the client's design first. These are differences that the client can easily spot. Usually these are the exact position of various elements with fixed size like logos, banners, badges, buttons etc. They can also be custom font headings or navigation elements, alignment of the elements on the grid, padding and margin of the elements and their overall size. Keep in mind that designers often are more sensitive about their designs than you!</li>
+            <li>Don't be a slave of X-Precise! Sometimes it's hard to achieve pixel accuracy, particularly in long content areas that contains long text or many repeating elements such as items listings and blog posts. This due to the fact that designers are less precise in these areas and don't use the same margin, padding etc. everywhere. A super pixel-precision usually isn't necessary in these cases, however, so you should rely more on your own eyes than X-Precise to judge if these sections look good in general.</li>
+            <li>After long sections such as those mentioned above, sometimes another section may follow where pixel accuracy is desirable. This could for example be a custom bottom of the page or footer. With X-Precise, however, you can drag the overlay image over these areas and work with them until you achieve desired accuracy.</li>
+            <li>Before sending the project to the client for a preview make sure you detach xprecise.js from the pages and remove /_xprecise/ folder with X-Precise and overlay images. You should backup this folder for later use.</li>
+        </ul>
+    </div>
+    <!-- / content -->
+    <hr />
+</div>
+<!-- / container -->
+<div id="footer-wrapper">
+    <div id="footer">
+        <p>X-Precise is a brand of X-TEAM. All rights reserved.</p>
+    </div>
+    <!-- / footer -->
+</div>
+<!-- / footer-wrapper -->
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<script type="text/javascript" src="_xprecise/xprecise.min.js"></script>
+</body>
+</html>

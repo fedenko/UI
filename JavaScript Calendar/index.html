@@ -1,0 +1,165 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="cache-control" content="no-cache" />
+  <meta name="keywords" content="jscalendar javascriptcalendar" />
+	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/calendar.css" />
+	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/setup.css" />
+	<link rel="stylesheet" type="text/css" media="screen,projection,print" href="css/text.css" />  
+	<script type="text/javascript" language="javascript" src="js/resources.js"></script>
+	<script type="text/javascript" language="javascript" src="js/config.js"></script>
+	<script type="text/javascript" language="javascript" src="js/calendar.js"></script>
+    <link rel="icon" type="image/x-icon" href="http://s3.envato.com/files/img/favicon.ico" />
+	<title>JSCalendar</title>
+</head>
+
+<!-- Global IE fix to avoid layout crash when single word size wider than column width -->
+<!--[if IE]><style type="text/css"> body {word-wrap: break-word;}</style><![endif]-->
+
+<body>
+  <!-- Main Page Container -->
+  <div class="page-container">
+
+    <!-- For alternative headers START PASTE here -->
+
+    <!-- For alternative headers END PASTE here -->
+
+    <!-- B. MAIN -->
+    <div class="main">
+  
+      <!-- B.1 MAIN CONTENT -->
+      <div class="main-content">
+        
+        <!-- Pagetitle -->
+        <h1 class="pagetitle">JSCalendar</h1>
+
+        <!-- Content unit - One column -->
+        <div class="column1-unit">		   
+		  <br />
+		  <p>
+            To select a date range, click the start date, then
+            SHIFT+click on the end date.  You can also use CTRL+click
+            to select/unselect individual dates.
+          </p>
+          <p>
+            Keyboard operations, when the calendar is focused (note
+            you can focus it with TAB):
+          </p>
+          <ul>
+            <li><b>Arrows</b>: select a date</li>
+            <li><b>SPACE</b>: select today</li>
+            <li><b>CTRL + UP/DOWN</b>: select year</li>
+			<li><b>CTRL + LEFT/RIGHT</b>: select month</li>
+            <li><b>ENTER(only inline mode)</b>: print and close</li>
+            <li><b>ESC(only inline mode)</b>:close</li>
+          </ul>
+        </div> 
+		<hr class="clear-contentunit" />
+		<h1 class="block">Inline Calendar</h1>
+		<br />
+		<div id="calendar" style="height:230px;"></div>        
+	
+		<div>
+			<table style="width:100%">
+				<tr>
+					<td style="width:30%">Language:</td>
+					<td><select id="language" onchange="javascript:changeLanguage(this.value);">
+						<option value="en">English</option>
+						<option value="fr">French</option>
+						<option value="ja">Japanese</option>
+						<option value="zh-cn">Chinese</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td>First Day of Week:</td>
+					<td><select id="weekday" onchange="javascript:changeWeekFirstDay(this.value);">
+						<option value="6">Sunday</option>
+						<option value="0">Monday</option>
+						<option value="1">Tuesday</option>
+						<option value="2">Wednesday</option>
+						<option value="3">Thursday</option>
+						<option value="4">Friday</option>
+						<option value="5">Saturday</option>
+					</select></td>
+				</tr>				
+				<tr>
+					<td>Skin:</td>
+					<td><select id="skin" onchange="javascript:changeSkin(this.value);">
+						<option value="black">Black</option>
+						<option value="green">Green</option>
+						<option value="red">Red</option>
+						<option value="blue">Blue</option>
+						<option value="stripe">Stripe</option>
+					</select></td>
+				</tr>
+				</table>
+				<hr class="clear-contentunit" />
+				<h1 class="block">Pop Calendar</h1>
+				<br />
+				<table>
+				<tr>
+					<td>print foarmat(only for inline calendar):</td>
+					<td><select id="format">
+						<option value="YYYY-MM-DD">YYYY-MM-DD</option>
+						<option value="MM-DD-YYYY">MM-DD-YYYY</option>
+						<option value="DD-MM-YY">DD-MM-YY</option>
+					</select></td>
+				</tr>
+				<tr>
+					<td colspan="2"><br /></td>
+				</tr>
+				<tr>
+					<td><input id="export" type="text" style="width:100px;" /></td>
+					<td><input id="button" type="button" style="width:40px;" value="..." onclick="javascript:createPopCalendar();"></td>
+				</tr>
+			</table>
+			<div style="height:300px;"></div>
+		</div>
+      </div>
+
+      <!-- B.2 MAIN NAVIGATION -->
+    </div>
+      
+    <!-- C. FOOTER AREA -->      
+    
+  </div> 
+<script type="text/javascript">
+	var ca1 = new JSCalender.InlineCalender("calendar");
+	ca1.show();
+	
+	var ca12 = new JSCalender.InlineCalender("calendar");
+	
+	changeLanguage = function(lang)
+	{
+		ca12.setLanguage(lang);
+		ca12.show();
+	}
+
+	changeWeekFirstDay = function(day)
+	{
+		ca12.setFirstDayInWeek(parseInt(day,10));
+		ca12.show();
+	}
+	
+	changeSkin = function(skin)
+	{
+		ca12.setCss(skin);
+		ca12.show();
+	}
+	
+	createPopCalendar = function()
+	{
+		var ca15 = new JSCalender.PopCalender("export", "button");
+		ca15.setPrintFarmat(document.getElementById("format").value);
+		ca15.show();
+	}
+	
+</script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+	    <title>Modern Accordion</title>
+	    <link href="css/modern_accordion.css" rel="stylesheet" type="text/css" />
+	    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+	    <script type="text/javascript" src="js/modern_accordion-min.js"></script>
+	    <script type="text/javascript">
+            $(document).ready(function(){
+                var acc1 = new ModernAccordion('accordion1');
+                var acc2 = new ModernAccordion('accordion2');
+                acc2.showItem(0);
+            });
+	    </script>
+	    
+	    <style type="text/css">
+	       * {
+	           padding : 0px 0px;
+	           margin : 0px 0px;
+	       }
+	       
+	       h1 {
+	           font-family: arial;
+	           font-size: 16pt;
+	           margin: 60px 0px 10px 0px;
+	           text-transform: uppercase;
+	           color: #318DF2;
+	       }
+	       
+	       #wrap {
+	           margin : 0px auto;    
+	           width : 600px; 
+	           overflow : hidden;
+	       }
+	    </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <h1>* No pane opened initially.</h1>
+            <div id="accordion1" class="modern_accordion">
+                <div title="Image">
+                    <img src="images/bbtour-hands-001.jpg" alt="" />
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+                <div title="Video">
+                    <object width="590" height="332"><param name="allowfullscreen" value="true" />
+                        <param name="allowscriptaccess" value="always" />
+                        <param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4936492&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" />
+                        <embed src="http://vimeo.com/moogaloop.swf?clip_id=4936492&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="590" height="332"></embed>
+                    </object>
+                </div>
+                <div title="Text">
+                    Australia, officially the Commonwealth of Australia, is a country in the southern hemisphere comprising the mainland, which is both the world's smallest continent and the world's largest island[8], the island of Tasmania, and numerous other islands in the Indian and Pacific Oceans.N4 It is the only area of land simultaneously considered a continent, a country and an island. Neighbouring countries include Indonesia, East Timor and Papua New Guinea to the north, the Solomon Islands, Vanuatu and New Caledonia to the north-east and New Zealand to the south-east.
+                    <br/><br/>
+                    For around 40,000 years before European settlement commenced in the late 18th century, the Australian mainland and Tasmania were inhabited by around 250 individual nations[9] of indigenous Australians.[10] After sporadic visits by fishermen from the immediate north, and European discovery by Dutch explorers in 1606,[11] the eastern half of Australia was claimed by the British in 1770 and initially settled through penal transportation to the colony of New South Wales, founded on 26 January 1788. The population grew steadily in the following years; the continent was explored, and during the 19th century another five largely self-governing Crown Colonies were established.                </div>
+                <div title="UK">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div title="New Zeland">
+                    New Zealand is an island country in the south-western Pacific Ocean comprising two main landmasses (commonly called the North Island and the South Island), and numerous smaller islands, most notably Stewart Island/Rakiura and the Chatham Islands. The indigenous Māori named New Zealand Aotearoa, commonly translated as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands and Niue (self-governing but in free association); Tokelau; and the Ross Dependency (New Zealand's territorial claim in Antarctica).
+                    <br/><br/>
+                    New Zealand is notable for its geographic isolation: it is situated about 2000 km (1250 miles) southeast of Australia across the Tasman Sea, and its closest neighbours to the north are New Caledonia, Fiji and Tonga. During its long isolation New Zealand developed a distinctive fauna dominated by birds, a number of which became extinct after the arrival of humans and the mammals they introduced.
+                </div>
+                <div title="South Africa">
+                    The Republic of South Africa, also known by other official names, is a country located at the southern tip of the continent of Africa. The South African coast stretches 2,798 kilometres (1,739 mi)[5][6] and borders both the Atlantic and Indian oceans.[7] To the north of South Africa lie Namibia, Botswana and Zimbabwe, to the east are Mozambique and Swaziland, while the Kingdom of Lesotho is an independent enclave surrounded by South African territory.[8]
+                    <br/><br/>
+                    Modern human beings have inhabited South Africa for more than 100,000 years.[9] At the time of European contact, its indigenous peoples reflected migrations from other parts of Africa, where new tribes had become dominant. Two major groups were Xhosa and Zulu peoples.                
+                </div>
+                <div title="Spain">
+                    Spain or the Kingdom of Spain (Spanish: Reino de España), is a country located in southwestern Europe on the Iberian Peninsula.[note 6] Its mainland is bordered to the south and east by the Mediterranean Sea except for a small land boundary with Gibraltar; to the north by France, Andorra, and the Bay of Biscay; and to the west by the Atlantic Ocean and Portugal. Spanish territory also includes the Balearic Islands in the Mediterranean, the Canary Islands in the Atlantic Ocean off the African coast, and two autonomous cities in North Africa, Ceuta and Melilla, that border Morocco. With an area of 504,030 km², Spain is the second largest country in Western Europe and the European Union after France.
+                    <br/><br/>
+                    Because of its location, the territory of Spain was subject to many external influences, often simultaneously, since prehistoric times and through the dawn of Spain as a country. On the other side, the country itself has been an important source of influence to other regions, chiefly during the Modern Era, when it became a global empire that has left a legacy of over 400 million Spanish speakers today.
+                </div>
+                <div title="Japan">
+                    Japan is an island nation in East Asia. Located in the Pacific Ocean, it lies to the east of the Sea of Japan, People's Republic of China, North Korea, South Korea and Russia, stretching from the Sea of Okhotsk in the north to the East China Sea and Taiwan in the south. The characters which make up Japan's name mean "sun-origin", which is why Japan is sometimes identified as the "Land of the Rising Sun".
+                    <br/><br/>
+                    Japan comprises over 3,000 islands[5] making it an archipelago. The four largest islands are Honshu, Hokkaid and Shikoku, together accounting for 97% of Japan's land area. Most of the islands are mountainous, many volcanic; for example, Japan's highest peak, Mount Fuji, is a volcano. Japan has the world's tenth largest population, with about 128 million people. The Greater Tokyo Area, which includes the de facto capital city of Tokyo and several surrounding prefectures, is the largest metropolitan area in the world, with over 30 million residents.                
+                </div>
+                <div title="South Korea">
+                    South Korea, officially the Republic of Korea (ROK) and often referred to as Korea, is a country in East Asia, occupying the southern half of the Korean Peninsula. Also known as the "Land of the Morning Calm", it is neighbored by China to the west and Japan to the east, and borders North Korea to the north. Its capital is Seoul, the second largest metropolitan city in the world[3] and a major global city.[4] South Korea lies in a temperate climate region with a predominantly mountainous terrain. Its territory covers a total area of 100,032 square kilometers and has a population of almost 50 million, making it one of the most densely populated regions in the world.[5]
+                    <br/><br/>
+                    South Korea is a presidential republic consisting of 16 administrative divisions. Archaeological findings indicate that the Korean Peninsula was occupied by humans as early as the Lower Paleolithic period.[6][7] Korea first began with the founding of Gojoseon kingdom in 2333 BCE by Dangun. Following the unification of North and South States period under Goryeo 936 AD, Korea went through the Goryeo and Joseon Dynasty as one nation until the end of the Korean Empire in 1910. After liberation and division, South Korea was established in 1948 as a democracy. Following the Korean War, the South Korean economy grew significantly, transforming the country into a major global economy[8].
+                </div>
+                <div title="Germany">
+                    Germany, officially the Federal Republic of Germany,[4] is a country in Central Europe. It is bordered to the north by the North Sea, Denmark, and the Baltic Sea; to the east by Poland and the Czech Republic; to the south by Austria and Switzerland; and to the west by France, Luxembourg, Belgium, and the Netherlands. The territory of Germany covers 357,021 square kilometers (137,847 sq mi) and is influenced by a temperate seasonal climate. With 82 million inhabitants, it accounts for the largest population among the member states of the European Union and is home to the third-largest number of international migrants worldwide.[5]
+                    <br/><br/>
+                    A region named Germania inhabited by several Germanic peoples has been known and documented before AD 100. Beginning in the 10th century, German territories formed a central part of the Holy Roman Empire that lasted until 1806. During the 16th century, northern Germany became the centre of the Protestant Reformation. As a modern nation-state, the country was first unified amidst the Franco-Prussian War in 1871. In 1949, after World War II, Germany was divided into two separate states—East Germany and West Germany—along the lines of Allied occupation.[6] The two states were unified in 1990. West Germany was a founding member of the European Community (EC) in 1957, which became the European Union in 1993. It is part of the Schengen zone and adopted the European currency, the euro, in 1999.
+                </div>
+                <div title="Italy">
+                    Italy, officially the Italian Republic (Italian: Repubblica Italiana), is a country located on the Italian Peninsula in Southern Europe and on the two largest islands in the Mediterranean Sea, Sicily and Sardinia. Italy shares its northern, Alpine boundary with France, Switzerland, Austria and Slovenia. The independent states of San Marino and the Vatican City are enclaves within the Italian Peninsula, and Campione d'Italia is an Italian exclave in Switzerland.
+                    <br/><br/>
+                    The land known as Italy today has been the cradle of many European cultures and peoples, such as the Etruscans and the Romans, and later was the birthplace of the University, the Renaissance that began in Tuscany and spread all over Europe, Vitruvian Man, modern science and astronomy, heliocentrism and Opera. Italy's capital, Rome, was for centuries the center of Western civilization. Italy possessed a colonial empire from the second half of the nineteenth century to the mid-twentieth century.
+                </div>
+                <div title="Romania">
+                    Romania is a country located in Southeastern and Central Europe, North of the Balkan Peninsula, on the Lower Danube, within and outside the Carpathian arch, bordering on the Black Sea[3]. Almost all of the Danube Delta is located within its territory. It shares a border with Hungary and Serbia to the west, Ukraine and the Republic of Moldova to the northeast, and Bulgaria to the south.
+                    <br/><br/>
+                    The territory's recorded history includes periods of rule by Dacians, the Roman Empire, the Kingdom of Hungary, and the Ottoman Empire. As a nation-state, the country was formed by the merging of Moldavia and Wallachia in 1859 and it gained recognition of its independence in 1878. Later, in 1918, they were joined by Transylvania, Bukovina and Bessarabia. At the end of World War II, parts of its territories (roughly the present day Moldova) were occupied by USSR and Romania became a member of the Warsaw Pact. With the fall of the Iron Curtain in 1989, Romania started a series of political and economic reforms. After a decade of post-independence economic problems, Romania made economic reforms such as low flat tax rates in 2005 and joined the European Union in January 1, 2007. While Romania's income level remains one of the lowest in the European Union, reforms have increased the growth speed. Romania is now an upper-middle income country economy.
+                </div>
+                <div title="Russia">
+                    Russia, officially known as the Russian Federation, is a country in northern Eurasia (Europe and Asia together).[12] It is a semi-presidential republic, comprising 83 federal subjects. Russia shares land borders with the following countries (from northwest to southeast): Norway, Finland, Estonia, Latvia, Lithuania (via Kaliningrad Oblast), Poland (via Kaliningrad Oblast), Belarus, Ukraine, Georgia, Azerbaijan, Kazakhstan, China, Mongolia and the Democratic People's Republic of Korea. It also has maritime borders with Japan (by the Sea of Okhotsk), the Republic of Korea (by the Sea of Japan), Sweden (by the Baltic Sea), Turkey (by the Black Sea), and the United States (by the Bering Strait). At 17,075,400 square kilometres (6,592,800 sq mi), Russia is, by far, the largest country in the world, covering more than an eighth of the Earth’s land area; with 142 million people, it is the ninth largest by population.[2] It extends across the whole of northern Asia and 40% of Europe, spanning 11 time zones, and incorporating a wide range of environments and landforms. Russia has the world's largest reserves of mineral and energy resources,[13] and is considered an energy superpower. It has the world's largest forest reserves and its lakes contain approximately one-quarter of the world's unfrozen fresh water.[14]
+                </div>
+            </div>
+            <h1>* Opened the first pane initially.</h1>
+            <div id="accordion2" class="modern_accordion">
+                <div title="Image">
+                    <img src="images/bbtour-hands-001.jpg" alt="" />
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    </p>
+                </div>
+                <div title="Video">
+                    <object width="590" height="332"><param name="allowfullscreen" value="true" />
+                        <param name="allowscriptaccess" value="always" />
+                        <param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=4936492&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" />
+                        <embed src="http://vimeo.com/moogaloop.swf?clip_id=4936492&amp;server=vimeo.com&amp;show_title=1&amp;show_byline=1&amp;show_portrait=0&amp;color=00ADEF&amp;fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="590" height="332"></embed>
+                    </object>
+                </div>
+                <div title="Text">
+                    Australia, officially the Commonwealth of Australia, is a country in the southern hemisphere comprising the mainland, which is both the world's smallest continent and the world's largest island[8], the island of Tasmania, and numerous other islands in the Indian and Pacific Oceans.N4 It is the only area of land simultaneously considered a continent, a country and an island. Neighbouring countries include Indonesia, East Timor and Papua New Guinea to the north, the Solomon Islands, Vanuatu and New Caledonia to the north-east and New Zealand to the south-east.
+                    <br/><br/>
+                    For around 40,000 years before European settlement commenced in the late 18th century, the Australian mainland and Tasmania were inhabited by around 250 individual nations[9] of indigenous Australians.[10] After sporadic visits by fishermen from the immediate north, and European discovery by Dutch explorers in 1606,[11] the eastern half of Australia was claimed by the British in 1770 and initially settled through penal transportation to the colony of New South Wales, founded on 26 January 1788. The population grew steadily in the following years; the continent was explored, and during the 19th century another five largely self-governing Crown Colonies were established.                </div>
+                <div title="UK">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </div>
+                <div title="New Zeland">
+                    New Zealand is an island country in the south-western Pacific Ocean comprising two main landmasses (commonly called the North Island and the South Island), and numerous smaller islands, most notably Stewart Island/Rakiura and the Chatham Islands. The indigenous Māori named New Zealand Aotearoa, commonly translated as The Land of the Long White Cloud. The Realm of New Zealand also includes the Cook Islands and Niue (self-governing but in free association); Tokelau; and the Ross Dependency (New Zealand's territorial claim in Antarctica).
+                    <br/><br/>
+                    New Zealand is notable for its geographic isolation: it is situated about 2000 km (1250 miles) southeast of Australia across the Tasman Sea, and its closest neighbours to the north are New Caledonia, Fiji and Tonga. During its long isolation New Zealand developed a distinctive fauna dominated by birds, a number of which became extinct after the arrival of humans and the mammals they introduced.
+                </div>
+                <div title="South Africa">
+                    The Republic of South Africa, also known by other official names, is a country located at the southern tip of the continent of Africa. The South African coast stretches 2,798 kilometres (1,739 mi)[5][6] and borders both the Atlantic and Indian oceans.[7] To the north of South Africa lie Namibia, Botswana and Zimbabwe, to the east are Mozambique and Swaziland, while the Kingdom of Lesotho is an independent enclave surrounded by South African territory.[8]
+                    <br/><br/>
+                    Modern human beings have inhabited South Africa for more than 100,000 years.[9] At the time of European contact, its indigenous peoples reflected migrations from other parts of Africa, where new tribes had become dominant. Two major groups were Xhosa and Zulu peoples.                
+                </div>
+                <div title="Spain">
+                    Spain or the Kingdom of Spain (Spanish: Reino de España), is a country located in southwestern Europe on the Iberian Peninsula.[note 6] Its mainland is bordered to the south and east by the Mediterranean Sea except for a small land boundary with Gibraltar; to the north by France, Andorra, and the Bay of Biscay; and to the west by the Atlantic Ocean and Portugal. Spanish territory also includes the Balearic Islands in the Mediterranean, the Canary Islands in the Atlantic Ocean off the African coast, and two autonomous cities in North Africa, Ceuta and Melilla, that border Morocco. With an area of 504,030 km², Spain is the second largest country in Western Europe and the European Union after France.
+                    <br/><br/>
+                    Because of its location, the territory of Spain was subject to many external influences, often simultaneously, since prehistoric times and through the dawn of Spain as a country. On the other side, the country itself has been an important source of influence to other regions, chiefly during the Modern Era, when it became a global empire that has left a legacy of over 400 million Spanish speakers today.
+                </div>
+                <div title="Japan">
+                    Japan is an island nation in East Asia. Located in the Pacific Ocean, it lies to the east of the Sea of Japan, People's Republic of China, North Korea, South Korea and Russia, stretching from the Sea of Okhotsk in the north to the East China Sea and Taiwan in the south. The characters which make up Japan's name mean "sun-origin", which is why Japan is sometimes identified as the "Land of the Rising Sun".
+                    <br/><br/>
+                    Japan comprises over 3,000 islands[5] making it an archipelago. The four largest islands are Honshu, Hokkaid and Shikoku, together accounting for 97% of Japan's land area. Most of the islands are mountainous, many volcanic; for example, Japan's highest peak, Mount Fuji, is a volcano. Japan has the world's tenth largest population, with about 128 million people. The Greater Tokyo Area, which includes the de facto capital city of Tokyo and several surrounding prefectures, is the largest metropolitan area in the world, with over 30 million residents.                
+                </div>
+                <div title="South Korea">
+                    South Korea, officially the Republic of Korea (ROK) and often referred to as Korea, is a country in East Asia, occupying the southern half of the Korean Peninsula. Also known as the "Land of the Morning Calm", it is neighbored by China to the west and Japan to the east, and borders North Korea to the north. Its capital is Seoul, the second largest metropolitan city in the world[3] and a major global city.[4] South Korea lies in a temperate climate region with a predominantly mountainous terrain. Its territory covers a total area of 100,032 square kilometers and has a population of almost 50 million, making it one of the most densely populated regions in the world.[5]
+                    <br/><br/>
+                    South Korea is a presidential republic consisting of 16 administrative divisions. Archaeological findings indicate that the Korean Peninsula was occupied by humans as early as the Lower Paleolithic period.[6][7] Korea first began with the founding of Gojoseon kingdom in 2333 BCE by Dangun. Following the unification of North and South States period under Goryeo 936 AD, Korea went through the Goryeo and Joseon Dynasty as one nation until the end of the Korean Empire in 1910. After liberation and division, South Korea was established in 1948 as a democracy. Following the Korean War, the South Korean economy grew significantly, transforming the country into a major global economy[8].
+                </div>
+                <div title="Germany">
+                    Germany, officially the Federal Republic of Germany,[4] is a country in Central Europe. It is bordered to the north by the North Sea, Denmark, and the Baltic Sea; to the east by Poland and the Czech Republic; to the south by Austria and Switzerland; and to the west by France, Luxembourg, Belgium, and the Netherlands. The territory of Germany covers 357,021 square kilometers (137,847 sq mi) and is influenced by a temperate seasonal climate. With 82 million inhabitants, it accounts for the largest population among the member states of the European Union and is home to the third-largest number of international migrants worldwide.[5]
+                    <br/><br/>
+                    A region named Germania inhabited by several Germanic peoples has been known and documented before AD 100. Beginning in the 10th century, German territories formed a central part of the Holy Roman Empire that lasted until 1806. During the 16th century, northern Germany became the centre of the Protestant Reformation. As a modern nation-state, the country was first unified amidst the Franco-Prussian War in 1871. In 1949, after World War II, Germany was divided into two separate states—East Germany and West Germany—along the lines of Allied occupation.[6] The two states were unified in 1990. West Germany was a founding member of the European Community (EC) in 1957, which became the European Union in 1993. It is part of the Schengen zone and adopted the European currency, the euro, in 1999.
+                </div>
+                <div title="Italy">
+                    Italy, officially the Italian Republic (Italian: Repubblica Italiana), is a country located on the Italian Peninsula in Southern Europe and on the two largest islands in the Mediterranean Sea, Sicily and Sardinia. Italy shares its northern, Alpine boundary with France, Switzerland, Austria and Slovenia. The independent states of San Marino and the Vatican City are enclaves within the Italian Peninsula, and Campione d'Italia is an Italian exclave in Switzerland.
+                    <br/><br/>
+                    The land known as Italy today has been the cradle of many European cultures and peoples, such as the Etruscans and the Romans, and later was the birthplace of the University, the Renaissance that began in Tuscany and spread all over Europe, Vitruvian Man, modern science and astronomy, heliocentrism and Opera. Italy's capital, Rome, was for centuries the center of Western civilization. Italy possessed a colonial empire from the second half of the nineteenth century to the mid-twentieth century.
+                </div>
+                <div title="Romania">
+                    Romania is a country located in Southeastern and Central Europe, North of the Balkan Peninsula, on the Lower Danube, within and outside the Carpathian arch, bordering on the Black Sea[3]. Almost all of the Danube Delta is located within its territory. It shares a border with Hungary and Serbia to the west, Ukraine and the Republic of Moldova to the northeast, and Bulgaria to the south.
+                    <br/><br/>
+                    The territory's recorded history includes periods of rule by Dacians, the Roman Empire, the Kingdom of Hungary, and the Ottoman Empire. As a nation-state, the country was formed by the merging of Moldavia and Wallachia in 1859 and it gained recognition of its independence in 1878. Later, in 1918, they were joined by Transylvania, Bukovina and Bessarabia. At the end of World War II, parts of its territories (roughly the present day Moldova) were occupied by USSR and Romania became a member of the Warsaw Pact. With the fall of the Iron Curtain in 1989, Romania started a series of political and economic reforms. After a decade of post-independence economic problems, Romania made economic reforms such as low flat tax rates in 2005 and joined the European Union in January 1, 2007. While Romania's income level remains one of the lowest in the European Union, reforms have increased the growth speed. Romania is now an upper-middle income country economy.
+                </div>
+                <div title="Russia">
+                    Russia, officially known as the Russian Federation, is a country in northern Eurasia (Europe and Asia together).[12] It is a semi-presidential republic, comprising 83 federal subjects. Russia shares land borders with the following countries (from northwest to southeast): Norway, Finland, Estonia, Latvia, Lithuania (via Kaliningrad Oblast), Poland (via Kaliningrad Oblast), Belarus, Ukraine, Georgia, Azerbaijan, Kazakhstan, China, Mongolia and the Democratic People's Republic of Korea. It also has maritime borders with Japan (by the Sea of Okhotsk), the Republic of Korea (by the Sea of Japan), Sweden (by the Baltic Sea), Turkey (by the Black Sea), and the United States (by the Bering Strait). At 17,075,400 square kilometres (6,592,800 sq mi), Russia is, by far, the largest country in the world, covering more than an eighth of the Earth’s land area; with 142 million people, it is the ninth largest by population.[2] It extends across the whole of northern Asia and 40% of Europe, spanning 11 time zones, and incorporating a wide range of environments and landforms. Russia has the world's largest reserves of mineral and energy resources,[13] and is considered an energy superpower. It has the world's largest forest reserves and its lakes contain approximately one-quarter of the world's unfrozen fresh water.[14]
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

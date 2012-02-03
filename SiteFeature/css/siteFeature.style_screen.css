@@ -1,0 +1,89 @@
+/* siteFeature CSS */
+
+/* ---------------------------------------------------------------------- 
+	In the name of Progressive Enhancement, this is the default style for 4 "tabs" that will be seen by users with Javascript turned off.
+	Notice that the width/height match the plugin defaults.
+ ---------------------------------------------------------------------- */
+#preFeature{width:645px; height:265px; overflow:hidden; border-left:1px solid #000000;}
+	#preFeature *{padding:0px; margin:0px; border:none;}
+	#preFeature div{width:24.8%; height:99.25%; float:left; background:#606060; color:#ffffff; font-size:11px; line-height:15px; border-right:1px solid #000000; border-top:1px solid #000000; border-bottom:1px solid #000000;}
+	#preFeature div.clear{float:none; clear:both; width:auto; border:none;}
+	#preFeature div h3{font-size:1.1em; padding:0.5em 1em; font-weight:normal; background:#333333;}
+	#preFeature div p{font-size:1em; margin: 0.5em 1em 1em 1em;}
+	#preFeature div img{width:100%; display:block;}
+	#preFeature div a:link{font-size:1em; margin:1em; color:#00ccff; text-decoration:none;}
+	#preFeature div a:visited{font-size:1em; margin:1em; padding:0.25em; color:#00ccff; text-decoration:none;}
+	#preFeature div a:hover{background:#333333;}
+
+/* ---------------------------------------------------------------------- 
+	The default output id is "siteFeature". If you changed this in the $.makeFeature() call you'll need to update the CSS below.
+	As a general rule, I tried to clump like-declarations.  Because of the tab side (left/right) and text layout options (horizontal/vertical) inheritance can get messy. 
+	FireBug - http://getfirebug.com/ (Joe Hewitt / Firebug Working Group) is strongly recommended.
+ ---------------------------------------------------------------------- */
+#siteFeature{position:relative; overflow:hidden;}
+	#siteFeature *{padding:0px; margin:0px; border:none;}
+	
+	#siteFeature #imgBgContainer{position:absolute;}
+		#siteFeature.left #imgBgContainer{right:0px;}
+		#siteFeature.right #imgBgContainer{left:0px;}
+			#siteFeature #imgBgContainer div{position:absolute;}
+		
+		
+	#siteFeature #txtBoxContainer{position:absolute; height:100%; width:100%; color:#ffffff; font-size:12px; line-height:16px;}
+			#siteFeature.left #txtBoxContainer{right:0px;}
+			#siteFeature.right #txtBoxContainer{left:0px;}
+		#siteFeature #txtBoxContainer div{position:absolute; overflow:hidden;}
+		#siteFeature #txtBoxContainer div span{display:block; width:100%; height:100%; position:absolute; background:#000000;}
+		#siteFeature #txtBoxContainer div div{}
+		
+		#siteFeature #txtBoxContainer div div h3{font-size:24px; line-height:24px; margin:25px 0px 15px 0px;}
+		#siteFeature #txtBoxContainer div.horizontal div h3{font-size:24px; line-height:normal; margin:5px 0px 0px 0px;}
+		#siteFeature.left #txtBoxContainer div div h3{padding:0px 0.5em 0px 0.5em;}
+		#siteFeature.right #txtBoxContainer div div h3{padding:0px 0.5em 0px 0.5em;}
+		#siteFeature.right #txtBoxContainer div.horizontal div h3{padding:0px 0.5em 0px 0.5em;}
+		
+		#siteFeature #txtBoxContainer div div p{margin:0px 0px 15px 0px;}
+		#siteFeature #txtBoxContainer div.horizontal div p{width:320px; margin:0px 0px 0px 0px;}
+		#siteFeature.left #txtBoxContainer div div p{padding:0px 1em 0px 1em;}
+		#siteFeature.right #txtBoxContainer div div p{padding:0px 1em 0px 1em;}
+		#siteFeature.right #txtBoxContainer div.horizontal div p{padding:0px 1em 0px 1em;}
+			
+		#siteFeature #txtBoxContainer div div a:link,
+		#siteFeature #txtBoxContainer div div a:visited{background:#345594; color:#ffffff; padding:2px 5px 2px 5px; text-decoration:none; margin:0px 0px 0px 1em;}
+		#siteFeature #txtBoxContainer div div a:hover{background:#5d77a9; color:#ffffff;}
+		#siteFeature #txtBoxContainer div.horizontal div a:link{position:absolute; right:25px; bottom:10px; /*IE6|7*/ *bottom:5px;}
+		#siteFeature #txtBoxContainer div.horizontal div a:visited{position:absolute; right:25px; bottom:10px; /*IE6|7*/ *bottom:5px;}
+
+		#siteFeature.left #txtBoxContainer div{right:0px;}
+		#siteFeature.left #txtBoxContainer div.horizontal div{left:25px; height:100%;}
+		
+		#siteFeature.right #txtBoxContainer div.horizontal{left:0px; bottom:0px;}
+		#siteFeature.right #txtBoxContainer div{left:0px;}
+		#siteFeature.right #txtBoxContainer div.horizontal div{left:0px; height:100%; width:100%;}
+
+
+	#siteFeature #tabContainer{position:absolute; border-top:1px solid #cccccc;}
+		#siteFeature.left #tabContainer{left:0px; border-left:1px solid #cccccc;}
+		#siteFeature.right #tabContainer{right:0px; border-right:1px solid #cccccc;}
+			#siteFeature #tabContainer a:link,
+			#siteFeature #tabContainer a:visited{display:block; width:100%; background:#ffffff; border-bottom:1px solid #cccccc; font-size:11px; text-decoration:none; position:relative;}
+			#siteFeature #tabContainer a:hover{background:#e7eef7;}
+			#siteFeature #tabContainer a:active{outline:none;}
+			#siteFeature #tabContainer a:focus{outline:none;}
+			#siteFeature #tabContainer a.selected{background:transparent;}
+/* ---------------------------------------------------------------------- 
+	The 2 declarations below style the text in the tabs. If you have more/less than the default 4 tabs, you'll likely need to tweak the padding.
+	Be aware of the IE6,7 specific padding on the h4.
+ ---------------------------------------------------------------------- */
+			#siteFeature #tabContainer a h4{padding:1em 1em 0px 1em; color:#345bab; position:relative; /*IE6|7*/ *padding:10px 11px 0px 11px;}
+			#siteFeature #tabContainer a p{padding:2px 1em 0px 1em; color:#3a3a3a; position:relative;}
+
+
+			#siteFeature #tabContainer a span{display:none;}
+			#siteFeature #tabContainer a.selected span{overflow:hidden; display:block; position:absolute; top:0px;}
+			#siteFeature #tabContainer a.selected span span{background:#c4d6f0; height:100%;}
+				#siteFeature.left #tabContainer a.selected span{left:0px;}
+				#siteFeature.right #tabContainer a.selected span{right:0px;}
+			#siteFeature #tabContainer a span img{height:100%; position:absolute; top:0px;}
+				#siteFeature.left #tabContainer a span img{left:0px;}
+				#siteFeature.right #tabContainer a span img{left:0px;}

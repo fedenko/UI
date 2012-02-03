@@ -1,0 +1,102 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title></title>
+        <style type="text/css">
+            @import url('assets/css/contact.css');
+            @import url('assets/css/lay.css');
+        </style>
+        <script type="text/javascript" src="js/jquery.js"></script>
+    </head>
+    <body>
+        <div id="contact">
+            <div id="top">
+                <h1>Help file</h1>
+            </div>
+            <div id="center">
+                <div id="contact_form">
+                <h2>Including into your website</h2>
+                <p>There are two ways to include the form on your site.</p>
+                <h3>First way</h3>
+                <p>You can include using php. Open the file you want to include the form.
+                    Be sure that it is in the same folder as "assets" and has the extension ".php".
+                    Between the head tags (&lt;head&gt; &lt;head/&gt;), write this:</p>
+                <pre>&lt;?php include ('assets/php/parts/header.html'); ?&gt;</pre>
+                <p>And write this where you want that the form stay:</p>
+                <pre>&lt;?php include ('assets/php/parts/body.html'); ?&gt;</pre>
+                <h3>Second way</h3>
+                <p>You can copy the content of "assets/php/parts/header.html" file and to paste between head (&lt;head&gt; &lt;head/&gt;) tags
+                of your website. Do the same thing with the "assets/php/parts/body.html" file, but paste between body tags (&lt;body&gt; &lt;body/&gt;)
+                (or where you want that the form stay).</p>
+                <h2>Configuration</h2>
+                <p>The contact form is easily of configure. There is only one thing you should do.
+                    The others are optional.</p>
+                <p>Open the "assets/xml/config.php" file. To add a default email, just replace "put@your.email.here" for your real email, example:</p>
+                <pre>&lt;address&gt;<strong>put@your.email.here</strong>&lt;/address&gt;</pre>
+                <p>This is the only thing you have to set to the form works.</p>
+                <p>If you want to send the message to a different e-mail depending on the subject that the User chose, just change the settings of the tags below, otherwise leave blank, example:</p>
+                <pre>&lt;address&gt;<strong>default@email.com</strong>&lt;/address>
+
+&lt;address on="subject" value="Support"&gt;
+    <strong>support@yoursite.com</strong>
+&lt;/address&gt
+
+&lt;address on="subject" value="Sales"&gt;
+    <strong>sales@yoursite.com</strong>
+&lt;/address&gt;
+
+&lt;address on="subject" value="Other"&gt;
+    <strong>other@yoursite.com</strong>
+&lt;/address&gt;</pre>
+
+                <p>You can change the charset too. Just change the value of the tag "charset".</p>
+                <br />
+                <h2>Configuring SMTP options</h2>
+                <p>The Super Ajax Contact Form is able open connections smtp too. If you don't
+ have a SMTP server, then you may want to use the Live or Gmail for example. See two
+ examples of how configure the SMTP.</p>
+                <p>In the file "assets/xml/config.php", find the tag "smtp". Here
+                there, we have all smtp options of the system</p>
+                <p>Here a explanation of the tags:</p>
+                <br />
+                <p><strong>use:</strong> This tells for the script if you will send the email
+                through of SMTP.</p>
+                <p><strong>auth:</strong> This tells for the script if the SMTP server will use authentication.</p>
+                <p><strong>secure:</strong> This tells for the script how to make the conection with the SMTP server, most servers use "tls".</p>
+                <p><strong>username:</strong> The username of SMTP.</p>
+                <p><strong>password: </strong> The password of SMTP.</p>
+                <p><strong>port: </strong> The port to be used.</p>
+                <p>For a better understanding, see this example in which I connect to the SMTP server Live.<p>
+
+                <pre>&lt;smtp&gt;
+&lt;use&gt;<strong>yes</strong>&lt;/use&gt;
+&lt;auth&gt;<strong>yes</strong>&lt;/auth&gt;
+&lt;secure&gt;<strong>tls</strong>&lt;/secure&gt;
+&lt;host&gt;<strong>smtp.live.com</strong>&lt;/host&gt;
+&lt;username&gt;<strong>example@hotmail.com</strong>&lt;/username&gt;
+&lt;password&gt;<strong>1234123</strong>&lt;/password&gt;
+&lt;port&gt;<strong>25</strong>&lt;/port&gt;
+&lt;/smtp&gt;</pre>
+                <h3>Now, for Gmail</h3>
+                <pre>&lt;smtp&gt;
+&lt;use&gt;<strong>yes</strong>&lt;/use&gt;
+&lt;auth&gt;<strong>yes</strong>&lt;/auth&gt;
+&lt;secure&gt;<strong>tls</strong>&lt;/secure&gt;
+&lt;host&gt;<strong>smtp.gmail.com</strong>&lt;/host&gt;
+&lt;username&gt;<strong>smtp.gmail.com</strong>&lt;/username&gt;
+&lt;password&gt;<strong>1234123</strong>&lt;/password&gt;
+&lt;port&gt;<strong>587</strong>&lt;/port&gt;
+&lt;/smtp&gt;</pre>
+
+                <p>As you saw, is very easy to set up the contact form :)</p>
+                <h2>Finishing</h2>
+                <p>Now, just upload the form for your server and use it!<br />
+                Thank you for purchase :)</p>
+                </div>
+            </div>
+            <div id="bot"><!--bottom--></div>
+
+        </div>
+    </body>
+</html>

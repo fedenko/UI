@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SexySlider &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/global.css" />
+  <link rel="stylesheet" type="text/css" href="css/sexyslider.css" />
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/jquery.sexyslider.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#slider").SexySlider({
+      navigation      : '#navigation',
+      control         : '#control',
+      width           : 560,
+      height          : 200,
+      strips          : 20,
+      auto            : true,
+      autopause       : true,
+      delay           : 2000, // in ms
+      stripSpeed      : 400,  // in ms
+      titleOpacity    : 0.1,
+      titleSpeed      : 1000, // in ms
+      titlePosition   : 'bottom',    // top, right, bottom, left
+      direction       : 'alternate', // left, right, alternate, random
+      effect          : 'random'     // curtain, zipper, wave, fountain, cascade, fade, random
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div id="top">
+    <div id="header">
+        <h1>Sexy Slider <span>v1.3</span></h1>
+    </div>
+
+    <div class="hastoc">
+
+        <p>SexySlider is compatible and fully tested with Safari 2+, Internet Explorer 6+, Firefox 2+, Google Chrome 3+, Opera 9+. </p>
+        
+        <div id="wrapper">
+          
+
+          <div id="slider">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel lorem velit. "/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt="Call of Duty Modern Warfare 2 sold approximately 4.7 million copies worldwide in 24 hours. Visit the &lt;a href=&quot;http://www.modernwarfare2.com/&quot;&gt;official website&lt;/a&gt;"/>
+          </div>
+
+          <div id="navigation"></div>
+          <div id="control"></div>
+
+        </div>
+
+        <h2>Features</h2>
+        <ul>
+          <li>Auto slide</li>
+          <li>Continuous sliding</li>
+          <li>Image captions</li>
+          <li>Flexible configuration</li>
+          <li>6 transitions effects</li>
+        </ul>
+
+        <h2>Documentation</h2>
+        <p>This plugin is really easy to use. After you download the plugin add the following lines between the HEAD tag on your page:</p>
+
+<pre>
+<span class="oper">&lt;</span><span class="var">script</span> <span class="var">type</span><span class="oper">=</span>&quot;<span class="string">text/javascript</span>&quot; <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">jquery.min.js</span>&quot;<span class="oper">&gt;</span><span class="oper">&lt;</span>/<span class="var">script</span><span class="oper">&gt;</span>
+<span class="oper">&lt;</span><span class="var">script</span> <span class="var">type</span><span class="oper">=</span>&quot;<span class="string">text/javascript</span>&quot; <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">jquery.sexyslider.min.js</span>&quot;<span class="oper">&gt;</span><span class="oper">&lt;</span>/<span class="var">script</span><span class="oper">&gt;</span></pre>
+
+<!--
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.sexyslider.min.js"></script>
+-->
+        
+        <p>Next all you have to do is create a wrapper with some ID and put the next code below it:</p>
+
+<pre>$('<span class="string">#wrapper</span>').<span class="func">SexySlider</span>();</pre>
+<!--
+        <pre>
+        $('#wrapper').SexySlider();
+        </pre>
+-->        
+        <p>The above code will take all images from the div 'wrapper' and will create the slider. If you want to comment below images just add text in alt tag.</p>
+
+<pre>
+<span class="oper">&lt;</span><span class="var">div</span> <span class="var">id</span><span class="oper">=</span>'<span class="string">wrapper</span>'<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>'<span class="string">image1.jpg</span>' /<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>'<span class="string">image2.jpg</span>' <span class="var">alt</span><span class="oper">=</span>'<span class="string">description</span>' /<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>'<span class="string">image3.jpg</span>' /<span class="oper">&gt;</span>
+<span class="oper">&lt;</span>/<span class="var">div</span><span class="oper">&gt;</span>
+</pre>
+<!--
+        <pre>
+          <div id="wrapper">
+            <img src="image1.jpg"/>
+            <img src="image2.jpg" alt="description"/>
+            <img src="image3.jpg"/>
+          </div>
+        </pre>
+-->
+
+        <p>You have 6 predifined effects that you can use:</p>
+
+        <ul>
+          <li>Wave</li>
+          <li>Curtain</li>
+          <li>Zipper</li>
+          <li>Fountain</li>
+          <li>Cascade</li>
+          <li>Fade</li>
+          <li>or only "Random"</li>
+        </ul>
+        
+        <p>Things you can customize: (With their default values)</p>
+
+<pre>
+<span class="var">navigation</span>    <span class="oper">:</span> '<span class="string">#idnavigation</span>', <span class="comment">// #id of div to place navigation buttons.</span>
+<span class="var">control</span>       <span class="oper">:</span> '<span class="string">#idcontrol</span>',    <span class="comment">// #id of div to place control buttons.</span>
+<span class="var">width</span>         <span class="oper">:</span> <span class="num">500</span>,  <span class="comment">// width of panel</span>
+<span class="var">height</span>        <span class="oper">:</span> <span class="num">332</span>,  <span class="comment">// height of panel</span>
+<span class="var">strips</span>        <span class="oper">:</span> <span class="num">20</span>,   <span class="comment">// number of strips</span>
+<span class="var">auto</span>          <span class="oper">:</span> <span class="num">true</span>, <span class="comment">// autoslider</span>
+<span class="var">autopause</span>     <span class="oper">:</span> <span class="num">true</span>, <span class="comment">// stop autoslider after click</span>
+<span class="var">delay</span>         <span class="oper">:</span> <span class="num">3000</span>, <span class="comment">// delay between images in ms</span>
+<span class="var">stripSpeed</span>    <span class="oper">:</span> <span class="num">500</span>,  <span class="comment">// delay beetwen strips in ms</span>
+<span class="var">titleOpacity</span>  <span class="oper">:</span> <span class="num">0.7</span>,  <span class="comment">// opacity of title</span>
+<span class="var">titleSpeed</span>    <span class="oper">:</span> <span class="num">1000</span>, <span class="comment">// speed of title appereance in ms</span>
+<span class="var">titlePosition</span> <span class="oper">:</span> '<span class="string">bottom</span>', <span class="comment">// top, right, bottom, left</span>
+<span class="var">direction</span>     <span class="oper">:</span> '<span class="string">alternate</span>', <span class="comment">// left, right, alternate, random</span>
+<span class="var">effect</span>        <span class="oper">:</span> '<span class="string">random</span>' <span class="comment">// curtain, zipper, wave, fountain, cascade, fade, random</span>
+</pre>        
+
+<!--
+        <pre>
+navigation    : '#idnavigation', // #id of div to place navigation buttons.
+control       : '#idcontrol',    // #id of div to place control buttons.
+width         : 500,  // width of panel
+height        : 332,  // height of panel
+strips        : 20,   // number of strips
+auto          : true, // autoslider
+delay         : 3000, // delay between images in ms
+stripSpeed    : 500,  // delay beetwen strips in ms
+titleOpacity  : 0.7,  // opacity of title
+titleSpeed    : 1000, // speed of title appereance in ms
+direction     : 'alternate', // left, right, alternate, random
+effect        : 'random' // curtain, zipper, wave, fountain, cascade, fade, random
+        </pre>
+-->
+        
+        <h2>Example</h2>
+<p>HTML:</p>
+<pre>
+<span class="oper">&lt;</span><span class="var">div</span> <span class="var">id</span><span class="oper">=</span>&quot;<span class="string">slider</span>&quot;<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">assets/slide_1.jpg</span>&quot; <span class="var">alt</span><span class="oper">=</span>&quot;&quot; /<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">assets/slide_2.jpg</span>&quot; <span class="var">alt</span><span class="oper">=</span>&quot;&quot; /<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">assets/slide_3.jpg</span>&quot; <span class="var">alt</span><span class="oper">=</span>&quot;&quot; /<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">assets/slide_4.jpg</span>&quot; <span class="var">alt</span><span class="oper">=</span>&quot;&quot; /<span class="oper">&gt;</span>
+  <span class="oper">&lt;</span><span class="var">img</span> <span class="var">src</span><span class="oper">=</span>&quot;<span class="string">assets/slide_5.jpg</span>&quot; <span class="var">alt</span><span class="oper">=</span>&quot;&quot; /<span class="oper">&gt;</span>
+<span class="oper">&lt;</span>/<span class="var">div</span><span class="oper">&gt;</span>
+
+<span class="oper">&lt;</span><span class="var">div</span> <span class="var">id</span><span class="oper">=</span>&quot;<span class="string">navigation</span>&quot;<span class="oper">&gt;</span><span class="oper">&lt;</span>/<span class="var">div</span><span class="oper">&gt;</span>
+
+<span class="oper">&lt;</span><span class="var">div</span> <span class="var">id</span><span class="oper">=</span>&quot;<span class="string">control</span>&quot;<span class="oper">&gt;</span><span class="oper">&lt;</span>/<span class="var">div</span><span class="oper">&gt;</span>
+</pre>
+
+<p>CSS:</p>
+<pre>
+#navigation a
+{
+  <span class="oper">padding</span>:10px;
+  <span class="oper">background</span>:#d60c62;
+  <span class="oper">color</span>:#FFFFFF;
+  <span class="oper">text-decoration</span>:none;
+}
+
+#navigation a.<span class="var">sexyslider-prev</span>
+{
+  <span class="oper">float</span>:left;
+}
+
+#navigation a.<span class="var">sexyslider-next</span>
+{
+  <span class="oper">float</span>:right;
+}
+
+#control a
+{
+  <span class="oper">background</span>:#f385a2;
+  <span class="oper">padding</span>:0 3px;
+  <span class="oper">color</span>:#FFFFFF;
+  <span class="oper">margin-left</span>:3px;
+}
+
+#control a.<span class="var">active</span>
+{
+  <span class="oper">background</span>:#d60c62;
+}
+</pre>
+
+<p>JS:</p>
+<pre>
+<span class="oper">&lt;</span><span class="var">script</span> <span class="var">type</span><span class="oper">=</span>&quot;<span class="string">text/javascript</span>&quot;<span class="oper">&gt;</span>
+  $(<span class="var">document</span>).<span class="func">ready</span>(<span class="oper">function</span>(){
+    $('<span class="string">#slider</span>').<span class="func">SexySlider</span>({
+      <span class="var">width</span>  <span class="oper">:</span> <span class="num">500</span>,
+      <span class="var">height</span> <span class="oper">:</span> <span class="num">332</span>,
+      <span class="var">strips</span> <span class="oper">:</span> <span class="num">20</span>,
+      <span class="var">delay</span>  <span class="oper">:</span> <span class="num">5000</span>,
+      <span class="var">effect</span> <span class="oper">:</span> '<span class="string">random</span>',
+      <span class="var">direction</span><span class="oper">:</span> '<span class="string">random</span>'
+    });
+  });
+<span class="oper">&lt;</span>/<span class="var">script</span><span class="oper">&gt;</span>
+</pre>
+
+
+<!--
+
+<div id="slider">
+  <img src="assets/slide_1.jpg"/>
+  <img src="assets/slide_2.jpg" alt=""/>
+  <img src="assets/slide_3.jpg" alt=""/>
+  <img src="assets/slide_4.jpg" alt=""/>
+  <img src="assets/slide_5.jpg" alt=""/>
+</div>
+
+<div id="navigation"></div>
+
+<div id="control"></div>
+
+
+        <pre>
+          $(document).ready(function(){
+            $('#slider').SexySlider({
+              effect : 'random',
+              width  : 500,
+              height : 332,
+              strips : 20,
+              delay  : 5000,
+              direction: 'random'
+            });
+          });
+        </pre>
+-->
+
+    </div><!--/hastoc-->
+  </div>
+  <!-- Syntax highlighting Javascript http://www.howtocreate.co.uk/tutorials/jsexamples/syntax/ -->
+</body>
+</html>

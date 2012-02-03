@@ -1,0 +1,272 @@
+/*
+Item Name : HoverMe - Collection of CSS3 Hover Effects
+Author URI : http://themeforest.net/user/Keliah
+Version : 1.0
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+1. Sliding Up
+2. Sliding Left
+3. Sliding Right
+4. Sliding Down
+5. Sliding Up & Left
+6. Sliding Up & Right
+7. Sliding Down & Left
+8. Sliding Down & Right
+9. Sliding 50% Up
+10. Sliding 50% Down
+
+*/
+
+
+
+/* DEFAULTS PAGE STYLING - FOR DEMO ONLY */
+
+/* You can safely remove / modify the following markup as it's only for the demo purpose */
+
+body {
+	background:#121212;
+	font-family:Arial, Helvetica, sans-serif;
+	_behavior: url("ie/csshover3.htc"); /* For IE6 only, it enables hover on non anchor tags */
+}
+.container {
+	width:960px;
+	margin:30px auto;
+}
+h1 {
+	font-size:30px;
+	letter-spacing:-1px;
+	margin:20px 0px 20px 0px;
+	color:#FFFFFF;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 40px;
+}
+
+
+/* SLIDING EFFECTS */
+
+
+.slide {
+	position:relative;
+	/* Set the width and the height according to the size of your pictures */
+	width:300px;
+	height:200px;
+	overflow:hidden;
+	float:left;
+	margin-right: 20px;
+}
+	/* Paragraphs and Heading 2 styling, change according to your needs */
+	.slide p, .slide h2 {
+		color:#ffffff;
+		padding:10px;
+	}
+	.slide p {
+		font-size:12px;
+		line-height:18px;
+	}
+	.slide h2 {
+		font-size:18px;
+		line-height:24px;
+	}
+
+
+
+	/* For all the following markup, you'll see each time 4 lines setting
+	   the sliding effect (-webkit-transition, -moz-transition, -o-transition
+	   and transition), the values set the direction of the slide, the duration
+	   and the effect */
+	   
+	/* Other markup sets the positionning and margins. On mouse hover, you'll
+	   see additional paddings which differ according to the direction of the slide.
+	   It creates an empty space when the image is pushed away and keeps the "hover"
+	   state enabled, otherwise the image would slide back right after. */
+
+
+	/* 1. Sliding Up */
+	
+	.moveup img {
+		position:absolute;
+		left:0;
+		top:0;
+		
+		-webkit-transition: top 0.4s ease-in-out;
+		-moz-transition: top 0.4s ease-in-out;
+		-o-transition: top 0.4s ease-in-out;
+		transition: top 0.4s ease-in-out;
+	}
+	.moveup img.top:hover {
+		top:-200px;
+		padding-bottom:200px;
+	}
+
+	/* 2. Sliding Left */
+	
+	.moveleft img {
+		position:absolute;
+		left:0;
+		top:0;
+		
+		-webkit-transition: left 0.4s ease-in-out;
+		-moz-transition: left 0.4s ease-in-out;
+		-o-transition: left 0.4s ease-in-out;
+		transition: left 0.4s ease-in-out;
+	}
+	.moveleft img.top:hover {
+		left:-300px;
+		padding-right:300px;
+	}
+
+	/* 3. Sliding Right */
+	
+	.moveright img {
+		position:absolute;
+		right:0;
+		top:0;
+		
+		-webkit-transition: right 0.4s ease-in-out;
+		-moz-transition: right 0.4s ease-in-out;
+		-o-transition: right 0.4s ease-in-out;
+		transition: right 0.4s ease-in-out;
+	}
+	.moveright img.top:hover {
+		right:-300px;
+		padding-left:300px;
+	}
+
+	/* 4. Sliding Down */
+	
+	.movedown img {
+		position:absolute;
+		left:0;
+		bottom:0;
+		
+		-webkit-transition: bottom 0.4s ease-in-out;
+		-moz-transition: bottom 0.4s ease-in-out;
+		-o-transition: bottom 0.4s ease-in-out;
+		transition: bottom 0.4s ease-in-out;
+	}
+	.movedown img.top:hover {
+		bottom:-200px;
+		padding-top:200px;
+	}
+
+	/* 5. Sliding Up & Left */
+	
+	.moveupleft img {
+		position:absolute;
+		left:0;
+		top:0;
+		
+		-webkit-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+		-moz-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+		-o-transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+		transition: top 0.4s ease-in-out, left 0.4s ease-in-out;
+	}
+	.moveupleft img.top:hover {
+		top:-200px;
+		left:-300px;
+		padding-bottom:200px;
+		padding-right:300px;
+	}
+
+	/* 6. Sliding Up & Right */
+	
+	.moveupright img {
+		position:absolute;
+		right:0;
+		top:0;
+		
+		-webkit-transition: top 0.4s ease-in-out, right 0.4s ease-in-out;
+		-moz-transition: top 0.4s ease-in-out, right 0.4s ease-in-out;
+		-o-transition: top 0.4s ease-in-out, right 0.4s ease-in-out;
+		transition: top 0.4s ease-in-out, right 0.4s ease-in-out;
+	}
+	.moveupright img.top:hover {
+		top:-200px;
+		right:-300px;
+		padding-bottom:200px;
+		padding-left:300px;
+	}
+
+	/* 7. Sliding Down & Left */
+	
+	.movedownleft img {
+		position:absolute;
+		left:0;
+		bottom:0;
+		
+		-webkit-transition: bottom 0.4s ease-in-out, left 0.4s ease-in-out;
+		-moz-transition: bottom 0.4s ease-in-out, left 0.4s ease-in-out;
+		-o-transition: bottom 0.4s ease-in-out, left 0.4s ease-in-out;
+		transition: bottom 0.4s ease-in-out, left 0.4s ease-in-out;
+	}
+	.movedownleft img.top:hover {
+		bottom:-200px;
+		left:-300px;
+		padding-top:200px;
+		padding-right:300px;
+	}
+
+	/* 8. Sliding Down & Right */
+	
+	.movedownright img {
+		position:absolute;
+		right:0;
+		bottom:0;
+		
+		-webkit-transition: bottom 0.4s ease-in-out, right 0.4s ease-in-out;
+		-moz-transition: bottom 0.4s ease-in-out, right 0.4s ease-in-out;
+		-o-transition: bottom 0.4s ease-in-out, right 0.4s ease-in-out;
+		transition: bottom 0.4s ease-in-out, right 0.4s ease-in-out;
+	}
+	.movedownright img.top:hover {
+		bottom:-200px;
+		right:-300px;
+		padding-top:200px;
+		padding-left:300px;
+	}
+
+	/* 9. Sliding 50% Up */
+	
+	.moveup50 img {
+		position:absolute;
+		left:0;
+		top:0;
+		
+		-webkit-transition: top 0.4s ease-in-out;
+		-moz-transition: top 0.4s ease-in-out;
+		-o-transition: top 0.4s ease-in-out;
+		transition: top 0.4s ease-in-out;
+	}
+	.moveup50 img.top:hover {
+		top:-100px;
+		padding-bottom:100px;
+	}
+	.half {margin-top:100px;}
+
+
+	/* 10. Sliding 50% Down */
+	
+	.movedown50 img {
+		position:absolute;
+		left:0;
+		bottom:0;
+		
+		-webkit-transition: bottom 0.4s ease-in-out;
+		-moz-transition: bottom 0.4s ease-in-out;
+		-o-transition: bottom 0.4s ease-in-out;
+		transition: bottom 0.4s ease-in-out;
+	}
+	.movedown50 img.top:hover {
+		bottom:-100px;
+		padding-top:100px;
+	}

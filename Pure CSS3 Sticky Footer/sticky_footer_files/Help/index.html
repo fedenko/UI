@@ -1,0 +1,259 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Pure CSS3 Sticky Footer</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Pure CSS3 Sticky Footer&rdquo; Documentation by &ldquo;Template Keliah&rdquo; v1.2</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Pure CSS3 Sticky Footer&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created : 10/02/2010<br>
+                    Updated : 10/16/2010<br>
+					By: Keliah<br>
+					Email: <a href="mailto:keliahdesign@gmail.com">keliahdesign@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://themeforest.net/user/keliah">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		<p><strong>NOTICE</strong> : you'll find an additional file in the htc subfolder of each version, this "csshover3.htc" file is required only if you support Internet Explorer 6, if you remove it, the menu won't work at all under IE6.</p>		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+
+		<hr>
+
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>Please note that in each folder HTML files are exactly the same. This footer has a fixed layout based upon the 960gs grid.</p>
+        
+        <p>You probably have heard or used drop down menus, here the principle is the same with the difference that the content appears above the menu links.</p>
+        <p>Let's begin with the containers available for the "drop ups", you can use from the smallest (140px) to the largest (420px) container. Then, within these containers, you can organize your content in 1, 2, or 3 columns.</p>
+        <p>For easier understanding, we'll use the regular expression "drop downs".</p>
+        
+        <h2>Setting a container</h2>
+        
+        <p>These containers must be placed within a menu list item as follows :</p>
+        
+<pre>
+&lt;li&gt; &lt;a href="yourlink"&gt;yourlink&lt;/a&gt;
+
+    CONTAINER COMES HERE
+
+&lt;/li&gt;
+</pre>        
+       
+<p>And here is the list of the containers available :</p>
+        
+      
+<p><strong>To add a 420px drop down :</strong></p>
+        
+<pre>
+&lt;div class="dropdown_3columns"&gt;
+
+    CONTENT IN 1, 2 OR 3 COLUMNS
+
+&lt;/div&gt;
+</pre>        
+
+        
+<p><strong>To add a 280px drop down :</strong></p>
+        
+<pre>
+&lt;div class="dropdown_2columns"&gt;
+
+    CONTENT IN 1 OR 2 COLUMNS
+
+&lt;/div&gt;
+</pre>        
+
+        
+<p><strong>To add a 140px drop down :</strong></p>
+        
+<pre>
+&lt;div class="dropdown_1column"&gt;
+
+    CONTENT IN 1 COLUMN
+
+&lt;/div&gt;
+</pre>        
+
+<h2>Setting columns for your content</h2>
+
+<p>Then, within these containers, you can use from 1 up to 3 columns, but don't forget to check if your container is large enough for the columns you include. You'll notice that they are smaller than the containers, it's because of the paddings so the content doesn't stick to the edges.</p>
+
+<p>Here are the choices available :</p>
+
+<pre>
+&lt;div class="col_1"&gt;
+    
+    HERE COMES YOUR 130 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+
+<pre>
+&lt;div class="col_2"&gt;
+    
+    HERE COMES YOUR 270 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+
+<pre>
+&lt;div class="col_3"&gt;
+    
+    HERE COMES YOUR 410 PX WIDTH CONTENT
+
+&lt;/div&gt;
+</pre>
+
+		<hr>
+
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+        <p>The main file for this footer is "footer.css", but you'll also find a "reset.css" which should be included first in your HTML and a "content.css" in variants containing some texts.</p>
+        <p>You can remove safely those 2 files (reset and content) but I highly recommend using a reset which should be called first.</p>
+        <p>The footer.css is structured, there are labels to help you find the section you need to modify :</p> 
+
+<pre>	/* 01 FOOTER - GENERAL STYLES */
+	some code
+	
+	/* 02 FOOTER - DROP DOWN MENU (DROP UP) */
+	some code
+	
+	/* 03 FOOTER - COLUMNS CONTENT */
+	some code
+	
+</pre>
+
+		<h2>Handling IE6 support</h2>
+        
+        <p>You'll find in each variant a folder called "htc", it contains 2 files :</p>
+        <ul>
+        <li>css3hover.htc : this files enables mouse hover on non-anchor elements, without it, the drop-up would not appear.</li>
+        <li>ie6.css : this one is required to call the "css3hover.htc" and to fix the footer at the bottom of the browser as IE6 doesn't handle the fixed positionning.</li>
+        </ul>
+        
+      <p>If you don't want to support IE6 at all, simply delete the htc folder and in the html page, you can remove the commented content :</p>
+        
+        <img src="assets/ie6.jpg" width="615" height="91" alt="ie6">
+        
+    <h2>CSS content</h2>
+        
+        <p>As you can see above, the file is divided in 3 sections :</p>
+        
+        <ul>
+        <li><strong>01 FOOTER - GENERAL STYLES</strong> : This section is one of the most importants, it defines the footer container, some typography stylings and all necessary code for the social icons with the tooltips.</li>
+        <li><strong>02 FOOTER - DROP DOWN MENU (DROP UP)</strong> : this part contains all stylings for the drop downs (or drop ups if you prefer) : show / hide properties, left or right alignment and columns properties (you can use from 1 to 3 columns).</li>
+        <li><strong>03 FOOTER - COLUMNS CONTENT</strong> : this part contains specific stylings for all the content appearing in the drop down : text boxes, lists, paragraphs texts...</li>
+        </ul>
+        
+        <h2>Working with colors</h2>
+        
+        <p>This item comes with color variants, each one has it's own folder, but you may want to create your own color scheme. For this example, we'll see the black variant : open "footer.css" and scroll down until you find the label <strong>#footer</strong>. This class defines the color of the main footer bar with the following attributes :</p>
+        
+        <pre>
+        background:#161616;
+	border-top: 1px solid #333333;
+    
+	/* CSS3 Stylings - Creates the double top border */
+	-moz-box-shadow: 0px -1px 0px #161616;
+	-webkit-box-shadow:  0px -1px 0px #161616;
+	box-shadow:  0px -1px 0px #161616;
+    
+	/* CSS3 Stylings - Creates the gradient background */
+	background: -moz-linear-gradient(top, #222222, #111111);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222222), to(#111111));
+</pre>
+
+		<p>The "background" must be set for browsers which don't support CSS3 properties, in this case, we have the color #161616 and this value is overwritten by the CSS3 attributes in the case the user is using a recent browser supporting CSS3, so the 2 last lines define a gradient from the top (color : #222222) to the bottom (color : #111111).</p>
+        
+        <p>A border-top is set to match the other colors using #333333.</p>
+        
+        <p>All the above properties, as I said before, determine the colors of the footer container.</p>
+        
+        <p>Now let's see the menu within the footer, I used a dark color scheme defined with the <strong>#footer_menu li</strong> class :</p>
+        <pre>
+	border-right:1px solid #111111;
+	border-left:1px solid #444444;
+	background:#3E3E3E;
+	
+	/* CSS3 Stylings - Creates the gradient background */
+	background: -moz-linear-gradient(top, #3E3E3E, #313131);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#3E3E3E), to(#313131));
+        </pre>
+        <p>Again, the background color (#3E3E3E) is a fallback color for older browsers, then a lighter gradient is set using the #3E3E3E and #313131 colors. On mouse hover, this gradient is reverted :</p>
+        <pre>
+	background:#313131;
+	/* CSS3 Stylings - Creates the gradient background */
+	background: -moz-linear-gradient(top, #313131, #3E3E3E);
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#313131), to(#3E3E3E));
+}
+        </pre>
+        <p>Then we have this same dark scheme used in the drop down (or drop up) with the <strong>#footer_menu li:hover ul.dropup</strong>, <strong>.dropdown_1column</strong>, <strong>.dropdown_2columns</strong> and the <strong>dropdown_3columns</strong> classes :</p>
+        <pre>
+	background-color:#222222;
+	border: 1px solid #111111;
+		</pre>      
+        
+		<h3 id="credits"><strong>C) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following images, icons or other files as listed.
+		
+
+        <h4>CSS</h4>
+        
+		<ul>
+			<li><a href="http://960.gs/">960Grid</a></li>
+			<li><a href="http://meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/">Reset CSS</a></li>
+		</ul>
+
+        <h4>Graphics</h4>
+        
+		<ul>
+			<li><a href="http://browse.deviantart.com/?qh=&section=&global=1&q=wood+floor#/d1fqv7y">Wood Texture</a></li>
+            <li><a href="http://www.iconfinder.com/icondetails/57950/32/home_icon">Home Icon</a></li>
+			<li><a href="http://www.profimagazin.cz/ikony/socialni-ikony-vcetne-ceskych-linkovacich-sluzeb-ke-stazeni-zdarma">Social Icons</a></li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this theme. As I said at the beginning, I'd be glad to help you if you have any questions relating to this theme. No guarantees, but I'll do my best to assist. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Keliah</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

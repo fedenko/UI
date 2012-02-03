@@ -1,0 +1,1078 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sliding Tabs - jQuery Plugin</title>
+    <meta name="description" content="Create animated sliding tabs for your design using the Sliding Tabs jQuery plugin" />
+    
+    <!-- CSS -->           
+    <link rel="stylesheet" type="text/css" href="css/demo.css" type="text/css" />
+    <!--[if IE 6]>
+        <style type="text/css">
+            body {padding-top:0px;}
+        </style>
+    <![endif]-->
+    <!--[if lte IE 7]>        
+        <style type="text/css">
+            div.tooltip {width:73px;}
+        </style>
+    <![endif]-->        
+    <link rel="stylesheet" type="text/css" href="css/slidingtabs-horizontal.css" />
+    <link rel="stylesheet" type="text/css" href="css/slidingtabs-vertical.css" />   
+    
+    <!-- JavaScript -->
+    <script src="http://www.google.com/jsapi"></script><script type="text/javascript">google.load("jquery", "1.4.4");</script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.slidingtabs.demo.pack.js"></script>
+    <script type="text/javascript">  
+  	$(document).ready(function() {
+  				
+  		// Horizontal Sliding Tabs Demo
+  		$("div#tabs_horizontal").slideTabs({
+  			// Options  			
+  			orientation: 'horizontal',
+  			slideWidth: 694, // Width of the #tabs_container <div> element			
+			contentAnim: 'slideLeft',
+  			contentEasing: 'easeInOutExpo',
+  			tabsAnimTime: 300,
+  			contentAnimTime: 600
+  		});		
+  		
+  		// Vertical Sliding Tabs Demo
+  		$("div#tabs_vertical").slideTabs({
+  			// Options  			
+  			orientation: 'vertical',  			
+  			slideHeight: 300, // Height of the #tabs_container <div> -minus the directional button's height (37px)			
+			contentAnim: 'slideLeft',			
+  			contentEasing: 'easeInOutExpo',
+  			tabsAnimTime: 300,
+  			contentAnimTime: 600
+  		});		
+  	
+  	});
+    </script>
+    <script type="text/javascript">
+	$(function() {	  
+		if($.browser.mozilla || $.browser.msie) {$("div.column").css({float:"none"});}
+		
+		/* 
+		 * Tooltip
+		 */
+		$("body").prepend('<div class="tooltip"><p></p><div class="triangle"></div></div>');
+		var tt = $("div.tooltip");
+		
+		$("ul.customize li a").hover(function() {								
+			var btn = $(this);
+			
+			tt.children("p").text(btn.attr("title"));								
+						
+			var t = Math.floor(tt.outerWidth(true)/2),
+				b = Math.floor(btn.outerWidth(true)/2),							
+				y = btn.offset().top - 30,
+				x = btn.offset().left - (t-b);
+						
+			tt.css({"top" : y+"px", "left" : x+"px", "display" : "block"});			
+			   
+		}, function() {		
+			tt.hide();			
+		});
+									
+	});		
+	</script>
+    
+</head>
+<body id="top">	        
+    
+    <div id="header">
+    
+        <div id="header_center">                    
+                           
+            <ul id="nav">
+                <li class="logo"><h1><a href="#top">Sliding Tabs</a></h1><a href="changelog.txt" class="version" title="View changelog">1.0.3</a></li>
+                <li><a href="#intro" class="demos">Demos & Features</a></li>            
+                <li><a href="#docs" class="howto">How to Use</a></li>
+                <li><a href="#opts" class="opts">Options</a></li>
+                <li class="fl_r"><a href="http://codecanyon.net/item/sliding-tabs-jquery-plugin/141774" class="buy">Purchase</a></li>
+            </ul>                                              
+        
+        </div> <!-- /#header_center -->
+    
+    </div> <!-- /#header -->
+    
+    <div id="container">        
+                                             
+        <div id="intro">        	
+            <em>The <span>sliding tabs</span> jQuery plugin let's you create any number of tabs and make them slideable with the <span>mouse scroll wheel</span> or <span>directional buttons</span>.</em>            
+        </div> 
+        
+        <div id="demos" class="column">
+        
+            <h1>Horizontal demo</h1>                     
+            
+            <!-- Start HTML - Horizontal tabs -->
+            <div id="tabs_horizontal">                                                                                      				                                
+                                
+                <a href="#prev" id="prev"></a>                
+                
+                <div id="tabs_container">                                                                                                                                          
+                    
+                    <ul id="tabs">
+                        <li><a href="#content_1" id="tab_1" class="tab active">Horizontal Tab #1</a></li>
+                        <li><a href="#content_2" id="tab_2" class="tab">Horizontal Tab #2</a></li>                                     
+                        <li><a href="#content_3" id="tab_3" class="tab">Horizontal Tab #3</a></li>
+                        <li><a href="#content_4" id="tab_4" class="tab">Horizontal Tab #4</a></li>
+                        <li><a href="#content_5" id="tab_5" class="tab">Horizontal Tab #5</a></li>                                                       
+                        <li><a href="#content_6" id="tab_6" class="tab">Horizontal Tab #6</a></li>
+                        <li><a href="#content_7" id="tab_7" class="tab">Horizontal Tab #7</a></li>
+                        <li><a href="#content_8" id="tab_8" class="tab">Horizontal Tab #8</a></li>
+                        <li><a href="#content_9" id="tab_9" class="tab">Horizontal Tab #9</a></li>
+                        <li><a href="#content_10" id="tab_10" class="tab">Horizontal Tab #10</a></li>                                        
+                    </ul>                                                                                                
+                
+                </div> <!-- /#tabs_container -->
+                                
+                <a href="#next" id="next"></a>                                                                                             
+               
+                <div id="content">
+                
+                    <div id="view_container">
+                                
+                        <div id="content_1" class="tab_view">
+                            <h2>Horizontal Tab #1</h2>
+                            
+                            <div class="text">                                                                                                  
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>                            
+                        </div>
+                        
+                        <div id="content_2" class="tab_view">
+                            <h2>Horizontal Tab #2</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_3" class="tab_view">
+                            <h2>Horizontal Tab #3</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_4" class="tab_view">
+                            <h2>Horizontal Tab #4</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_5" class="tab_view">
+                            <h2>Horizontal Tab #5</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_6" class="tab_view">
+                            <h2>Horizontal Tab #6</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_7" class="tab_view">
+                            <h2>Horizontal Tab #7</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_8" class="tab_view">
+                            <h2>Horizontal Tab #8</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_9" class="tab_view">
+                            <h2>Horizontal Tab #9</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_10" class="tab_view">
+                            <h2>Horizontal Tab #10</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh duis odio morbi quam, scelerisque convallis aenean quam tincidunt ornare nam nec feugiat sodales tristique.</p>
+                                
+                                <blockquote>Aliquam commodo ullamcorper aenean erat. Nullam vel justo in neque porttitor eget laoreet. Aenean lacus adipiscing.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam vel justo cras porttitor laoreet. Aenean lacus dui, consequat eu, adipiscing nonummy, eget non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa. Vivamus tincidunt diam nec eget urna.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor curabitur, justo arcu nisl, natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris purus, aliquam quisque, eget nisl. Pellentesque nibh ut odio morbi quam, scelerisque convallis tincidunt tristique.</p>
+                            </div>
+                        </div>
+                    
+                    </div> <!-- /#view_container --> 
+                 
+                </div> <!-- /#content -->
+                
+                <!-- Start HTML - Customize tabs -->
+                <div id="customize_container">
+                
+                    <ul class="customize">          
+                        <li><p>Customize</p></li>
+                        <li><a href="#add" id="add" class="btn_enabled" title="Add tab">Add tab</a></li>           
+                        <li><a href="#remove" id="remove" class="btn_enabled" title="Remove tab">Remove tab</a></li>
+                        <li><a href="#options" id="options" class="btn_enabled" title="Options">Options</a></li>             
+                    </ul>
+                    
+                    <div id="options_box" class="hide">                        
+                        <input type="hidden" id="orientation" value="horizontal"  />
+                        
+                        <h2>Tab Options</h2>
+                        
+                        <ul class="opts_list">                            
+                            <li>
+                                <h3>Scroll wheel:</h3>
+                                <ul>
+                                    <li><input type="radio" name="scroll" value="true" checked="checked" /><label>enabled</label></li>                                    
+                                    <li><input type="radio" name="scroll" value="false" /><label>disabled</label></li>
+                                </ul>
+                            </li>                           
+                            <li>
+                                <h3>Animation speed:</h3>
+                                <ul>
+                                    <li><input type="radio" name="tab_dur" value="600" /><label>slow</label></li>                                    
+                                    <li><input type="radio" name="tab_dur" value="300" checked="checked" /><label>normal</label></li>                                  
+                                    <li><input type="radio" name="tab_dur" value="200" /><label>fast</label></li>                                    
+                                </ul>
+                            </li>                            
+                            <li>                             
+                                <h3>Easing effect:</h3>
+                                <select id="tab_fx">
+                                    <option value="" selected="selected">(none)</option>
+                                    <option value="jswing">jswing</option>                                    
+                                    <option value="easeInQuad">easeInQuad</option>
+                                    <option value="easeOutQuad">easeOutQuad</option>
+                                    <option value="easeInOutQuad">easeInOutQuad</option>
+                                    <option value="easeInCubic">easeInCubic</option>
+                                    <option value="easeOutCubic">easeOutCubic</option>
+                                    <option value="easeInOutCubic">easeInOutCubic</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInOutQuart">easeInOutQuart</option>
+                                    <option value="easeInQuint">easeInQuint</option>
+                                    <option value="easeOutQuint">easeOutQuint</option>
+                                    <option value="easeInOutQuint">easeInOutQuint</option>
+                                    <option value="easeInSine">easeInSine</option>
+                                    <option value="easeOutSine">easeOutSine</option>
+                                    <option value="easeInOutSine">easeInOutSine</option>
+                                    <option value="easeInExpo">easeInExpo</option>
+                                    <option value="easeOutExpo">easeOutExpo</option>
+                                    <option value="easeInOutExpo">easeInOutExpo</option>
+                                    <option value="easeInCirc">easeInCirc</option>
+                                    <option value="easeOutCirc">easeOutCirc</option>
+                                    <option value="easeInOutCirc">easeInOutCirc</option>
+                                    <option value="easeInElastic">easeInElastic</option>
+                                    <option value="easeOutElastic">easeOutElastic</option>
+                                    <option value="easeInOutElastic">easeInOutElastic</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="easeInBounce">easeInBounce</option>
+                                    <option value="easeOutBounce">easeOutBounce</option>
+                                    <option value="easeInOutBounce">easeInOutBounce</option>
+                                </select>
+                            </li>                            
+                        </ul>
+                        
+                        <h2 class="content">Content Options</h2>
+                        
+                        <ul class="opts_list">                                                           
+                            <li>
+                                <h3>Animation type:</h3>
+                                <select id="cont_anim">
+                                    <option value="">(none)</option>
+                                    <option value="fade">fade</option>
+                                    <option value="slideLeft" selected="selected">slideLeft</option>
+                                    <option value="slideRight">slideRight</option>
+                                    <option value="slideUp">slideUp</option>
+                                    <option value="slideDown">slideDown</option>
+                                </select>                                
+                            </li>
+                            <li>
+                            	<h3>Animation speed:</h3>
+                                <ul>                                   
+                                    <li><input type="radio" name="cont_dur" value="900" /><label>slow</label></li>                                    
+                                    <li><input type="radio" name="cont_dur" value="600" checked="checked" /><label>normal</label></li>                                   
+                                    <li><input type="radio" name="cont_dur" value="400" /><label>fast</label></li>
+                                </ul>
+                            </li>                              
+                            <li>
+                                <h3>Easing effect:</h3>
+                                <select id="cont_fx">
+                                	<option value="">(none)</option>
+                                    <option value="jswing">jswing</option>                                    
+                                    <option value="easeInQuad">easeInQuad</option>
+                                    <option value="easeOutQuad">easeOutQuad</option>
+                                    <option value="easeInOutQuad">easeInOutQuad</option>
+                                    <option value="easeInCubic">easeInCubic</option>
+                                    <option value="easeOutCubic">easeOutCubic</option>
+                                    <option value="easeInOutCubic">easeInOutCubic</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInOutQuart">easeInOutQuart</option>
+                                    <option value="easeInQuint">easeInQuint</option>
+                                    <option value="easeOutQuint">easeOutQuint</option>
+                                    <option value="easeInOutQuint">easeInOutQuint</option>
+                                    <option value="easeInSine">easeInSine</option>
+                                    <option value="easeOutSine">easeOutSine</option>
+                                    <option value="easeInOutSine">easeInOutSine</option>
+                                    <option value="easeInExpo">easeInExpo</option>
+                                    <option value="easeOutExpo">easeOutExpo</option>
+                                    <option value="easeInOutExpo" selected="selected">easeInOutExpo</option>
+                                    <option value="easeInCirc">easeInCirc</option>
+                                    <option value="easeOutCirc">easeOutCirc</option>
+                                    <option value="easeInOutCirc">easeInOutCirc</option>
+                                    <option value="easeInElastic">easeInElastic</option>
+                                    <option value="easeOutElastic">easeOutElastic</option>
+                                    <option value="easeInOutElastic">easeInOutElastic</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="easeInBounce">easeInBounce</option>
+                                    <option value="easeOutBounce">easeOutBounce</option>
+                                    <option value="easeInOutBounce">easeInOutBounce</option>                                
+                                </select>
+                            </li>
+                        </ul>
+                        
+                        <div id="save_cont">
+                        	<a href="#save" id="save" title="Apply Options">Apply Options</a>
+                        </div>
+                    </div> <!-- /#options_box -->
+                
+                </div> <!-- /#customize_continer -->
+                <!-- End HTML - Customize tabs -->                           
+            
+            </div> <!-- /#tabs_horizontal -->        
+            <!-- End HTML - Horizontal tabs -->               
+        
+        </div> <!-- /.column -->             
+        
+        <div class="column">
+        
+            <h1>Vertical demo</h1>
+            
+            <!-- Start HTML - Vertical tabs -->
+            <div id="tabs_vertical">                        	                                                                                          
+                                
+                <div id="tabs_container">                               
+                                        
+                    <a href="#prev" id="prev"></a>
+                    <a href="#next" id="next"></a>                                    					
+                                                                                                         
+                    <div class="slide_container">
+                    
+                        <ul id="tabs">
+                            <li><a href="#content_1" id="tab_1" class="tab active">Vertical Tab #1<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_2" id="tab_2" class="tab">Vertical Tab #2<span>Lorem ipsum dolor sit amet</span></a></li>                                    
+                            <li><a href="#content_3" id="tab_3" class="tab">Vertical Tab #3<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_4" id="tab_4" class="tab">Vertical Tab #4<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_5" id="tab_5" class="tab">Vertical Tab #5<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_6" id="tab_6" class="tab">Vertical Tab #6<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_7" id="tab_7" class="tab">Vertical Tab #7<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_8" id="tab_8" class="tab">Vertical Tab #8<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_9" id="tab_9" class="tab">Vertical Tab #9<span>Lorem ipsum dolor sit amet</span></a></li>
+                            <li><a href="#content_10" id="tab_10" class="tab">Vertical Tab #10<span>Lorem ipsum dolor sit amet</span></a></li>                                      
+                        </ul>
+                        
+                    </div> <!-- /.slide_container -->                                                                                          
+                
+                </div> <!-- /#tabs_container -->                               
+                
+                <div id="content">
+                
+                    <div id="view_container">
+                                
+                        <div id="content_1" class="tab_view">
+                            <h2>Vertical Tab #1</h2>
+                            
+                            <div class="text">                                                                                                   
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>                            
+                        </div>
+                        
+                        <div id="content_2" class="tab_view">
+                            <h2>Vertical Tab #2</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_3" class="tab_view">
+                            <h2>Vertical Tab #3</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_4" class="tab_view">
+                            <h2>Vertical Tab #4</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_5" class="tab_view">
+                            <h2>Vertical Tab #5</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_6" class="tab_view">
+                            <h2>Vertical Tab #6</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_7" class="tab_view">
+                            <h2>Vertical Tab #7</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_8" class="tab_view">
+                            <h2>Vertical Tab #8</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_9" class="tab_view">
+                            <h2>Vertical Tab #9</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                            </div>
+                        </div>
+                        
+                        <div id="content_10" class="tab_view">
+                            <h2>Vertical Tab #10</h2>
+                            
+                            <div class="text">
+                                <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                                
+                                <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                        
+                                <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                                
+                                <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>    
+                            </div>
+                        </div>
+                    
+                    </div> <!-- /#view_container --> 
+                 
+                </div> <!-- /#content -->
+                
+                <!-- Start HTML - Customize tabs -->
+                <div id="customize_container">
+                
+                    <ul class="customize">          
+                        <li><p>Customize</p></li>
+                        <li><a href="#add" id="add" class="btn_enabled" title="Add tab">Add tab</a></li>           
+                        <li><a href="#remove" id="remove" class="btn_enabled" title="Remove tab">Remove tab</a></li>
+                        <li><a href="#options" id="options" class="btn_enabled" title="Options">Options</a></li>             
+                    </ul>
+                    
+                    <div id="options_box" class="hide">                                                
+                        
+                        <h2>Tab Options</h2>
+                        
+                        <ul class="opts_list">                            
+                            <li>
+                                <h3>Scroll wheel:</h3>
+                                <ul>
+                                    <li><input type="radio" name="v_scroll" value="true" checked="checked" /><label>enabled</label></li>                                    
+                                    <li><input type="radio" name="v_scroll" value="false" /><label>disabled</label></li>
+                                </ul>
+                            </li>                           
+                            <li>
+                                <h3>Animation speed:</h3>
+                                <ul>
+                                    <li><input type="radio" name="v_tab_dur" value="600" /><label>slow</label></li>                                    
+                                    <li><input type="radio" name="v_tab_dur" value="300" checked="checked" /><label>normal</label></li>                                  
+                                    <li><input type="radio" name="v_tab_dur" value="200" /><label>fast</label></li>                                    
+                                </ul>
+                            </li>                            
+                            <li>                             
+                                <h3>Easing effect:</h3>
+                                <select id="tab_fx">
+                                    <option value="" selected="selected">(none)</option>
+                                    <option value="jswing">jswing</option>                                    
+                                    <option value="easeInQuad">easeInQuad</option>
+                                    <option value="easeOutQuad">easeOutQuad</option>
+                                    <option value="easeInOutQuad">easeInOutQuad</option>
+                                    <option value="easeInCubic">easeInCubic</option>
+                                    <option value="easeOutCubic">easeOutCubic</option>
+                                    <option value="easeInOutCubic">easeInOutCubic</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInOutQuart">easeInOutQuart</option>
+                                    <option value="easeInQuint">easeInQuint</option>
+                                    <option value="easeOutQuint">easeOutQuint</option>
+                                    <option value="easeInOutQuint">easeInOutQuint</option>
+                                    <option value="easeInSine">easeInSine</option>
+                                    <option value="easeOutSine">easeOutSine</option>
+                                    <option value="easeInOutSine">easeInOutSine</option>
+                                    <option value="easeInExpo">easeInExpo</option>
+                                    <option value="easeOutExpo">easeOutExpo</option>
+                                    <option value="easeInOutExpo">easeInOutExpo</option>
+                                    <option value="easeInCirc">easeInCirc</option>
+                                    <option value="easeOutCirc">easeOutCirc</option>
+                                    <option value="easeInOutCirc">easeInOutCirc</option>
+                                    <option value="easeInElastic">easeInElastic</option>
+                                    <option value="easeOutElastic">easeOutElastic</option>
+                                    <option value="easeInOutElastic">easeInOutElastic</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="easeInBounce">easeInBounce</option>
+                                    <option value="easeOutBounce">easeOutBounce</option>
+                                    <option value="easeInOutBounce">easeInOutBounce</option>
+                                </select>
+                            </li>                            
+                        </ul>
+                        
+                        <h2 class="content">Content Options</h2>
+                        
+                        <ul class="opts_list">                                      
+                            <li>
+                                <h3>Animation type:</h3>
+                                <select id="cont_anim">
+                                    <option value="">(none)</option>
+                                    <option value="fade">fade</option>
+                                    <option value="slideLeft" selected="selected">slideLeft</option>
+                                    <option value="slideRight">slideRight</option>
+                                    <option value="slideUp">slideUp</option>
+                                    <option value="slideDown">slideDown</option>
+                                </select>                                
+                            </li>
+                            <li>
+                            	<h3>Animation speed:</h3>
+                                <ul>
+                                    <li><input type="radio" name="v_cont_dur" value="900" /><label>slow</label></li>                                    
+                                    <li><input type="radio" name="v_cont_dur" value="600" checked="checked" /><label>normal</label></li>                                   
+                                    <li><input type="radio" name="v_cont_dur" value="400" /><label>fast</label></li>
+                                </ul>
+                            </li>                                
+                            <li>
+                                <h3>Easing effect:</h3>
+                                <select id="cont_fx">
+                                	<option value="">(none)</option>
+                                    <option value="jswing">jswing</option>                                    
+                                    <option value="easeInQuad">easeInQuad</option>
+                                    <option value="easeOutQuad">easeOutQuad</option>
+                                    <option value="easeInOutQuad">easeInOutQuad</option>
+                                    <option value="easeInCubic">easeInCubic</option>
+                                    <option value="easeOutCubic">easeOutCubic</option>
+                                    <option value="easeInOutCubic">easeInOutCubic</option>
+                                    <option value="easeInQuart">easeInQuart</option>
+                                    <option value="easeOutQuart">easeOutQuart</option>
+                                    <option value="easeInOutQuart">easeInOutQuart</option>
+                                    <option value="easeInQuint">easeInQuint</option>
+                                    <option value="easeOutQuint">easeOutQuint</option>
+                                    <option value="easeInOutQuint">easeInOutQuint</option>
+                                    <option value="easeInSine">easeInSine</option>
+                                    <option value="easeOutSine">easeOutSine</option>
+                                    <option value="easeInOutSine">easeInOutSine</option>
+                                    <option value="easeInExpo">easeInExpo</option>
+                                    <option value="easeOutExpo">easeOutExpo</option>
+                                    <option value="easeInOutExpo" selected="selected">easeInOutExpo</option>
+                                    <option value="easeInCirc">easeInCirc</option>
+                                    <option value="easeOutCirc">easeOutCirc</option>
+                                    <option value="easeInOutCirc">easeInOutCirc</option>
+                                    <option value="easeInElastic">easeInElastic</option>
+                                    <option value="easeOutElastic">easeOutElastic</option>
+                                    <option value="easeInOutElastic">easeInOutElastic</option>
+                                    <option value="easeInBack">easeInBack</option>
+                                    <option value="easeOutBack">easeOutBack</option>
+                                    <option value="easeInOutBack">easeInOutBack</option>
+                                    <option value="easeInBounce">easeInBounce</option>
+                                    <option value="easeOutBounce">easeOutBounce</option>
+                                    <option value="easeInOutBounce">easeInOutBounce</option>                                
+                                </select>
+                            </li>
+                        </ul>
+                        
+                        <div id="save_cont">
+                        	<a href="#save" id="save" title="Apply Options">Apply Options</a>
+                        </div>
+                    </div> <!-- /#options_box -->
+                
+                </div> <!-- /#customize_continer -->
+                <!-- End HTML - Customize tabs -->                    	            
+            
+            </div> <!-- /#tabs_vertical -->                    
+            <!-- End HTML - Vertical tabs -->                      
+        
+        </div> <!-- /.column -->                                              
+        
+        <div id="features">
+        
+        	<h1>What can it do?</h1>
+            
+            <ul>
+            	<li>
+                	<h3>Scroll any number of tabs</h3>
+                	Unlimited number of tabs and no size limit.
+                </li>                
+                <li>
+                	<h3>Multiple transitions for the content</h3>
+                	fade, slide left, right, up, and down (No effect also possible).
+                </li>
+                <li>
+                	<h3>Set animation speed</h3>
+                	Both tabs and content have options for animation speed.
+                </li>                               
+                <li>
+                	<h3>Easing plugin for sliding effects</h3>
+                    Just include the Easing plugin and specify the easing effect.
+                </li>
+                <li>
+                	<h3>Lightweight</h3>
+                    The packed script weighs only 4kb.
+                </li>                                             
+            </ul>
+            
+            <ul class="f_right">                            
+                <li>
+                	<h3>Use the mouse scroll wheel to slide the tabs</h3>
+                	Can be disabled if desired.
+                </li> 
+                 <li>
+                	<h3>Navigates to the 'active' tab on page load</h3> 
+                    Active class name can be changed in the options.
+                </li>    
+                <li>
+                	<h3>Auto deactivates and hides directional buttons</h3> 
+                    Set the styling with CSS.
+                </li>                 
+                <li>
+                	<h3>Fully customizable</h3>
+                    Fully customizable with CSS.
+                </li>
+                <li>
+                	<h3>Compatible with all browsers</h3>
+                    Including IE6.
+                </li>
+            </ul>
+        
+        </div>
+        
+        <div id="docs">
+                	
+            <div id="setup">
+            
+                <h1>How to use?</h1>
+            
+                <h2><strong>Step 1</strong> - Include the scripts</h2>
+                
+                    <p>Include the javascript files in the &lt;head&gt; of your HTML document, and change the <code>src="your-path/"</code> to the location of your files. The code below loads <a href="http://code.google.com/intl/en/apis/ajaxlibs/documentation/#jquery">jQuery from Google</a>, but you can include your own copy instead if you want. The <a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a> is required for <em>easing effects</em>, and the <a href="http://brandonaaron.net/code/mousewheel/docs">jQuery Mousewheel Plugin</a> is required for <em>mouse wheel scrolling</em>.</p>                                      
+                    
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;your-path/jquery.mousewheel.min.js&quot;&gt;&lt;/script&gt; &lt;!-- Optional --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;your-path/jquery.easing.1.3.js&quot;&gt;&lt;/script&gt; &lt;!-- Optional --&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;your-path/jquery.slidingtabs.pack.js&quot;&gt;&lt;/script&gt;</code></pre>
+            
+                <h2><strong>Step 2</strong> - Create the HTML and CSS</h2>                                    
+                    
+                    <p>You can get the HTML and CSS for the horizontal and vertical demos from the links below.</p>
+                    
+                    <ul class="markup">
+                    	<li><strong>Horizontal tabs:</strong> <a href="horizontal.html">HTML</a> & <a href="css/slidingtabs-horizontal.css">CSS</a></li>
+                    	<li><strong>Vertical tabs:</strong> <a href="vertical.html">HTML</a> & <a href="css/slidingtabs-vertical.css">CSS</a></li>
+                    </ul>
+                    
+                    <p>Place the CSS code in your stylesheet or create a separate one and include it in your document &lt;head&gt; <em>before</em> the javascript.</p>
+                
+<pre><code class="html">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;your-path/style.css&quot; /&gt;</code></pre>
+                                                                          
+                    <h3><strong>Customizing the tabs</strong> - The tabs can be customized any way you want. A few things to note is:</h3>                                        
+                    
+                    <ul class="notes">                        
+                        <li>Some CSS classes are predefined and needed for the sliding tabs to work. If you want to rename any of these classes remember to change them in the <a href="#opts">options</a> as well.</li>
+                        <li>If you change the width or height of the <code>'tabs_container'</code> &lt;div&gt;, set the new value in the <a href="#slideWidth"><code class="option">slideWidth</code></a> or <a href="#slideHeight"><code class="option">slideHeight</code></a> option as well so the sliding will behave correctly.</li>                        
+                        <li>Each tab (&lt;a&gt; tag) has an <code>href=""</code> attribute that matches the ID of a <code>'.tab_view'</code> &lt;div&gt; element. They can be called anything you want, as long as they match. This is how the correct content will show when a tab is clicked.</li>
+                        <li>Set the <a href="#orient"><code class="option">orientation</code></a> option to <code>'vertical'</code> if you use vertical sliding tabs. The default is <code>'horizontal'</code>.</li>
+                    </ul>
+                
+                <h2><strong>Step 3</strong> - Activate the plugin</h2>
+                
+                	<p>As you can see from the demos above, you can have multiple tab instances on a single page. Just include the code below in the &lt;head&gt; of your HTML document, <em>after</em> the scripts. Specify wich element contains your tabs and define any options you want.</p>
+                    <p>Repeat this step specifying your next tab container element if you want <em>multiple instances.</em></p>
+                    
+<pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+$(document).ready(function() {
+
+    // Vertical tabs example
+    $(&#x27;#your_tabs&#x27;).slideTabs({
+        // Your options here
+        orientation: 'vertical',
+        slideHeight: 300,
+        contentAnim: 'slideLeft',
+        contentEasing: 'easeInOutExpo',
+        tabsAnimTime: 300,
+        contentAnimTime: 600
+    });
+
+});
+&lt;/script&gt;</code></pre>                                            
+            
+            </div> <!-- /#setup -->
+            
+            <div id="opts">
+                
+                <div id="opts_list">
+                
+                    <h1>Customization options</h1>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Properties</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th style="width:17%"><code>btnNext</code></th>
+                                <td style="width:30%">
+                                    <strong>string</strong> - Default: <code>'#next'</code>							
+                                </td>
+                                <td style="width:53%">The CSS class or ID for the next-tab button (include the <code>#</code> or <code>.</code> selector before the name).</td>
+                            </tr>
+                            <tr>
+                                <th><code>btnPrev</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'#prev'</code>							
+                                </td>
+                                <td>The CSS class or ID for the previous-tab button (include the <code>#</code> or <code>.</code> selector before the name).</td
+                            ></tr>
+                            <tr>
+                                <th><code>tabsList</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'#tabs'</code>							
+                                </td>
+                                <td>The CSS class or ID for the tabs unordered list element (include the <code>#</code> or <code>.</code> selector before the name).</td
+                            ></tr>
+                            <tr>
+                                <th><code>viewContainer</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'#view_container'</code>							
+                                </td>
+                                <td>The CSS class or ID for the content's container div element (include the <code>#</code> or <code>.</code> selector before the name).</td>
+                            </tr>
+                            <tr>
+                                <th><code>tabClass</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'tab'</code>							
+                                </td>
+                                <td>The CSS class name for the tabs (the name only, no selector).</td>
+                            </tr>
+                            <tr>
+                                <th><code>activeTabClass</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'active'</code>							
+                                </td>
+                                <td>The CSS class name for the active/highlighted tab (the name only, no selector).</td>
+                            </tr>
+                            <tr>
+                                <th><code>activeViewClass</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'active_view'</code>							
+                                </td>
+                                <td>The CSS class name for the active view div element (the name only, no selector).</td>
+                            </tr>
+                            <tr>
+                                <th><code>btnDisabledClass</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'disabled'</code>							
+                                </td>
+                                <td>The CSS class added to the prev/next buttons when they are unable to be clicked (the name only, no selector).</td>
+                            </tr>
+                            <tr id="orient">
+                                <th><code>orientation</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'horizontal'</code>							
+                                </td>
+                                <td>Specify the sliding direction of the tabs. Set to either <code>'horizontal'</code> or <code>'vertical'</code>.</td>
+                            </tr>                    
+                            <tr id="slideWidth">
+                                <th><code>slideWidth</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>600</code>							
+                                </td>
+                                <td>The width of the visible horizontal tab area (for horizontal sliding only).</td>
+                            </tr>
+                            <tr id="slideHeight">
+                                <th><code>slideHeight</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>300</code>							
+                                </td>
+                                <td>The height of the visible vertical tab area (for vertical sliding only).</td>
+                            </tr>
+                            <tr>
+                                <th><code>offsetLeft</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>0</code>							
+                                </td>
+                                <td>Set a offset pluss/minus the sliding-width when sliding the tabs <strong>left</strong> (<code>slideWidth</code> pluss/minus the <code>offset</code> value).</td>
+                            </tr>
+                            <tr>
+                                <th><code>offsetRight</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>0</code>							
+                                </td>
+                                <td>Set a offset pluss/minus the sliding-width when sliding the tabs <strong>right</strong> (<code>slideWidth</code> pluss/minus the <code>offset</code> value).</td>
+                            </tr>
+                            <tr>
+                                <th><code>offsetTop</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>0</code>							
+                                </td>
+                                <td>Set a offset pluss/minus the sliding-height when sliding the tabs <strong>up</strong> (<code>slideHeight</code> pluss/minus the <code>offset</code> value).</td>
+                            </tr>
+                            <tr>
+                                <th><code>offsetBottom</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>0</code>							
+                                </td>
+                                <td>Set a offset pluss/minus the sliding-height when sliding the tabs <strong>down</strong> (<code>slideHeight</code> pluss/minus the <code>offset</code> value).</td>
+                            </tr>
+                            <tr>
+                                <th><code>contentAnim</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'slideLeft'</code>							
+                                </td>                       
+                                <td>Animation for the content. <code>'fade'</code>, <code>'slideLeft'</code>, <code>'slideRight'</code>, <code>'slideUp'</code>, or <code>'slideDown'</code>. Leave empty <code>''</code> for no animation.</td>
+                            </tr>
+                            <tr>
+                                <th><code>tabsEasing</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>''</code>							
+                                </td>
+                                <td>Easing effect for the tabs sliding animation. Leave empty  <code>''</code> if you don't want any effect. (requires the <a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a>).</td>
+                            </tr>
+                            <tr>
+                                <th><code>contentEasing</code></th>
+                                <td>
+                                    <strong>string</strong> - Default: <code>'easeInOutExpo'</code>							
+                                </td>
+                                <td>Easing effect for the content sliding animation. Leave empty <code>''</code> if you don't want any effect. (requires the <a href="http://gsgd.co.uk/sandbox/jquery/easing/">jQuery Easing Plugin</a>).</td>
+                            </tr>
+                            <tr>
+                                <th><code>tabsAnimTime</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>300</code>							
+                                </td>
+                                <td>Tabs sliding animation time in milliseconds.</td>
+                            </tr>
+                            <tr>
+                                <th><code>contentAnimTime</code></th>
+                                <td>
+                                    <strong>integer</strong> - Default: <code>600</code>							
+                                </td>
+                                <td>Content sliding/fading animation time in milliseconds.</td>
+                            </tr>
+                            <tr>
+                                <th><code>scrollTabs</code></th>
+                                <td>
+                                    <strong>boolean</strong> - Default: <code>true</code>							
+                                </td>
+                                <td>Enable or disable mouse scrolling. Set to <code>true</code> or <code>false</code> (requires the <a href="http://brandonaaron.net/code/mousewheel/docs">jQuery Mousewheel Plugin</a>).</td>
+                            </tr>												
+                        </tbody>
+                    </table>
+                
+                </div> <!-- /#opts_list -->
+         
+            </div> <!-- /#opts -->
+        
+        </div> <!-- /#docs -->                           
+    
+    </div> <!-- /#container -->
+    
+    <div id="footer">               
+       	
+        <ul>
+            <li>&copy; Copyright 2010, <a href="http://codecanyon.net/user/northernlight">Christian André</a></li>                
+            <li class="fr"><a href="#top" id="top_btn">Return to Top</a></li>
+        </ul>
+    
+    </div> <!-- /#footer -->    
+    
+	<script type="text/javascript">
+	// Load the syntax highlight script and styles
+	$.ajax({
+		url: "http://www.kristiandre.net/assets/js/highlight/highlight.pack.js",
+		dataType: "script",
+		cache: true,
+		success: function() {
+			$('<link rel="stylesheet" type="text/css" href="http://www.kristiandre.net/assets/js/highlight/highlight.css" />').appendTo("head");
+			hljs.tabReplace = "    ";
+			hljs.initHighlightingOnLoad();
+		}
+	});
+	</script>
+    <script type="text/javascript">
+	// Load the smooth-scroll script
+	$.ajax({
+		url: "http://www.kristiandre.net/assets/js/jquery.smooth-scroll.pack.js",
+		dataType: "script",
+		cache: true,
+		success: function() {			
+			$("a").smoothScroll({
+				excludeWithin: ["#tabs_horizontal", "#tabs_vertical"],
+				afterScroll: function() {
+					location.hash = this.hash;
+				}
+			});						
+		}
+	});
+	</script>
+  
+</body>
+</html>

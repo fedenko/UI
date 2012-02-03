@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>jConvert Demo Page</title>
+	
+	<link rel="stylesheet" href="jconvert.css" />
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jquery.jconvert.js"></script>
+</head>
+
+<body>
+	<div id="container">
+		<h1>jConvert jQuery Plugin</h1>
+		<h2>Introduction</h2>
+		<p>
+			This is the demo page for jConvert. Below is a sample of how you would use jConvert. 
+		</p>
+	
+		<h2>How to use jConvert</h2>
+			<p>
+			To use jConvert, you need to have jQuery along with the jquery.jconvert.js file included in this download. A stylesheet has also been provided, which you can edit if you would like to customize the look of the jConvert tooltip.
+			</p>
+		
+			<p>
+			To include these 3 files, add the following lines within the <head> tag of your webpage:
+			<pre>
+				&lt;link rel="stylesheet" href="jconvert.css" /&gt;
+				&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
+				&lt;script type="text/javascript" src="jquery.jconvert.js"&gt;&lt;/script&gt;
+			</pre>
+			</p>
+		
+			<p>
+			Now you can apply the jconvert function to any DOM element on your page. To do so, use code similar to this in your webpage:
+			<pre>
+				&lt;script type="text/javascript"&gt;
+					$(document).ready(function(){
+						$('a.jconvert').jconvert();
+					});
+				&lt;/script&gt;
+			</pre>
+			</p>	
+		
+		</p>
+	
+		<h2>Demos</h2>
+		<p>
+			Hover over the measurement units to see some conversions to other units.
+			<br /><br />
+			Sample Volumes:<br />
+			<ul>
+				<li><a class="jconvert">5 cup</a> plain flour</li>
+				<li><a class="jconvert">350g</a> butter</li>
+				<li><a class="jconvert">1 pint</a> milk</li>
+				<li><a class="jconvert">0.5 quarts</a> water</li>
+				<li><a class="jconvert">15 minutes on the oven</a></li>
+				<li><a class="jconvert">3 ounces</a> cream</li>
+				<li><a class="jconvert">4 m walk</a></li>
+				<li><a class="jconvert">1 Dog</a> tail</li>
+			</ul>
+		
+			<br />
+			Sample Weights:<br />
+			<ul>
+				<li><a class="jconvert">350g</a> lime</li>
+				<li><a class="jconvert">24 kilograms</a> cement mix</li>
+				<li><a class="jconvert">3.5 lbs</a> soil</li>
+				<li><a class="jconvert">39 ounces</a> sand</li>
+				<li><a class="jconvert">20 stone</a> gravel</li>
+			</ul>
+		
+			<br />
+			Sample Lengths:<br />
+			<ul>
+				<li><a class="jconvert">55m</a> fabric</li>
+				<li><a class="jconvert">13 yards</a> rope</li>
+				<li><a class="jconvert">24 foot</a> high</li>
+			</ul>
+		</p>
+	
+		<h2>Feedback</h2>
+		<p>
+			If you have any feedback, comments or issues, please drop me an email at <a href="mailto:maria@mariacheung.com">maria@mariacheung.com</a> and I'll be happy to help or answer any questions.
+		</p>
+	</div>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+	
+			$('a.jconvert').jconvert({shortUnits: false, unitsMode: 'us'});
+		});
+	</script>
+</body>
+</html>

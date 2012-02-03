@@ -1,0 +1,33 @@
+.jsizedCarousel {
+    position: relative;
+    display: block;           
+    
+    overflow: none;
+    
+    height: 260px;
+    width: 500px;    
+}
+.jsizedCarousel .slide {
+    position: absolute;
+    
+    display: block;            
+    
+    width: 100px;
+    height: 200px;
+    
+    overflow: hidden;
+    
+    border: 1px solid rgb(99, 99, 99);                                    
+    border: 1px solid rgba(0, 0, 0, 0.5);
+
+    cursor: pointer; 
+}
+.jsizedCarousel .slide:hover {
+	border: 1px solid black;
+    
+    -moz-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
+    /* safari doesn't support spread yet */   
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);            
+    /* for chrome */
+    -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
+}

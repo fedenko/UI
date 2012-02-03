@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SexySlider &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/global.css" />
+  <link rel="stylesheet" type="text/css" href="css/sexyslider.css" />
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/jquery.sexyslider.js"></script>
+
+</head>
+
+<body>
+
+  <div id="top">
+    <div id="header">
+        <h1>Sexy Slider <span>Example 3</span></h1>
+    </div>
+
+    <div class="hastoc">
+
+        <div id="wrapper">
+          
+          <h2>slider_one</h2>
+          <div id="slider_one">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt=""/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt=""/>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#slider_one").SexySlider({
+                width     : 560,
+                height    : 200,
+                delay     : 2000,
+                strips    : 10,
+                effect    : 'fade'
+              });
+            });
+          </script>
+
+
+
+
+          <h2>slider_two</h2>
+          <div id="slider_two">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt=""/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt=""/>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#slider_two").SexySlider({
+                width     : 560,
+                height    : 200,
+                delay     : 2000,
+                stripSpeed: 1000,
+                strips    : 1,
+                effect    : 'fade'
+              });
+            });
+          </script>
+
+
+
+          <h2>slider_three</h2>
+          <div id="slider_three">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt=""/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt=""/>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#slider_three").SexySlider({
+                width     : 560,
+                height    : 200,
+                delay     : 1500,
+                stripSpeed: 1000,
+                strips    : 1,
+                effect    : 'cascade'
+              });
+            });
+          </script>
+
+
+
+
+
+          <h2>slider_four</h2>
+          <div id="slider_four">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt=""/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt=""/>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#slider_four").SexySlider({
+                width     : 560,
+                height    : 200,
+                delay     : 2000,
+                stripSpeed: 1000,
+                strips    : 1,
+                effect    : 'curtain'
+              });
+            });
+          </script>
+
+
+
+
+
+          <h2>slider_five</h2>
+          <div id="slider_five">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt=""/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt=""/>
+          </div>
+          <script type="text/javascript">
+            $(document).ready(function() {
+              $("#slider_five").SexySlider({
+                width     : 560,
+                height    : 200,
+                delay     : 2000,
+                strips    : 3,
+                effect    : 'zipper'
+              });
+            });
+          </script>
+
+
+        </div>
+
+    </div><!--/hastoc-->
+  </div>
+  <!-- Syntax highlighting Javascript http://www.howtocreate.co.uk/tutorials/jsexamples/syntax/ -->
+</body>
+</html>

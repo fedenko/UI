@@ -1,0 +1,9 @@
+1.2 (Mar 29 2010)
+* BugFixed: isPlainObject don't exists in jquery 1.3
+
+1.1 (Mar 17 2010)
+* Now you can press [Enter] to close the alert
+* Config function has added
+
+1.0 (Mar 14 2010)
+* First release with a version number.

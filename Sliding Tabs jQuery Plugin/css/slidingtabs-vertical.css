@@ -1,0 +1,169 @@
+/* 
+ * Sliding Tabs - jQuery Plugin
+ * Copyright 2010, Christian André
+ *
+------------------------------------------------------------------------------------- */
+
+div#tabs_vertical {	
+	position:relative;
+	z-index:500; 
+	float:left;
+	clear:both;
+	width:775px;
+}
+
+/* Control buttons
+------------------------------------------------------------------------------------- */
+div#tabs_vertical a#prev, 
+div#tabs_vertical a#next {	
+	display:none;
+	float:left;
+	position:relative;
+	z-index:100;	
+	height:36px;
+	width:83px;
+	border:1px solid #d4d4d4;
+	border-top:0 none;	
+	background:#fff url(../img/btn_arrows.gif) no-repeat;	
+}
+
+div#tabs_vertical a#prev {
+	border-right:0 none;
+	background-position:35px -47px;
+}
+
+div#tabs_vertical a#prev:hover {	
+	background-position:-28px -47px;
+	background-color:#f5f5f5;
+}
+
+div#tabs_vertical a#next {
+	background-position:34px -79px;
+}
+
+div#tabs_vertical a#next:hover {
+	background-position:-29px -79px;
+	background-color:#f5f5f5;
+}
+
+div#tabs_vertical a#prev.disabled,
+div#tabs_vertical a#next.disabled {
+	cursor:default;
+	background-color:#f7f7f7;
+}
+
+div#tabs_vertical a#prev.disabled {
+	background-position:-91px -47px;
+}
+
+div#tabs_vertical a#next.disabled {
+	background-position:-92px -79px;
+}
+
+/* Tabs
+------------------------------------------------------------------------------------- */
+div#tabs_vertical div#tabs_container {  	
+	position:relative;
+	z-index:100;
+	float:left;
+	width:169px; /* +1px for the negative right margin */
+	height:337px;
+	margin-right:-1px;
+	border-top:1px solid #d4d4d4;
+	overflow:hidden;
+}
+
+div#tabs_vertical div#tabs_container div.slide_container {
+	position:relative !important; /* The tabs position will be calculated from the ul#tabs first parent element with position:relative */
+	float:left;
+}
+
+div#tabs_vertical div#tabs_container ul#tabs {
+	width:168px;
+	margin-top:0px;
+}
+
+div#tabs_vertical div#tabs_container ul#tabs li {
+	float:left;
+	clear:both;
+}
+
+div#tabs_vertical ul#tabs li a {
+	display:block;
+	width:147px;
+	height:31px;
+	padding:14px 0 14px 20px;
+	font-size:11px;
+	color:#5c5c5c;
+	font-weight:bold;
+	line-height:normal;
+	border-left:1px solid #d4d4d4;
+	border-bottom:1px solid #d4d4d4;
+	background:#fff url(../img/v_tab_bg.jpg) repeat-x 0px 0px;	
+}
+
+div#tabs_vertical div#tabs_container ul#tabs li a span {
+	display:block;
+	clear:both;
+	font-weight:normal;
+	color:#838383;
+	padding-top:3px;
+}
+
+div#tabs_vertical ul#tabs a:hover {
+	color:#333;
+}
+
+div#tabs_vertical ul#tabs a.active {
+	position:relative;
+	z-index:10;
+	color:#1ca5ec;
+	padding-right:1px;
+	background:#fff;
+}
+
+/* Content
+------------------------------------------------------------------------------------- */
+div#tabs_vertical div#content {
+	position:relative;
+	z-index:5;
+	float:left;	
+	width:565px;
+	height:296px;
+	padding:20px;
+	line-height:18px;
+	border:1px solid #d4d4d4;
+	background-color:#fff;
+	overflow:auto;
+}
+
+div#tabs_vertical div#content div#view_container {
+	position:relative;	
+	height:296px;	
+}
+
+div#tabs_vertical div#content div.tab_view {
+	width:567px;
+	margin-bottom:10px;
+	padding-bottom:5px;
+	background-color:#fff;
+}
+
+div#tabs_vertical div#content h2 {
+	margin-bottom:12px;
+	font-size:16px;
+}
+
+div#tabs_vertical div#content p {
+	margin-bottom:14px;
+}
+
+div#tabs_vertical div#content blockquote {
+	float:left;
+	width:43%;
+	margin:4px 14px 8px 0px;
+	padding-left:14px;
+	border-left:2px solid #5c5c5c;
+	font:italic 17px/21px Georgia, "Times New Roman", Times, serif;
+	color:#A8A8A8;
+}

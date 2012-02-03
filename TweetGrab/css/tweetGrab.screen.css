@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* TweetGrab has Style */
+
+.tweetgrab_container{position:relative; margin:10px 0px 10px 0px; border:1px solid #000000; width:100%; font-size:12px; -moz-border-radius:10px; -webkit-border-radius:10px;}
+.tweetgrab_container, x:-moz-any-link{-moz-border-radius:0px; -webkit-border-radius:0px;}
+.tweetgrab_container, x:-moz-any-link, x:default{-moz-border-radius:10px; -webkit-border-radius:10px;}
+ 
+.tweetgrab_loading{position:relative; top:0px; left:0px; background:#ffffff url(../images/ajax-loader.gif) 7px 4px no-repeat; text-indent:28px; display:block; width:100%; line-height:24px; -moz-border-radius:10px; -webkit-border-radius:10px;}
+	.tweetgrab_loading a:link{color:#CC0000; font-style:normal; font-size:12px; margin:0px 0px 0px 5px; text-decoration:none;}
+	.tweetgrab_loading a:visited{color:#CC0000; font-style:normal; font-size:12px; margin:0px 0px 0px 5px; text-decoration:none;}
+	.tweetgrab_loading a:hover{text-decoration:underline;}
+
+.tweetgrab_container .tweetgrab_background{position:absolute; top:0px; left:0px; width:100%; background-color:#9ae4e8; background-repeat:no-repeat; background-position: -50px -100px; -moz-border-radius:9px; -webkit-border-radius:9px;}
+
+.tweetgrab_container .tweetgrab_content{font-family:Georgia, "Times New Roman", Times, serif; width:75%; background:#ffffff; position:relative; -moz-border-radius:5px; -webkit-border-radius:5px; margin:23px auto 20px auto; padding:10px 15px 10px 15px; filter:alpha(opacity=90); opacity: 0.9; -moz-opacity:0.9;}
+
+.tweetgrab_container .tweetgrab_content span.tweetgrab_speech-bubble{display:block; width:21px; height:11px; position:absolute; top:-11px; left:10px; background:url('../images/arrow.gif') 0px 0px no-repeat; filter:alpha(opacity=90);}
+.tweetgrab_container .tweetgrab_content span{display:block;}
+
+.tweetgrab_container .tweetgrab_content span.tweet_text{font-size:16px;}
+	.tweetgrab_container .tweetgrab_content span.tweet_text a:link{font-size:16px; text-decoration:none;}
+	.tweetgrab_container .tweetgrab_content span.tweet_text a:visited{font-size:16px; text-decoration:none;}
+	.tweetgrab_container .tweetgrab_content span.tweet_text a:hover{text-decoration:underline;}
+
+.tweetgrab_container .tweetgrab_content span.tweet_meta{border-bottom:1px solid #e6e6e6; padding:0px 0px 5px 0px; margin:3px 0px 8px 0px;}
+	.tweetgrab_container .tweetgrab_content span.tweet_meta a:link{color:#999999; text-decoration:none; font-style:italic; font-size:12px;}
+	.tweetgrab_container .tweetgrab_content span.tweet_meta a:visited{color:#999999; text-decoration:none; font-style:italic; font-size:12px;}
+	.tweetgrab_container .tweetgrab_content span.tweet_meta a:hover{color:#000000; text-decoration:none; font-style:italic; font-size:12px;}
+	
+.tweetgrab_container .tweetgrab_content span.tweet_author{font-family:'Lucida Grande',sans-serif;}
+	.tweetgrab_container .tweetgrab_content span.tweet_author a:link{display:block; font-size:28px; line-height:48px; text-indent:60px;}
+	.tweetgrab_container .tweetgrab_content span.tweet_author a:visited{display:block; font-size:28px; line-height:48px; text-indent:60px;}
+	.tweetgrab_container .tweetgrab_content span.tweet_author a:hover{text-decoration:underline;}
+
+.tweetgrab_container .tweetgrab_search{background:#9ae4e8 url('../../../../a2.twimg.com/a/1250203207/images/bg.gif') 0px 0px no-repeat;}
+		.tweetgrab_container .tweetgrab_search a:link{color:#0084b4; text-decoration:none;}
+		.tweetgrab_container .tweetgrab_search a:visited{color:#0084b4; text-decoration:none;}
+		.tweetgrab_container .tweetgrab_search a:hover{text-decoration:underline;}
+	.tweetgrab_container .tweetgrab_search .tweetgrab_content span.tweet_author{float:left; margin:0px 10px 0px 0px;}
+		.tweetgrab_container .tweetgrab_search .tweetgrab_content span.tweet_author a:link{width:48px; height:48px;}
+		.tweetgrab_container .tweetgrab_search .tweetgrab_content span.tweet_author a:visited{width:48px; height:48px;}
+		.tweetgrab_container .tweetgrab_search .tweetgrab_content span.tweet_author a:hover{}
+	.tweetgrab_container .tweetgrab_search .tweetgrab_content span.tweet_text{float:left; width:83%;}
+	.tweetgrab_container .tweetgrab_search .tweetgrab_content span.tweet_meta{width:83%; border:none; padding:0px 0px 0px 0px; margin:0px 0px 0px 0px;}
+	.tweetgrab_container .tweetgrab_search .tweetgrab_content span.clear{clear:both;}
+	.tweetgrab_container .tweetgrab_search .tweetgrab_content div{border-bottom:1px solid #e6e6e6; padding:8px 0px 8px 0px;}
+	
+	.tweetgrab_container .tweetgrab_content span.tweet_info{font-family:'Lucida Grande',sans-serif; font-size:22px; line-height:48px;}

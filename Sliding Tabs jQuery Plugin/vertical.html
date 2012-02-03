@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Vertical Demo - Sliding Tabs - jQuery Plugin</title>    
+    
+    <!-- CSS -->    
+    <link rel="stylesheet" type="text/css" href="css/demo.css" type="text/css" />         
+    <link rel="stylesheet" type="text/css" href="css/slidingtabs-vertical.css" />    
+    
+    <!-- JavaScript -->
+    <script src="http://www.google.com/jsapi"></script><script type="text/javascript">google.load("jquery", "1.4.4");</script>
+    <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/jquery.slidingtabs.pack.js"></script>
+    <script type="text/javascript">  
+  	$(document).ready(function() {  				  		
+  		
+  		// Vertical Sliding Tabs Demo
+  		$("div#tabs_vertical").slideTabs({
+  			// Options  			
+  			orientation: 'vertical',  			
+  			slideHeight: 300, // Height of the #tabs_container <div> -minus the directional button's height (37px)			
+  			contentAnim: 'slideLeft',			
+  			contentEasing: 'easeInOutExpo',
+  			tabsAnimTime: 300,
+  			contentAnimTime: 600
+  		});		
+  	
+  	});
+    </script>    
+    
+</head>
+<body id="demo">	                                                                                         
+        
+    <h1>Vertical Demo</h1>
+    
+    <!-- Start HTML - Vertical Tabs -->
+    <div id="tabs_vertical">                        	                                                                                          
+                        
+        <div id="tabs_container">                               
+                                
+            <a href="#prev" id="prev"></a>
+            <a href="#next" id="next"></a>                                    					
+                                                                                                 
+            <div class="slide_container">
+            
+                <ul id="tabs">
+                    <li><a href="#content_1" id="tab_1" class="tab active">Vertical Tab #1<span>Lorem ipsum dolor sit amet</span></a></li>
+                    <li><a href="#content_2" id="tab_2" class="tab">Vertical Tab #2<span>Lorem ipsum dolor sit amet</span></a></li>                                    
+                    <li><a href="#content_3" id="tab_3" class="tab">Vertical Tab #3<span>Lorem ipsum dolor sit amet</span></a></li>
+                    <li><a href="#content_4" id="tab_4" class="tab">Vertical Tab #4<span>Lorem ipsum dolor sit amet</span></a></li>
+                    <li><a href="#content_5" id="tab_5" class="tab">Vertical Tab #5<span>Lorem ipsum dolor sit amet</span></a></li>                                                      
+                    <li><a href="#content_6" id="tab_6" class="tab">Vertical Tab #6<span>Lorem ipsum dolor sit amet</span></a></li>
+                    <li><a href="#content_7" id="tab_7" class="tab">Vertical Tab #7<span>Lorem ipsum dolor sit amet</span></a></li>
+                    <li><a href="#content_8" id="tab_8" class="tab">Vertical Tab #8<span>Lorem ipsum dolor sit amet</span></a></li>                            
+                </ul>
+                
+            </div> <!-- /.slide_container -->                                                                                          
+        
+        </div> <!-- /#tabs_container -->                               
+        
+        <div id="content">
+        
+            <div id="view_container">
+                        
+                <div id="content_1" class="tab_view">
+                    <h2>Vertical Tab #1</h2>
+                    
+                    <div class="text">                                                                                                   
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>                            
+                </div>
+                
+                <div id="content_2" class="tab_view">
+                    <h2>Vertical Tab #2</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>
+                
+                <div id="content_3" class="tab_view">
+                    <h2>Vertical Tab #3</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>
+                
+                <div id="content_4" class="tab_view">
+                    <h2>Vertical Tab #4</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>
+                
+                <div id="content_5" class="tab_view">
+                    <h2>Vertical Tab #5</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>
+                
+                <div id="content_6" class="tab_view">
+                    <h2>Vertical Tab #6</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>
+                
+                <div id="content_7" class="tab_view">
+                    <h2>Vertical Tab #7</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>
+                
+                <div id="content_8" class="tab_view">
+                    <h2>Vertical Tab #8</h2>
+                    
+                    <div class="text">
+                        <p>Lorem ipsum dolor sit amet, duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam praesent purus, aliquam quisque, eget nisl. Pellentesque scelerisque convallis tincidunt tristique.</p>
+                        
+                        <blockquote>Aliquam commodo arcu libero. Nullam justo neque porttitor laoreet. Aenean adipiscing nisi.</blockquote>
+                                
+                        <p>Aliquam commodo ullamcorper erat. Nullam justo in neque porttitor laoreet. Aenean lacus consequat adipiscing eget, nonummy non, nisi. Morbi nunc est, dignissim non, ornare sed, luctus eu, massa.</p>
+                        
+                        <p>Curabitur velit. Veniam donec orci viverra, lorem convallis in libero quisque, purus erat dolor, justo arcu nisl, et natoque velit euismod dapibus nulla semper. Suspendisse odio tempor. Id ornare nam nec feugiat, ac consectetuer magna, dolor enim vel in, pulvinar bibendum ante ac, dui nibh dui est neque lacinia et. Duis netus ut posuere feugiat arcu, purus wisi quis fringilla at, nunc ut eget elit duis erat, eu praesent, ut fermentum lacus turpis cras. Justo gravida erat quam mauris, aliquam quisque, eget nisl. Pellentesque nibh ut tristique.</p>
+                    </div>
+                </div>                                               
+            
+            </div> <!-- /#view_container --> 
+         
+        </div> <!-- /#content -->                                                  	            
+    
+    </div> <!-- /#tabs_vertical -->                    
+    <!-- End HTML - Vertical Tabs -->                                                                                        
+   
+</body>
+</html>

@@ -1,0 +1,124 @@
+/**********************************************************************************************
+
+	CSS on Sails
+	Title: X-Precise Sample page
+	Author: XHTMLized (http://www.xhtmlized.com/)
+	Date: December 2009
+
+***********************************************************************************************
+
+	1. BASE
+			1.1 Reset
+			1.2 Accessibility Navigation & Hide
+			1.3 Clearfix
+			1.4 Default Styles
+
+	2. LAYOUT
+			2.1 Structure
+			2.2 Header
+			2.3 Navigation
+			2.4 Content
+			2.5 Footer
+
+***********************************************************************************************/
+
+
+/* 1. BASE
+-----------------------------------------------------------------------------------------------
+===============================================================================================*/
+
+
+/* 1.1 Reset
+-----------------------------------------------------------------------------------------------*/
+
+html, body, div, span, object, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, samp, small, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; background: transparent; }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+a, ins, del { text-decoration: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+th, td { vertical-align: top; }
+th { text-align: left; }
+
+/* 1.2 Accessibility Navigation & Hide
+-----------------------------------------------------------------------------------------------*/
+
+ol#accessibility-nav, .hide { position: absolute; top: -999em; left: -999em; height: 1px; width: 1px; }
+
+
+/* 1.3 Clearfix
+-----------------------------------------------------------------------------------------------*/
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+
+/* 1.4 Default Styles
+-----------------------------------------------------------------------------------------------*/
+
+body { background: #fff url(../images/bg_body.png) center top no-repeat; color: #353535; font: 87.5%/1.79 "Arial", "Helvetica", sans-serif; text-align: center; }
+hr { display: none; }
+strong { font-weight: bold; }
+em { font-style: italic; }
+del { text-decoration: line-through; }
+th { font-weight: normal; }
+address, cite, dfn { font-style: normal; }
+li { list-style: none; }
+abbr, acronym { border-bottom: 1px dotted #999; cursor: help; }
+input, textarea, select { font-family: "Arial", "Helvetica", sans-serif; }
+a, a:visited { color: #353535; text-decoration: none; }
+a:hover, a:active { color: #f22200; text-decoration: underline; }
+
+/* 1.4 Image replacement
+-----------------------------------------------------------------------------------------------*/
+.ir { font-size: 1em; margin: 0; overflow: hidden; position: relative; }
+.ir span { background-repeat: no-repeat; display: block; height: 100%; left: 0; position: absolute; top: 0; width: 100%; z-index: 1; }
+.ir a { cursor: pointer; display: block; height: 100%; width: 100%; }
+.ir a span { cursor: pointer; }
+
+/* 2. LAYOUT
+-----------------------------------------------------------------------------------------------
+===============================================================================================*/
+
+/* 2.1 Structure
+-----------------------------------------------------------------------------------------------*/
+
+.container { width: 900px; position: relative; margin: 0 auto; text-align: left; }
+#content { width: 603px; float: left; }
+#navigation { width: 255px; float: right; }
+
+/* 2.2 Header
+-----------------------------------------------------------------------------------------------*/
+#header { height: 165px; position: relative; }
+#header .site-name,
+#header .site-name span { display: block; overflow: hidden; width: 400px; height: 165px; }
+#header .site-name { position: absolute; top: 0; left: -70px; }
+#header .site-name span { background: url('../images/logo_xprecise.png') no-repeat; position: absolute; top: 0; left: 0; z-index: 10; }
+#header a.site-name span { cursor: pointer; }
+#header .x-team { position: absolute; top: 19px; right: 0; width: 255px; }
+#header .x-team-logo { width: 121px; height: 44px; margin-bottom: 1px; }
+#header .x-team-logo span { background-image: url(../images/logo_xteam.png); }
+#header .x-team p { color: #767676; font-size: 0.86em; text-shadow: #fff 1px 1px 1px; }
+
+/* 2.3 Navigation
+-----------------------------------------------------------------------------------------------*/
+#navigation { font-weight: bold; margin-top: -7px; }
+#navigation li { padding-left: 18px; background: url(../images/bg_navigation.png) 0 10px no-repeat; margin-bottom: 4px; }
+#navigation strong { color: #f22200; }
+
+/* 2.4 Content
+-----------------------------------------------------------------------------------------------*/
+#content { margin: -7px 0 80px 0; }
+#content .intro { font-weight: bold; text-shadow: #fff 1px 1px 1px; }
+#content h2 { font-size: 1.79em; margin: 0.75em 0 0 0; font-weight: bold; line-height: 1.2; }
+#content h2 em { color: #f22200; font-style: normal; }
+#content h3 { margin: 1em 0 0.15em 0; }
+#content p { margin-bottom: 0em; }
+#content ul { margin: 1em 0 1.5em 0; }
+#content li { padding-left: 18px; background: url(../images/bg_content_li.png) 0 10px no-repeat; margin-bottom: 10px; }
+#content code { color: #222; font: 13px/1.5 "Courier New", Courier, monospace; }
+#content .code { width: 593px; padding-top: 4px; background: url(../images/bg_code.png) no-repeat; margin: 1em 0 1.15em 0; }
+#content .code code { display: block; padding: 6px 10px 10px 10px; background: url(../images/bg_code.png) bottom no-repeat;  }
+
+/* 2.5 Footer
+-----------------------------------------------------------------------------------------------*/
+#footer-wrapper { clear: both; background: #df3d3c url(../images/bg_footer.png) repeat-x; color: #fff; }
+#footer { width: 900px; margin: 0 auto; text-align: right; font-size: 0.79em; height: 75px; padding-top: 16px; }

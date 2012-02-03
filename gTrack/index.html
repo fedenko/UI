@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>GTrack</title>
+		<link rel="stylesheet" href="css/example.css" type="text/css" />
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.gtrack.js"></script>
+		<script type="text/javascript">
+			// execute code when DOM is finished loading
+			$(document).ready(function()
+			{
+				function log(message)
+				{
+					var div = $("<div class='log'/>");
+
+					div.text(message);
+					var logs = $("#logs");
+					
+					logs.append(div);
+					logs.queue(function()
+					{
+						var height = $("#logs").attr("scrollHeight");
+						
+						logs.animate(
+						{
+							scrollTop: height
+						}, 1000);
+						logs.dequeue();
+					});
+				}
+				
+				$("#delicious, #flickr, #stumbleupon").click(function()
+				{
+					log("click [id:" + $(this).attr("id") + "]");
+				});
+				
+				$("#digg, #facebook, #rss, #twitter").hover(function()
+				{
+					log("enter [id:" + $(this).attr("id") + "]");
+				}, function()
+				{
+					log("leave [id:" + $(this).attr("id") + "]");
+				});
+				
+				// initialise system
+				$.gtrack(
+				{
+					// Google Analytics Account
+					// check it out the tracking result at
+					// url: http://www.google.com/analytics/
+					account: "UA-XXXXXXXX-X",
+					// set 2 secs for the sake of demo...
+					intervalPool: 2000,
+					// this is event handler once the Google Analytic script is loaded
+					onInitFinished: function(tracker)
+					{
+						// this is important for testing purposes
+						tracker._setDomainName("none");
+					},
+					// you could omit this function, this function is used only for debug purposes
+					onTracking: function(option)
+					{
+						log("sent [category:" + option.category + "], [action:" + option.action + "], [label:" + option.label + "], [count:" + option.count + "]");
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="frame">
+			<div class="content">
+				<div id="delicious" class="button delicious" href="#" gt-evt="click" gt-cat="delicious"></div>
+				<div id="digg" class="button digg" href="#" gt-evt="mouseenter,mouseleave" gt-cat="digg"></div>
+				<div id="facebook" class="button facebook" href="#" gt-evt="mouseenter,mouseleave" gt-cat="facebook,a facebook"></div>
+				<div id="flickr" class="button flickr" href="#" gt-evt="click" gt-cat="flickr" gt-act="flickr#click"></div>
+				<div id="rss" class="button rss" href="#" gt-evt="mouseenter,mouseleave" gt-cat="rss" gt-act="rss#mouseenter,rss#mouseleave"></div>
+				<div id="stumbleupon" class="button stumbleupon" href="#" gt-evt="click" gt-cat="stumbleupon" gt-act="stumbleupon#click" gt-lbl="stumbleupon#label"></div>
+				<div id="twitter" class="button twitter" href="#" gt-evt="mouseenter,mouseleave" gt-cat="twitter,a twitter" gt-act="entering twitter, leaving twitter" gt-lbl="twitter!!"></div>
+				<div class="message1"></div>
+			</div>
+		</div>
+		
+		<div class="log-container">
+			<div id="logs" class="logs"></div>
+		</div>
+	</body>
+</html>

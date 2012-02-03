@@ -1,0 +1,1618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"> 
+<head> 
+  <meta http-equiv="Content-type" content="text/html; charset=UTF-8" /> 
+  <link rel="stylesheet" href="files/lite.css" type="text/css" />
+  <link rel="stylesheet" href="files/sh_style.css" type="text/css" />
+  <script type="text/javascript" src="files/sh_main.js"></script>
+  <script type="text/javascript" src="files/sh_html.js"></script>
+  <script type="text/javascript" src="files/sh_javascript.js"></script>
+  <script type="text/javascript" src="files/sh_css.js"></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
+  <link rel="stylesheet" href="DeviantMenu.css" type="text/css" />
+  <script type="text/javascript" src="DeviantMenu.demo.js"></script>
+  <!--[if lt IE 7]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.0(beta3)/IE7.js" type="text/javascript"></script>
+  <![endif]-->
+  <title>Deviant Menu :: Samples</title> 
+</head> 
+<body onload="sh_highlightDocument();"> 
+  <div id="content"> 
+    <div id="top"> 
+      <div id="lighttop" class="light"></div>  
+      <div> 
+        <a href="http://codecanyon.net/user/sh33run" style="width: 80px; height: 80px;"><img id="avatar" src="files/thumbnail.png" /></a> 
+        <h2>Deviant Menu</h2> 
+        <p>An easily customizable menu</p> 
+        <p>created by <a href="http://sher.pl/">sher.pl</a></p> 
+      </div>         
+    </div> 
+    <div id="bottom"> 
+      <div> 
+        <div id="lightbottom" class="light"></div>  
+        <h1 name="basicc">Basic menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">&lt;div class="deviant" id="basic">
+  &lt;ul>&lt;li>&lt;a href="#mainmenu" class="title">Title&lt;/a>&lt;ul> 
+    &lt;li>&lt;a href="#new">New&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li>&lt;a href="#used">Used&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+  &lt;/ul>&lt;/li>&lt;/ul> 
+&lt;/div></pre>
+<h2>CSS:</h2>
+<p>NONE</p>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('basic').DeviantMenu();
+});
+</pre>
+<h2>Effect:</h2>
+<script type="text/javascript">
+    window.addEvent("domready", function() {
+      $('basic').DeviantMenu();
+    });
+</script>
+<div class="deviant" id="basic">
+  <ul><li><a href="#mainmenu" class="title">Title</a><ul> 
+        <li><a href="#new">New</a> 
+          <ul> 
+                <li><a href="#newcorporate">Corporate Use</a></li> 
+                <li><a href="#newprivate">Private Use</a></li> 
+          </ul> 
+        </li> 
+        <li><a href="#used">Used</a> 
+          <ul> 
+                <li><a href="#usedcorporate">Corporate Use</a></li> 
+                <li><a href="#usedprivate">Private Use</a></li> 
+          </ul> 
+        </li> 
+        <li><a href="#featured">Featured</a></li> 
+        <li><a href="#toprated">Top Rated</a></li> 
+        <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+</div>
+<h1 name="styled">Styled menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">&lt;div class="deviant" id="styled">
+  &lt;ul>&lt;li>&lt;a href="#mainmenu" class="title">Title&lt;/a>&lt;ul> 
+    &lt;li>&lt;a href="#new">New&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li>&lt;a href="#used">Used&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+  &lt;/ul>&lt;/li>&lt;/ul> 
+&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#styled a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#styled a:hover {
+  color: #f0e155;
+}
+
+
+#styled, #styled li, #styled ul {
+  background-color: #333639;
+}
+
+#styled li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#styled .right {
+  background: transparent url(right.gif) 95% center no-repeat;
+}
+
+#styled .left {
+  background: #d1e751 url(left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#styled .left:hover {
+  background-color: #d6e962;
+}	
+
+  #styled .left a {
+    color: #222426;
+  }
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('styled').DeviantMenu({
+    width: 200 // Set width to 200px
+  });
+});
+</pre>
+<h2>Effect:</h2>
+<style type="text/css">
+  #styled a {
+    color: #fbaf32;
+    text-decoration: none;
+  }
+  
+  #styled a:hover {
+    color: #f0e155;
+  }
+  
+  
+  #styled, #styled li, #styled ul {
+    background-color: #333639;
+  }
+  
+  #styled li a {
+    list-style: none;
+    border-bottom: 1px solid #44474b;
+    padding: 4px 30px 4px 28px;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+  }
+  
+  #styled .right {
+    background: transparent url(files/right.gif) 95% center no-repeat;
+  }
+  
+  #styled .left {
+    background: #d1e751 url(files/left.gif) 5px center no-repeat;
+    color: #222426;
+    font-weight: bold;
+  }
+  
+  #styled .left:hover {
+    background-color: #d6e962;
+  }	
+  
+    #styled .left a {
+      color: #222426;
+    }
+</style>
+<script type="text/javascript">
+    window.addEvent("domready", function() {
+      $('styled').DeviantMenu({
+        width: 200 // Set width to 200px
+      });
+    });
+</script>
+<div class="deviant" id="styled">
+  <ul><li><a href="#mainmenu" class="title">Title</a><ul> 
+        <li><a href="#new">New</a> 
+          <ul> 
+                <li><a href="#newcorporate">Corporate Use</a></li> 
+                <li><a href="#newprivate">Private Use</a></li> 
+          </ul> 
+        </li> 
+        <li><a href="#used">Used</a> 
+          <ul> 
+                <li><a href="#usedcorporate">Corporate Use</a></li> 
+                <li><a href="#usedprivate">Private Use</a></li> 
+          </ul> 
+        </li> 
+        <li><a href="#featured">Featured</a></li> 
+        <li><a href="#toprated">Top Rated</a></li> 
+        <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+</div>
+
+<h1 name="stacked">Styled stacked menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">
+&lt;div id="stacked">
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title one&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title two&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title three&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#stacked .deviant {
+  clear: both; /* Optional */
+}
+
+#stacked .deviant a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#stacked .deviant a:hover {
+  color: #f0e155;
+}
+
+
+#stacked .deviant, #stacked .deviant li, #stacked .deviant ul {
+  background-color: #333639;
+}
+
+#stacked .deviant li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#stacked .deviant .right {
+  background: transparent url(files/right.gif) 95% center no-repeat;
+}
+
+#stacked .deviant .left {
+  background: #d1e751 url(files/left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#stacked .deviant .left:hover {
+  background-color: #d6e962;
+}	
+
+  #stacked .deviant .left a {
+    color: #222426;
+  }
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('stacked').DeviantMenu({
+    width: 120,
+    group: 'stacked', // Only one menu in group can be opened
+  });
+});
+</pre>
+<h2>Effect:</h2>
+<style type="text/css">
+  #stacked .deviant {
+    clear: both; /* Optional */
+  }
+  
+  #stacked .deviant a {
+    color: #fbaf32;
+    text-decoration: none;
+  }
+  
+  #stacked .deviant a:hover {
+    color: #f0e155;
+  }
+  
+  
+  #stacked .deviant, #stacked .deviant li, #stacked .deviant ul {
+    background-color: #333639;
+  }
+  
+  #stacked .deviant li a {
+    list-style: none;
+    border-bottom: 1px solid #44474b;
+    padding: 4px 30px 4px 28px;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+  }
+  
+  #stacked .deviant .right {
+    background: transparent url(files/right.gif) 95% center no-repeat;
+  }
+  
+  #stacked .deviant .left {
+    background: #d1e751 url(files/left.gif) 5px center no-repeat;
+    color: #222426;
+    font-weight: bold;
+  }
+  
+  #stacked .deviant .left:hover {
+    background-color: #d6e962;
+  }	
+  
+    #stacked .deviant .left a {
+      color: #222426;
+    }
+</style>
+<script type="text/javascript">
+  window.addEvent("domready", function() {
+    $('stacked').DeviantMenu({
+      width: 120,
+      group: 'stacked', // Only one menu in group can be opened
+    });
+  });
+</script>
+<div id="stacked">
+  <div class="deviant">
+  <ul><li><a href="#mainmenu">Title one</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+  <div class="deviant">
+  <ul><li><a href="#mainmenu">Title two</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+  <div class="deviant">
+  <ul><li><a href="#mainmenu">Title three</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+</div>
+
+<h1 name="horizontal">Styled horizontal menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">
+&lt;div id="horizontal">
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title one&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title two&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title three&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#horizontal .deviant {
+  float: left; /* !!! */
+}
+
+#horizontal .deviant a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#horizontal .deviant a:hover {
+  color: #f0e155;
+}
+
+
+#horizontal .deviant, #horizontal .deviant li, #horizontal .deviant ul {
+  background-color: #333639;
+}
+
+#horizontal .deviant li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#horizontal .deviant .right {
+  background: transparent url(files/right.gif) 95% center no-repeat;
+}
+
+#horizontal .deviant .left {
+  background: #d1e751 url(files/left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#horizontal .deviant .left:hover {
+  background-color: #d6e962;
+}	
+
+  #horizontal .deviant .left a {
+    color: #222426;
+  }
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('horizontal').DeviantMenu({
+    width: 120,
+    group: 'horizontal', // Only one menu in group can be opened
+    duration: 1000, // Change duration of animation
+    transition: 'bounce:out' // Change transition too
+  });
+});
+</pre>
+<h2>Effect:</h2>
+<style type="text/css">
+  #horizontal .deviant {
+    float: left; /* !!! */
+  }
+  
+  #horizontal .deviant a {
+    color: #fbaf32;
+    text-decoration: none;
+  }
+
+  #horizontal .deviant a:hover {
+    color: #f0e155;
+  }
+
+
+  #horizontal .deviant, #horizontal .deviant li, #horizontal .deviant ul {
+    background-color: #333639;
+  }
+
+  #horizontal .deviant li a {
+    list-style: none;
+    border-bottom: 1px solid #44474b;
+    padding: 4px 30px 4px 28px;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+  }
+
+  #horizontal .deviant .right {
+    background: transparent url(files/right.gif) 95% center no-repeat;
+  }
+
+  #horizontal .deviant .left {
+    background: #d1e751 url(files/left.gif) 5px center no-repeat;
+    color: #222426;
+    font-weight: bold;
+  }
+
+  #horizontal .deviant .left:hover {
+    background-color: #d6e962;
+  }	
+
+    #horizontal .deviant .left a {
+      color: #222426;
+    }
+</style>
+<script type="text/javascript">
+  window.addEvent("domready", function() {
+    $('horizontal').DeviantMenu({
+      width: 120,
+      group: 'horizontal', // Only one menu in group can be opened
+      duration: 1000, // Change duration of animation
+      transition: 'bounce:out' // Change transition too
+    });
+  });
+</script>
+<div id="horizontal">
+  <div class="deviant">
+  <ul><li><a href="#mainmenu">Title one</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+  <div class="deviant">
+  <ul><li><a href="#mainmenu">Title two</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+  <div class="deviant">
+  <ul><li><a href="#mainmenu">Title three</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+</div>
+<h1 name="horizontal2">Another styled horizontal menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">
+&lt;div id="dropdown">
+  &lt;div class="link">
+    &lt;a href="#home">Home&lt;/a>
+  &lt;/div>
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu" class="title">Title one&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+  &lt;div class="deviant">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu" class="title">Title two&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#dropdown div {
+   float: left;
+   padding: 0;
+   background-color: #172322;
+}
+
+#dropdown div.link {		
+  width: 50px;
+  color: #fff;
+  line-height: 25px;
+  white-space: nowrap;
+  height: 27px;
+  text-align: center;
+}
+
+#dropdown a:link,
+#dropdown a:visited { color: #fff; text-decoration: none; }
+#dropdown a:hover { color: #b0d730; }
+#dropdown a:active { color: #0395cc; }
+
+#dropdown .deviant div {
+  margin: 0 10px;
+  overflow: hidden;
+}
+
+#dropdown .deviant ul {
+  background-color: #172322;
+  overflow: hidden;
+  padding: 0px 0px;	
+}
+
+#dropdown .deviant li {
+  background-color: #172322;
+  height: 27px;
+  line-height: 25px;	
+
+}
+
+#dropdown .right {
+  background: #172322 url(files/arrow-right.png) 82px center no-repeat;
+}
+
+#dropdown .left {
+  background: #172322 url(files/arrow-left.png) 82px center no-repeat;
+}
+
+#dropdown .title {
+  background: #172322 url(files/arrow-down.png) 82px center no-repeat;
+}
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('dropdown').DeviantMenu({
+    width: 120,
+    autoclose: false,
+    leftText: 'parent'
+  });
+});
+</pre>
+<h2>Effect:</h2>
+<style type="text/css">
+  #dropdown div {
+     float: left;
+     padding: 0;
+     background-color: #172322;
+  }
+  
+  #dropdown div.link {		
+    width: 50px;
+    color: #fff;
+    line-height: 25px;
+    white-space: nowrap;
+    height: 27px;
+    text-align: center;
+  }
+  
+  #dropdown a:link,
+  #dropdown a:visited { color: #fff; text-decoration: none; }
+  #dropdown a:hover { color: #b0d730; }
+  #dropdown a:active { color: #0395cc; }
+  
+  #dropdown .deviant div {
+    margin: 0 10px;
+    overflow: hidden;
+  }
+  
+  #dropdown .deviant ul {
+    background-color: #172322;
+    overflow: hidden;
+    padding: 0px 0px;	
+  }
+  
+  #dropdown .deviant li {
+    background-color: #172322;
+    height: 27px;
+    line-height: 25px;	
+  
+  }
+  
+  #dropdown .right {
+    background: #172322 url(files/arrow-right.png) 82px center no-repeat;
+  }
+  
+  #dropdown .left {
+    background: #172322 url(files/arrow-left.png) 82px center no-repeat;
+  }
+  
+  #dropdown .title {
+    background: #172322 url(files/arrow-down.png) 82px center no-repeat;
+  }
+</style>
+<script type="text/javascript">
+  window.addEvent("domready", function() {
+    $('dropdown').DeviantMenu({
+      width: 120,
+      autoclose: false,
+      leftText: 'parent'
+    });
+  });
+</script>
+<div id="dropdown">
+  <div class="link">
+  <a href="#home">Home</a>
+  </div>
+  <div class="deviant">
+  <ul><li><a href="#mainmenu" class="title">Title one</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+  <div class="deviant">
+  <ul><li><a href="#mainmenu" class="title">Title two</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+</div>
+<h1 name="fixed">Fixed menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">
+&lt;div id="sticked">
+  &lt;div class="deviant one">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title one&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+  &lt;div class="deviant two">
+    &lt;ul>&lt;li>&lt;a href="#mainmenu">Title two&lt;/a>&lt;ul> 
+      &lt;li>&lt;a href="#new">New&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#used">Used&lt;/a> 
+        &lt;ul> 
+          &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+          &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+        &lt;/ul> 
+      &lt;/li> 
+      &lt;li>&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+      &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+    &lt;/ul>&lt;/li>&lt;/ul> 
+  &lt;/div>
+&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+
+/* IMPORTANT PART */
+
+#sticked {
+  position: fixed;
+  bottom: 0px;
+  left: 10px
+}
+
+#sticked .one {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#sticked .two {
+  position: absolute;
+  bottom: 0;
+  left: 130px; /* Width of menu */
+}
+
+/* END OF IMPORTANT PART */
+
+#sticked a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#sticked a:hover {
+  color: #f0e155;
+}
+
+
+#sticked li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#sticked .right {
+  background: transparent url(files/right.gif) 95% center no-repeat;
+}
+
+#sticked .left {
+  background: #d1e751 url(files/left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#sticked .left:hover {
+  background-color: #d6e962;
+}	
+
+  #sticked .left a {
+    color: #222426;
+  }
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('sticked').DeviantMenu({
+    width: 130,
+    leftPosition: 'bottom' // Position return button on bottom
+  });
+});
+</pre>
+<h2>Effect:</h2>
+<p>At boottom-left of this page</p>
+<style type="text/css">
+   /* IMPORTANT PART */
+  
+  #sticked {
+    position: fixed;
+    bottom: 0px;
+    left: 10px;
+  }
+  
+  #sticked .deviant {
+    position: absolute;
+    bottom: 0;
+    float: left;
+    height: auto;
+  }
+  
+  #sticked .one {
+    left: 0;
+  }
+  
+  #sticked .two {
+    left: 130px; /* Width of menu */
+  }
+  
+  /* END OF IMPORTANT PART */
+  
+  #sticked a {
+    color: #fbaf32;
+    text-decoration: none;
+  }
+  
+  #sticked a:hover {
+    color: #f0e155;
+  }
+  
+  #sticked li a {
+    list-style: none;
+    border-bottom: 1px solid #44474b;
+    padding: 4px 30px 4px 28px;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+  }
+  
+  #sticked .right {
+    background: transparent url(files/right.gif) 95% center no-repeat;
+  }
+  
+  #sticked .left {
+    background: #d1e751 url(files/left.gif) 5px center no-repeat;
+    color: #222426;
+    font-weight: bold;
+  }
+  
+  #sticked .left:hover {
+    background-color: #d6e962;
+  }	
+  
+    #sticked .left a {
+      color: #222426;
+    }
+</style>
+<script type="text/javascript">
+  window.addEvent("domready", function() {
+    $('sticked').DeviantMenu({
+      width: 130,
+      leftPosition: 'bottom' // Position return button on bottom
+    });
+  });
+</script>
+
+<h1 name="icons">Menu with icons and events</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">&lt;div class="deviant" id="example">
+  &lt;ul>&lt;li>&lt;a href="#mainmenu" class="title" style="background: url(files/user.png) 5px 50% no-repeat;">Main menu&lt;/a>&lt;ul> 
+    &lt;li>&lt;a style="background: url(files/add.png) 5px 50% no-repeat;" href="#new">New&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li>&lt;a href="#used" style="background: url(files/world.png) 5px 50% no-repeat;">Used&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li style="background: url(files/shield.png) 5px 50% no-repeat;">&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+  &lt;/ul>&lt;/li>&lt;/ul> 
+&lt;/div>
+&lt;div id="status">&lt;/div>
+&lt;div id="status2">&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#example a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#example a:hover {
+  color: #f0e155;
+}
+
+
+#example, #example li, #example ul {
+  background-color: #333639;
+}
+
+#example li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#example .right {
+  background: transparent url(right.gif) 95% center no-repeat;
+}
+
+#example .left {
+  background: #d1e751 url(left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#example .left:hover {
+  background-color: #d6e962;
+}	
+
+  #example .left a {
+    color: #222426;
+  }
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('example').DeviantMenu({
+    width: 200,
+    autoreset: false, // Additionaly disable autoreset
+    onClick: function(item) {
+      $('status2').set('html', 'Clicked ' + item.href);
+    },
+    onOpen: function(from, to) {
+      $('status').set('html', 'Open <br />From: ' + from.id + '<br />To: ' + to.id);
+    },
+    onClose: function(from, to) {
+      $('status').set('html', 'Close <br />From: ' + from.id + '<br />To: ' + to.id);
+    },
+    onOpened: function(from, to) {
+      $('status').set('html', 'Opened <br />From: ' + from.id + '<br />To: ' + to.id);
+    },
+    onClosed: function(from, to) {
+      $('status').set('html', 'Closed <br />From: ' + from.id + '<br />To: ' + to.id);
+    }
+  });
+});
+</pre>
+<h2>Effect:</h2>
+<style type="text/css">
+  #example a {
+    color: #fbaf32;
+    text-decoration: none;
+  }
+  
+  #example a:hover {
+    color: #f0e155;
+  }
+  
+  
+  #example, #example li, #example ul {
+    background-color: #333639;
+  }
+  
+  #example li a {
+    list-style: none;
+    border-bottom: 1px solid #44474b;
+    padding: 4px 30px 4px 28px;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+  }
+  
+  #example .right {
+    background: transparent url(right.gif) 95% center no-repeat;
+  }
+  
+  #example .left {
+    background: #d1e751 url(left.gif) 5px center no-repeat;
+    color: #222426;
+    font-weight: bold;
+  }
+  
+  #example .left:hover {
+    background-color: #d6e962;
+  }	
+  
+    #example .left a {
+      color: #222426;
+  }
+</style>
+<script type="text/javascript">
+  window.addEvent("domready", function() {
+    $('example').DeviantMenu({
+      width: 200,
+      autoreset: false, // Additionaly disable autoreset
+      onClick: function(item) {
+        $('status2').set('html', 'Clicked ' + item.href.substr(item.href.indexOf('#')));
+      },
+      onOpen: function(from, to) {
+        $('status').set('html', 'Open <br />From: ' + from.id + '<br />To: ' + to.id);
+      },
+      onClose: function(from, to) {
+        $('status').set('html', 'Close <br />From: ' + from.id + '<br />To: ' + to.id);
+      },
+      onOpened: function(from, to) {
+        $('status').set('html', 'Opened <br />From: ' + from.id + '<br />To: ' + to.id);
+      },
+      onClosed: function(from, to) {
+        $('status').set('html', 'Closed <br />From: ' + from.id + '<br />To: ' + to.id);
+      }
+    });
+  });
+</script>
+  <div class="deviant" id="example">
+    <ul><li><a href="#mainmenu" class="title" style="background: url(files/user.png) 5px 50% no-repeat;">Main menu</a><ul> 
+      <li><a style="background: url(files/add.png) 5px 50% no-repeat;" href="#new">New</a> 
+        <ul> 
+          <li><a href="#newcorporate">Corporate Use</a></li> 
+          <li><a href="#newprivate">Private Use</a></li> 
+        </ul> 
+      </li> 
+      <li><a href="#used" style="background: url(files/world.png) 5px 50% no-repeat;">Used</a> 
+        <ul> 
+          <li><a href="#usedcorporate">Corporate Use</a></li> 
+          <li><a href="#usedprivate">Private Use</a></li> 
+        </ul> 
+      </li> 
+      <li style="background: url(files/shield.png) 5px 50% no-repeat;"><a href="#featured">Featured</a></li> 
+      <li><a href="#toprated">Top Rated</a></li> 
+      <li><a href="#prices">Prices</a></li> 
+    </ul></li></ul> 
+  </div>
+  <div id="status"></div>
+  <div id="status2"></div>
+  
+  
+<h1 name="icons">Button menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">&lt;div class="deviant" id="button">
+  &lt;ul> 
+    &lt;li>&lt;a style="background: url(files/add.png) 5px 50% no-repeat;" href="#new">New&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#newcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#newprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li>&lt;a href="#used" style="background: url(files/world.png) 5px 50% no-repeat;">Used&lt;/a> 
+      &lt;ul> 
+        &lt;li>&lt;a href="#usedcorporate">Corporate Use&lt;/a>&lt;/li> 
+        &lt;li>&lt;a href="#usedprivate">Private Use&lt;/a>&lt;/li> 
+      &lt;/ul> 
+    &lt;/li> 
+    &lt;li style="background: url(files/shield.png) 5px 50% no-repeat;">&lt;a href="#featured">Featured&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#toprated">Top Rated&lt;/a>&lt;/li> 
+    &lt;li>&lt;a href="#prices">Prices&lt;/a>&lt;/li> 
+  &lt;/ul>
+&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#button_div {
+  position: relative;
+}
+
+#button_deviant {
+  position: absolute;
+  top: 24px;
+}
+
+#button_deviant a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#button_deviant a:hover {
+  color: #f0e155;
+}
+
+
+#button_deviant, #button_deviant li, #button_deviant ul {
+  background-color: #333639;
+}
+
+#button_deviant li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#button_deviant .right {
+  background: transparent url(files/right.gif) 95% center no-repeat;
+}
+
+#button_deviant .left {
+  background: #d1e751 url(files/left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#button_deviant .left:hover {
+  background-color: #d6e962;
+}	
+
+  #button_deviant .left a {
+    color: #222426;
+}
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+   $('button_deviant').DeviantMenu({
+     button: 'button_show',
+     reset: false // additionaly dont reset state
+   });
+});
+</pre>
+<h2>Effect:</h2>
+<style type="text/css">
+  #button_div {
+    position: relative;
+  }
+  
+  #button_deviant {
+    position: absolute;
+    top: 24px;
+  }
+  
+  #button_deviant a {
+    color: #fbaf32;
+    text-decoration: none;
+  }
+
+  #button_deviant a:hover {
+    color: #f0e155;
+  }
+
+
+  #button_deviant, #button_deviant li, #button_deviant ul {
+    background-color: #333639;
+  }
+
+  #button_deviant li a {
+    list-style: none;
+    border-bottom: 1px solid #44474b;
+    padding: 4px 30px 4px 28px;
+    margin: 0;
+    cursor: pointer;
+    height: 16px;
+  }
+
+  #button_deviant .right {
+    background: transparent url(files/right.gif) 95% center no-repeat;
+  }
+
+  #button_deviant .left {
+    background: #d1e751 url(files/left.gif) 5px center no-repeat;
+    color: #222426;
+    font-weight: bold;
+  }
+
+  #button_deviant .left:hover {
+    background-color: #d6e962;
+  }	
+
+    #button_deviant .left a {
+      color: #222426;
+  }
+</style>
+<script type="text/javascript">
+  window.addEvent("domready", function() {
+     $('button_deviant').DeviantMenu({
+       button: 'button_show',
+       reset: false // additionaly dont reset state
+     });
+  });
+</script>
+
+<div id="button_div">
+  <button id="button_show" type="button">Show Menu!</button>
+  <div class="deviant" id="button_deviant">
+    <ul> 
+    <li><a style="background: url(files/add.png) 5px 50% no-repeat;" href="#new">New</a> 
+      <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+      </ul> 
+    </li> 
+    <li><a href="#used" style="background: url(files/world.png) 5px 50% no-repeat;">Used</a> 
+      <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+      </ul> 
+    </li> 
+    <li style="background: url(files/shield.png) 5px 50% no-repeat;"><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+    </ul>
+  </div>
+</div>
+
+<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget ipsum libero, ac varius massa. Fusce et tellus et enim consectetur lobortis. Aliquam nec diam sed lorem mollis facilisis nec ut justo. Aliquam ut dui nibh. Sed sodales lacus vitae erat sollicitudin a vulputate elit accumsan. Integer elementum sagittis turpis quis fermentum. Mauris eu tortor nunc, sed tempor ante. Nunc risus nunc, fermentum ut pretium id, feugiat ac metus. Pellentesque feugiat auctor libero, at ullamcorper nibh vehicula nec. Nulla massa nisl, porttitor vel eleifend eu, viverra a elit. Morbi rhoncus nisi id metus vehicula iaculis. Donec enim eros, commodo ut dapibus et, condimentum ut lacus. Nullam porta porta dolor, id auctor lorem euismod eu.</div>
+
+<h1 name="icons">JSON menu</h1>
+<h2>HTML:</h2>
+<pre class="sh_html">&lt;div id="json">&lt;/div></pre>
+<h2>CSS:</h2>
+<pre class="sh_css">
+#json a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#json a:hover {
+  color: #f0e155;
+}
+
+
+#json, #json li, #json ul {
+  background-color: #333639;
+}
+
+#json li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#json .right {
+  background: transparent url(right.gif) 95% center no-repeat;
+}
+
+#json .left {
+  background: #d1e751 url(left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#json .left:hover {
+  background-color: #d6e962;
+}	
+
+  #json .left a {
+    color: #222426;
+  }
+</pre>
+<h2>JS:</h2>
+<pre class="sh_javascript">
+window.addEvent("domready", function() {
+  $('json').JSONDeviantMenu({
+    'JSON Menu': {
+      'First': '#first',
+      'Second': {
+        'Second First': '#sf',
+        'Second Second': '#ss',
+        'Second Third': '#st',
+        'Second Fourth': '#sfo'
+      }
+    }
+  }, {
+    width: 200
+  });
+});
+</pre>
+<h2>Effect: </h2>
+<style type="text/css">
+#json a {
+  color: #fbaf32;
+  text-decoration: none;
+}
+
+#json a:hover {
+  color: #f0e155;
+}
+
+
+#json, #json li, #json ul {
+  background-color: #333639;
+}
+
+#json li a {
+  list-style: none;
+  border-bottom: 1px solid #44474b;
+  padding: 4px 30px 4px 28px;
+  margin: 0;
+  cursor: pointer;
+  height: 16px;
+}
+
+#json .right {
+  background: transparent url(files/right.gif) 95% center no-repeat;
+}
+
+#json .left {
+  background: #d1e751 url(files/left.gif) 5px center no-repeat;
+  color: #222426;
+  font-weight: bold;
+}
+
+#json .left:hover {
+  background-color: #d6e962;
+}	
+
+  #json .left a {
+    color: #222426;
+  }    
+</style>
+<script type="text/javascript">
+window.addEvent("domready", function() {
+  $('json').JSONDeviantMenu({
+    'JSON Menu': {
+      'First': '#first',
+      'Second': {
+        'Second First': '#sf',
+        'Second Second': '#ss',
+        'Second Third': '#st',
+        'Second Fourth': '#sfo'
+      }
+    }
+  }, {
+    width: 200
+  });
+});
+</script>
+<div id="json"></div>
+<div style="height: 200px">&nbsp;</div>
+
+
+       </div>
+    </div>   
+  </div> 
+  
+<div id="sticked">
+  <div class="deviant one">
+  <ul><li><a href="#mainmenu" class="title">Title one</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+  <div class="deviant two">
+  <ul><li><a href="#mainmenu" class="title">Title two</a><ul> 
+    <li><a href="#new">New</a> 
+    <ul> 
+      <li><a href="#newcorporate">Corporate Use</a></li> 
+      <li><a href="#newprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#used">Used</a> 
+    <ul> 
+      <li><a href="#usedcorporate">Corporate Use</a></li> 
+      <li><a href="#usedprivate">Private Use</a></li> 
+    </ul> 
+    </li> 
+    <li><a href="#featured">Featured</a></li> 
+    <li><a href="#toprated">Top Rated</a></li> 
+    <li><a href="#prices">Prices</a></li> 
+  </ul></li></ul> 
+  </div>
+</div>
+</body> 
+</html>

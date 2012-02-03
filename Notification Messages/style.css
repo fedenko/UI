@@ -1,0 +1,273 @@
+@charset "utf-8";
+/* CSS Document */
+body, html, div, blockquote, img, label, p, h1, h2, h3, h4, h5, h6, pre, ul,ol, li, dl, dt, dd, form, a, fieldset, input, th, td{
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: none;
+}
+
+body{
+      font-size: 88%;
+      line-height: 1;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+      font-size: 100%;
+      padding: .6em 0;
+      margin: 0 15px;
+}
+ul, ol{
+      list-style-image: none;
+      list-style-type: none;
+}
+       
+img{
+ border: 0;
+}
+body{
+	font-size: 11px;
+	font-family:Verdana;
+	background:#EFEFEF none repeat scroll 0 0;
+	text-align: center;
+	line-height:1.5;
+}
+h2 {
+	font-size:20px;
+	padding: 0px;
+	margin: 0em 0em 0.75em 0em;
+}
+h3 {
+	font-size:14px;
+	padding: 0px;
+	margin: 0em 0em 0.55em 0em;
+	font-weight: bold;
+}
+h1, h2 {
+	font-weight:normal;
+}
+ul.overview  {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:disc;
+	margin:0 1.5em 1.5em;
+}
+
+li {
+	font-size: 1.1em;
+	margin-bottom: 4px;
+}
+p{
+	margin: 5px 0px 10px 0px;
+}
+
+a:link, a:visited, a:active{
+	color:#3366CC;
+	text-decoration:underline;
+}
+a:hover {
+	color:#CC3333;
+}
+#wrapper{
+	width: 700px;
+	margin: 20px auto;
+	text-align: left;
+}
+#maincontent{
+	border:1px solid #BEBEBE;	
+	background-color: #FFF;
+	padding: 20px;
+}
+label{
+	font-size:12px;
+	font-weight:bold;
+}
+input, select, textarea{
+	padding: 4px 6px;	
+	border: solid 1px #7f9db9;
+}
+.nodisplay{
+	display: none;
+}
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.spacer{
+	display: block;
+	clear: both;
+}
+.code{
+	padding-left: 10px;
+	border-left: solid 3px #999;
+	font-family:"Times New Roman", Times, serif;
+	color:#333;
+	font-size: 12px;
+}
+
+
+
+/** START LOGIN NOTICE **/
+.login_notice{
+	width: 100%;
+	border-bottom: 2px solid #222;
+	background: #494949;
+	color: #FFF;
+	height: 120px;
+	text-align: center;
+}
+.login_notice .wrapper{
+	margin: 0 auto;
+	text-align: left;
+	width: 700px;
+}
+.login_notice .left{
+	float: left;
+	width: 49%;
+}
+.login_notice .right{
+	float: right;
+	width: 49%;
+}
+.login_notice .title{
+	font-family:Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	font-size:24px;
+	font-size-adjust:none;
+	font-style:italic;
+	line-height:35px;
+	margin:0;
+	padding:14px 15px 3px 0;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+.login_notice .description{
+	font-size: 11px;
+}
+.login_notice label{
+	display: block;
+	font-weight: normal;
+	margin: 5px 0px 2px 0px;
+}
+.login_notice input{
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border: 1px solid #DFDFDF;
+}
+.login_notice .button_green{
+	border-radius:11px;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border: 1px solid #A4D066;
+	cursor:pointer;
+	font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-size:11px !important;
+	line-height:16px;
+	padding:2px 8px;
+	text-decoration:none;
+	padding: 3px 10px;
+	background-color: #7CAC48;
+	font-weight: bold;
+	color: #FFF;
+	margin: 0px 4px;
+}
+
+.login_notice .button_red{
+	border-radius:11px;
+	-moz-border-radius:11px;
+	-webkit-border-radius:11px;
+	border: 1px solid #E66A6A;
+	cursor:pointer;
+	font-family:"Lucida Grande",Verdana,Arial,"Bitstream Vera Sans",sans-serif;
+	font-size:11px !important;
+	line-height:16px;
+	padding:2px 8px;
+	text-decoration:none;
+	padding: 3px 10px;
+	background-color: #B31313;
+	font-weight: bold;
+	color: #FFF;
+	margin: 0px 4px;
+}
+/** END LOGIN NOTICE **/
+
+
+/** START RSS BOX **/
+.rss_notice{
+	border-bottom: 1px solid #301700;
+	background-color: #562900;
+	width: 100%;
+	text-align: center;
+}
+.rss_notice .wrapper{
+	margin: 0 auto;
+	text-align: left;
+	width: 700px;
+	color: #FFF;
+}
+.rss_notice .title{
+	float: left;
+	width: 30%;
+	font-family:Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	font-size:24px;
+	font-size-adjust:none;
+	font-style:italic;
+	line-height:35px;
+	margin:0;
+	padding:15px;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+.rss_notice .description{
+	float: left;
+	width: 50%;
+	font-size: 11px;
+	padding:15px;
+}
+.rss_notice .icon{
+	float: right;
+	padding:10px;
+}
+.rss_notice a:link, .rss_notice a:visited, .rss_notice a:active{
+	color: #FFF;
+}
+.rss_notice a:hover{
+	color: #ffc692;
+}
+/** END RSS BOX **/
+
+/** START MESSAGE BOX **/
+.buy_notice{
+	text-align: center;
+	width: 100%;
+}
+.buy_notice .wrapper{
+	width: 800px;
+	height: 110px;
+	margin: 0 auto;
+	text-align: left;
+}
+.buy_notice .content{
+	float: right;
+	width: 150px;
+	padding: 15px 25px;
+	height: 60px;
+	background-image: url(images/message.png);
+	background-repeat: no-repeat;
+	color: #FFF;
+}
+.buy_notice .title{
+	font-family:Georgia,"Times New Roman","Bitstream Charter",Times,serif;
+	font-size:24px;
+	font-size-adjust:none;
+	font-style:italic;
+	line-height:35px;
+	margin:0;
+	padding:0px;
+	text-shadow:0 1px 0 #FFFFFF;
+}
+.buy_notice .description{
+	font-size: 11px;
+}
+/** END MESSAGE BOX **/

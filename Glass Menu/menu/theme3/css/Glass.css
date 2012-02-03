@@ -1,0 +1,45 @@
+@charset "utf-8";
+/* CSS Document */
+
+.GlassMenu {  zoom:1; background:#c8c8c8; font-family: Tahoma, Geneva, sans-serif; font-weight:500; font-size:16px; padding:8px 5px;  display:block;  list-style:none;  }
+.GlassMenu:after { content:"."; display:block; visibility:hidden; height:0; clear:both;  }
+.GlassMenu  li { float:left; padding:10px 15px ; position:relative;  display:block; border:1px solid transparent;  }
+.GlassMenu a  { text-decoration:none; color:#404040; display:block; }
+
+.GlassMenu  li ul{  width:170px; list-style:none; padding:3px; margin:0px; background:#c8c8c8; border:1px solid #d8d8d8; -moz-border-radius: 3px; -webkit-border-radius: 3px; font-size:14px; position:relative;  }
+.GlassMenu  li ul li{  float:none; color:#404040; border-bottom:1px solid #e5e5e5;border-top:1px solid #b7b7b7; padding:10px;margin:0px; }
+.GlassMenu  li ul li:first-child{  border-top:none;  }
+
+/* The glass border and subglass div that holds all elements style  */
+.GlassMenu .subglass { display:none; background:url(i/glass.png); padding:7px; margin-top:11px; -moz-border-radius: 5px; -webkit-border-radius: 5px; position:absolute;  z-index:40; left:0; }
+.GlassMenu .subglass div{ margin-top:-25px; z-index:41; left:170px;  }
+.GlassMenu li:hover>div { display:block;}
+
+/* Styling li when mouse hovers  */
+
+.GlassMenu li:hover { background: #007cc2;   border:1px solid  #009af1; }
+.GlassMenu li:hover>a { color:#fff; }
+/* ------------------------------------  Styling Feature Box  ------------------------------------  */
+
+.GlassMenu .subglass>div { margin:0px;  background:#c8c8c8; padding:7px;  -moz-border-radius: 5px; -webkit-border-radius: 5px; float:left;  width:450px;  }
+.GlassMenu div.subglass>div h2,h4 { font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; font-weight:500; font-size:20px; padding:3px;border-bottom:1px solid #b7b7b7; margin-bottom:4px; color:#404040;}
+.GlassMenu div.subglass>div h4 {  font-weight:200; font-size:16px; }
+.GlassMenu .subglass>div img { width:400px; height:250px;}
+.GlassMenu .subglass>div ul {  float:left; border:none; width:140px; }
+.GlassMenu .subglass>div li,p { border-bottom:1px dotted #e5e5e5; border-top:none; font-size:12px; display:block;  }
+.GlassMenu .subglass>div li:first-child { border-top:1px dotted #e5e5e5;}
+
+/* ------------------------------------   Generic form Styling  ------------------------------------  */
+
+.GlassMenu form { background:#fff; -moz-border-radius: 2px; -webkit-border-radius: 2px; padding:20px; margin:5px; width:500px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif  }
+.GlassMenu input[type=text],input[type=password],textarea {border:none; background:#c8c8c8; outline:1px solid #ddd; border-left:1px solid #ccc;border-top:1px solid #a7a7a7;
+ padding:5px;  }
+ .GlassMenu  legend { padding:3px; margin-left:30px; color:#0098ef;}
+.GlassMenu  fieldset { border:#ccc 1px solid; padding:30px; }
+.GlassMenu label,input[type=text],input[type=password],textarea { width:100%;margin:4px 2px; color:#000;font-family:Tahoma, Geneva, sans-serif;  }
+.GlassMenu input[type=submit] { background: #007cc2;   border:1px solid  #009af1; margin:2px; color:#FFF; outline:none; padding:6px 10px; font-family:Tahoma, Geneva, sans-serif; font-weight:800; }
+.GlassMenu input[type=submit]:hover {border:1px solid #fff;  }
+.GlassMenu input[type=text]:focus,input[type=password]:focus,textarea:focus  { border:1px solid #c4b1a0; }
+
+
+.sticky { position:fixed!important; top:0;  }

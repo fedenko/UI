@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jSocial</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="jsocial.js"></script>
+<script type="text/javascript">
+$().ready(function() { 
+	$("#example1").jsocial({highlight: true,
+							buttons: "nujij,linkedin,ekudos,digg,sphere,technorati,delicious,furl,netscape,yahoo,google,newsvine,reddit,blogmarks,magnolia,live,tailrank,facebook,twitter,stumbleupon,bligg,symbaloo", 
+							imagedir: "images/small/", 
+							imageextension: "gif", 
+							blanktarget: false});
+							
+	$("#example2").jsocial({highlight: true,
+							buttons: "technorati,delicious,reddit,facebook,twitter,stumbleupon", 
+							imagedir: "images/big/", 
+							imageextension: "png", 
+							blanktarget: true});
+});
+</script>
+<style>
+.jsocial_button{
+	padding: 2px;
+	display:block;
+	float: left;
+}
+.jsocial_button img {
+
+}
+#example1{
+	height: 16px;
+}
+#example2{
+	height: 48px;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="maincontent">
+
+<h2>Example 1</h2>
+<p>
+<code>$(&quot;#example1&quot;).jsocial({highlight: true,<br />
+buttons: &quot;nujij,ekudos,digg,sphere,technorati,delicious,furl,netscape,yahoo,google,newsvine,reddit,blogmarks,magnolia,live,tailrank,facebook,twitter,stumbleupon,bligg,symbaloo&quot;, <br />
+imagedir: &quot;images/small/&quot;, <br />
+imageextension: &quot;gif&quot;, <br />
+blanktarget: false});<br />
+</code>
+</p>
+<p id="example1"> </p>
+<h2>Example 2</h2>
+<p> <code>$(&quot;#example2&quot;).jsocial({highlight: true,<br />
+buttons: &quot;technorati,delicious,reddit,facebook,twitter,stumbleupon&quot;, <br />
+imagedir: &quot;images/big/&quot;, <br />
+imageextension: &quot;png&quot;, <br />
+blanktarget: true});<br />
+</code> </p>
+<p id="example2"> </p>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,210 @@
+﻿/*****************/
+/*  Black Theme  */
+/*****************/
+.black{position:absolute;z-index:1000;font-family:verdana,tahoma,sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;line-height:normal;-moz-user-select:none;}
+.black-iframeshim{z-index:999;width:220px;}
+.black .panel{background-color:#EBEBEB;color:#000000;cursor:default;width:220px;font-family:"trebuchet ms",verdana,tahoma,sans-serif;font-size:12px;}
+.black .panel tr td{height : 20px;}
+.black .topleft{background:transparent url(../img/bg_corner_topleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.black .topright{background:transparent url(../img/bg_corner_topright.gif) no-repeat scroll 0 0;height:10px;margin-left:210px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.black .bottomleft{background:transparent url(../img/bg_corner_bottomleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.black .bottomright{background:transparent url(../img/bg_corner_bottomright.gif) no-repeat scroll 0 0;height:10px;margin-left:211px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.black .slidepanel{width:100%;border-bottom:1px solid #797979;}
+.black .slidepanel-img{height:80px;margin-left:3px;margin-right:5px;margin-bottom:2px;}
+.black .slidepanel-text{text-align:left;width:100%;vertical-align:top;font-size:11px;}
+.black .toppanel{background-color:#EBEBEB;color:#000000;width:100%;text-align:center;}
+.black .toppanel-hover{background-color:#BEBEBE;cursor:pointer;}
+.black .bodypanel{color:#000000;width:100%;border-top:1px solid #797979;border-bottom:1px solid #797979;}
+.black .bodypanel-headrow{background-color:#BEBEBE;text-align:center;}
+.black .bodypanel-weekhead{border-right:1px solid #797979;border-bottom:1px solid #797979;}
+.black .bodypanel-dayhead{border-bottom:1px solid #797979;}
+.black .bodypanel-weekendhead{color:Red;}
+.black .bodypanel-week{text-align:center;border-right:1px solid #797979;background-color:#BEBEBE;}
+.black .bodypanel-othermonthday{text-align:center;color:Silver;}
+.black .bodypanel-date{text-align:center;}
+.black .bodypanel-today{font-weight: bold;color:Blue;}
+.black .bodypanel-weekend{color:Red;}
+.black .bodypanel-daterow-hover{background-color:#D4D0C8;}
+.black .bodypanel-date-hover{background-color:#BEBEBE;color:white;cursor:pointer;}
+.black .bodypanel-date-select{background-color:#3C75C4;}
+.black .inforpanel{width:100%;background-color:#BEBEBE;padding-top:3px;padding-bottom:3px;border-bottom:1px solid #797979;text-align:center;}
+.black .inforpanel tr td{text-align:center;background-color:#BEBEBE;}
+.black .bottompanel{width:100%;height:8px;background-color:#EBEBEB;}
+.black .monthcombobox{display:none;position:absolute;z-index:1002;background-color:#EBEBEB;border:1px solid #797979;}
+.black .monthcombobox div{padding : 3px;}
+.black .monthcombobox-thismonth{color:red;}
+.black .monthcombobox-hover{background-color:#BEBEBE;cursor:pointer;}
+.black .yearcombobox{display:none;position:absolute;z-index:1002;background-color:#EBEBEB;border:1px solid #797979;text-align:center;}
+.black .yearcombobox div{padding : 3px;}
+.black .yearcombobox .plus{height : 15px;padding : 3px;font-size:14px;}
+.black .yearcombobox-thisyear{color:red;}
+.black .yearcombobox-hover{background-color:#BEBEBE;cursor:pointer;}
+
+
+/*****************/
+/*  Green Theme  */
+/*****************/
+.green{position:absolute;z-index:1000;font-family:verdana,tahoma,sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;line-height:normal;-moz-user-select:none;}
+.green-iframeshim{z-index:999;width:220px;}
+.green .panel{background-color:#BBE18C;color:#000000;cursor:default;width:220px;font-family:"trebuchet ms",verdana,tahoma,sans-serif;font-size:12px;}
+.green .panel tr td{height : 20px;}
+.green .topleft{background:transparent url(../img/bg_corner_topleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.green .topright{background:transparent url(../img/bg_corner_topright.gif) no-repeat scroll 0 0;height:10px;margin-left:210px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.green .bottomleft{background:transparent url(../img/bg_corner_bottomleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.green .bottomright{background:transparent url(../img/bg_corner_bottomright.gif) no-repeat scroll 0 0;height:10px;margin-left:211px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.green .slidepanel{width:100%;border-bottom:1px solid #797979;}
+.green .slidepanel-img{height:80px;margin-left:3px;margin-right:5px;margin-bottom:2px;}
+.green .slidepanel-text{text-align:left;width:100%;vertical-align:top;}
+.green .toppanel{background-color:#BBE18C;color:#000000;width:100%;text-align:center;}
+.green .toppanel-hover{background-color:#00993F;cursor:pointer;}
+.green .bodypanel{color:#000000;width:100%;border-top:1px solid silver;border-bottom:1px solid silver;}
+.green .bodypanel-headrow{background-color:#00993F;text-align:center;}
+.green .bodypanel-weekhead{border-right:1px solid silver;border-bottom:1px solid silver;}
+.green .bodypanel-dayhead{border-bottom:1px solid silver;}
+.green .bodypanel-weekendhead{color:Red;}
+.green .bodypanel-week{text-align:center;border-right:1px solid silver;background-color:#00993F;}
+.green .bodypanel-othermonthday{text-align:center;color:Silver;}
+.green .bodypanel-date{text-align:center;}
+.green .bodypanel-today{font-weight: bold;color:Blue;}
+.green .bodypanel-weekend{color:Red;}
+.green .bodypanel-daterow-hover{background-color:#85C032;}
+.green .bodypanel-date-hover{background-color:#00993F;color:white;cursor:pointer;}
+.green .bodypanel-date-select{background-color:#3C75C4;}
+.green .inforpanel{width:100%;background-color:#85C032;padding-top:3px;padding-bottom:3px;border-bottom:1px solid silver;text-align:center;}
+.green .inforpanel tr td{text-align:center;background-color:#BBE18C;}
+.green .bottompanel{width:100%;height:8px;background-color:#BBE18C;}
+.green .monthcombobox{display:none;position:absolute;z-index:1002;background-color:#B7DB81;border:1px solid #797979;}
+.green .monthcombobox div{padding : 3px;}
+.green .monthcombobox-thismonth{color:red;}
+.green .monthcombobox-hover{background-color:#00993F;cursor:pointer;}
+.green .yearcombobox{display:none;position:absolute;z-index:1002;background-color:#B7DB81;border:1px solid #797979;text-align:center;}
+.green .yearcombobox div{padding : 3px;}
+.green .yearcombobox .plus{height : 15px;padding : 3px;font-size:14px;}
+.green .yearcombobox-thisyear{color:red;}
+.green .yearcombobox-hover{background-color:#00993F;cursor:pointer;}
+
+/****************/
+/*  Blue Theme  */
+/****************/
+.blue{position:absolute;z-index:1000;font-family:verdana,tahoma,sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;line-height:normal;-moz-user-select:none;}
+.blue-iframeshim{z-index:999;width:220px;}
+.blue .panel{background-color:#66CCFF;color:#000000;cursor:default;width:220px;font-family:"trebuchet ms",verdana,tahoma,sans-serif;font-size:12px;}
+.blue .panel tr td{height : 20px;}
+.blue .topleft{background:transparent url(../img/bg_corner_topleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.blue .topright{background:transparent url(../img/bg_corner_topright.gif) no-repeat scroll 0 0;height:10px;margin-left:210px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.blue .bottomleft{background:transparent url(../img/bg_corner_bottomleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.blue .bottomright{background:transparent url(../img/bg_corner_bottomright.gif) no-repeat scroll 0 0;height:10px;margin-left:211px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.blue .slidepanel{width:100%;border-bottom:1px solid #797979;}
+.blue .slidepanel-img{height:80px;margin-left:3px;margin-right:5px;margin-bottom:2px;}
+.blue .slidepanel-text{text-align:left;width:100%;vertical-align:top;}
+.blue .toppanel{background-color:#66CCFF;color:#000000;width:100%;text-align:center;}
+.blue .toppanel-hover{background-color:#0066FF;cursor:pointer;}
+.blue .bodypanel{color:#000000;width:100%;border-top:1px solid silver;border-bottom:1px solid silver;}
+.blue .bodypanel-headrow{background-color:#0066FF;text-align:center;}
+.blue .bodypanel-weekhead{border-right:1px solid silver;border-bottom:1px solid silver;}
+.blue .bodypanel-dayhead{border-bottom:1px solid silver;}
+.blue .bodypanel-weekendhead{color:Red;}
+.blue .bodypanel-week{background-color:#0066FF;text-align:center;border-right:1px solid silver;}
+.blue .bodypanel-othermonthday{text-align:center;color:Silver;}
+.blue .bodypanel-date{text-align:center;}
+.blue .bodypanel-today{font-weight: bold;color:Blue;}
+.blue .bodypanel-weekend{color:Red;}
+.blue .bodypanel-daterow-hover{background-color:#529CFF;}
+.blue .bodypanel-date-hover{background-color:#0066FF;color:white;cursor:pointer;}
+.blue .bodypanel-date-select{background-color:#0066FF;}
+.blue .inforpanel{width:100%;background-color:#529CFF;padding-top:3px;padding-bottom:3px;border-bottom:1px solid silver;text-align:center;}
+.blue .inforpanel tr td{text-align:center;}
+.blue .bottompanel{width:100%;height:8px;background-color:#66CCFF;}
+.blue .monthcombobox{display:none;position:absolute;z-index:1002;background-color:#66CCFF;border:1px solid #797979;}
+.blue .monthcombobox div{padding : 3px;}
+.blue .monthcombobox-thismonth{color:red;}
+.blue .monthcombobox-hover{background-color:#0066FF;cursor:pointer;}
+.blue .yearcombobox{display:none;position:absolute;z-index:1002;background-color:#66CCFF;border:1px solid #797979;text-align:center;}
+.blue .yearcombobox div{padding : 3px;}
+.blue .yearcombobox .plus{height : 15px;padding : 3px;font-size:14px;}
+.blue .yearcombobox-thisyear{color:red;}
+.blue .yearcombobox-hover{background-color:#0066FF;cursor:pointer;}
+
+/***************/
+/*  Red Theme  */
+/***************/
+.red{position:absolute;z-index:1000;font-family:verdana,tahoma,sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;line-height:normal;-moz-user-select:none;}
+.red-iframeshim{z-index:999;width:220px;}
+.red .panel{background-color:#FF99CC;color:#000000;cursor:default;width:220px;font-family:"trebuchet ms",verdana,tahoma,sans-serif;font-size:12px;}
+.red .panel tr td{height : 20px;}
+.red .topleft{background:transparent url(../img/bg_corner_topleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.red .topright{background:transparent url(../img/bg_corner_topright.gif) no-repeat scroll 0 0;height:10px;margin-left:210px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.red .bottomleft{background:transparent url(../img/bg_corner_bottomleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.red .bottomright{background:transparent url(../img/bg_corner_bottomright.gif) no-repeat scroll 0 0;height:10px;margin-left:211px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.red .slidepanel{width:100%;border-bottom:1px solid #797979;}
+.red .slidepanel-img{height:80px;margin-left:3px;margin-right:5px;margin-bottom:2px;}
+.red .slidepanel-text{text-align:left;width:100%;vertical-align:top;}
+.red .toppanel{background-color:#FF99CC;color:#000000;width:100%;text-align:center;}
+.red .toppanel-hover{background-color:#FF0066;cursor:pointer;}
+.red .bodypanel{color:#000000;width:100%;border-top:1px solid silver;border-bottom:1px solid silver;}
+.red .bodypanel-headrow{background-color:#FF0066;text-align:center;}
+.red .bodypanel-weekhead{border-right:1px solid silver;border-bottom:1px solid silver;}
+.red .bodypanel-dayhead{border-bottom:1px solid silver;}
+.red .bodypanel-weekendhead{color:Black;}
+.red .bodypanel-week{background-color:#FF0066;text-align:center;border-right:1px solid silver;}
+.red .bodypanel-othermonthday{text-align:center;color:Silver;}
+.red .bodypanel-date{text-align:center;}
+.red .bodypanel-today{font-weight: bold;color:red;}
+.red .bodypanel-weekend{color:Red;}
+.red .bodypanel-daterow-hover{background-color:#FF6699;}
+.red .bodypanel-date-hover{background-color:#FF0066;color:white;cursor:pointer;}
+.red .bodypanel-date-select{background-color:#0066FF;}
+.red .inforpanel{width:100%;background-color:#FF6699;padding-top:3px;padding-bottom:3px;border-bottom:1px solid silver;text-align:center;}
+.red .inforpanel tr td{text-align:center;}
+.red .bottompanel{width:100%;height:8px;background-color:#FF99CC;}
+.red .monthcombobox{display:none;position:absolute;z-index:1002;background-color:#FF99CC;border:1px solid #797979;}
+.red .monthcombobox div{padding : 3px;}
+.red .monthcombobox-thismonth{color:red;}
+.red .monthcombobox-hover{background-color:#FF0066;cursor:pointer;}
+.red .yearcombobox{display:none;position:absolute;z-index:1002;background-color:#FF99CC;border:1px solid #797979;text-align:center;}
+.red .yearcombobox div{padding : 3px;}
+.red .yearcombobox .plus{height : 15px;padding : 3px;font-size:14px;}
+.red .yearcombobox-thisyear{color:red;}
+.red .yearcombobox-hover{background-color:#FF0066;cursor:pointer;}
+
+/******************/
+/*  Stripe Theme  */
+/******************/
+.stripe{position:absolute;z-index:1000;font-family:verdana,tahoma,sans-serif;font-size:13px;font-style:normal;font-variant:normal;font-weight:normal;line-height:normal;-moz-user-select:none;}
+.stripe-iframeshim{z-index:999;width:220px;}
+.stripe .panel{background:transparent url("../img/skin/stripe/background_normal.gif") repeat scroll 0 0;color:#000000;cursor:default;width:220px;font-family:"trebuchet ms",verdana,tahoma,sans-serif;font-size:12px;}
+.stripe .panel tr td{height : 20px;}
+.stripe .topleft{background:transparent url(../img/bg_corner_topleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.stripe .topright{background:transparent url(../img/bg_corner_topright.gif) no-repeat scroll 0 0;height:10px;margin-left:210px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.stripe .bottomleft{background:transparent url(../img/bg_corner_bottomleft.gif) no-repeat scroll 0 0;height:10px;margin-left:-1px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.stripe .bottomright{background:transparent url(../img/bg_corner_bottomright.gif) no-repeat scroll 0 0;height:10px;margin-left:211px;margin-top:-1px;position:absolute;width:10px;z-index:990;}
+.stripe .slidepanel{width:100%;border-bottom:1px solid #797979;}
+.stripe .slidepanel-img{height:80px;margin-left:3px;margin-right:5px;margin-bottom:2px;}
+.stripe .slidepanel-text{text-align:left;width:100%;vertical-align:top;}
+.stripe .toppanel{background:transparent url("../img/skin/stripe/background_normal.gif") repeat scroll 0 0;color:#000000;width:100%;text-align:center;}
+.stripe .toppanel-hover{background:transparent url("../img/skin/stripe/background_weekhead.gif") repeat scroll 0 100%;cursor:pointer;}
+.stripe .bodypanel{color:#000000;width:100%;border-top:1px solid #797979;border-bottom:1px solid #797979;}
+.stripe .bodypanel-headrow{background:transparent url("../img/skin/stripe/background_weekhead.gif") repeat scroll 0 100%;text-align:center;}
+.stripe .bodypanel-weekhead{border-right:1px solid #797979;border-bottom:1px solid #797979;}
+.stripe .bodypanel-dayhead{border-bottom:1px solid #797979;}
+.stripe .bodypanel-weekendhead{color:stripe;}
+.stripe .bodypanel-week{background:transparent url("../img/skin/stripe/background_weekhead.gif") repeat scroll 0 100%;text-align:center;border-right:1px solid #797979;}
+.stripe .bodypanel-othermonthday{text-align:center;color:#797979;}
+.stripe .bodypanel-date{text-align:center;}
+.stripe .bodypanel-today{font-weight: bold;color:stripe;}
+.stripe .bodypanel-weekend{color:stripe;}
+.stripe .bodypanel-daterow-hover{background:transparent url("../img/skin/stripe/background_rowhover.gif") repeat scroll 0 100%;}
+.stripe .bodypanel-date-hover{background:transparent url("../img/skin/stripe/background_hover.gif") repeat scroll 0 100%;color:white;cursor:pointer;}
+.stripe .bodypanel-date-select{background:transparent url("../img/skin/stripe/background_select.gif") repeat scroll 0 100%;}
+.stripe .inforpanel{width:100%;background:transparent url("../img/skin/stripe/background_weekhead.gif") repeat scroll 0 100%;padding-top:3px;padding-bottom:3px;border-bottom:1px solid #797979;text-align:center;}
+.stripe .inforpanel tr td{text-align:center;}
+.stripe .bottompanel{width:100%;height:8px;background:transparent url("../img/skin/stripe/background_normal.gif") repeat scroll 0 0;}
+.stripe .monthcombobox{display:none;position:absolute;z-index:1002;background:transparent url("../img/skin/stripe/background_normal.gif") repeat scroll 0 0;border:1px solid #797979;}
+.stripe .monthcombobox div{padding : 3px;}
+.stripe .monthcombobox-thismonth{color:stripe;}
+.stripe .monthcombobox-hover{background:transparent url("../img/skin/stripe/background_hover.gif") repeat scroll 0 100%;cursor:pointer;}
+.stripe .yearcombobox{display:none;position:absolute;z-index:1002;background:transparent url("../img/skin/stripe/background_normal.gif") repeat scroll 0 0;border:1px solid #797979;text-align:center;}
+.stripe .yearcombobox div{padding : 3px;}
+.stripe .yearcombobox .plus{height : 15px;padding : 3px;font-size:14px;}
+.stripe .yearcombobox-thisyear{color:stripe;}
+.stripe .yearcombobox-hover{background:transparent url("../img/skin/stripe/background_hover.gif") repeat scroll 0 100%;cursor:pointer;}

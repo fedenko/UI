@@ -1,0 +1,7 @@
+body {
+	behavior: url("htc/csshover3.htc");
+}
+#footer {
+	position: absolute;
+    top: expression( ignore = - this.offsetHeight + document.documentElement.clientHeight + document.documentElement.scrollTop + "px" );
+}

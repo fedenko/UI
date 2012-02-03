@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="title" content="Living Elements" />
+    <title>Living Elements</title>
+    <link href="css/living-form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-1.4.1.min.js"></script>
+		<script type="text/javascript" src="js/jquery.backgroundPosition-1.21.js"></script>
+		<script type="text/javascript" src="js/jquery.livingElements-0.1.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".input-wrapper").livingElements("images/input-mask.png", {
+					background: "url('images/gradient.png') no-repeat",
+					fade: false,
+					startOpacity:1,
+					endOpacity:1,
+					scrollDirection: 'horizontal',					
+					duration:1500,
+					delay:0,
+					continous: false,
+					easing: 'linear',
+					disableIE6: false,
+					softFadeAtEnd: true/*,
+					triggerElement: $(this).children()*/
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div class="input-wrapper">
+			<input class="living-input" name="" type="text" />
+		</div>
+		<div class="input-wrapper">
+			<input class="living-input" name="" type="text" />
+		</div>
+	</body>
+</html>

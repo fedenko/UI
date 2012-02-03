@@ -1,0 +1,45 @@
+/*** jExpose specific styling ***/
+#exposeLayer {
+    background-color: #000000;   
+}
+
+#exposeTL {
+	background: url(images/cTL.png) top left no-repeat transparent;
+}
+#exposeTR {
+	background: url(images/cTR.png) top left no-repeat transparent;
+}
+#exposeBL {
+	background: url(images/cBL.png) bottom left no-repeat transparent;
+}
+#exposeBR {
+	background: url(images/cBR.png) bottom right no-repeat transparent;
+}
+
+#exposeT {
+	background: url(images/mT.png) top left repeat-x transparent;
+}
+#exposeB {
+	background: url(images/mB.png) bottom left repeat-x transparent;
+}
+#exposeL {
+	background: url(images/mL.png) top left repeat-y transparent;
+}
+#exposeR {
+	background: url(images/mR.png) top left repeat-y transparent;
+}
+
+
+/*** other styling for the document ***/
+#someLayer {
+    width: 150px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 3px solid #aaaaaa;
+    position: absolute;
+    top: 100px; left: 200px;
+    opacity: 0;
+    padding: 10px;
+    visibility: hidden;
+    z-index: 1000;
+}

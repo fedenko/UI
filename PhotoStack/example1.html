@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+  <head profile="http://gmpg.org/xfn/11">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+    <title>Documentation and Demos for the photostack jQuery Plugin</title>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+
+    <script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.photostack.pack.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#photos').photostack();
+      });
+    </script>
+  </head>
+  
+  <body>
+    <div id="wrapper">
+      <div id="nav">
+        <h3>Navigation</h3>
+        <ol>
+          <li><a href="index.html"><span>Home:</span> Setup photostack</a></li>
+          <li class="active"><a href="example1.html"><span>Example 1:</span> Without any options</a></li>
+          <li><a href="example2.html"><span>Example 2:</span> With easing</a></li>
+          <li><a href="example3.html"><span>Example 3:</span> Horizontal swapping</a></li>
+          <li><a href="example4.html"><span>Example 4:</span> Slideshow</a></li>
+          <li><a href="example5.html"><span>Example 5:</span> Cutting-edge shadows</a></li>
+        </ol>
+      </div>
+      
+      <div id="content">
+        <h1>Markup</h1>
+<pre><code>&lt;div id="photos"&gt;
+  &lt;img src="images/sa_m_1.jpg" alt="Streetart 1" width="500" height="333" /&gt;
+  &lt;img src="images/sa_m_2.jpg" alt="Streetart 2" width="500" height="332" /&gt;
+  &lt;img src="images/sa_m_3.jpg" alt="Streetart 3" width="500" height="332" /&gt;
+  &lt;img src="images/sa_m_4.jpg" alt="Streetart 4" width="500" height="375" /&gt;
+  &lt;img src="images/sa_m_5.jpg" alt="Streetart 5" width="500" height="375" /&gt;
+&lt;/div&gt;
+&lt;div id="controls"&gt;
+  &lt;a href="#previous" id="prev"&gt;&laquo; Previous&lt;/a&gt; - &lt;a href="#next" id="next"&gt;Next &raquo;&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+        <p>Note: You need to set the <strong>width</strong> and <strong>height</strong> attribute of the images to prevent a bug in Chrome.</p>
+        
+        <h1>Code</h1>
+<pre><code>$(document).ready(function() {
+  $('#photos').photostack();
+});</code></pre>
+        
+        <h1>Result</h1>
+        <div id="photos">
+          <img src="images/sa_m_1.jpg" alt="Streetart 1" width="500" height="333" />
+          <img src="images/sa_m_2.jpg" alt="Streetart 2" width="500" height="332" />
+          <img src="images/sa_m_3.jpg" alt="Streetart 3" width="500" height="332" />
+          <img src="images/sa_m_4.jpg" alt="Streetart 4" width="500" height="375" />
+          <img src="images/sa_m_5.jpg" alt="Streetart 5" width="500" height="375" />
+        </div>
+        <div id="controls">
+          <a href="#previous" id="prev">&laquo; Previous</a> - <a href="#next" id="next">Next &raquo;</a>
+        </div>
+      </div>
+      <div class="clear"></div>
+      
+      <div id="footer">
+        <a href="index.html">photostack</a> <a href="http://jquery.com/">jQuery</a> Plugin coded by <a href="http://mustardamus.com/">Sebastian Senf</a>
+        -
+        All example photos are under <a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en">Creative Commons Attribution-Share Alike</a> License
+        -
+        Found on <a href="http://www.flickr.com/creativecommons/by-sa-2.0/">Flickr</a> (<a href="http://www.flickr.com/photos/streetart-berlin/3624904343/">1</a>, <a href="http://www.flickr.com/photos/streetart-berlin/3441090030/">2</a>, <a href="http://www.flickr.com/photos/streetart-berlin/3440281479/">3</a>, <a href="http://www.flickr.com/photos/sanduhr472/52657432/">4</a> and <a href="http://www.flickr.com/photos/retinafunk/456610742/">5</a>)
+      </div>
+    </div>
+  </body>
+</html>

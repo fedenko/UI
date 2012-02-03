@@ -1,0 +1,7 @@
+body, table tr td { font-size: 13px; font-family: tahoma; color: #333; }
+body { margin: 60px; background: #efefef; }
+#m { margin: 0 auto; width: 600px; padding: 15px 25px; border: 1px solid #dcdcdc; background: #fff; border-radius: 7px; }
+#m h1 { font-size: 17px; font-weight: normal; }
+
+input[type=text], select { padding: 5px; border: 1px solid #ccc; border-radius: 3px; color: #000; }
+input#show_message_btn { padding: 5px; background-color: #c00; color: #fff; border-radius: 3px; border: 1px solid #c00 }

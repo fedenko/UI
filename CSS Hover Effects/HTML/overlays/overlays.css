@@ -1,0 +1,299 @@
+/*
+Item Name : HoverMe - Collection of CSS3 Hover Effects
+Author URI : http://themeforest.net/user/Keliah
+Version : 1.0
+*/
+
+/*
+
+TABLE OF CONTENTS
+
+1.a, 1.b INFORMATION BOX
+2. LOMO EFFECT
+3.a, 3.b OVERLAYS
+4. IMAGES STACKS
+5. FULL OVERLAY
+
+*/
+
+
+
+/* DEFAULTS PAGE STYLING - FOR DEMO ONLY */
+
+/* You can safely remove / modify the following markup as it's only for the demo purpose */
+
+body {
+	background:#121212;
+	font-family:Arial, Helvetica, sans-serif;
+	_behavior: url("ie/csshover3.htc"); /* For IE6 only, it enables hover on non anchor tags */
+}
+.container {
+	width:960px;
+	margin:30px auto;
+}
+.container ul li, .stack, .full_overlay {
+	float:left;
+	margin-right: 20px; 
+}
+h1 {
+	font-size:30px;
+	letter-spacing:-1px;
+	margin:20px 0px 20px 0px;
+	color:#FFFFFF;
+}
+p {
+	font-size:12px;
+	line-height:18px;
+}
+h2 {
+	font-size:18px;
+	line-height:24px;
+}
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 40px;
+}
+
+
+
+/*  _______________________________________
+
+	1.a, 1.b INFORMATION BOX
+    _______________________________________  */
+
+
+
+.info {
+	width: auto;
+	float: left; 
+	display: inline;
+	padding: 0;
+	position: relative;
+}
+	.info:hover {
+		z-index: 99;
+	}
+.info img {
+	position: relative;
+	
+	/* Set an opacity for the default state */
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+}
+.info:hover img{
+	z-index: 999;
+	
+	/* Enabling a 100% opacity on mouse hover */
+	filter: alpha(opacity=100);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+.details {
+	position: absolute;
+	left: -10px; 
+	top: -10px;
+	
+	/* The top padding is set to 220px because the height of the demo images
+	   is 200px, so we have an additional 10px on the top and at the bottom of the image */
+	padding: 220px 10px 10px 10px;
+	/* Set the following width according to the size of your images */
+	width: 300px;
+	/* Hiding the DIV */
+	display: none;
+	/* Rounded corners */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.info:hover .details {
+	/* Showing on mouse hover */
+	display: block;
+}
+/* Styling for the black variant */
+.black {
+	background: #000000;
+}
+	.black h2, .black p {
+		color: #ffffff;
+	}
+/* Styling for the white variant */
+.white {
+	background: #ffffff;
+}
+	.white h2, .white p {
+		color: #000000;
+	}
+
+
+
+/*  _______________________________________
+
+	2. LOMO EFFECT
+    _______________________________________  */
+
+
+
+.lomo {
+	position: relative; 
+	display: inline-block;
+}                    
+.lomo img {
+	display: block;
+}  
+.lomo:hover:after {
+	/* The box shadow is set to black and mkes the nice inner glowing
+	   effect on mouse hover */
+	-moz-box-shadow: inset 0 0 80px #000000;  
+	-webkit-box-shadow: inset 0 0 80px #000000;   
+	box-shadow: inset 0 0 80px #000000;
+	/* Positionning this black glow on mouse hover */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;  
+	z-index: 2;              
+	content: "";
+} 
+
+
+
+/*  _______________________________________
+
+	3.a, 3.b OVERLAYS
+    _______________________________________  */
+
+
+
+.overlay {
+	position: relative; 
+	display: inline-block;
+}                    
+	.overlay img {
+		display: block;
+	}  
+.overlay .description {
+	position: absolute;
+	left: 0px; 
+	width: 100%;
+	
+	/* Setting a zero opacity so we have a nice fading effect on mouse hover */
+	filter: alpha(opacity=0);
+	opacity: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	/* Semi-transparent background for modern browsers, black for older browsers */
+	background:#000000;
+	background: rgba(0,0,0,0.8);
+	/* CSS3 transition, makes the fading effect */ 
+	-webkit-transition: opacity 0.4s ease-in-out;
+	-moz-transition: opacity 0.4s ease-in-out;
+	-o-transition: opacity 0.4s ease-in-out;
+	transition: opacity 0.4s ease-in-out;
+}
+	.description p {
+		/* Text styling */
+		padding:10px;
+		color:#ffffff;
+	}
+.overlay:hover .description {
+	/* Setting a 100% opacity on mouse hover */
+	filter: alpha(opacity=100);
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+/* Aligning to the bottom of the image */
+.bottom {
+	bottom: 0px;
+}
+/* Aligning to the top of the image */
+.top {
+	top: 0px;
+}
+
+
+
+/*  _______________________________________
+
+	4. IMAGES STACKS
+    _______________________________________  */
+
+
+
+.stack {
+	position:relative;
+	/* Set the width and the height according to the size of your pictures */
+	width:300px;
+	height:200px;
+}
+	.stack img {
+		position:absolute;
+		left:0;
+		/* CSS3 transitions, creates the fading effect */
+		-webkit-transition: opacity 0.4s ease-in-out;
+		-moz-transition: opacity 0.4s ease-in-out;
+		-o-transition: opacity 0.4s ease-in-out;
+		transition: opacity 0.4s ease-in-out;
+	}
+	.stack img.top:hover {
+		/* Set a 0 opacity to the top image and reveal the other image */
+		filter: alpha(opacity=0);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+
+
+
+/*  _______________________________________
+
+	5. FULL OVERLAY
+    _______________________________________  */
+
+
+
+.full_overlay {
+	position:relative;
+	/* Set the width and the height according to the size of your pictures */
+	width:300px;
+	height:200px;
+}
+.full_overlay p {
+	color:#FFFFFF;
+	padding:10px;
+}
+	.full_overlay .content {
+		position: absolute;
+		left: 0px;
+		/* Set the width and the height according to the size of your pictures */
+		width: 300px;
+		height:200px;
+		/* Set a 0 opacity to hide the content */
+		filter: alpha(opacity=0);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		/* Semi-transparent background for modern browsers, black for older browsers */
+		background:#000000;
+		background: rgba(0,0,0,0.8);
+		/* CSS3 transitions, creates the fading effect */
+		-webkit-transition: opacity 0.4s ease-in-out;
+		-moz-transition: opacity 0.4s ease-in-out;
+		-o-transition: opacity 0.4s ease-in-out;
+		transition: opacity 0.4s ease-in-out;
+	}
+	.content h2, .content p {
+		/* Text styling */
+		padding:10px;
+		color:#ffffff;
+	}
+	.full_overlay:hover .content {
+		/* Setting a 100% opacity on mouse hover to show the content */
+		filter: alpha(opacity=100);
+		opacity: 1;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	}
+
+

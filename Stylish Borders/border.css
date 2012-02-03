@@ -1,0 +1,68 @@
+.glass {
+	padding: 6px;
+	
+	background: #eee;
+	background: -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #ddd), color-stop(0.5, #c0c0c0), to(#aaa));
+	background: -moz-linear-gradient(top, #eee, #ddd 50%, #c0c0c0 50%, #aaa);
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	box-shadow: 0 0 10px rgba(0,0,0,.7);
+}
+
+.aluminium {
+	padding: 5px;
+	
+	background: #ccc;
+	background: -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.25, #aaa), to(#8a8a8a));
+	background: -moz-linear-gradient(top, #ddd, #aaa 25%, #8a8a8a);
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	border: 1px solid #666;
+	
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	box-shadow: 0 0 10px rgba(0,0,0,.7);
+}
+
+.transparent {
+	padding: 5px;
+	
+	background: #555;
+	background: rgba(0,0,0,.4);
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	
+	border: 1px solid rgba(0,0,0,0.3);
+	
+	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,.7);
+	box-shadow: 0 0 10px rgba(0,0,0,.7);
+}
+
+.red {
+	background: #ff5555;
+	background: rgba(255,0,0,.4);
+}
+.yellow {
+	background: #ffff55;
+	background: rgba(255,255,0,.4);	
+}
+.green {
+	background: #55ff55;
+	background: rgba(0,255,0,.4);	
+}
+.blue {
+	background: #5555ff;
+	background: rgba(0,0,255,.4);
+}
+

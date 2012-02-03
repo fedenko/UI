@@ -1,0 +1,51 @@
+.modern_accordion {
+    width : 600px;
+    overflow : hidden;
+    position: relative;
+}
+
+.modern_accordion div {
+    float : left;
+} 
+
+.modern_accordion .content {
+    display : none;
+    color : #fff;
+    background: #318DF2;
+    font-family: Helvetica Neue, Helvetica, Arial, Lucida;
+    font-size: 10pt;
+    padding: 5px;
+    width : 590px;
+    margin-bottom: 2px;
+}
+
+.modern_accordion .title {
+    background: #000;
+    margin : 0px 2px 2px 0px;
+}
+
+.modern_accordion .title_extended {
+    background: #000;
+    margin : 0px 0px 2px 0px;
+}
+
+.modern_accordion .title a,
+.modern_accordion .title_extended a {
+    line-height: 1.2em;
+    font-family: Helvetica Neue, Lucida Sans Unicode, Arial, Helvetica, Lucida;
+    font-size: 10pt;
+    text-decoration: none;
+    outline: none;
+    white-space: nowrap;
+    padding : 4px 10px 4px 4px;
+    color : #FFF;
+    text-transform: uppercase;
+    float: left;
+}
+
+.modern_accordion .active a, 
+.modern_accordion .title a:hover {
+    color : #318DF2;
+}
+
+

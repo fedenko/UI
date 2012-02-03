@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>My Products Zoomer</title>
+    <link rel="stylesheet" href="files/RbZoom.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="files/RbZoom.js"></script>
+    <style type="text/css" media="all">
+	body{ background:#CCC}
+	p {padding:0; margin:0}
+	.Cont {
+		width:400px;
+		height:380px;
+		margin:50px auto; 
+		padding:20px;
+		background:url(images/demo_bg.png) center center no-repeat;	
+		-background: none; 
+		-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/demo_bg.png", sizingMethod="scale");
+	}
+	.ProductInfo {
+		width:250px;
+		border-left:1px dotted #666; 
+		padding-left:3px;	
+	}	
+	.ProductInfo h3 {
+		margin:0px; padding:0px; 
+		color:#666; 
+		font-size:18px	;
+	}	
+	.ProductInfo p {
+		font-size:14px; 
+		color:#999; 
+		margin:8px 0px;
+		margin-left:10px;
+	}
+	</style>
+</head>
+
+<body>
+
+<div class="Cont">
+	<div style="float:left">
+        <p style=" font-size:12px; color:#999;">Hover over the image</p>
+        <a href="images/products/zoom_1.jpg" rel="thumbs:Thumbs" class="RbZoom"> <img src="images/products/small_1.jpg" alt=""/> </a>
+        <div id="Thumbs" class="RbProdThumbs" >
+            <a href="images/products/zoom_1.jpg"  rel="images/products/small_1.jpg"> <img src="images/products/thumb_1.jpg" alt=""/> </a>
+            <a href="images/products/zoom_2.jpg"  rel="images/products/small_2.jpg"> <img src="images/products/thumb_2.jpg" alt=""/> </a>
+        </div>
+    </div>
+    <div style="float: right;" class="ProductInfo">
+        <h3>Product Name</h3>
+        <p><b>Description : </b>Nam pretium pharetra eros. Duis dui. Suspendisse volutpat arcu id sem. Aliquam mattis tortor sed nulla. Phasellus sed felis at neque hendrerit suscipit. Proin eget orci. Pellentesque dapibus rhoncus tortor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse dolor pede, tincidunt quis, pulvinar eu, ultrices nec, mauris. Suspendisse mollis augue sit amet dui. Phasellus mi sapien, hendrerit lacinia, elementum in, pretium sed, nulla.</p>
+        <p><b>Price : </b>150 $</p>
+        </div>
+    <div class="Clear"></div>
+	<div style=" border-top:1px dashed #666; padding-top:6px"><img src="images/navs.gif" alt="" /></div>
+</div>
+
+</body>
+</html>

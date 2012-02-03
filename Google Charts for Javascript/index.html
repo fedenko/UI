@@ -1,0 +1,74 @@
+<html>
+<head>
+	<title>GoogleCharts test</title>
+	<style>
+		.hidden{position:absolute;top:0;left:-9999px;}
+		table{border-collapse:collapse;border:1px solid #999;width:400px;}
+		th,td{padding:5px;border:1px solid #999;}
+		th{background:#eee;}
+		caption{font-weight:bold;font-size:120;padding:5px 0;}
+		.fromtable{display:block;padding:5px;margin:10px;border:1px solid #ccc;}
+	</style>
+<body>
+<div style="width: 730px; margin: 20px auto; font-family:sans-serif;">
+	<table id="BrowserWars" cellpadding="2" cellspacing=2 summary="test">
+	<tr>
+		<td>Browser</td><td>Percent</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 1.0</td><td>30.95</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 6.0</td><td>24.84</td>
+	</tr>
+	<tr>
+		<td>Firefox 3.0</td><td>18.20</td>
+	</tr>
+	<tr>
+		<td>Firefox 2.0</td><td>11.28</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 8.0</td><td>1.61</td>
+	</tr>
+	<tr>
+		<td>Firefox 1.5</td><td>1.56</td>
+	</tr>
+	<tr>
+		<td>Safari 3.1</td><td>0.92</td>
+	</tr>
+	<tr>
+		<td>Safari 3.0</td><td>0.66</td>
+	</tr>
+	<tr>
+		<td>Safari 3.2</td><td>0.61</td>
+	</tr>
+	<tr>
+		<td>Chrome 1.0</td><td>0.57</td>
+	</tr>
+	</table>
+	<Br />
+	<table id="BrowserWars2" cellpadding="2" cellspacing=2 summary="test">
+	<tr>
+		<td>Browser</td><td>Percent</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 7.0</td><td>30.95</td>
+	</tr>
+	<tr>
+		<td>Internet Explorer 6.0</td><td>24.84</td>
+	</tr>
+	<tr>
+		<td>Firefox 3.0</td><td>18.20</td>
+	</tr>
+	<tr>
+		<td>Firefox 2.0</td><td>11.28</td>
+	</tr>
+	</table>
+	<script src="googlecharts/googlecharts.js"></script>
+	<script>
+		GoogleCharts.graphIt("BrowserWars","pie",550,250,"990000,000000,339933");
+		GoogleCharts.graphIt("BrowserWars2","sparkline",750,250,"990000,000000,339933");
+	</script>
+</div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <title>Insert title here</title>
+  
+  <link href="jExpose.css" type="text/css" rel="stylesheet">
+  
+  <script type="text/javascript" src="jquery-min.js"></script>
+  <script type="text/javascript" src="jquery.jExpose-min.js"></script>
+
+  <script type="text/javascript">
+    $(function() {
+        function showData() {
+            var d = $("#someLayer");
+            d.css("visibility", "visible").animate({ opacity: 1 }, 130);
+            return d;
+        }
+        var props = {
+            showCorners: true,
+            showMargins: false,
+            onlyCorners: true,
+            
+            onCornerTopRight: function() {
+                showData().html("The <strong>top right corner</strong> was triggered");
+            },
+            onCornerTopLeft: function() {
+                showData().html("The <strong>top left corner</strong> was triggered");
+            },
+            onCornerBottomRight: function() {
+                showData().html("The <strong>bottom right corner</strong> was triggered");
+            },
+            onCornerBottomLeft: function() {
+                showData().html("The <strong>bottom left corner</strong> was triggered");
+            },
+            
+            onMarginTop: function() {
+                showData().html("The <strong>top margin</strong> was triggered");
+            },
+            onMarginBottom: function() {
+                showData().html("The <strong>bottom margin</strong> was triggered");
+            },
+            onMarginLeft: function() {
+                showData().html("The <strong>left margin</strong> was triggered");
+            },
+            onMarginRight: function() {
+                showData().html("The <strong>right margin</strong> was triggered");
+            },
+            
+            onLayerExit: function() {
+                $("#someLayer").animate({opacity: 0}, 150, function() {
+                    $(this).css("visibility", "hidden");
+                });
+            }
+        };
+        
+        $.expose(props);
+        
+        $("#enableExpose").click(function() { $.expose.enable(); });
+        $("#disableExpose").click(function() { $.expose.disable(); });
+        $("#showControls").click(function() { $.expose.showControls(); });
+        $("#hideControls").click(function() { $.expose.hideControls(); });
+        $("#showCorners").click(function() { $.expose.setShowCorners(true); });
+        $("#hideCorners").click(function() { $.expose.setShowCorners(false); });
+        $("#showMargins").click(function() { $.expose.setShowMargins(true); });
+        $("#hideMargins").click(function() { $.expose.setShowMargins(false); });
+        $("#cornersOnly").click(function() { $.expose.setOnlyCorners(true); });
+        $("#cornersAndMargins").click(function() { $.expose.setOnlyCorners(false); });
+    });
+  </script>
+</head>
+<body>
+  <br/>
+  <table border=0 align="center">
+    <tr>
+        <td align="center"><button id="enableExpose">Enable Expose</button></td>
+        <td align="center"><button id="disableExpose">Disable Expose</button></td>
+    </tr>
+    <tr><td colspan="2" height="20"></td></tr>    
+    <tr>
+        <td align="center"><button id="cornersAndMargins">Allow Margins</button></td>
+        <td align="center"><button id="cornersOnly">Disable Margins</button></td>        
+    </tr>
+    <tr><td colspan="2" height="20"></td></tr>
+    <tr>        
+        <td align="center"><button id="hideCorners">Hide Corners</button></td>
+        <td align="center"><button id="showCorners">Show Corners</button></td>
+    </tr>   
+    <tr><td colspan="2" height="5"></td></tr>
+    <tr>
+        <td align="center"><button id="showMargins">Show Margins</button></td>
+        <td align="center"><button id="hideMargins">Hide Margins</button></td>
+    </tr>
+    <tr><td colspan="2" height="20"></td></tr>
+    <tr>        
+        <td align="center"><button id="hideControls">Hide Controls</button></td>
+        <td align="center"><button id="showControls">Show Controls</button></td>
+    </tr>
+  </table>
+  
+  <div id="someLayer">
+    <p></p>
+  </div>
+</body>
+</html>

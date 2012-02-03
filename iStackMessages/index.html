@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /> 
+	<title>Example iStackMessage</title>
+	
+	<link type="text/css" href="css/style.css" rel="stylesheet" />
+	<link type="text/css" href="css/istackmessages.css" rel="stylesheet" />
+	<script type="text/javascript" src="js/mootools.core.js"></script>
+	<script type="text/javascript" src="js/istackmessages.js"></script>
+	<script type="text/javascript">
+	var stackmessages;
+	window.addEvent('domready', function()
+	{
+		stackmessages = new iStackMessages();
+		
+		$('show_message_btn').addEvent('click', function()
+		{
+			stackmessages.options.capacity = $('capacityBox').get('value');
+			stackmessages.options.hideTimeout = $('hideTimeoutBox').get('value');
+			stackmessages.options.animationTime = $('animationTimeBox').get('value');
+			stackmessages.options.hideOptions.property = $('hidePropertyBox').get('value');
+			stackmessages.options.hideOptions.value = $('hidePropertyValueBox').get('value');
+			stackmessages.options.showOptions.property = $('showPropertyBox').get('value');
+			stackmessages.options.showOptions.value = $('showPropertyValueBox').get('value');
+			stackmessages.options.vPosition = $('vpos').getSelected().get('value');
+			stackmessages.options.hPosition = $('hpos').getSelected().get('value');
+			
+			if($('callbackBox').get('checked') == true)
+			{
+				stackmessages.options.showCallback = showMessageCallback;
+				stackmessages.options.hideCallback = hideMessageCallback;
+			}
+			else
+			{
+				stackmessages.options.showCallback = null;
+				stackmessages.options.hideCallback = null;				
+			}
+
+			stackmessages.showMessage($('type_message').get('value'), $('header_text').get('value'), $('content_text').get('value'), 
+										$('isClosed').get('checked'), $('ttl').get('value'), function(message){alert(message)});
+		});
+	});
+	
+	function showMessageCallback(message)
+	{
+		alert('Message open!');
+	}
+	
+	function hideMessageCallback(message)
+	{
+		alert('Message close!');
+	}	
+	</script>
+</head>
+<body>
+
+<div id="m">
+
+	<p>
+	<h1>Show message</h1>
+	<table width="100%">
+	<tr>
+		<td align="right" width="35%">Title text:</td>
+		<td><input type="text" id="header_text" value="Congratulations" size="20" /></td>
+	</tr>
+	<tr>
+		<td align="right">Content:</td>
+		<td><input type="text" id="content_text" value="You have successfully registered." size="50" /></td>
+	</tr>
+	<tr>
+		<td align="right">Is closed:</td>
+		<td><input type="checkbox" id="isClosed" style="vertical-align:-2px;" /></td>
+	</tr>	
+	<tr>
+		<td align="right">Time to left:</td>
+		<td><input type="text" id="ttl" value="0" size="5" /></td>
+	</tr>
+	<tr>
+		<td align="right">Message type:</td>
+		<td>
+			<select id="type_message">
+			<option value="success">Success</option>			
+			<option value="error">Error</option>
+			<option value="info">Information</option>
+			<option value="attention">Attention</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" id="show_message_btn" value="Show Message" /></td>
+	</tr>
+	</table>
+	</p>
+	
+	<hr />
+	<p>
+		<h1>Settings</h1>
+		<table width="100%">
+		<tr>
+			<td align="right" width="35%">Callback functions:</td>
+			<td><input type="checkbox" id="callbackBox" style="vertical-align:-2px;" /></td>
+		</tr>	
+		<tr>
+			<td align="right" width="35%">Positions:</td>
+			<td>
+				<select id="vpos"><option value="top">Top</option><option value="bottom">Bottom</option></select>
+				<select id="hpos"><option value="left">Left</option><option value="right">Right</option></select>
+			</td>
+		</tr>			
+		<tr>
+			<td align="right" width="35%">Max. count messages in stack:</td>
+			<td><input type="text" id="capacityBox" value="5" size="2" /></td>
+		</tr>	
+		<tr>
+			<td align="right" width="35%">Animation time:</td>
+			<td><input type="text" id="animationTimeBox" value="300" size="3" /></td>
+		</tr>		
+		<tr>
+			<td align="right" width="35%">Default hide timeout:</td>
+			<td><input type="text" id="hideTimeoutBox" value="6000" size="3" /></td>
+		</tr>
+		<tr>
+			<td align="right" width="35%">Hide messages property:</td>
+			<td><input type="text" id="hidePropertyBox" value="opacity" size="20" /></td>
+		</tr>
+		<tr>
+			<td align="right" width="35%">Hide messages property value:</td>
+			<td><input type="text" id="hidePropertyValueBox" value="0" size="15" /></td>
+		</tr>
+		<tr>
+			<td align="right" width="35%">Show messages property:</td>
+			<td><input type="text" id="showPropertyBox" value="opacity" size="20" /></td>
+		</tr>
+		<tr>
+			<td align="right" width="35%">Show messages property value:</td>
+			<td><input type="text" id="showPropertyValueBox" value="1" size="15" /></td>
+		</tr>			
+		</table>
+	</p>
+	
+	<hr />
+	<p>
+	<h1>Files</h1>
+	<b>istackmessages.js</b> &mdash; main js file script<br />
+	<b>istackmessages.css</b> &mdash; css styles message
+	</p>
+	
+	<hr />
+	<p>
+	<h1>Intergrated</h1>
+	Insert this code to HEAD tag of your site:<br />
+		<p style="color:#666;">
+		&lt;script type="text/javascript"&gt;<br />
+		var stackmessages;<br />
+		window.addEvent('domready', function()<br />
+		{<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;stackmessages = new iStackMessages([options]);<br />
+		});<br />
+		&lt;/script&gt;
+		</p>
+	</p>
+	
+	<hr />
+	<p>
+	<h1>Options</h1>	
+		<b>capacity</b> (integer) - Max. count messages in stack<br />
+		<b>animationTime</b> (integer) - Show and hide animation duration<br />
+		<b>hideTimeout</b> (integer) - Default time to left message<br />
+		<b>hideOptions</b> (array) - Options of hide animation<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>property</b> (string)<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>value</b> (integer)<br />
+		<b>showOptions</b> (array) - Options of show animation<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>property</b> (string)<br />
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>value</b> (integer)<br />
+		<b>hPosition</b> (string) - set a horizontal position (left or right)<br />
+		<b>vPosition</b> (string) - set a vertical position (top or bottom)<br />
+		<b>showCallback</b> (handle) - name callback function to show message<br />
+		<b>hideCallback</b> (handle) - name callback function to close message<br />
+	</p>
+	
+	<hr />
+	<p>
+	<h1>Run</h1>
+	This code show message in stack:<br />
+		<p style="color:#666;">
+		stackmessages.showMessage(string type, string title, string text, bool closed[, int hideTimeout, handle clickFunction]);
+		</p>
+	<b>Params:</b><br />
+	1. Error, info, success or your custom<br />
+	2. Title message<br />
+	3. Text of message<br />
+	4. Show a close button?<br />
+	5. Custom, if you pass "0" to never hide<br />
+	6. Custom, a callback function of click to message box<br />
+	</p>
+	
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,8 @@
+/**
+ * X-Team Page Peel, v1.1.1
+ *
+ * http://x-team.com/
+ * Copyright (c) 2009 X-Team
+ */
+
+.xteam-pagepeel {position: absolute;top: 0;right: 0;z-index: 9999;}.xteam-pagepeel img {border: 0;}.xteam-pagepeel img.peel {position: absolute;top: 0;right: 0;width: 100px;height: 104px;z-index: 100;}.xteam-pagepeel img.map {width: 100%;height: 100%;position: absolute;}.xteam-pagepeel .back {position: absolute;top: 0;right: 0;width: 100px;height: 100px;}.xteam-pagepeel .corner {z-index: 0;}.xteam-pagepeel .link {z-index: 200;}.xteam-pagepeel .peel-content {display: none;position: absolute;left: 15px;bottom: 27px;}.xteam-pagepeel .peel-hint {display: block;position: absolute;left: 5px;bottom: 5px;}.xteam-pagepeel.open .peel-content {display: block;}.xteam-pagepeel.open .peel-hint {display: none;}

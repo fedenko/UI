@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@import url('reset.css');
+a {
+	color: #0086f2;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+
+.paragraph {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #141414;
+	text-align: justify;
+	line-height: 21px;
+}
+
+.highlight{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #0086f2;
+	line-height: 21px;
+	
+}
+.desc {
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 12px;
+	line-height: 18px;
+}
+.signature {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-style: italic;
+	color: #141414;
+	line-height: 21px;
+	margin-top: 20px;
+}
+.rights {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #505050;
+	text-align: right;
+	text-shadow: 1px 1px 1px #ffffff;
+}
+.container {
+	width: 790px;
+	margin: 30px auto
+}
+h1 {
+	font-size:32px;
+	margin-bottom:0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #323232;
+	text-align: center;
+}
+h2 {
+	color: #666;
+	font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
+	font-style: italic;
+	font-weight: normal;
+	font-size: 30px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+h3 {
+	color: #666;
+	font-family: "Warnock Pro", "Goudy Old Style", "Palatino", "Book Antiqua", Georgia, serif;
+	font-style: italic;
+	font-weight: normal;
+	text-align: center;
+	font-size: 18px;
+}
+h4 {
+	font-size:14px;
+	margin-bottom:0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #323232;	
+}
+
+.header {
+	overflow: hidden;
+	
+}
+.info {
+	width: 230px;
+	height: 100px;
+	border: solid 1px #cccccc;
+	border-left: none;
+	background: #f7f7f7;
+	float: left;
+	
+}
+.info p {
+	padding: 18px;
+	
+}
+.thanks {
+	width: 559px;
+	height: 100px;
+	border: solid 1px #cccccc;
+	border-left: none;
+	border-right: none;
+	float: right;
+}
+
+.thanks p {
+	padding: 30px 20px;	
+}
+.index {
+	margin-bottom: 20px;
+}
+.index ol {
+	list-style-type: upper-alpha;
+	padding-left: 40px;
+}
+.index ol li ul {
+	list-style-type: lower-alpha;
+	padding-left: 20px;
+}
+
+.code {
+	padding: 5px;
+	font-family: Monaco, Courier;
+	font-size: 12px;
+	color: #323232;
+}

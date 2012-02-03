@@ -1,0 +1,71 @@
+/**********************************************************************************************
+
+	X-Precise
+	Author: X-Team.com
+
+***********************************************************************************************/
+
+/* X-Precise overlay */
+#xprecise-overlay { position: absolute; top: 0; left: 0; z-index: 10000; }
+#xprecise-overlay img { display: block; }
+
+/* X-Precise wrapper */
+#xprecise-wrapper { position: absolute; top: 0; left: 0; width: 100%; z-index: 5000; }
+
+/* X-Precise interface */
+#xprecise { position: absolute; top: 20px; left: 20px; z-index: 50000; color: #fff; width: 234px; font: 12px/1.5 "Arial", "Helvetica", sans-serif; text-align: left; }
+#xprecise-inner { background: url(images/bg_inner.png) no-repeat !important; }
+#xprecise-bottom { height: 22px; background: url(images/bg_bottom.png) no-repeat !important; }
+#xprecise * { margin: 0; padding: 0; border: 0; vertical-align: baseline; background: transparent; outline: none; }
+#xprecise a { color: #fff !important; text-decoration: none; }
+#xprecise a.active { text-decoration: none; color: #fff !important; }
+#xprecise h2 { position: relative; margin: 0 18px; padding: 20px 9px 0 9px; color: #fff; font-size: 1.33em; font-weight: normal; }
+#xprecise h2 span.ie6 { display: none; }
+#xprecise h2 img { vertical-align: middle; }
+#xprecise .xprecise-close { display: block; width: 14px; height: 14px; line-height: 14px; text-align: center; text-decoration: none; top: 26px; right: 10px; position: absolute; *top: 24px; text-indent: -999em; background: url(images/bg_close.png) no-repeat; }
+#xprecise .xprecise-closed { background-position: left bottom; } 
+#xprecise form { padding: 10px 11px 5px 11px; margin: 4px 18px 0 18px; background: url(images/bg_title.png) top repeat-x; }
+#xprecise h3 { color: #cdcdcd; font-size: 1.09em; font-weight: normal; margin-bottom: 4px; position: relative; }
+#xprecise h3 span { color: #fff; }
+#xprecise li { margin-top: 12px; list-style: none; }
+#xprecise li.first { margin: 0 0 -2px 0; }
+#xprecise .submit { text-align: center; margin-top: 10px; }
+#xprecise #xprecise-image { width: 166px; height: 17px; padding: 2px 6px; background: transparent url(images/bg_image.png) no-repeat; }
+#xprecise .xprecise-toggle { display: block; position: absolute; top: 3px; right: 0; width: 32px; height: 16px; line-height: 16px; text-align: center; background: url(images/bg_toggle.png) no-repeat; color: #fff; text-decoration: none; text-indent: -999em; }
+#xprecise .xprecise-off { background-position: left bottom; }
+#xprecise .xprecise-over-under input { vertical-align: middle; background: transparent; }
+#xprecise .xprecise-over-under label { vertical-align: middle; margin: 0 12px 0 3px; }
+#xprecise #xprecise-top, #xprecise #xprecise-left { padding: 3px 3px; height: 17px; width: 33px; text-align: center; background: transparent url(images/bg_top_left.png) no-repeat; }
+#xprecise #xprecise-top { margin-right: 10px; }
+#xprecise .xprecise-position label { margin-right: 5px; }
+#xprecise-opacity-value { margin-left: 20px; }
+#xprecise-page-opacity-value { margin-left: 31px; }
+
+/* Draggable */
+.ui-draggable h2, #xprecise-overlay { cursor: move; } 
+
+/* Slider */
+#xprecise #xprecise-opacity { margin: 8px 4px 16px 4px; }
+#xprecise #xprecise-page-opacity { margin: 8px 4px; }
+#xprecise .ui-slider { position: relative; text-align: left; }
+#xprecise .ui-slider-horizontal { height: 4px; background: url(images/bg_slider.png) no-repeat; width: 166px; }
+#xprecise .ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 14px; height: 14px; top: -4px; margin-left: -6px; cursor: default; background: url(images/bg_slider_handle.png) no-repeat; }
+#xprecise .ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: 4px; display: block; border: 0; top: 0; height: 100%; }
+
+/* IE7 and IE6 Styles */
+#xprecise form { *margin-top: 2px; }
+
+/* hasLayout fix */
+#xprecise-inner, #xprecise h2, #xprecise form { *zoom: 1; }
+
+/* Simplified IE6 version */
+#xprecise { _width: 198px; }
+#xprecise-inner { _background: #424242 !important; _padding-bottom: 8px; }
+#xprecise h2 { _margin: 0; _padding-top: 5px; }
+#xprecise h2 img, #xprecise-bottom { _display: none; }
+#xprecise h2 span.ie6 { _display: block; }
+#xprecise form { _margin: 4px 0 0 0; }
+#xprecise #xprecise-image, #xprecise #xprecise-top, #xprecise #xprecise-left, #xprecise .ui-slider-horizontal { _background: #fff; }
+#xprecise .ui-slider .ui-slider-handle { _background: #cdcdcd; }
+#xprecise .xprecise-close { _background-image: url(images/bg_close_ie6.png); _top: 10px; }
+#xprecise .xprecise-toggle { _background-image: url(images/bg_toggle_ie6.png); _right: 10px; }

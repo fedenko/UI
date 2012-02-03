@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Pure CSS3 Sticky Footer</title>
+
+<link rel="stylesheet" href="reset.css" type="text/css" media="screen" /><!-- Reset -->
+<link rel="stylesheet" href="footer.css" type="text/css" media="screen" /><!-- Footer Stylings -->
+
+<!-- The following code targets IE6 only and enables mouse hover on non-anchor tags -->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="htc/ie6.css" />
+<![endif]-->
+
+</head>
+
+<body>
+
+
+<div id="footer"><!-- BEGIN FOOTER CONTAINER -->
+
+
+    <ul id="footer_menu"><!-- Begin Footer Menu -->
+    
+    
+        <li class="imgmenu"><a href="#"><span>Home</span></a></li><!-- This Item is an Image, the "span" is hidden via CSS -->
+        
+        
+        <li><a href="#">My works</a><!-- Begin Second Menu Item -->
+        
+            <ul class="dropup"><!-- Default Drop Up List -->
+                <li><a href="#">This is a</a></li>
+                <li><a href="#">Simple list</a></li>
+                <li><a href="#">With just</a></li>
+                <li><a href="#">A few items</a></li>
+            </ul><!-- End Drop Up List -->
+            
+        </li><!-- End Second Menu Item -->
+        
+        
+        <li><a href="#">Links</a><!-- Begin Third Menu Item -->
+        
+            <ul class="dropup"><!-- Default Drop Up List -->
+                <li><a href="#">FreelanceSwitch</a></li>
+                <li><a href="#">Creattica</a></li>
+                <li><a href="#">WorkAwesome</a></li>
+                <li><a href="#">Mac Apps</a></li>
+                <li><a href="#">Web Apps</a></li>
+                <li><a href="#">NetTuts</a></li>
+                <li><a href="#">VectorTuts</a></li>
+                <li><a href="#">PsdTuts</a></li>
+                <li><a href="#">PhotoTuts</a></li>
+                <li><a href="#">ActiveTuts</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Logo</a></li>
+                <li><a href="#">Flash</a></li>
+                <li><a href="#">Illustration</a></li>
+                <li><a href="#">More...</a></li>
+            </ul><!-- End Drop Up List -->
+            
+        </li><!-- End Third Menu Item -->
+
+
+        <li><a href="#">3 Columns</a><!-- Begin 3 Columns Menu Item -->
+        
+            <div class="dropdown_3columns"><!-- Begin 3 columns container -->
+            
+                <div class="col_3">
+                    <h2>Welcome !</h2>
+                </div>
+        
+                <div class="col_1">
+                    <p>This is a three columns example. Praesent gravida venenatis felis sed egestas.</p>             
+                </div>
+        
+                <div class="col_1">
+                    <p class="strong">This is a bold text. Sed ac tortor lobortis sem gravida consequat et vel mi.</p>             
+                </div>
+                
+                <div class="col_1">
+                    <p class="italic">This is an italic text sample. Curabitur arcu orci, iaculis vel bibendum gravida tortor lobortis.</p>             
+                </div>
+                
+                <div class="clear"></div><!-- Use this clear DIV to separate rows of content -->
+                
+                <div class="col_1">
+                    <p class="black_box">This is a black box, you can use it to highligh some content. Sed sed lacus nulla, et lacinia risus.</p>
+        		</div>
+                
+                <div class="col_2">
+                    <p>Sed lacus est, iaculis sed sagittis ac, malesuada a felis. Vestibulum vitae dictum mauris. Aenean felis nisl, pulvinar quis blandit et, fermentum ut tortor. In condimentum nisi ut leo fermentum ornare. Praesent gravida venenatis felis sed egestas.</p>
+        		</div>
+                
+                <div class="clear"></div>
+                
+                <div class="col_3">
+                    <h2>Here are some image examples</h2>
+                </div>
+                
+                <div class="col_3">
+                	<!-- Examples of paragraphs with side images -->
+                    <p><img src="img/01.jpg" width="40" height="40" class="img_left imgshadow" alt="" />
+                    Maecenas eget eros lorem, nec pellentesque lacus. Aenean dui orci, rhoncus sit amet tristique eu, tristique.<a href="#">Read more...</a></p>
+                    <p><img src="img/02.jpg" width="40" height="40" class="img_left imgshadow" alt="" />
+                    Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan.<a href="#">Read more...</a></p>
+                    <p><img src="img/03.jpg" width="40" height="40" class="img_right imgshadow" alt="" />
+                    Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan.<a href="#">Read more...</a></p>
+                    <p><img src="img/04.jpg" width="40" height="40" class="img_right imgshadow" alt="" />
+                    Aliquam elementum felis quis felis consequat scelerisque. Fusce sed lectus at arcu mollis accumsan.<a href="#">Read more...</a></p>
+                </div>
+                
+            </div><!-- End 3 columns container -->
+            
+        </li><!-- End 3 Columns Menu Item -->
+
+
+        <li><a href="#">2 Columns</a><!-- Begin 2 Columns Menu Item -->
+        
+            <div class="dropdown_2columns"><!-- Begin 2 columns container -->
+            
+                <div class="col_2">
+                    <h2>Other typography</h2>
+                </div>
+        
+                <div class="col_1">
+                    <p>This is a two columns example. Praesent gravida venenatis felis sed egestas.</p>             
+                </div>
+        
+                <div class="col_1">
+                    <p>Duis sit amet erat enim. Sed ac tortor lobortis sem gravida consequat et vel mi venenatis.</p>             
+                </div>
+                
+                <div class="clear"></div>
+                
+                <div class="col_2">
+                    <p>Vivamus ut urna magna. Aenean vehicula feugiat leo, sit amet facilisis felis commodo a. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sit amet erat enim.</p>             
+                </div>
+                
+                <div class="col_2">
+                    <h2>Some lists examples</h2>
+                </div>
+        
+                <div class="col_1">
+        
+                    <ul class="simple"><!-- Simple list -->
+                        <li><a href="#">ThemeForest</a></li>
+                        <li><a href="#">GraphicRiver</a></li>
+                        <li><a href="#">ActiveDen</a></li>
+                        <li><a href="#">VideoHive</a></li>
+                        <li><a href="#">3DOcean</a></li>
+                    </ul>   
+        
+        		</div>
+                
+                <div class="col_1">
+        
+                    <ul class="simple"><!-- Simple list -->
+                        <li><a href="#">NetTuts</a></li>
+                        <li><a href="#">VectorTuts</a></li>
+                        <li><a href="#">PsdTuts</a></li>
+                        <li><a href="#">PhotoTuts</a></li>
+                        <li><a href="#">ActiveTuts</a></li>
+                    </ul>   
+        
+        		</div>
+                
+            </div><!-- End 2 columns container -->
+            
+        </li><!-- End 2 Columns Menu Item -->
+
+
+        <li><a href="#">1 Column</a><!-- 1 Columns Menu Item -->
+        
+            <div class="dropdown_1column"><!-- Begin 1 columns container -->
+
+                <div class="col_1">
+                    <p>This is a simple column example. Praesent gravida venenatis felis sed egestas.</p>             
+                </div>
+        
+                <div class="col_1">
+                    <p>Duis sit amet erat enim. Sed ac tortor lobortis sem gravida consequat et vel mi.</p>             
+                </div>
+                
+            </div><!-- End 1 column container -->
+            
+        </li><!-- End 1 Column Menu Item -->
+
+
+
+        <li class="right"><a href="#" class="drop">Right</a><!-- Begin Right Aligned Item -->
+            
+            <ul class="dropup right"><!-- Use the right class for right alignment of the drop up -->
+                <li><a href="#">ThemeForest</a></li>
+                <li><a href="#">GraphicRiver</a></li>
+                <li><a href="#">ActiveDen</a></li>
+                <li><a href="#">VideoHive</a></li>
+                <li><a href="#">3DOcean</a></li>
+                <li><a href="#">CodeCanyon</a></li>
+            </ul>
+            
+        </li><!-- End Right Aligned  Item -->
+
+
+    
+    </ul><!-- End Footer Menu -->
+
+
+
+    <p><a href="#">StickyFooter</a> &copy; 2010 All Rights Reserved.</p>
+
+
+
+    <ul id="social"><!-- Social Icons -->
+    
+    	<!-- The span is the text appearing on hover, use the tooltip class in the link -->
+        <li><a href="#" class="tooltip"><img src='img/twitter.png' alt="" /><span>Twitter</span></a></li>
+        <li><a href="#" class="tooltip"><img src='img/rss.png' alt="" /><span>RSS</span></a></li>
+        <li><a href="#" class="tooltip"><img src='img/flickr.png' alt="" /><span>Flickr</span></a></li>
+        <li><a href="#" class="tooltip"><img src='img/facebook.png' alt="" /><span>Facebook</span></a></li>
+        
+    </ul><!-- End Social Icons -->
+
+
+
+</div><!-- END FOOTER CONTAINER -->
+
+
+
+</body>
+</html>

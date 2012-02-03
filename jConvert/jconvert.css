@@ -1,0 +1,36 @@
+body { background-color: #39424B; font-family: "Trebuchet MS",Verdana,Helvetica,Arial,sans-serif !important; }
+div#container { 
+	background-color: #FFF; 
+	color: #39424B; 
+	margin: 40px; 
+	padding: 20px; 
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	-moz-border-radius-bottomleft:0.5em;
+	-moz-border-radius-bottomright:0.5em;
+	-moz-border-radius-topleft:0.5em;
+	-moz-border-radius-topright:0.5em;
+}
+h1 { text-align: center; }
+
+div#tooltip { 
+	position: absolute; 
+	color: #808080;
+	background: #f1f1f1;
+	font-weight: bold;
+	font-size: 70%;
+	padding: 5px;
+	border: 4px solid #c7c7c7;
+	background: #fff;
+	
+	-moz-background-clip:border;
+	-moz-background-inline-policy:continuous;
+	-moz-background-origin:padding;
+	-moz-border-radius-bottomleft:0.5em;
+	-moz-border-radius-bottomright:0.5em;
+	-moz-border-radius-topleft:0.5em;
+	-moz-border-radius-topright:0.5em;
+}
+
+div#tooltip ul, div#tooltip ol { margin: 5px; padding-left: 15px;}

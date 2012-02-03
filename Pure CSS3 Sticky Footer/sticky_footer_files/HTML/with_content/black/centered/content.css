@@ -1,0 +1,147 @@
+/*
+	Variable Grid System.
+	Learn more ~ http://www.spry-soft.com/grids/
+	Based on 960 Grid System - http://960.gs/
+
+	Licensed under GPL and MIT.
+*/
+
+
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_2 {
+	margin-top:30px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 980px;
+	opacity:0.5;
+}
+
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+
+.grid_1,
+.grid_2 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Grid >> Children (Alpha ~ First, Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+
+.alpha {
+	margin-left: 0;
+}
+
+.omega {
+	margin-right: 0;
+}
+
+/* Grid >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_2 .grid_1 {
+	width:450px;
+}
+
+.container_2 .grid_2 {
+	width:940px;
+}
+
+
+
+/* Prefix Extra Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_2 .prefix_1 {
+	padding-left:490px;
+}
+
+
+
+/* Suffix Extra Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_2 .suffix_1 {
+	padding-right:490px;
+}
+
+
+
+/* Push Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_2 .push_1 {
+	left:490px;
+}
+
+
+
+/* Pull Space >> 2 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.container_2 .pull_1 {
+	left:-490px;
+}
+
+
+
+
+/* Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/* http://perishablepress.com/press/2008/02/05/lessons-learned-concerning-the-clearfix-css-hack */
+
+.clearfix:after {
+	clear: both;
+	content: ' ';
+	display: block;
+	font-size: 0;
+	line-height: 0;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+.container_2 h1 {
+	font-size:36px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#161616;
+	text-shadow:none;
+	margin-bottom:24px;
+	margin-top:12px;
+}
+.container_2 p {
+	font-size:12px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#222222;
+	text-shadow:none;
+	margin-bottom:18px;
+	line-height:18px;
+}

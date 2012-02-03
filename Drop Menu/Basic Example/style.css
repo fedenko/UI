@@ -1,0 +1,94 @@
+body {
+	background-color: #f6f6f6;
+	color: #666;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+ul.dropmenu{
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	display:block;
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	border: solid 1px #ccc;
+	border-right: none;
+	display: inline-block;
+}
+.dropmenu li{
+	position: relative;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	display: block;
+	cursor: point;
+	float: left;
+}
+.dropmenu li a{
+	padding: 5px 30px 5px 15px;
+	display: block;
+	cursor: point;
+	border-right: solid 1px #ccc;
+	color: #666;
+	text-decoration: none;
+	background-color: #f1f1f1;
+}
+.dropmenu li a:hover{
+	background-color: #d6d6d6;
+}
+.dropmenu li span{
+	display: block;
+	height: 5px;
+	width: 5px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background-color: #666;
+}
+.dropmenu li a:hover span{
+	background-color: #0099FF;
+}
+.dropmenu li:hover ul, .dropmenu li:hover div{
+	display: block;
+}
+.dropmenu ul, .dropmenu div{
+	position: absolute;
+	display: none;
+	width: 150px;
+	padding: 0px;
+	background-color: #FFFFFF;
+	border-bottom: solid 1px #CCC;
+}
+.dropmenu li div ul{
+	border: none;
+	background: none;
+	position: relative;
+	display: block;
+	left: 0px;
+}
+.dropmenu ul li{
+	border: 0;
+	float: none;
+}
+.dropmenu ul a {
+  border: 1px solid #CCC;
+  border-bottom: 0;
+  padding-right: 20px;
+  display:block;
+  color: #666;
+}
+.dropmenu ul a:hover {
+  background-color: #FFF;
+  font-weight: bold;
+}
+.dropmenu div ul{
+	position: relative;
+	display: block;
+}
+.dropmenu li div{
+	border: 1px solid #CCC;
+	background-color: #f1f1f1;
+	padding: 5px;
+	display: none;
+	position: absolute;
+}

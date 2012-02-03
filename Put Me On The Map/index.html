@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    
+<head>
+	    <title>Me On The Map</title>
+	    <link href="css/meonthemap.css" rel="stylesheet" type="text/css" />
+        <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;sensor=true&amp;key=ABQIAAAAgyprTzuuxiQyVIMN4zi4WhT7KgBbXzpoFXhI7G15mCRbYCNXGhSRgyhCt8YC9_l4aB4tnbwgiEt3ww" type="text/javascript"></script>
+        <script type="text/javascript" src="js/meonthemap.js"></script>
+        <script type="text/javascript">
+            window.onload = function(){
+                var mymap = new MeOnTheMap({
+                    container: "map",
+                    html: "Microsoft Headquarters<img src=\"resources/building.jpg\"/><br/>This is where we are at ;)",
+                    address: "1 Microsoft Way Redmond WA, USA",
+                    zoomLevel: 13
+                });
+
+                mymap.adjustMapCenter({
+                    x: 0,
+                    y: -80
+                });
+            }
+        </script>
+        <style type="text/css">
+            body {
+                background: #14191c;
+            }
+            
+            h1,p {
+                color: #006FC4;
+                font-family: Arial;
+            }
+            
+            p {
+                font-family: "Lucida Sans","Lucida Sans Unicode", Arial;
+                margin: 10px 0px 10px 0px;
+                padding: 0px;
+                font-size: 9pt;
+                color: #FFF;
+            }
+            
+            #contact {
+                background: #273035;
+                padding: 10px;
+            }
+            
+            #contact p {
+                padding: 2px 0px;
+            }
+
+            #contact label {
+                width: 100px;
+                display: inline-block;
+            }
+            
+            #contact textarea {
+                width: 710px;
+                margin: 5px 0px 10px 0px;
+            }
+            
+            #wrap {
+                width: 730px;
+                margin: 40px auto 0px auto;
+            }
+        </style>
+    </head>
+    <body >
+        <div id="wrap">
+            <h1>Your contact form</h1>
+            <div id="map" class="map"></div>
+            <p>Address: 1 Microsoft Way Redmond WA, USA</p>
+            <div id="contact">
+                <p>
+                    Please enter your name, email address and your message in this form. We will not give away your email address.
+                </p>
+                <p>
+                    <label>Name</label><input type="text" value="" size="40"/>
+                </p>
+                <p>
+                    <label>Email Address *</label><input type="text" value="" size="40"/>
+                </p>
+                <p>
+                    <label>Message</label>
+                    <textarea cols="100" rows="8"></textarea>
+                    <input type="button" value="Send"/>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

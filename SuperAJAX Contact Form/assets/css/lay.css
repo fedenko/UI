@@ -1,0 +1,36 @@
+body {
+    background: url(../img/lay/bg.jpg);
+}
+
+div#contact {
+    width: 444px;
+    margin: 0 auto;
+}
+
+div#top {
+    background: url(../img/lay/top.jpg);
+    height: 64px;
+}
+
+div#top h1 {
+    font-family: Verdana, Arial;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 20px 0 0 20px;
+    color: #fff;
+}
+
+div#center {
+    background: url(../img/lay/center.jpg);
+    padding: 5px 15px 5px 25px;
+}
+
+div#bot {
+    background: url(../img/lay/bot.jpg);
+    height: 13px;
+}
+
+* body h2 {
+    border-bottom: 1px solid #0066CC;
+    color:#0066CC;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>SexySlider &raquo; Help File</title>
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" type="text/css" href="css/global.css" />
+  <link rel="stylesheet" type="text/css" href="css/sexyslider.css" />
+
+  <script type="text/javascript" src="javascript/jquery.min.js"></script>
+  <script type="text/javascript" src="javascript/jquery.sexyslider.min.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $("#slider").SexySlider({
+        width     : 560,
+        height    : 200,
+        delay     : 3000,
+        strips    : 1, // <-- this do the trick
+        autopause : false,
+        navigation: '#navigation',
+        control   : '#control',
+        effect    : 'fountain'
+      });
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div id="top">
+    <div id="header">
+        <h1>Sexy Slider <span>Example 2</span></h1>
+    </div>
+
+    <div class="hastoc">
+
+        <div id="wrapper">
+          
+          <div id="navigation"></div>
+
+          <div id="slider">
+            <img src="assets/slide_1.jpg" alt=""/>
+            <img src="assets/slide_2.jpg" alt="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel lorem velit. "/>
+            <img src="assets/slide_3.jpg" alt=""/>
+            <img src="assets/slide_4.jpg" alt=""/>
+            <img src="assets/slide_5.jpg" alt="Call of Duty Modern Warfare 2 sold approximately 4.7 million copies worldwide in 24 hours. Visit the &lt;a href=&quot;http://www.modernwarfare2.com/&quot;&gt;official website&lt;/a&gt;"/>
+          </div>
+
+          <div id="control"></div>
+
+        </div>
+
+    </div><!--/hastoc-->
+  </div>
+  <!-- Syntax highlighting Javascript http://www.howtocreate.co.uk/tutorials/jsexamples/syntax/ -->
+</body>
+</html>

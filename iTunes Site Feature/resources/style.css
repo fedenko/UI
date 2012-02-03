@@ -1,0 +1,78 @@
+.itunesfeature {
+    width: 800px;
+    height: 300px;
+    position: relative;
+    display: none;
+    overflow: hidden;
+    font-family:  Verdana, Tahoma, "Lucida Sans";
+    font-size: 9pt;
+    font-weight: normal;
+}
+
+.itunesfeature #transparentGlass {
+    width: 600px;
+    height: 300px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.itunesfeature #billboardone,
+.itunesfeature #billboardtwo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 300px;
+    width: 600px;
+    z-index: -1;
+}
+
+.itunesfeature #paneltwo {
+    opacity : 0.0;
+    z-index: -2;
+}
+
+.itunesfeature #carrousel {
+    margin-left: 600px;
+    position: relative;
+    padding: 0px;
+    z-index: 0;
+    list-style: none;
+}
+
+.itunesfeature #carrousel li{
+    width : 200px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.itunesfeature .downarrow {
+    height: 32px;
+    width: 32px;
+    cursor: pointer; 
+    background: url(downarrow.png) no-repeat;
+    z-index: 1000;
+    position: absolute;
+    top: 250px;
+    left: 685px;
+}
+
+.itunesfeature .featuretitle {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: url(bg.png);
+    color: #FFF;
+    padding: 3px 6px;
+    z-index: 100;
+}
+
+.itunesfeature .downarrowIE6 {
+    background: url(downarrow.gif);
+}
+
+.itunesfeature .featuretitleIE6 {
+    background: #000;
+}
