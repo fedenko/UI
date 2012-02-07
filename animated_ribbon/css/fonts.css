@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.eot');
+    src: url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfontd41d.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.woff') format('woff'),
+         url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.ttf') format('truetype'),
+         url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Chunk_Big{
+    text-decoration: none;
+font-size: 30px;
+font-family: 'ChunkFiveRegular',Helvetica,Arial;
+line-height: 150%;
+text-align: center;
+}

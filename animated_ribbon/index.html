@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en-us">
+    
+<head>
+        <meta charset="utf-8">
+        <title>Animated-Ribbon | CodeCanyon Project file</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/reset.css" rel="stylesheet" type="text/css">
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+        <!--[if lte IE 8]>
+          <script src="http://js.cwhcode.com/html5/"></script>
+        <![endif]-->
+        <script type="text/javascript">
+                                
+            function activatePlaceholders() {
+                var detect = navigator.userAgent.toLowerCase(); 
+                if (detect.indexOf("safari") > 0) return false;
+                var inputs = document.getElementsByTagName("input");
+                for (var i=0;i<inputs.length;i++) {
+                    if (inputs[i].getAttribute("type") == "text") {
+                        if (inputs[i].getAttribute("placeholder") && inputs[i].getAttribute("placeholder").length > 0) {
+                            inputs[i].value = inputs[i].getAttribute("placeholder");
+                            inputs[i].onclick = function() {
+                                if (this.value == this.getAttribute("placeholder")) {
+                                    this.value = "";
+                                }
+                                return false;
+                            }
+                            inputs[i].onblur = function() {
+                                if (this.value.length < 1) {
+                                    this.value = this.getAttribute("placeholder");
+                                }
+                            }
+                        }
+                    }
+                    if (inputs[i].getAttribute("type") == "password") {
+                        if (inputs[i].getAttribute("placeholder") && inputs[i].getAttribute("placeholder").length > 0) {
+                            inputs[i].value = inputs[i].getAttribute("placeholder");
+                            inputs[i].onclick = function() {
+                                if (this.value == this.getAttribute("placeholder")) {
+                                    this.value = "";
+                                }
+                                return false;
+                            }
+                            inputs[i].onblur = function() {
+                                if (this.value.length < 1) {
+                                    this.value = this.getAttribute("placeholder");
+                                }
+                            }
+                        }
+                    }
+                    if (inputs[i].getAttribute("type") == "email") {
+                        if (inputs[i].getAttribute("placeholder") && inputs[i].getAttribute("placeholder").length > 0) {
+                            inputs[i].value = inputs[i].getAttribute("placeholder");
+                            inputs[i].onclick = function() {
+                                if (this.value == this.getAttribute("placeholder")) {
+                                    this.value = "";
+                                }
+                                return false;
+                            }
+                            inputs[i].onblur = function() {
+                                if (this.value.length < 1) {
+                                    this.value = this.getAttribute("placeholder");
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            window.onload=function() {
+                activatePlaceholders();
+                ﻿if($.browser.msie){
+					if($.browser.version<9){
+					$('.box_01 .fields').css('marginTop','29px');
+					$('.box_01 .fields').css('display','none');
+					$(".box_01").hover(function() {
+					$('.box_01 .fields').css('display','block');
+					$('.box_01 h1').animate({
+                            boxShadow:'0px 0px 20px white',                    
+                            marginTop: '0px',
+                            borderRadius:'5px 5px 0px 0px'
+                        },300);
+					},function() {	
+					$('.box_01 .fields').css('display','none');
+					$('.box_01 h1').animate({
+                            boxShadow:'0px 0px 5px grey',                    
+                            marginTop: '29px',
+                            borderRadius:'0px 0px 5px 5px'
+                        },300);
+					});
+					}else{
+                    $(".box_01").hover(function() {	
+                        $('.box_01 h1').animate({
+                            boxShadow:'0px 0px 20px white',                    
+                            marginTop: '0px',
+                            borderRadius:'5px 5px 0px 0px'
+                        },300);
+                        $('.box_01 .fields').animate({
+						opacity:1,
+						marginTop:'29px',
+						display:'block'
+						},300);
+						                 
+                    },
+					function() {	
+                        $('.box_01 h1').animate({
+                            boxShadow:'0px 0px 5px grey',                    
+                            marginTop: '29px',
+                            borderRadius:'0px 0px 5px 5px'
+                        },300);
+						$('.box_01 .fields').animate({
+						opacity:0,
+						marginTop:'0px',
+						display:'none'
+						},300);                 
+                    });
+                }}    
+            }
+            
+        </script>
+        
+    </head>
+   
+    <body class="body">
+        <script type="text/javascript">
+            if(!$.browser.msie){
+                var fileref=document.createElement("link")
+                fileref.setAttribute("rel", "stylesheet")
+                fileref.setAttribute("type", "text/css")
+                fileref.setAttribute("href", "css/box_01_animation.css");
+                document.body.appendChild(fileref);
+            }
+        </script>
+        <header class="header">
+            <div class="header_content midPage">
+                <div class="header_left">
+                    <h1>Product of <img src="images/logo.png" /></h1>
+                    <h2>Animated-Ribbon</h2>                       
+                </div>
+                <div class="header_right">
+                    <h1>Animated-Ribbon is a codecanyon.net  project file enable designers and developers to enhance their websites using the latest technologies in CSS3 and providing a robust elements that works with all the modern browsers ready to you use showing perfect results.</h1>
+                    <div class="Button_base_18_preview Chunk_Big">
+                        <a href="#">Subscribe to Mailing list</a>                        
+                        <div class="triangle-top">9</div>
+                        <div class="button_base_18_preview_hover">
+                            <fieldset>  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/>  
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/>
+                                <input type="submit" name="submit" value="Subscribe" class="form_button" />
+                            </fieldset>                      
+                        </div>                       
+                    </div>                    
+                </div>
+            </div>
+        </header>
+
+        <section class="midPage">
+
+            <!-- Form 01 -->
+            <section class="post_wrapper">
+                <div class="post" style="height: 750px;">
+                    <div class="left_post">
+                        <div class="box_01 red" style=" margin-left:50px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset> 
+                        </div>
+
+                        <div class="box_01 orange" style="margin-top: -200px; margin-left:500px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset>
+                        </div>
+
+                        <div class="box_01 green" style="margin-left:50px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset>
+                        </div>
+
+                        <div class="box_01 violet" style="margin-top: -200px; margin-left:500px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset> 
+                        </div>
+
+                        <div class="box_01 beige" style="margin-left:50px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset> 
+                        </div>
+
+                        <div class="box_01 blue" style="margin-top: -200px; margin-left:500px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset> 
+                        </div>
+
+                        <div class="box_01 yellow" style="margin-left:50px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset> 
+                        </div>
+
+                        <div class="box_01 pink" style="margin-top: -200px; margin-left:500px;"> 
+                            <h1><img src="images/gift.png" height="30"/> Get Your Gift!</h1>
+                            <div class="arrow-left">9</div>
+                            <div class="arrow-left-top">9</div>
+                            <div class="arrow-left-bottom">9</div>
+                            <div class="arrow-right">9</div>
+                            <div class="arrow-right-top">9</div>
+                            <div class="arrow-right-bottom">9</div>
+                            <fieldset class="fields black">  
+                                <input type="text" name="name" placeholder="Type your Name here" class="login"/> <br/> 
+                                <input type="text" name="username" placeholder="Your Email address" class="login"/><br/>
+                                <input type="submit" name="submit" value="Get it Now!" class="form_button red" />
+                            </fieldset>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+        <footer class="footer_bg">
+            <h1>Copyrights Creiden 2011</h1>
+        </footer>
+    </body>
+
+</html>

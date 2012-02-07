@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>jDashboard</title>
+		
+		<link rel="stylesheet" type="text/css" href="jdashboard/jdashboard.css" />
+		
+		<style type="text/css">
+			
+			body {
+				background: #F9F9F9 url("images/grain-light.png");
+			}
+			
+			#jDash {
+				min-height: 500px;
+				background: white;
+				-moz-border-radius: 4px;
+				border: 1px solid #EEEEEE;
+				margin: 20px;
+				margin-top: 0;
+			}
+			
+			div.jdash-head-title span.sub-title {
+				display: inline;
+				margin: 0;
+				font-size: 11px;
+				color: #888888;
+			}
+			
+		</style>
+		
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+		<script type="text/javascript" src="jdashboard/jdashboard.min.js"></script>
+		<script type="text/javascript">
+			
+			$(function() {
+				$("#jDash").jDashboard({ columns: 3 });
+			});
+			
+		</script>
+	</head>
+	<body>
+		
+		<div align="center" style="margin: 50px 0;">
+			<table cellpadding="0" cellspacing="0" style="margin-left: -100px;">
+				<tr>
+					<td width="100" align="left"><img src="images/avatar.jpg" /></td>
+					<td align="left"><img src="images/title.png" /></td>
+				</tr>
+			</table>
+		</div>
+		
+		<div id="jDash">
+			
+			<div class="jdash-item">
+				<h1 class="jdash-head">Cookies!!!</h1>
+				<div class="jdash-body">
+					<strong>jDashboard</strong> uses cookies to save the layout of the dashboard. Go ahead, move stuff around then try refreshing the page!
+				</div>
+			</div>
+			
+			<div class="jdash-item">
+				<h1 class="jdash-head">
+					Toolbar
+					<div class="jdash-toolbar">
+						<button>Button</button>
+						<button>Another Button</button>
+					</div>
+				</h1>
+				<div class="jdash-body">
+					Each dashboard item can have their own toolbar, where any html can be added. The toolbar won't be hidden when the item is collapsed.
+				</div>
+			</div>
+			
+			<div class="jdash-item">
+				<h1 class="jdash-head">Some Simple Paragraphs<span class="sub-title">: Sub Title</span></h1>
+				<div class="jdash-body">
+					<p>
+						<h2>Lorem Ipsum</h2>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vel mollis nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mollis nisi ac erat pellentesque semper. Donec auctor scelerisque tortor, ac volutpat lacus tincidunt in.
+					</p>
+					<p>
+						<h2>Nam Egestas</h2>
+						Nam egestas, nisl ut blandit sodales, odio quam gravida lectus, quis pretium nunc sem in neque. Etiam lobortis consectetur felis eu hendrerit. Maecenas vehicula diam ut urna posuere faucibus. Nullam tincidunt mollis felis quis semper. Nullam mollis ante et arcu elementum eget ultrices velit facilisis. Fusce a ligula velit, laoreet tempor nisi. Suspendisse tempor pellentesque justo vel pulvinar.
+					</p>
+					<p>
+						<h2>Consectetur Adipiscing Elit</h2>
+						Consectetur adipiscing elit. Aenean vel mollis nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque mollis nisi ac erat pellentesque semper. Donec auctor scelerisque tortor, ac volutpat lacus tincidunt in.
+					</p>
+				</div>
+			</div>
+			
+			<div class="jdash-item">
+				<h1 class="jdash-head">Form Test</h1>
+				<div class="jdash-body">
+					<table cellpadding="5" cellspacing="0">
+						<tr>
+							<td valign="top"><label>Text Field</label></td>
+							<td colspan="2"><input type="text" /></td>
+						</tr>
+						<tr>
+							<td valign="top"><label>Text Area</label></td>
+							<td colspan="2"><textarea></textarea></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td align="right"><button>Button</button></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class="jdash-item">
+				<h1 class="jdash-head">
+					Notepad
+					<div class="jdash-toolbar">
+						
+						<button><strong>B</strong></button>
+						<button><em>I</em></button>
+						<button><u>U</u></button>
+						<strong style="margin-left: 6px;">&larr; just for show...</strong>
+						
+					</div>
+				</h1>
+				<div class="jdash-body">
+					<textarea style="padding: 0; width: 100%; height: 150px; border: 0; background: none; line-height: 200%; font-size: 12px; font-family: Calibri, Verdana, Arial, sans-serif;"></textarea>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

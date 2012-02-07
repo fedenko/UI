@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Grid Accordion</title>
+
+<link rel="stylesheet" type="text/css" href="grid-accordion.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="grid-accordion-example.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+
+<script type="text/javascript" src="jquery-1.4.3.min.js"></script>
+<script type="text/javascript" src="jquery.gridAccordion.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+		$('.accordion').gridAccordion({xmlSource:'accordion.xml', width:1200, height:600, distance:8, closedPanelWidth:50, closedPanelHeight:50});
+	});
+	
+</script>
+
+</head>
+
+<body>
+ 	   <div class="accordion"></div>
+</body>
+</html>

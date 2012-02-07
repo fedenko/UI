@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ccc;
+	font: 12px Helvetica, Arial, sans-serif;
+}
+
+#title {
+	font: 42px 'Cantarell', Helvetica, Arial, sans-serif;
+	margin: 60px auto;
+	color: #2d2d2d;	
+	text-align: center;
+	width: 600px;
+	height: 200px;
+	line-height: 200px;
+	background-color: #fea063;
+    background-image: -moz-linear-gradient(top, #fea063, #d75602); /* FF3.6 */
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #fea063),color-stop(1, #d75602)); /* Saf4+, Chrome */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#fea063', EndColorStr='#d75602'); /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#fea063', EndColorStr='#d75602')"; /* IE8 */
+}
+
+#container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#left-col {
+	width: 400px;
+	float: left;
+}
+
+#right-col {
+	width: 400px;
+	float: right;
+}
+
+#left-col > div, #right-col > div {
+	width: 380px;
+	background: #fff;
+	padding: 10px;
+	margin-bottom: 60px;
+}
+
+#left-col img, #right-col img {
+	width: 100%;
+}
+
+#left-col div:nth-of-type(1) img, #right-col div:nth-of-type(1) img {
+	height: 500px;
+}
+
+#left-col div:nth-of-type(2) img, #right-col div:nth-of-type(2) img {
+	height: 400px;
+}
+
+#left-col div:nth-of-type(3) img, #right-col div:nth-of-type(3) img {
+	height: 300px;
+}   

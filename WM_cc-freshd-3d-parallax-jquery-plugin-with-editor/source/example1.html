@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+
+<!--
+#######################################
+	- THE HEAD PART -
+######################################
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>freshD - Parallax</title>
+
+	<link rel="icon" type="image/png" href="images/sitelogo.png" />
+
+    <!-- commented, remove this line to use IE & iOS favicons -->           
+    <link rel="shortcut icon" href="images/favicon.ico" /> 
+
+   
+    <!-- get jQuery from the google apis -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
+    <!-- CSS reset -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+	
+    <!-- jQuery f// parallax  -->
+    <script type="text/javascript" src="parallax/js/freshline/jquery.freshline.Parallax.min.js"></script>
+	<script type="text/javascript" src="parallax/js/jquery.zclip.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="parallax/css/settings.css" media="screen" />
+	
+	
+	<!-- FONT IMPORT -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	
+	        
+</head>
+
+
+
+
+<!--
+#######################################
+	- THE BODY PART -
+######################################
+-->
+<body>
+
+	<div id="sitelogo"></div>
+	
+	
+	<!-- 
+	##############################################################################################################################################################		
+		-	HOW TO EDIT THE DATA SETTINGS WITHOUT THE EDITOR (we recommend to use the Editor !!)
+		#########################################################################################
+		
+		data-startx : The Layer Item Position Horizontal when Mouse is moved to the left side of the Document
+		data-endx : The Layer Item Position Horizontal when Mouse is moved to the right side of the Document
+		
+		data-starty : The Layer Item Position Vertical when Mouse is moved to the top side of the Document
+		data-endy : The Layer Item Position Vertical when Mouse is moved to the bottom side of the Document
+		
+		// The _ie8 values are for IE8 Browsers, as Alternative Values. IE8 Can not Skew, and in that case start/end positions can be different in that Browser.
+		
+		data-startskew / data-endskew : The Horizontal Skew (deformation of Item) depending on Mouse Position ( Best Values from -30 to 30 )
+		
+		data-zoomxoffset : The Horizontal Offset depending on the Vertical Zoom Values when mouse is moved to the left side 
+		data-zoomxendoffset :  The Horizontal Offset depending on the Vertical Zoom Values when mouse is moved to the right side 
+		
+		// The _ie8 values are for IE8 Browsers, as Alternative Values. IE8 Can not Skew, and in that case start/end positions can be different in that Browser.
+	##############################################################################################################################################################
+	-->
+	
+	<!--
+	################################################
+		- THE PARALLAX WORLD -		
+		Zooming Best values in range from 70 - 150
+	################################################
+	-->
+	
+	<div id="world" class="parallax_world" data-zoommin="100" data-zoommax="120">
+		
+			
+			<!--
+		##############################
+			 garage  Settings  
+		##############################
+		-->
+
+        <div id="garage" class="parallax_world_class fadeup" data-startx="-25" data-endx="-95" data-startx_ie8="-25" data-endx_ie8="-95" data-starty="50" data-endy="60" data-starty_ie8="50" data-endy_ie8="60" data-startskew="0" data-endskew="0" data-zoomxoffset="0" data-zoomxoffset_ie8="0" data-zoomxendoffset="0" data-zoomxendoffset_ie8="0">
+					<img src="images/garage/assets/front_head.jpg">
+		</div>
+
+		<!--
+		##############################
+			 Rollo  Settings  
+		##############################
+		-->
+
+        <div id="Rollo" class="parallax_world_class fadedown" data-startx="192" data-endx="122" data-startx_ie8="192" data-endx_ie8="122" data-starty="164" data-endy="172" data-starty_ie8="164" data-endy_ie8="172" data-startskew="0" data-endskew="0" data-zoomxoffset="0" data-zoomxoffset_ie8="0" data-zoomxendoffset="0" data-zoomxendoffset_ie8="0"> 
+					<img src="images/garage/assets/rollo.jpg">
+		</div>
+
+		<!--
+		##############################
+			 street  Settings  
+		##############################
+		-->
+
+        <div id="street" class="parallax_world_class fadeleft" data-startx="15" data-endx="-95" data-startx_ie8="0" data-endx_ie8="-76" data-starty="448" data-endy="495" data-starty_ie8="428" data-endy_ie8="474" data-startskew="30" data-endskew="-30" data-zoomxoffset="5" data-zoomxoffset_ie8="5" data-zoomxendoffset="5" data-zoomxendoffset_ie8="5">				
+				<img src="images/garage/assets/bottom.png">
+		</div>
+
+		<!--
+		##############################
+			 front  Settings  
+		##############################
+		-->
+
+        <div id="front" class="parallax_world_class fadeup" data-startx="38" data-endx="-119" data-startx_ie8="2" data-endx_ie8="-75" data-starty="534" data-endy="595" data-starty_ie8="515" data-endy_ie8="572" data-startskew="0" data-endskew="0" data-zoomxoffset="5" data-zoomxoffset_ie8="5" data-zoomxendoffset="8" data-zoomxendoffset_ie8="5">						
+					<img src="images/garage/assets/bottom_front.jpg">
+		</div>
+
+		<!--
+		##############################
+			 Table  Settings  
+		##############################
+		-->
+
+        <div id="Table" class="parallax_world_class fadedown" data-startx="620" data-endx="469" data-startx_ie8="590" data-endx_ie8="500" data-starty="320" data-endy="355" data-starty_ie8="320" data-endy_ie8="355" data-startskew="0" data-endskew="0" data-zoomxoffset="61" data-zoomxoffset_ie8="50" data-zoomxendoffset="71" data-zoomxendoffset_ie8="50">									
+					<div id="table_button" class="p_button">
+						<img src="images/garage/assets/tablet_button_normal.png" alt="images/garage/assets/tablet_button_hover.png">
+					</div>
+		</div>
+
+		<!--
+		##############################
+			 big_lamp  Settings  
+		##############################
+		-->
+
+        <div id="big_lamp" class="parallax_world_class faderight" data-startx="66" data-endx="-30" data-startx_ie8="60" data-endx_ie8="-30" data-starty="-61" data-endy="-71" data-starty_ie8="-75" data-endy_ie8="-85" data-startskew="0" data-endskew="0" data-zoomxoffset="-49" data-zoomxoffset_ie8="-55" data-zoomxendoffset="-55" data-zoomxendoffset_ie8="-55">				
+					<img src="images/garage/assets/lamp.png">
+		</div>
+
+		<!--
+		##############################
+			 trash  Settings  
+		##############################
+		-->
+
+        <div  id="trash" class="parallax_world_class faderight" data-startx="117" data-endx="4" data-startx_ie8="100" data-endx_ie8="20" data-starty="367" data-endy="401" data-starty_ie8="340" data-endy_ie8="370" data-startskew="0" data-endskew="0" data-zoomxoffset="-42" data-zoomxoffset_ie8="-30" data-zoomxendoffset="-42" data-zoomxendoffset_ie8="-30">
+					<div  id="trash_button" class="p_button">
+						<a href="http://www.google.de">
+							<img  src="images/garage/assets/trashcan_button_normal.png" alt="images/garage/assets/trashcan_button_hover.png">						
+						</a>
+					</div>					
+		</div>
+
+		<!--
+		##############################
+			 small_lamp  Settings  
+		##############################
+		-->
+
+        <div id="small_lamp" class="parallax_world_class faderight" data-startx="671" data-endx="601" data-startx_ie8="671" data-endx_ie8="598" data-starty="117" data-endy="93" data-starty_ie8="120" data-endy_ie8="97" data-startskew="0" data-endskew="0" data-zoomxoffset="57" data-zoomxoffset_ie8="55" data-zoomxendoffset="57" data-zoomxendoffset_ie8="55">
+					<img src="images/garage/assets/lamp_anim.gif">						
+					
+		</div>
+
+		<!--
+		##############################
+			 skate_logo  Settings  
+		##############################
+		-->
+
+        <div id="skate_logo" class="parallax_world_class faderight" data-startx="270" data-endx="200" data-startx_ie8="270" data-endx_ie8="200" data-starty="60" data-endy="30" data-starty_ie8="60" data-endy_ie8="30" data-startskew="0" data-endskew="0" data-zoomxoffset="0" data-zoomxoffset_ie8="0" data-zoomxendoffset="0" data-zoomxendoffset_ie8="0">
+					<img src="images/garage/assets/skate_logo.png">						
+					
+		</div>
+	
+	</div>
+
+	
+	
+	
+	<!--
+	######################################
+	 - ACTIVATE THE PARALLAX WORLD HERE -
+	######################################
+	-->
+	<script type="text/javascript">
+		
+		$(window).load(function() {
+			$.noConflict();						 
+			jQuery('#world').fhparallax({
+				editor:'off',
+				path:'parallax/js/ZeroClipboard.swf',
+				automatic:0,
+				mobile_auto_start:"yes"
+			})				
+	});
+	</script>
+	
+</body>
+</html>

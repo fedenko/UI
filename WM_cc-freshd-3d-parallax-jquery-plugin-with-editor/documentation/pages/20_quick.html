@@ -1,0 +1,135 @@
+<link href="../css/documentation.css" rel="stylesheet" type="text/css" />
+
+<p><span class="value"><font size="1">00</font></span><strong> What files do I need to upload to my server?</strong> </p>
+<p>Please upload the <strong><em>parallax</em> folder</strong> to your server. In this folder you will find the following subfolders containing all of the items content:</p>
+<ul>
+  <li>js</li>
+  <li>css</li>
+  <li>assets</li>
+</ul>
+<p>You could use your own <i>jQuery</i> but we recommend loading it directly from the Google ressources (see later in this documentation<span class="value"></span>).</p>
+<p><br>
+
+
+
+<span class="value"><font size="1">01</font></span><strong> Implement the <i>jQuery</i></strong></p>
+<p>Add the following lines to your HTML <strong>&lt;HEAD&gt;</strong>:</p>
+<p class="xmlexample red">&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js&quot;&gt;&lt;/script&gt;</p><br>
+<p><span class="value orange"><font size="1">02</font></span> <strong>Add freshline js  and freshline css</strong> files to your HTML page</p>
+<p>Also in the <strong>&lt;HEAD&gt;</strong> section:</p>
+<p class="xmlexample orange">&lt;script type=&quot;text/javascript&quot; src=&quot;parallax/js/freshline/jquery.freshline.Parallax.js&quot;&gt;&lt;/script&gt;<br>
+&lt;script type=&quot;text/javascript&quot; src=&quot;parallax/js/jquery.zclip.min.js&quot;&gt;&lt;/script&gt;<br>
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;parallax/css/settings.css&quot; media=&quot;screen&quot; /&gt;</p>
+<p>If you do not want to use the editor just use the minified version of the freshline parallax script like this:</p>
+<p class="xmlexample orange">&lt;script type=&quot;text/javascript&quot; src=&quot;parallax/js/freshline/jquery.freshline.Parallax.<span class="value">min</span>.js&quot;&gt;&lt;/script&gt;</p><br>
+<p><span class="orangeLight"><font size="1">03</font></span> <strong>Create  a surroun</strong><strong>ding DIV for your Parallax World </strong></p>
+<p>Put it in the HTML:</p>
+<p class="xmlexample orangeLight">&lt;div id=&quot;world&quot; class=&quot;parallax_world&quot; data-zoommin=&quot;100&quot; data-zoommax=&quot;120&quot;&gt;...&lt;/div&gt;</p>
+<p>
+The DIV must have set width and height (any) i.e.:
+</p>
+<p class="xmlexample">#world {margin-left:auto;
+ margin-right:auto; 
+ margin-top:-50px;
+  <span class="value">width:760px;
+ height:486px;</span> position:relative;
+ z-index:100;
+}</p><br>
+<p><span class="green"><font size="1" class="green">04</font></span> <strong>Build the World via the Editor or manually and put in the resulting code</strong></p>
+<p>First slice your picture the way that you get all the seperate parts of the moving 3D world. Then put in the picture sources in the HTML in seperate DIVs like this one for a normal element:</p>
+<p class="green xmlexample">&lt;!-- <span class="value">TEMPLATE LAYER ITEM</span> --&gt;<br />
+&lt;div id=&quot;<span class="value">WRITE-YOUR-ID-HERE</span>&quot; class=&quot;parallax_world_class <span class="value">YOUR-STARTUP-ANIMATION</span>&quot; data-startx=&quot;0&quot; data-endx=&quot;0&quot; data-startx_ie8=&quot;0&quot; data-endx_ie8=&quot;0&quot; data-starty=&quot;0&quot; data-endy=&quot;0&quot; data-starty_ie8=&quot;0&quot; data-endy_ie8=&quot;0&quot; data-startskew=&quot;0&quot; data-endskew=&quot;0&quot; data-zoomxoffset=&quot;0&quot; data-zoomxoffset_ie8=&quot;0&quot; data-zoomxendoffset=&quot;0&quot; data-zoomxendoffset_ie8=&quot;0&quot;&gt;<br />
+&lt;img src=&quot;<span class="value">YOUR-IMAGE-SOURCE</span>&quot;&gt;<br />
+&lt;/div&gt;</p>
+<p>Never mind the values other than the img src,  the ID of the DIV (this is the name that appears in the Editor) and the Startanimation. You can change everything else later on with the WYSIWYG editor.</p>
+<p>Or put in a <b>button</b> element like this:</p><p class="green xmlexample">&lt;!-- <span class="value">TEMPLATE BUTTON LAYER ITEM</span> --&gt;<br />
+&lt;div id=&quot;<span class="value">WRITE-YOUR-ID-HERE</span>&quot; class=&quot;parallax_world_class <span class="value">YOUR-STARTUP-ANIMATION</span>&quot; data-startx=&quot;0&quot; data-endx=&quot;0&quot; data-startx_ie8=&quot;0&quot; data-endx_ie8=&quot;0&quot; data-starty=&quot;0&quot; data-endy=&quot;0&quot; data-starty_ie8=&quot;0&quot; data-endy_ie8=&quot;0&quot; data-startskew=&quot;0&quot; data-endskew=&quot;0&quot; data-zoomxoffset=&quot;0&quot; data-zoomxoffset_ie8=&quot;0&quot; data-zoomxendoffset=&quot;0&quot; data-zoomxendoffset_ie8=&quot;0&quot;&gt;<br />
+<span class="red">&lt;div style=&quot;opacity: 1; display: block;&quot; id=&quot;trash_button&quot; class=&quot;p_button&quot;&gt;<br />
+&lt;a href=&quot;http://www.google.de&quot;&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;YOUR-IMAGE-SOURCE&quot;&gt;&lt;/a&gt;&lt;/div&gt;</span><br />
+&lt;/div&gt;</p><br>
+<p><span class="blue"><font size="1" class="blue">05</font></span> <strong>Call the jQuery Plugin to build the World online!</strong></p><p>Put this code underneath the 3D world DIV:</p>
+<p class="xmlexample blue">&lt;script type=&quot;text/javascript&quot;&gt;<br>
+  <br>
+&nbsp;&nbsp;&nbsp;$(window).load(function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.noConflict(); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery('#world').fhparallax({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;editor:'on',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;automatic:0,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile_auto_start:&quot;yes&quot;</span><span class="blue">,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path:'parallax/js/ZeroClipboard.swf'</span></span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}) <br>
+&nbsp;&nbsp;&nbsp;});<br>
+&lt;/script&gt;</p><br>
+<p><font size="-1"><span class="red">01</span>-<span class="blue">06</span></font> <strong>All together now! A complete Parallax site!</strong></p>
+<p class="xmlexample">&lt;!DOCTYPE html&gt;<br>
+<br>
+...<br>
+<br>
+<br>
+  &lt;!-- get jQuery from the google apis --&gt;<br>
+  <span class="red">&lt;script type=&quot;text/javascript&quot; src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js&quot;&gt;&lt;/script&gt;<br>
+  </span><br>
+...<br>
+<br>
+<br>
+  &lt;!-- jQuery f// parallax  --&gt;<br>
+  <span class="orange">&lt;script type=&quot;text/javascript&quot; src=&quot;parallax/js/freshline/jquery.freshline.Parallax.js&quot;&gt;&lt;/script&gt;<br>
+  &lt;script type=&quot;text/javascript&quot; src=&quot;parallax/js/jquery.zclip.min.js&quot;&gt;&lt;/script&gt;<br>
+  &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;parallax/css/settings.css&quot; media=&quot;screen&quot; /&gt;</span><br>
+  <br>
+...<br>
+<br>
+<br>
+  &lt;/head&gt;<br>
+&lt;body&gt;<br>
+<br>
+ ...<br>
+<br>
+ <span class="orangeLight">&lt;div id=&quot;world&quot; class=&quot;parallax_world&quot; data-zoommin=&quot;100&quot; data-zoommax=&quot;120&quot;&gt;</span><br>
+  <br>
+  <br>
+  <span class="green">&lt;!-- <span class="value">TEMPLATE LAYER ITEM</span> --&gt;<br />
+&lt;div id=&quot;<span class="value">WRITE-YOUR-ID-HERE</span>&quot; class=&quot;parallax_world_class <span class="value">YOUR-STARTUP-ANIMATION</span>&quot; data-startx=&quot;0&quot; data-endx=&quot;0&quot; data-startx_ie8=&quot;0&quot; data-endx_ie8=&quot;0&quot; data-starty=&quot;0&quot; data-endy=&quot;0&quot; data-starty_ie8=&quot;0&quot; data-endy_ie8=&quot;0&quot; data-startskew=&quot;0&quot; data-endskew=&quot;0&quot; data-zoomxoffset=&quot;0&quot; data-zoomxoffset_ie8=&quot;0&quot; data-zoomxendoffset=&quot;0&quot; data-zoomxendoffset_ie8=&quot;0&quot;&gt;<br />
+&lt;img src=&quot;<span class="value">YOUR-IMAGE-SOURCE</span>&quot;&gt;<br />
+&lt;/div&gt;</span><br>
+  <br />
+  <span class="green">&lt;!-- <span class="value">TEMPLATE BUTTON LAYER ITEM</span> --&gt;<br />
+&lt;div id=&quot;<span class="value">WRITE-YOUR-ID-HERE</span>&quot; class=&quot;parallax_world_class <span class="value">YOUR-STARTUP-ANIMATION</span>&quot; data-startx=&quot;0&quot; data-endx=&quot;0&quot; data-startx_ie8=&quot;0&quot; data-endx_ie8=&quot;0&quot; data-starty=&quot;0&quot; data-endy=&quot;0&quot; data-starty_ie8=&quot;0&quot; data-endy_ie8=&quot;0&quot; data-startskew=&quot;0&quot; data-endskew=&quot;0&quot; data-zoomxoffset=&quot;0&quot; data-zoomxoffset_ie8=&quot;0&quot; data-zoomxendoffset=&quot;0&quot; data-zoomxendoffset_ie8=&quot;0&quot;&gt;<br />
+<span class="red">&lt;div style=&quot;opacity: 1; display: block;&quot; id=&quot;trash_button&quot; class=&quot;p_button&quot;&gt;<br />
+&lt;a href=&quot;http://www.google.de&quot;&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;YOUR-IMAGE-SOURCE&quot;&gt;&lt;/a&gt;&lt;/div&gt;</span><br />
+&lt;/div&gt;</span><br />
+<br>
+  ...</span><br>
+  <br>
+  <span class="orangeLight">&lt;/div&gt;</span><br>
+  &lt;!--<br>
+  ##############################<br>
+  - ACTIVATE THE BANNER HERE -<br>
+  ##############################<br>
+  --&gt;<br>
+  <span class="blue">&lt;script type=&quot;text/javascript&quot;&gt;<br>
+  <br>
+&nbsp;&nbsp;&nbsp;$(window).load(function() {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.noConflict(); <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery('#world').fhparallax({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;editor:'on',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;automatic:0,<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mobile_auto_start:&quot;yes&quot;</span><span class="blue">,<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path:'parallax/js/ZeroClipboard.swf'	<br>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}) <br>
+  &nbsp;&nbsp;&nbsp;});<br>
+  &lt;/script&gt;</span><br />
+  ...
+  <br>
+  
+  &lt;/body&gt;<br>
+  &lt;/html&gt;</p>
+
+  <br><br>
+  <span class="value"><font size="1">More Info - </font></span> Choose one of the jqUery versions (with or without Editor, minimised or full version)</p>
+<ul>
+<li><span class="value">jquery.freshline.Parallax.js - </span> The Full Version with Editor with full source</li>
+<li><span class="value">jquery.freshline.Parallax.min.js - </span> The Minimised Version with Editor</li>
+<li><span class="value">jquery.freshline.Parallax.No.Editor.js - </span>Full Version without Editor</li>
+<li><span class="value">jquery.freshline.Parallax.No.Editor.min.js - </span>Minimized Version without Editor</li>
+</ul>
+<br>

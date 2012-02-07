@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Advanced Slider</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+		#properties li { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Grid Accordion&rdquo; Documentation by &ldquo;bqworks&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Grid Accordion&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 26/11/2010<br>
+					Bought By: <a href="http://templatep2p.com/forum/index.php?action=profile;u=25235">DigiPulse</a><br>
+					By: <a href="http://codecanyon.net/user/bqworks">bqworks</a><br>
+					Email: <a href="mailto:contact@bqworks.com">contact@bqworks.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my file. If you have any questions, please feel free to ask in the item's discussion page or send me an email. Thanks again and I hope you will enjoy using this plugin.</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#introduction">Introduction</a></li>
+            <li><a href="#usingHtml">Using HTML</a></li>
+            <li><a href="#usingXml">Using XML</a></li>
+			<li><a href="#javascriptReference">JavaScript Reference</a></li>
+			<li><a href="#css">CSS</a></li>
+			<li><a href="#credits">Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="introduction">A. Introduction</h3>
+		<p>
+<br/>
+            To apply this plugin to a div element you simply select its ID or class name. The plugin will delete all the content of the selected div and will create the accordion in it. If a user doesn't have Javascript enabled, the accordion won't be created and instead the initial content of the div will be displayed.
+        </p> 
+        
+        <hr>
+        
+        <h3 id="usingXml">B. Using HTML</h3>
+        <p>
+        	The plugin gives you flexibility in choosing the HTML markup for your accordion. You can use ordered/unordered list but you can also use divs. Below are two examples, one using unordered list and one using divs.
+      </p>
+        <p>
+        	Unordered list example:
+        </p>
+        <img src="assets/images/html_ul.png" alt="html ul" style="margin-bottom:15px;"/>
+        <p>
+        	Div example:
+        </p>
+        <img src="assets/images/html_div.png" alt="html div" style="margin-bottom:15px;"/>
+        
+        <p>
+        	You can see in the examples above the structure of the HTML markup. The images are specified using &lt;img&gt; tags and if the images have links, the &lt;img&gt; tags must be wrapped by &lt;a&gt; tags. Also, if you want to have captions you will specify them in &lt;p&gt; or &lt;div&gt; tags and assign them the "caption" class.
+        </p>
+        
+<hr>
+
+		<h3 id="usingXml">C. Using XML</h3>
+		
+        <p>
+           The XML support is one of the most important features of this plugin because it makes it very easy for you to update the accordion's content. This is the XML structure that you need to use:
+        </p>
+		<img src="assets/images/xml.png" alt="xml structure" style="margin-bottom:15px;"/>
+        <p>
+        	For each panel you want to add to the accordion, you need to create a new <b>&lt;panel&gt;</b> node. Inside the &lt;panel&gt; node you will add all the panel's data. You can see in the above example that I've added the <b>&lt;path&gt;</b> tag to specify the path to the slide's image but there are other details that you can add for each panel, like caption, link, caption's width , caption's height etc.
+        </p>
+        <p>
+         The <b>&lt;link&gt;</b> tag allows you to specify a link to navigate to when the user clicks on the panel. As the name suggests, the <b>&lt;caption&gt;</b> tag is used to specify a caption for the panel, and this caption can be simple text or HTML content. If you want to use HTML content, you must write it inside the <b>CDATA</b> tag.
+        </p>
+        <p>
+        	After creating the XML file, all you need to do is pass the path of the XML file to the accordion instance:
+        </p>
+        <img src="assets/images/xml_ex.png" alt="simple example" style="margin-bottom:15px;"/>
+        
+        <hr>
+		
+		<h3 id="javascriptReference">D. JavaScript Reference</h3>
+		<p>
+        	This plugin has several customizable properties that can be set when the plugin is instantiated. Bellow is a list of all the available properties with their default value and description.
+        </p>
+        <ul id="properties">
+        	<li><b>xmlSource</b> - <i>null</i> - the path to the XML source file</li>
+            <li><b>width</b> - <i>500</i> - the width of the accordion</li>
+            <li><b>height</b> - <i>300</i> - the height of the accordion</li>
+            <li><b>alignType</b> - <i>'horizontal'</i> - indicates the alignment of the image. Possible values are: 'leftTop', 'leftCenter', 'leftBottom', 'centerTop', 'centerCenter', 'centerBottom', 'rightTop', 'rightCenter', 'centerBottom'</li>
+            <li><b>columns</b> - <i>3</i> - indicates the number of columns. The number of rows necessary will be automatically calculated based on the number of columns specified and the total number pf panels.</li>
+            <li><b>distance</b> - <i>0</i> - the distance between the accordion's panels</li>
+            <li><b>slideshow</b> - <i>false</i> - sets the accordion to the auto slideshow mode</li>
+            <li><b>slideshowDelay</b> - <i>5000</i> - the delay of the slideshow, in milliseconds</li>
+            <li><b>slideshowDirection</b> - <i>'next'</i> - sets the accordion to navigate to the next panel or to the previous panel.</li>
+            <li><b>preloadPanels</b> - <i>false</i> - indicates if the panels will be preloaded before the accordion is displayed</li>
+            <li><b>shuffle</b> - <i>false</i> - randomizes the panels</li>
+            <li><b>linkTarget</b> - <i>'_blank'</i> - indicates where the URL window will be opened if a link was specified. Possible values are '_blank', '_self', '_parent', '_top'
+            <li><b>shadow</b> - <i>true</i> - indicates whether a shadow will be displayed over the panels</li>
+            <li><b>slideDuration</b> - <i>700</i> - the duration for a panel to slide in</li>
+		 	<li><b>stopSlideshowOnHover</b> - <i>true</i> - indicates whether the slideshow will stop when the mouse is over the accordion</li>
+            <li><b>openPanelOnMouseOver</b> - <i>true</i> - indicates whether a panel will open when the mouse moves over it</li>
+            <li><b>closePanelOnMouseOut</b> - <i>true</i> - indicates whether the panels will close when the mouse leaves the accordion</li>
+            <li><b>openPanelOnClick</b> - <i>false</i> - indicates whether a panel will open when it is clicked</li>
+            <li><b>openedPanelWidth</b> - <i>'auto'</i> - the width of the panel in its opened state. Possible values are: 'auto', 'max' or a number. If 'auto' is specified, the panel will resize depending on the value set for the 'closedPanelWidth' property and the width of the other panels which are in the same columns. 'max' will resize the panel's width to its original width and if you specify a number (e.g. 500), the panel's width will be resized to the specified value.</li>
+            <li><b>openedPanelHeight</b> - <i>'auto'</i> - the height of the panel in its opened state. Possible values are: 'auto', 'max' or a number. If 'auto' is specified, the panel will resize depending on the value set for the 'closedPanelHeight' property and the height of the other panels which are in the same row. 'max' will resize the panel's height to its original height and if you specify a number (e.g. 300), the panel's height will be resized to the specified value.</li>
+            <li><b>closedPanelWidth</b> - <i>30</i> - the minimum width of the panel in its closed state</li>
+            <li><b>closedPanelHeight</b> - <i>30</i> - the minimum height of the panel in its closed state</li>
+            <li><b>openPanelDelay</b> - <i>200</i> - the delay, in milliseconds, after which the panel will be opened on mouse over</li>
+            <li><b>captionFadeDuration</b> - <i>500</i> - the duration of the caption's fade in effect</li>
+            <li><b>captionWidth</b> - <i>300</i> - the width of the caption</li>
+            <li><b>captionHeight</b> - <i>100</i> - the height of the caption</li>
+            <li><b>captionTop</b> - <i>100</i> - the vertical position of the caption</li>
+            <li><b>captionLeft</b> - <i>30</i> - the horizontal position of the caption</li>
+        </ul>
+        <p>
+   	  When you set any of these properties they will apply globally, for all the panels, but you can override some of these global settings by setting specific values for each panel. This can be done  for both HTML accordions and XML-driven accordions.. The following properties can be set: <i>captionFadeDuration</i>, <i>captionWidth</i>, <i>captionHeight</i>, <i>captionTop</i>, <i>captionLeft</i>. </p>
+        <p>You will have to pass these individual settings to the "panelProperties" object. For example if you want to edit the 1st and 4th panel, you will do this: panelProperties:{0:{captionWidth:200, captionHeight:35, captionTop:30, captionLeft:30}, 3:{captionWidth:380, captionHeight:40, captionTop:330, captionLeft:30}}. You can see that first you indicate the index of the panel (note that enumeration starts from 0) and then to this index you pass an object that contains the settings.</p>
+        <img src="assets/images/panel_properties.png" alt="panel properties" style="margin-bottom:15px;"/>
+        <p>For XML-driven accordions, you also have the option to specify the settings using attributes for each &lt;panel&gt; tag as you could see in one of the above examples.
+        </p>
+                
+  		<p>
+        	The plugin also provides a few callback functions: <i>openPanel</i>, <i>animationComplete</i>, <i>panelClick</i>, <i>panelMouseOver</i>, <i>panelMouseOut</i>, <i>panelLoaded</i>, <i>panelCreated</i> and <i>allPanelsCreated</i>. Each of these callback functions will return an object that contains information about the panel that triggered the event. The information contained is the index of the panel(0, 2, 5 etc.), the type of event(panelClick, animationComplete etc.) and a 'data' object that contains all the panel's information that was specified for that panel.
+        </p>
+        <img src="assets/images/callback_console.png" alt="console callback" style="margin-bottom:15px;"/>
+        <p>
+        	And this is displayed in Firebug's console:
+        </p>
+        <img src="assets/images/callback.png" alt="callback" style="margin-bottom:15px;"/>
+        
+		<hr>
+		<p>
+        	This plugin also provides a few public methods/functions that can be called using external controls.
+        </p>
+        <ul id="properties">
+        	<li><b>nextPanel()</b> - opens the next panel</li>
+            <li><b>previousPanel()</b> - opens the previous panel</li>
+            <li><b>openPanel(index)</b> - opens the panel at the specified index</li>
+            <li><b>startSlideshow()</b> - starts the slideshow mode</li>
+            <li><b>stopSlideshow()</b> - stops the slideshow mode</li>
+            <li><b>getCurrentIndex()</b> - gets the index of the current panel</li>
+            <li><b>getPanelAt(index)</b> - gets all the data of the panel at the specified index. Returns an object that contains all the data specified for that panel</li>
+            <li><b>getAccordionState()</b> - checks if the accordion is closed or opened. Returns 'closed' or 'opened'</li>
+        </ul>
+        <img src="assets/images/public_methods.png" alt="public methods example" style="margin-bottom:15px;"/>
+		<h3 id="css">E. CSS</h3>		
+		<p>
+        	Some aspects of the accordion can be customized from within the CSS file. If you open the grid-accordion.css file you will see that the names used for the classes are suggestive for the elements they are applied to. So, if you want to replace the main preloader, you will just go to ".accordion .preloader" and specify a different background image. There are many customizations that can be done from within the CSS file, so I'm not going to enumerate them all, but if there's something you can't figure out how to modify, please feel free to ask for my assistance.
+        </p>
+        
+		<hr>
+		
+		<h3 id="credits">F. Credits</h3>
+		
+		<ul>
+			<li>&ldquo;jQuery&rdquo; JavaScript library.</li>
+		</ul>
+        
+         <hr>
+		
+        <p>Once again, thank you for purchasing my plugin and if you need any help please let me know.</p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

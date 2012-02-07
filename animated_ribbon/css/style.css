@@ -1,0 +1,188 @@
+@import url("colors.css");
+@import url("box_01.css");
+@import url("fonts.css");
+@import url("button_18_preview.css");
+
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.eot');
+    src: url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfontd41d.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.woff') format('woff'),
+        url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.ttf') format('truetype'),
+        url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.Chunk_Big{
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 150%;
+    text-align: center;
+}
+
+.midPage{
+    margin:0 auto;
+    width:960px;
+    display:block;
+}
+
+.body{
+    background: url('../images/body_bg_slice.png') #ade9f4;
+}
+
+.header{
+    background: url('../images/header.jpg') #ade9f4 top center no-repeat;
+    height: 470px;
+}
+
+.header_left{
+    float: left;
+    width:500px;
+}
+
+.header_left h1{
+    text-decoration: none;
+    font-size: 45px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 100%;
+    text-align: left;
+    color:#00aeff;
+    margin-top: 50px;
+}
+
+.header_left img{
+    float: right;
+}
+
+.header_left h2{
+    padding-top: 40px;
+    text-decoration: none;
+    font-size: 46px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 100%;
+    text-align: left;
+    color:white;
+    text-transform: uppercase;
+}
+
+.header_left h3{
+    padding-top: 20px;
+    text-decoration: none;
+    font-size: 62px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 100%;
+    text-align: left;
+    color:#00aeff;
+}
+.header_right{
+    float: right;
+    width:450px;
+}
+
+.header_right h1{
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 100%;
+    text-align: left;
+    color:white;
+    font-weight: normal;
+   text-align: justify;
+}
+
+.header_content{
+    padding-top:150px;
+}
+.post_wrapper{
+    background: url('../images/shadow.png') no-repeat bottom center;
+    padding:35px 0px;
+    width:880px;
+    margin-top: 25px;
+    z-index: -20;
+}
+
+.post{
+    width:880px;
+    background:rgba(255,255,255,0.5);
+    padding:40px 40px 100px 40px;
+    border-radius:40px;
+    
+}
+
+.left_post{
+    float:left;
+}
+.shadow{
+margin-bottom: -140px;
+}
+
+.post h4{
+    margin-top: 20px;
+    width:140px;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 100%;
+    text-align: center !important;
+    color:black;
+    font-weight: normal;
+   text-align: justify;
+}
+
+.post h5{
+    text-decoration: none;
+    font-size: 100px;
+    font-family: 'ChunkFiveRegular',Helvetica,Arial;
+    line-height: 100%;
+    text-align: center !important;
+    color:black;
+    font-weight: normal;
+   text-align: justify;
+   margin-bottom: 20px;
+}
+.right_post{
+    float:right;
+    width:700px;
+}
+.footer_bg{
+    height: 180px;
+    background: url('../images/footer_bg_slice.jpg') #ade9f4 bottom center repeat-x;
+}
+
+.footer_bg h1{
+    margin: 0px auto;
+    width:250px;
+    color:white;
+    padding-top: 120px;
+    font-family: Helvetica;
+    text-transform: uppercase;
+    font-weight: lighter;
+    text-align: center;
+}
+
+ul.nav-menu{
+    padding-bottom: 20px;
+    margin-left: 50px;
+}
+
+ul.nav-menu li{
+    float:left;
+    padding-left: 50px;
+
+}
+
+ul.nav-menu li a{
+        text-decoration: none;
+font-size: 30px;
+font-family: 'ChunkFiveRegular',Helvetica,Arial;
+line-height: 150%;
+text-align: center;
+color:#222222;
+text-shadow:1px 1px white;
+}
+
+ul.nav-menu li .active{
+    color:#950000 !important;
+}

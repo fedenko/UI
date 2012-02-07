@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+<settings>
+<totalWidth>715</totalWidth>
+<totalHeight>360</totalHeight>
+<autoplay>off</autoplay>
+<autoplayNextVideo>on</autoplayNextVideo>
+<thumb></thumb>
+
+<menuPosition>right</menuPosition>
+<scrollbar>on</scrollbar>
+<youtubeFeed>off</youtubeFeed>
+
+<suggestedQuality>hd720</suggestedQuality>
+
+<cueFirstVideo>on</cueFirstVideo><!--choose whether or not the first video should preload or not-->
+
+<shareButton>off</shareButton>
+<shareButtonWidth>32</shareButtonWidth>
+<shareButtonHeight>32</shareButtonHeight>
+
+<embedButton>off</embedButton>
+
+<logo></logo>
+<logoAlpha>0.7</logoAlpha>
+<logoLink>http://activeden.net/user/ZoomIt</logoLink>
+
+<streamServer>rtmp://yourserver.com</streamServer>
+
+
+
+
+<htmlEmbedCode><![CDATA[<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='800' height='330'>        <param name='movie' value='http://zoomslider.net/ygalleryone/preview.swf' />
+        <!--[if !IE]>--><object type='application/x-shockwave-flash' data='http://zoomslider.net/ygalleryone/preview.swf' width='800' height='330' base='http://zoomslider.net/ygalleryone/'>
+        <!--<![endif]-->
+          <p>Alternative content</p>
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+	  ]]></htmlEmbedCode>
+	  
+
+
+</settings>
+
+
+
+
+<!--you have no use for this if <shareButton> is off-->
+<socialItem icon='icons/1.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/2.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/3.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/4.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/5.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/6.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/7.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/8.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/9.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+
+
+
+
+
+
+<item>
+<source>12393947</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Slides Video</title>
+<description><![CDATA[<font size="20">cev</font><br></br>ceva aceva ceva ceva]]></description>
+<menuDescription>Something</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>13587932</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Up 3D Trailer</title>
+<description><![CDATA[The only gallery which lets you combine your videos with YouTube Videos.]]></description>
+<menuDescription><![CDATA[Up trailer]]></menuDescription>
+<type>vimeo</type>
+</item>
+
+
+<item>
+<source>13643000</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Urban Video</title>
+<description>You can have multiple thumbs showcasing your video.</description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+
+</item>
+
+<item>
+<source>13787611</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Urban Video</title>
+<description>You can have multiple thumbs showcasing your video.</description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+
+</item>
+
+
+<item>
+<source>14128767</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Slides Video</title>
+<description><![CDATA[<font size="20">cev</font><br></br>ceva aceva ceva ceva]]></description>
+<menuDescription>Something</menuDescription>
+<type>vimeo</type>
+</item>
+<item>
+<source>16020755</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Slides Video</title>
+<description><![CDATA[<font size="20">cev</font><br></br>ceva aceva ceva ceva]]></description>
+<menuDescription>Something</menuDescription>
+<type>vimeo</type>
+</item>
+<item>
+<source>18210973</source>
+<thumb>thumbs/pages1.jpg</thumb>
+<title>Slides Video</title>
+<description><![CDATA[<font size="20">cev</font><br></br>ceva aceva ceva ceva]]></description>
+<menuDescription>Something</menuDescription>
+<type>vimeo</type>
+</item>
+
+
+
+</content>

@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* Kooltip - CSS3 tooltip [main.css] */
+body {
+	background:#EEE url(../images/kooltip_bg.gif) repeat;
+	color:#696969;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin:0;
+	padding:0;
+}
+a {
+	color:#333;
+	text-align:left;
+	text-decoration:none !important;
+}
+h1 {
+	background:url(../images/kooltip_logo.png) no-repeat;
+	font-size:26px;
+	height:80px;
+	margin:20px auto;
+	text-align:center;
+	text-indent:-99999px;
+	width:180px;
+}
+pre {
+	font-size:12px;
+	padding:15px;
+	margin:0;
+	text-shadow:none;
+}
+#container {
+	margin:auto;
+	text-shadow:1px 1px 0 #FFF;
+	width:1000px;
+}
+.box {
+	background:#E0E0E0;
+	background:rgba(0, 0, 0, 0.05);
+	border:solid 1px #CFCFCF;
+	border-bottom-color:#FFF;
+	border-right-color:#FFF;
+	-moz-box-shadow:0 0 10px rgba(255, 255, 255, 0.25), 0 0 10px rgba(0, 0, 0, 0.05) inset;
+	-webkit-box-shadow:0 0 10px rgba(255, 255, 255, 0.25), 0 0 10px rgba(0, 0, 0, 0.05) inset;
+	box-shadow:0 0 10px rgba(255, 255, 255, 0.25), 0 0 10px rgba(0, 0, 0, 0.05) inset;
+	margin-bottom:20px;
+	padding:10px;
+}
+.html-code {
+	background:#E0E0E0;
+	background:rgba(0, 0, 0, 0.05);
+	border:solid 1px #B5B5B5;
+	-moz-box-shadow:0 0 10px rgba(255, 255, 255, 0.25), 0 0 10px rgba(0, 0, 0, 0.05) inset;
+	-webkit-box-shadow:0 0 10px rgba(255, 255, 255, 0.25), 0 0 10px rgba(0, 0, 0, 0.05) inset;
+	box-shadow:0 0 10px rgba(255, 255, 255, 0.25), 0 0 10px rgba(0, 0, 0, 0.05) inset;
+	color:#333;
+	line-height:20px;
+	margin-top:10px;
+	overflow:auto;
+}
+.info {
+	float:right;
+	font-size:12px;
+}

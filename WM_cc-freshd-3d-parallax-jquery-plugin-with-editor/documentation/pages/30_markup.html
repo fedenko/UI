@@ -1,0 +1,17 @@
+<link href="../css/documentation.css" rel="stylesheet" type="text/css" />
+<p>The  freshD plugin uses javascript/jQuery to transform a block of HTML markup into a moving <strong>3D World</strong>, all customization is done trough the use of HTML5 data attributes and some little CSS. The markup is valid for HTML5 rules and  the content will be fully indexed by search engines. For the IE8 you must use special data attributes since Microsoft did not work with standards in this one. The general structure of markup follows this schema:</p>
+</br>
+<span class="value"><font size="1">01</font></span> <strong> Include DIV container for the 3D World</strong> (see next Tab for details)</p>
+<p class="xmlexample red">&lt;div id=&quot;world&quot; class=&quot;parallax_world&quot; data-zoommin=&quot;100&quot; data-zoommax=&quot;120&quot;&gt;...&lt;/div&gt;</p>
+</br>
+<p>Add the minimum and the maximum Zoom of the whole scene here. Meaning how big or small can the world get when zooming in relationship to the images(objects) original size.</p>
+<p>&nbsp;</p>
+<p><span class="value"><font size="1">02</font></span> <strong>Place your objects in this DIV container</strong></p> 
+<p>The objects (parts) of your <strong>3D World</strong> are placed inside the container you just created. An element looks like this:</p>
+<p class="xmlexample green">&lt;!-- <span class="value">TEMPLATE BUTTON LAYER ITEM</span> --&gt;<br />
+&lt;div id=&quot;<span class="value">WRITE-YOUR-ID-HERE</span>&quot; class=&quot;parallax_world_class <span class="value">YOUR-STARTUP-ANIMATION</span>&quot; data-startx=&quot;0&quot; data-endx=&quot;0&quot; data-startx_ie8=&quot;0&quot; data-endx_ie8=&quot;0&quot; data-starty=&quot;0&quot; data-endy=&quot;0&quot; data-starty_ie8=&quot;0&quot; data-endy_ie8=&quot;0&quot; data-startskew=&quot;0&quot; data-endskew=&quot;0&quot; data-zoomxoffset=&quot;0&quot; data-zoomxoffset_ie8=&quot;0&quot; data-zoomxendoffset=&quot;0&quot; data-zoomxendoffset_ie8=&quot;0&quot;&gt;<br />
+<span class="red">&lt;div style=&quot;opacity: 1; display: block;&quot; id=&quot;trash_button&quot; class=&quot;p_button&quot;&gt;<br />
+&lt;a href=&quot;http://www.google.de&quot;&gt;&lt;a href=&quot;&quot;&gt;&lt;img src=&quot;YOUR-IMAGE-SOURCE&quot;&gt;&lt;/a&gt;&lt;/div&gt;</span><br />
+&lt;/div&gt;</span><br />
+</p>
+<p>&nbsp;</p>

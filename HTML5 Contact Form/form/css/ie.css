@@ -1,0 +1,49 @@
+
+input, textarea, select{
+    background:transparent url(../images/input_bg.jpg) repeat-x 0 0 scroll;
+
+}
+
+input, textarea{
+   _width: 330px;
+}
+select{
+    _width:345px;
+    height:30px !important;
+}
+
+.submit input{
+    background:transparent url(../images/submit_bg.jpg) no-repeat 0 0 scroll;
+    outline:none;
+    border:none;
+}
+
+
+.directions-form li.first-child{
+    padding-right: 18px;
+}
+
+.get-directions-button{
+    background: transparent url(../images/get_directions.jpg) no-repeat 0 0 scroll;
+    border:none;
+    height:32px;
+    width:262px;
+}
+
+#map-overlay{
+    background:#fafafa url(../images/map_overlay.jpg) repeat-x 0 0 scroll;
+}
+
+#dir-container{
+    margin-top:24px;
+}
+
+.close{
+    background:transparent url(../images/overlay_close.jpg) no-repeat 0 0 scroll !important;
+    border:none !important;
+    width:38px !important;
+    height:38px  !important;
+}
+body{
+    color:#000;
+}

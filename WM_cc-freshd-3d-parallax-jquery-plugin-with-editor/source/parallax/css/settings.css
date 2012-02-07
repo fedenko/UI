@@ -1,0 +1,733 @@
+/*----------------------------------------------------------------------------- 
+
+	-	Parallax -
+
+Screen Stylesheet 
+
+version:   	1.0 
+date:      	09/12/11 
+author:		freshline
+email:     	support@version-four.com 
+website:   	http://www.version-four.com
+-----------------------------------------------------------------------------*/
+
+
+
+.parallax_world { 
+    margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: 0; 
+	font-size: 100%; 
+	vertical-align: baseline; 
+	background: transparent; 
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+	overflow:visible !important;		
+}
+
+
+
+/*--------------------------------------------------------
+	- The Loader Size, Source and position on the Banner
+----------------------------------------------------------*/
+
+
+
+#parallax-main-loader {
+	background-image:url(../assets/loader/loader_round_black.gif) !important;
+	width:18px !important;
+	height:18px !important;
+	margin-left:auto !important;
+	margin-right:auto !important;
+	top:45% !important;
+	z-index:99999 !important;
+	position:relative !important;
+}
+
+
+.controllgrid{
+	position:absolute;
+	width:1200px;
+	height:900px;
+	background:url(../assets/editor/control_grid.png) no-repeat;
+	z-index:5000;
+}
+
+
+.parallax_world_class{
+	position:absolute;
+	display:none;
+}	
+
+
+/***********************************
+	- REMOVE BORDER FROM LINKS -
+***********************************/
+.parallax_world_class a{
+	outline:none;
+}
+
+.parallax_world_class img{
+	border:0px;
+}
+
+.parallax_world_class img:visited{
+	border:0px;
+	decoration:none;
+}
+
+.parallax_world_class img:link{
+	border:0px;
+	decoration:none;
+}
+
+.parallax_world_class img:hover{
+	border:0px;
+	decoration:none;
+}
+
+
+.parallax_world .p_button{
+	cursor:pointer;
+}
+
+
+
+.editor_background_parallax{
+	background-color:#bfbfbf;
+	position:absolut;
+	margin-top:-150px;
+	margin-left:-300px;
+}
+
+
+
+/************************************
+	-	The LightBox	-
+************************************/
+.controllgrid_lightbox_overlay{
+	width:100px;
+	height:100px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	z-index:9998;
+}
+
+.controllgrid_lightbox_holder{
+	width:800px;
+	height:500px;
+	position:absolute;
+	background-color:#ffffff;
+	z-index:9999;	
+}
+
+.controllgrid_lightbox_holder .greybox{
+	width:800px;
+	height:40px;
+	position:absolut;
+	background-color:#c9051c;
+	z-index:99998;
+}
+
+.controllgrid_lightbox_holder_closebutton{
+	background:url(../assets/editor/fancy_close_lb_button.png) no-repeat top;
+	widht:30px;
+	height:30px;
+	position:absolut;	
+	margin-right:-800px;
+	margin-top:-50px;
+	z-index:99999;	
+}
+
+.controllgrid_lightbox_holder_closebutton:hover{
+	background-position:bottom;
+}
+
+
+
+.controllgrid_lightbox_holder_icon{
+	float:left;
+	width:40px;
+	height:23px;	
+	margin-top:10px;
+	margin-bottom:0px;
+	margin-left:10px;
+	margin-right:10px;
+	background:url(../assets/editor/copy_icon.png);	
+
+}
+
+.controllgrid_lightbox_header{
+	font-family: 'Oswald', sans-serif;
+	color:#fff;	
+	font-size:16px;	
+	padding-top:10px;
+	padding-left:20px;
+}
+
+.controllgrid_lightbox_holder #new_htmlsource{
+	color:#3e454c;
+	font-family: Verdana;
+	font-size:12px;
+	background-color:#faf9fa;
+	border:0px solid #b4b8bd;
+	border-style:dotted;
+	padding-left:-50px;
+	margin-left:-50px;
+	margin-right:10px;
+}
+
+/**************************************************
+	-	THE CONTROLL PANEL AND ITS ASsETS -
+**************************************************/
+.controllgrid_panel{
+	width:185px;
+	position:absolute;
+	padding-bottom:10px;	
+	top:-60px;
+	left:-245px;
+	background-color:#D6D5D3;	
+	-webkit-border-radius-topleft:10px !important;			/* The Rounder Corner on the top left Border */
+	-moz-border-radius-topleft: 10px !important;
+	border-top-left-radius: 10px !important;
+	-webkit-border-radius-bottomleft:10px !important;			/* The Rounder Corner on the bottom left Border */
+	-moz-border-radius-bottomleft: 10px !important;
+	border-bottom-left-radius: 10px !important;
+	
+	-webkit-box-shadow: 0px 0px 4px -1px #55677b;				/* Shadow around the Panel */
+	-moz-box-shadow: 0px 0px 4px -1px #55677b;
+	box-shadow: 0px 0px 4px -1px #55677b;
+}
+
+/***********************************
+	-	 THE LOGO ON THE PANEL -
+***********************************/	
+.controllgrid_panel_logo{
+	margin-top:10px;
+	background:url(../assets/editor/sitelogo.png) no-repeat center top;
+	width:185px;
+	height:106px;
+}
+
+
+/**************************************
+	- THE ITEMS (LISTS OF LAYERS) - 
+***************************************/
+.controllgrid_panel_item{
+	font-family: 'Oswald', sans-serif;
+	clear:both;
+	padding-left:0px;
+	padding-bottom:4px;
+	padding-top:4px;
+	margin-top:-20px;
+	margin-left:15px;
+	padding-left:5px;
+	float:left;
+	width:125px;
+	height:20px;
+	font-size:12px;
+	color:#3e464d;
+}
+
+
+
+/*****************************************
+	-	CLASS IF THE LAYER IS SELECTED - 
+******************************************/
+.controllgrid_panel_item_selected{
+	color:#c9051c !important;
+	background-color:#c6c6c5 !important;
+}
+
+/**********************************
+	- ANIMATION RABBIT -
+**********************************/
+.controllgrid_rabbit{
+	width:40px;
+	height:38px;	
+	background:url(../assets/editor/anim_onoff_button.png) no-repeat top;	
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-32px;	
+	cursor:pointer;
+}
+
+
+/*****************************
+	-	Open/Close Grid
+*****************************/
+.controllgrid_pause{
+	background:url(../assets/editor/pause.png);
+	width:35px;
+	height:37px;
+	position:absolute;
+	left:40px;
+	top:37px;
+	display:none;
+	
+}
+
+
+/*****************************
+	-	Open/Close Grid
+*****************************/
+.controllgrid_openclose{
+	background:url(../assets/editor/grid_onoff_button.png);
+	width:19px;
+	height:19px;
+	position:absolute;
+	left:21px;
+	top:21px;
+	cursor:pointer;
+}
+
+
+/**************************
+	- SWAP LAYER INDEXES
+***************************/
+.controllgrid_swap_up{
+	margin-left:4px;
+	margin-top:5px;
+	width:9px;
+	height:8px;		
+	background:url(../assets/editor/change_layer_button.png) no-repeat top left;		
+	cursor:pointer;
+}
+
+.controllgrid_swap_down{	
+	margin-top:-1px;
+	margin-left:4px;
+	float:left;
+	width:9px;
+	height:8px;		
+	background:url(../assets/editor/change_layer_button.png) no-repeat bottom left;	
+	cursor:pointer;
+}
+
+.controllgrid_swap_up:hover{
+	background-position:top right;
+}
+
+.controllgrid_swap_down:hover{
+	background-position:bottom right;
+}
+
+
+/**************************
+	- SELECT A LAYER INFO -
+***************************/
+.controllgrid_select_one_layer_arrow{
+	width:16px;
+	height:2px;	
+	margin-top:10px;
+	margin-bottom:5px;
+	margin-left:12px;
+	background:url(../assets/editor/select_arrow.png);	
+}
+
+.controllgrid_select_one_layer_text{	
+	font-family:Arial;
+	color:#73787e;	
+	text-align:left;
+	position:relative;
+	margin-left:12px;	
+	font-size:10px;
+}
+
+/*******************************************
+	- CHANGE STEPS (1px 5px 10px 50px) -
+********************************************/
+
+.controllgrid_show_html_icon{
+	float:left;
+	width:22px;
+	height:10px;	
+	margin-top:4px;
+	margin-bottom:2px;
+	margin-left:8px;
+	background:url(../assets/editor/html_icon.png);	
+}
+
+
+.controllgrid_show_html{
+	background-color:#3e444b;	
+	
+	width:105px;
+	height:20px;	
+	margin-top:20px;
+	padding-top:2px;
+	margin-bottom:10px;
+	margin-left:auto;
+	margin-right:auto;
+	font-family: 'Oswald', sans-serif;
+	color:#fff;	
+	font-size:12px;
+	text-align:center;	
+	-webkit-border-radius:4px !important;			/* The Rounder Corner on the top left Border */
+	-moz-border-radius: 4px !important;
+	border-radius: 4px !important;
+	-webkit-box-shadow: 0px 0px 4px -1px #55677b;				/* Shadow around the Panel */
+	-moz-box-shadow: 0px 0px 4px -1px #55677b;
+	box-shadow: 0px 0px 4px -1px #55677b;
+	cursor:pointer;
+}
+
+.controllgrid_show_html:hover{
+	background-color:#c9051c !important;	
+	cursor:pointer;
+}
+
+/*******************************************
+	- CHANGE STEPS (1px 5px 10px 50px) -
+********************************************/
+.controllgrid_ministeps_holder{
+  float:left;
+  margin-left:10px;
+  width:15px;
+  
+  margin-top:10px;
+}
+.controllgrid_ministeps_fake{
+ float:left;
+ margin-left:5px;
+ margin-top:10px;
+ width:9px;
+ height:55px;
+ background:url(../assets/editor/pixel_level_icon.png) no-repeat top;	
+}
+.controllgrid_ministeps{
+	width:13px;
+	height:12px;	
+	background:url(../assets/editor/pixel_select_button.png) no-repeat top;	
+	margin-left:auto;
+	margin-right:auto;	
+	margin-bottom:0px;
+	cursor:pointer;
+}
+
+.controllgrid_ministeps_text{	
+	font-family:Arial;
+	color:#73787e;	
+	text-align:center;
+	position:relative;
+	margin-top:2px;
+	font-size:10px;
+}
+
+
+/****************************************
+	- THE DIVIDER BETWEEN THE LAYERS -
+****************************************/
+.controllgrid_panel_divider{	
+	clear:both;	
+	margin-left:15px;
+	width:131px;
+	height:2px;
+	background:url(../assets/editor/toolbar_separator.png) no-repeat;	
+}
+
+.controllgrid_panel_divider_max{	
+	clear:both;	
+	margin-left:0px;
+	width:185px;
+	height:2px;
+	background:url(../assets/editor/toolbar_separator.png) repeat;	
+}
+
+.step_separator_tabbackground{
+	margin-top:52px;
+	width:185px;
+	height:52px;
+	background:url(../assets/editor/step_separator_tabbackground.png) no-repeat;	
+}
+
+.controllgrid_seperator{	
+	float:left;
+	margin-left:5px;
+	margin-right:5px;
+	margin-top:-13px;
+	width:2px;
+	height:46px;
+	background:url(../assets/editor/step_separator.png) no-repeat;	
+}
+
+
+/****************************************
+	-	THIS WILL TURN ALPHA ON/OFF - 
+****************************************/
+.controllgrid_panel_filter{		
+	width:22px;
+	height:22px;
+	background:url(../assets/editor/buttons.png) no-repeat right top;
+	cursor:pointer;
+	position:absolute;
+	left:155px;
+	margin-top:-10px;
+}
+
+
+
+/****************************************
+	-	INFO TEXTS  -
+*****************************************/
+.controllgrid_steps_numbers{
+   font-family:Arial;
+   color:#3e454c;	
+   float:left;
+   margin-left:23px;
+   margin-right:10.5px;
+   margin-top:5px;
+   font-size:12px;
+}
+
+.controllgird_calib_text{	
+	font-family:Arial;
+	color:#73787e;	
+	text-align:center;
+	position:relative;
+	margin-top:20px;
+	font-size:10px;
+}
+
+
+/****************************************
+	-	SKEW STEPS -
+*****************************************/
+.skew_text{	
+	font-family:Arial;
+	color:#73787e;	
+	text-align:center;
+	position:relative;
+	margin-top:-31px;
+	margin-bottom:5px;
+	font-size:10px;
+}
+
+.controllgrid_skew_start{
+	clear:both;
+	float:left;
+	width:28px;
+	height:18px;	
+	margin-left:12px;	
+	margin-top:3px;
+	background:url(../assets/editor/step_skew_1_icon.png) no-repeat bottom;
+	
+}
+
+.controllgrid_skew_minus{
+	
+	float:left;
+	width:14px;
+	height:13px;
+	margin-top:5px;
+	margin-left:20px;	
+	background:url(../assets/editor/step_plusminus.png) no-repeat right top;
+	cursor:pointer;
+}
+
+.controllgrid_skew_plus{	
+	float:left;
+	width:14px;
+	height:13px;
+	margin-top:5px;
+	margin-left:0px;	
+	background:url(../assets/editor/step_plusminus.png) no-repeat left top;
+	cursor:pointer;
+}
+
+.controllgrid_skew_value {
+	float:left;
+	font-family:Arial;
+	width:15px;
+	margin-right:11px;
+	margin-left:10px;	
+	color:#3e454c;		
+	position:relative;
+	margin-top:5px;
+	font-size:10px;
+	text-align:right;
+}
+
+.controllgrid_skew_end{
+	float:left;
+	width:28px;
+	height:18px;	
+	margin-left:18px;
+	margin-top:3px;	
+	background:url(../assets/editor/step_skew_2_icon.png) no-repeat bottom;
+	
+}
+
+/****************************************
+	-	THE STEP ANIMATIONS -
+*****************************************/
+#controllgrid_steps_1{
+	clear:both;
+	float:left;
+	width:31px;
+	height:30px;
+	margin-top:4px;
+	margin-left:12px;	
+	background:url(../assets/editor/step_1_button.png) no-repeat bottom;
+	cursor:pointer;
+}
+
+
+#controllgrid_steps_2{
+	float:left;
+	width:31px;
+	height:30px;
+	margin-top:4px;
+	background:url(../assets/editor/step_2_button.png) no-repeat;
+	cursor:pointer;
+}
+
+#controllgrid_steps_3{
+	float:left;
+	width:31px;
+	height:30px;
+	margin-top:4px;
+	background:url(../assets/editor/step_3_button.png) no-repeat;
+	cursor:pointer;
+}
+
+#controllgrid_steps_4{
+	float:left;
+	width:31px;
+	height:30px;	
+	margin-top:4px;
+	background:url(../assets/editor/step_4_button.png) no-repeat;
+	cursor:pointer;
+}
+
+
+
+/****************************************
+	- THE UP/DOWN/LEFT/RIGHT PANEL -
+****************************************/
+
+.controllgrid_minipanel_text{	
+	font-family:Arial;
+	color:#73787e;	
+	text-align:center;
+	position:relative;
+	margin-top:50px;
+	font-size:10px;
+}
+
+.controllgrid_minipanel{	
+	clear:both;	
+	margin-left:37px;	
+	margin-top:5px;
+	position:absolute;	
+	width:111px;
+	height:111px;
+	background:url(../assets/editor/nav_bg_button.png) no-repeat left;
+	cursor:pointer;
+}
+
+.controllgrid_minipanel:hover{	
+	background-position:right;
+}
+
+
+/****************************************
+	- THE UP ARROW ON MINI PANEL -
+****************************************/
+.controllgrid_minipanel_info{
+	font-family: 'Oswald', sans-serif;
+	position:absolute;
+	width:20px;
+	height:7px;
+	text-align:center;
+	font-size:11px;
+	color:#3e454c;
+	left:45px;
+	top:47px;
+}
+
+
+/****************************************
+	- THE UP ARROW ON MINI PANEL -
+****************************************/
+.controllgrid_minipanel_up{
+	position:absolute;
+	width:22px;
+	height:27px;
+	margin-left:44px;
+	margin-top:	10px;
+	background:url(../assets/editor/updown.png) no-repeat left top;
+	cursor:pointer;	
+}
+
+.controllgrid_minipanel_up:hover{	
+	background-position:right top;
+}
+
+
+
+/****************************************
+	- THE DOWN ARROW ON MINI PANEL -
+****************************************/
+.controllgrid_minipanel_down{
+	position:absolute;
+	width:22px;
+	height:27px;
+	margin-left:44px;
+	margin-top:	73px;
+	background:url(../assets/editor/updown.png) no-repeat left bottom;
+	cursor:pointer;	
+}
+
+.controllgrid_minipanel_down:hover{	
+	background-position:right bottom;
+}
+
+
+/****************************************
+	- THE LEFT ARROW ON MINI PANEL -
+****************************************/
+.controllgrid_minipanel_left{
+	position:absolute;
+	width:27px;
+	height:22px;
+	margin-left:10px;
+	margin-top:	45px;
+	background:url(../assets/editor/nextprev.png) no-repeat left top;
+	cursor:pointer;	
+}
+
+.controllgrid_minipanel_left:hover{	
+	background-position:left bottom;
+}
+
+
+
+/****************************************
+	- THE DOWN ARROW ON MINI PANEL -
+****************************************/
+.controllgrid_minipanel_right{
+	position:absolute;
+	width:27px;
+	height:22px;
+	margin-left:73px;
+	margin-top:	45px;
+	background:url(../assets/editor/nextprev.png) no-repeat right top;
+	cursor:pointer;	
+}
+
+.controllgrid_minipanel_right:hover{	
+	background-position:right bottom;
+}
+
+
+.noFilterClass {
+	filter:none !important;
+}
+

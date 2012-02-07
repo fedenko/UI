@@ -1,0 +1,13 @@
+.ios-vg{ position:relative; overflow:hidden; }
+.ios-vg .videos { position:relative; padding-left:0; padding:0!important; margin:0!important; border:0!important; }
+.ios-vg .videos li {   list-style:none!important; }
+.ios-vg .videos-menu { position:absolute; height:100%; overflow-x:hidden; overflow-y:auto; width:200px; top:0; right:0px; margin:0; padding:0 0 0 0!important; padding-left:0; border:0;   }
+.ios-vg .videos-menu li { list-style:none!important; width:200px; height:50px; position:relative; background:#333; color:#eee; border-bottom:1px solid #787878; cursor:pointer;}
+.ios-vg .videos-menu li:hover {  background:#444; }
+.ios-vg .videos-menu li.selected {  background:#555; }
+.ios-vg .videos-menu li.selected:hover {  background:#555; }
+.ios-vg .videos-menu li > .the-title { position:absolute; left:50px; top:5px; width:150px;  color:#09F; font-weight:bold;  }
+.ios-vg .videos-menu li > .the-content { position:absolute; left:50px; top:25px; width:150px; }
+.ios-vg .videos-menu li > .the-thumb { position:absolute; left:5px; top:5px; width:40px; height:40px; }
+.clearfix {display:block; clear:both; }
+.clearfix:after {content: ".";	display: block;	clear: both;visibility: hidden;line-height: 0;height: 0;}

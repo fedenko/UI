@@ -1,0 +1,197 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8">
+		<title>My AnalyticsLight by Festo</title>
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" type="text/css" />
+		
+		<!-- JavaScript -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js" type="text/javascript"></script>
+		<!--[if IE]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+		<script src="js/jquery.flot.min.js" type="text/javascript"></script>
+		<script src="js/jQuery.myAnalyticsLight.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('#placeholder').myAnalyticsLight();
+				
+				$('#placeholder2').myAnalyticsLight({
+					tooltip : false
+				});
+				
+				$('#placeholder3').myAnalyticsLight({
+					data: [{	
+						metrics : 'ga:visitors',
+						label : 'Visitors',
+						color : "#333333"
+					},{
+						metrics : 'ga:pageviews',
+						label : 'Pageviews',
+						color : "#FF0000"
+					},{
+						metrics : 'ga:visits',
+						label : 'Visits',
+						color : "#FFFF00"
+					} ]
+				});				
+			});
+
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="title"><h1>myAnalyticsLight</h1></div>
+			
+			<h2>Examples</h2><br />
+			<p><b>Basic usage:</b></p>
+			<pre>$('#placeholder').myAnalyticsLight();</pre>
+			<p>Result:</p>
+			<div id="placeholder" style="width:100%;height:200px"></div>
+			
+			<hr>
+			
+			<p><b>Deffault values:</b></p>
+			<pre>
+var defaults = {
+	php : 'myAnalyticsLight/report.php',  // default path to report.php
+	tooltip : true,  // enable tooltip or not
+	dateFormat : 'Y-m-d',  // date format
+	data: [{
+		metrics : 'ga:pageviews',  // metrics
+		label : 'Pageviews',  // label text
+		color : "#0000FF"  // line color
+	}]
+};				
+			</pre>
+			
+			<hr>
+			
+			<p><b>Disable tooltips:</b></p>
+			<pre>$('#placeholder2').myAnalyticsLight({
+	tooltip : false
+});</pre>
+			<p>Result:</p>
+			<div id="placeholder2" style="width:100%;height:200px"></div>
+			
+			<hr>
+			
+			<p><b>Custom metrics:</b></p>
+			<pre>
+$('#placeholder3').myAnalyticsLight({
+	data: [{	
+		metrics : 'ga:visitors',
+		label : 'Visitors',
+		color : "#333333"
+	},{
+		metrics : 'ga:pageviews',
+		label : 'Pageviews',
+		color : "#FF0000"
+	},{
+		metrics : 'ga:visits',
+		label : 'Visits',
+		color : "#FFFF00"
+	} ]
+});					
+			</pre>
+			<p>Result:</p>
+			<div id="placeholder3" style="width:100%;height:200px"></div>
+			
+			<hr>
+			
+			<h2>Tested metrics</h2>
+			<small>But maybe others are work too.</small><br />
+			<small>(From: <a href="http://code.google.com/intl/hu/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html">http://code.google.com/intl/hu/apis/analytics/docs/gdata/gdataReferenceDimensionsMetrics.html</a>)</small>
+				
+			<table border="0" id="metrics">
+				<tr>
+					<td class="met">ga:visitors</td>
+					<td>Total number of visitors to your website for the requested time period.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:newVisits</td>
+					<td>The number of visitors whose visit to your website was marked as a first-time visit.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:percentNewVisits</td>
+					<td>The percentage of visits by people who had never visited your site before. <br />
+(ga:newVisits / ga:visits) * 100</td>
+				</tr>
+				<tr>
+					<td class="met">ga:visits</td>
+					<td>The total number of visits over the selected dimension. A visit consists of a single-user session.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:timeOnSite</td>
+					<td>The total duration of visitor sessions represented in total seconds. The value returned in the XML is a string and various client libraries use different types to represent this value, such as a double, float, long, or string.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:avgTimeOnSite</td>
+					<td>The average duration visitor sessions represented in total seconds. <br />ga:visitLength / ga:visits</td>
+				</tr>
+				<tr>
+					<td class="met">ga:organicSearches</td>
+					<td>The number of organic searches that happened within a session. This metric is search engine agnostic.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:entrances</td>
+					<td>The number of entrances to your website. The value will always be equal to the number of visits when aggregated over your entire website. Typically used with ga:landingPagePath</td>
+				</tr>
+				<tr>
+					<td class="met">ga:entranceRate</td>
+					<td>The percentage of pageviews in which this page was the entrance. <br /> (ga:entrances / ga:pageviews) * 100</td>
+				</tr>
+				<tr>
+					<td class="met">ga:bounces</td>
+					<td>The total number of single-page (or event) sessions to your website.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:entranceBounceRate</td>
+					<td>The percentage of single-page visits (i.e. visits in which the person left your site from the entrance page). <br />(ga:bounces / ga:entrances) * 100</td>
+				</tr>
+				<tr>
+					<td class="met">ga:visitBounceRate</td>
+					<td>The percentage of single-page visits (i.e., visits in which the person left your site from the first page). <br />(ga:bounces / ga:visits) * 100</td>
+				</tr>
+				<tr>
+					<td class="met">ga:pageviews</td>
+					<td>The total number of pageviews for your website.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:pageviewsPerVisit</td>
+					<td>The average number of pages viewed during a visit to your site. Repeated views of a single page are counted. <br />ga:pageviews / ga:visits</td>
+				</tr>
+				<tr>
+					<td class="met">ga:uniquePageviews</td>
+					<td>The number of different (unique) pages within a visit, summed up across all visits</td>
+				</tr>
+				<tr>
+					<td class="met">ga:avgTimeOnPage</td>
+					<td>The average amount of time visitors spent viewing this page or a set of pages. <br />ga:timeOnPage / (ga:pageviews - ga:exits)</td>
+				</tr>
+				<tr>
+					<td class="met">ga:exits</td>
+					<td>The number of exits from your website. As with entrances, it will always be equal to the number of visits when aggregated over your entire website.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:exitRate</td>
+					<td>The percentage of site exits that occurred out of the total page views. <br />(ga:exits / ga:pageviews) * 100</td>
+				</tr>
+				<tr>
+					<td class="met">ga:pageLoadSample</td>
+					<td>The number of page load time measurements received over the given time range</td>
+				</tr>
+				<tr>
+					<td class="met">ga:pageLoadTime</td>
+					<td>The total page load time over the given time range in milliseconds.</td>
+				</tr>
+				<tr>
+					<td class="met">ga:avgPageLoadTime</td>
+					<td>The average loading time for this page in seconds. <br />ga:pageLoadTime / (ga:pageLoadSample * 1000)</td>
+				</tr>
+			</table>			
+			<br />
+			<br />
+		</div>
+	</body>
+</html>

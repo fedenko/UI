@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ccc;
+	font: 12px Helvetica, Arial, sans-serif;
+}
+
+#title {
+	font: 48px 'Reenie Beanie', Helvetica, Arial, sans-serif;
+	width: 500px;
+	height: 200px;
+	background: #00ccb5;
+	color: #004acf;
+	margin: 60px auto 0 auto;
+	line-height: 200px;
+	text-align: center; 
+}
+
+#container {
+	width: 1000px;
+	margin: 40px auto 0 auto;
+	overflow: hidden;
+}
+
+#left_warp, #right_warp {
+	font-size: 30px;
+	color: #666;
+	text-shadow: 0 1px 0 #fff, 0 -1px 0 #222;
+	width: 400px;
+	text-align: center;
+	margin: 40px 0;
+}
+
+#left_warp { float: left;}
+#right_warp { float: right;}
+
+.left, .right {
+	width: 380px;
+	height: 180px;
+	margin-bottom: 40px;
+	background: #fff;
+	padding: 10px;
+}
+
+.left {
+	float: left;
+	clear: both;
+}
+
+.right {
+	float: right;
+}
+
+.left img, .right img {
+	width: 100%;
+	height: 100%;
+}

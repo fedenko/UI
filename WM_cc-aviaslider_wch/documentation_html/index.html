@@ -1,0 +1,401 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>AviaSlide Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<link rel="stylesheet" href="assets/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen" charset="utf-8" />	
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	<script type='text/javascript' src='assets/js/jquery.js'></script>
+	<script src="assets/js/prettyPhoto/js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>	
+	<script type='text/javascript' src='assets/js/custom.js'></script>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;AviaSlide&rdquo; Documentation by &ldquo;Kriesi&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;AviaSlide - a jquery Slideshow plugin&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created:23/05/2010<br>
+					By: Christian "Kriesi" Budschedl<br>
+					Email: <a href="http://themeforest.net/user/Kriesi#from">Kriesi</a>
+					</strong>				</p>
+				<p class="prepend-top"><span class="small">Informations about Updates and New Themes are always announced on Twitter and Facebook. Twitter updates are usually more up to date, facebook updates are more detailed and easier to follow :)</span><br/>
+					<br/>
+					<a href="http://twitter.com/kriesi"><img src="assets/images/twitter.png" width="212" height="65"></a><br/>
+					<a href="http://www.facebook.com/pages/Kriesi/333648177216"><img src="assets/images/facebook.jpg" width="212" height="65"></a><br/>
+					<br/>
+				</p>
+</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0"><strong>Hello! First of all I would like to thank you for purchasing my script! :) </strong><br>
+				If you have any questions that are beyond the scope of this help file, please feel free to ask your question on the item discussion page. </p>
+				<p class="prepend-top append-0">This file will teach you how to set up and use the “<span class="center">Aviaslider</span>”. It's actually not rocket science to use and you might just take a look at the different template files to understand most of the stuff, but especially the usage of some javascript options might be a little bit complicated sometimes :)<br>
+				</p>
+				<!--<p class="prepend-top append-0">In addition to this file I recorded several screencasts that might help you to setup and install the theme. Since English ain't my first	language	I	appologize upfront for my bad grammar and  pronunciation :)</p>-->
+				<p class="prepend-top append-0">Have fun with your new theme!<br/>Best regards<br>
+				<strong>Kriesi</strong></p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">JavaScript</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		
+		<h3 id="htmlStructure"><strong>1) Folder Structure</strong> - <a href="#toc">top</a></h3>
+		<ul>
+		<li>ROOT →  all HTML Files</li>
+		<li>CSS →  1 General Stylesheet </li>
+		<li>JS → Javascript files and the jQuery library as well as the prettyPhoto lightbox plugin</li>
+		<li>Images
+		<ul>
+		<li>layout → Images needed for the demo page</li>
+		<li>Slides → slideshow images</li>
+		</ul></li>
+		</ul>
+		
+		<h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>The HTML is valid html 5 and might be the easiest part of the whole script :)<br/>
+
+		The script pretty much works on every setup of html if configured correctly but out of the box its adjusted to work with an unorderd list with images inside:</p>
+		
+		<pre>
+&lt;ul class=&quot;aviaslider&quot; id='slider1'&gt;
+&lt;li&gt;&lt;a href=&quot;images/slides/1.jpg&quot; title=&quot;&quot;&gt;&lt;img src=&quot;images/slides/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;images/slides/2.jpg&quot; title=&quot;&quot;&gt;&lt;img src=&quot;images/slides/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;images/slides/3.jpg&quot; title=&quot;&quot;&gt;&lt;img src=&quot;images/slides/3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;images/slides/4.jpg&quot; title=&quot;&quot;&gt;&lt;img src=&quot;images/slides/4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+		</pre>
+
+<p>If you want to see image captions just add content to the alt tag of the image, it will be automatically converted by the javascript:</p>
+		
+<pre>
+&lt;img src=&quot;images/slides/2.jpg&quot; alt=&quot;A heading :: a description here&quot; /&gt;
+</pre>
+<p>
+Since we cant use html markup within the alt tag there is a little trick you can use to create a heading for the descriptio as well as a description text:<br/>
+Inside the alt tag first write down what you want to be your heading and follow it up with two colons "::", then write down the discription. The script will generate an additional html tag arround the "heading" so you can style it with css :)
+</p>
+
+<p>To change the html markup of the slider (for example if you want to use nested divs instead of an unordered list you simply need to change an option in your javascript when calling the script, I will describe that in a few seconds in the Javascript section.</p>
+<hr>		
+		
+		
+		
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>The CSS was created with simplicity in mind, if you look at the stylesheet you will notice it is separated within to areas: one that holds all code needed for the slider which is in fact very little. the remaining code is needed to style the demo page.
+		</p>
+		<h5>Classes you might need:</h5>
+		<ul>
+			<li><strong>.aviaslider:</strong> this is the class of the container that is wrapping your slides. This one is necessary to set the hight and width of the slideshow area</li>
+			<li><strong>.aviaslider li, .aviaslider .featured:</strong> those are the slides that are wrapping the images. as said earlier the default are "li" elements but the script works as well with each other html element. Since these other elements need the slide styling as well it is recommended to apply the class "featured" if you want to use nested divs, for example ;)</li>
+			<li><strong>.slidecontrolls:</strong> wrapping element around the slideshow controller to position those controlls anywhere on the screen. The slidecontrolls div gets added by the javascript and cannot be found in the index.html source code.</li>
+			<li><strong>.slidecontrolls a:</strong> styling for the single controll bullets, those get added by javascript as well, one for each slide we got</li>
+			<li><strong>.feature_excerpt:</strong> this is the class of the div that holds the image captions, also gets added by javascript</li>
+		</ul>
+<hr>
+		
+		<h3 id="javascript"><strong>C) JavaScript</strong> - <a href="#toc">top</a></h3>
+		
+		<p>The script comes with quite a few options to modify the slideshow transition and general behaviour. In general most of the time you only need to set 3 or 4 options for a compeltly different slideshow experience, allthough there are many more options. I will first describe what each option does and will then list a few slideshow examples.</p>
+		
+		
+		<p>Basically the script gets called the following way (assumed we got the ul markup described above):</p>
+<pre>
+$('#slider1').aviaSlider();
+</pre>
+		<p>
+		This would be a call without options, therefore we would create a basic fade slideshow where images blend in one after each other without any special fancyness :)
+		</p>
+		<p>If you want to call the script with some additional options that would look like this:</p>
+<pre>
+$('#slider1').aviaSlider({option1:"optionValue", option2:"optionValue", option3:"optionValue"});
+</pre>
+		
+		<h3>Available Options:</h3>
+<p><strong>blockSize: {height: 'full', width:'full'} - the size of the blocks in px or if a block should stretch across the whole image use the keyword full
+</strong><br/>Examples:</p>
+<pre>
+blockSize: {height: 'full', width:'full'} // default value
+blockSize: {height: 80, width:80}
+blockSize: {height: 'full', width:20}
+</pre>
+<p>This is the most important setting we got since it sets up how many blocks we got and also how big the should be: you could for example create only one fullwidth block and the slider would then behave like a basic fading slideshow since there is only one block to fade and that one has exactly the height and width of the images: <br/><a href="http://aviathemes.com/aviaslider/index.html?slider=fullwidth-fade-slider">Fading Slider</a></p>
+<p>
+Or you can set many small blocks with height and width of about 80px to create the fancy cube animation: <br/><a href="http://aviathemes.com/aviaslider/index.html?slider=diagonal-blocks">Diagonal Blocks</a> </p>
+<p>Or create blocks that differ in height and width so that they either are full width or full height stripes:<br/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=droping-curtain">Dropping Curtain</a><br/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=fading-top-curtain">Fading Slider</a><br/>
+</p>
+<p>This options basically sets the tone for the whole slideshow. However please be aware of the following: the more blocks the script needs to create and animate the more resources are needed. So I would highly recommend to not create squares that are smaller than 15px * 15px</p>
+<hr/>		
+		
+		
+		
+<p><strong>slides: wich element inside the container should serve as slide</strong><br/>Examples:</p>
+<pre>
+slides:"li"			//default value
+slides:".featured"
+slides:"div"
+</pre>
+<p>
+So if you would want to use nested divs instead of the unordered list you could set slides to ".featured" and use this markup instead:
+</p>
+<pre>
+&lt;div class='aviaslider' id=&quot;frontpage-slider&quot;&gt;
+&lt;div class=&quot;featured&quot;&gt;&lt;a href=&quot;images/slides/1.jpg&quot; title=&quot;&quot; &gt;&lt;img src=&quot;images/slides/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;featured&quot;&gt;&lt;a href=&quot;images/slides/2.jpg&quot; title=&quot;&quot;&gt;&lt;img src=&quot;images/slides/2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&quot;featured&quot;&gt;&lt;a href=&quot;images/slides/5.jpg&quot; title=&quot;&quot;&gt;&lt;img src=&quot;images/slides/3.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<hr/>
+<p><strong>autorotation: once preloading has finished should the slider start autorotationg</strong><br/>Examples:</p>
+<pre>
+autorotation: true		//default
+autorotation: false
+</pre>
+<hr/>
+<p><strong>autorotationSpeed: if autorotation is activated how long should each image be shown before changing the slide</strong><br/>Examples:</p>
+<pre>
+autorotationSpeed:3		//default
+autorotationSpeed:8
+autorotationSpeed:20
+</pre>
+<hr/>
+<p><strong>slideControlls: should the controll bullets be displayed or not	</strong><br/>Examples:</p>
+<pre>
+slideControlls: 'items'		//default	
+slideControlls: 'none'
+</pre>
+<hr/>
+<p><strong>appendControlls: the controlls are added to the html source code dynamically after this element</strong><br/>Examples:</p>
+<pre>
+appendControlls:""			//default (if empty they are added bellow the slideshow)
+appendControlls:"body"
+appendControlls:"#id-of-choice"
+</pre>
+<hr/>
+<p><strong>betweenBlockDelay: if the tranistion starts this duration sets the time delay between the appearance of each single block (value are miliseconds, the higher the number the slower the blocks fade)</strong><br/>Examples:</p>
+<pre>
+betweenBlockDelay:60		//default
+betweenBlockDelay:30
+betweenBlockDelay:200
+</pre>
+<hr/>
+<p><strong>animationSpeed: how long does it take for a single block to fade (value are miliseconds, the higher the number the slower the blocks fade)</strong><br/>Examples:</p>
+<pre>
+animationSpeed:900		//default
+animationSpeed:2000		
+</pre>
+<hr/>
+<p><strong>transition: which image transition for a single block do we want: 3 set values: fade, slide and drop.</strong>
+<br/>Examples:</p>
+<pre>
+transition: 'fade'			//default
+transition: 'slide'
+transition: 'drop'
+</pre>
+<p>
+When set to fade the block will just fade in from opacity 0 to 1<br/>
+When set to slide the block will fade in from opacity 0 to 1 and in addition change its height and with, starting from 1px *1px, transforming to the size set in the options<br/>
+When set to drop the block will fade in from opacity 0 to 1 and move down from the top
+</p>
+
+<hr/>
+<p><strong>display: the animation pattern of the blocks</strong><br/>Examples:</p>
+<pre>
+display: 'diagonaltop'
+display: 'diagonalbottom'
+display: 'topleft'				//default
+display: 'bottomright'
+display: 'random'
+display: 'all'
+</pre>
+<p>
+This sets the order in which the blocks are changing so they either fill row by row from top to bottom or vice versa or slide in diagonally or completly at random.<br/>
+When set to "all" the first image transition will use diagonaltop, the second one will use diagonalbottom, the third topleft and so on. this will repeat after every 5 transitions. The option "all" basically calls a predefined transition order that can be set with the next option:
+</p>
+
+<hr/>
+<p><strong>if display is set to "all" you can set a transition order</strong><br/>Examples:</p>
+<pre>
+transitionOrder: ['diagonaltop', 'diagonalbottom','topleft', 'bottomright', 'random'] //default 
+transitionOrder: ['random', 'random','topleft']
+transitionOrder: ['diagonaltop', 'diagonalbottom','diagonaltop' 'random']
+</pre>
+
+
+<hr/>
+<p><strong>switchMovement:  changes the transition direction to the opposite after each slide. for example switches between topleft and bottomtight when "display" is set to topleft. or if "display" is set to diagonaltop it switches between diagonaltop and diagonalbottom</strong><br/>Examples:</p>
+<pre>
+switchMovement: false		//default
+switchMovement: true
+</pre>
+<hr/>
+<p><strong>showText: shows image caption if alt text is defined</strong><br/>Examples:</p>
+<pre>
+showText: true			//default	
+showText: false
+</pre>
+<hr/>
+<p><strong>backgroundOpacity: background opacity of the image caption background</strong><br/>Examples:</p>
+<pre>
+backgroundOpacity:0.8	//default
+backgroundOpacity:1
+backgroundOpacity:0.2
+</pre>
+<hr/>	
+
+
+<h3>Example Slider:</h3>
+<p>These are the slideshows I used on my demo page with added options. As cou can see most of the times it is only a matter of changing a few option to achive a completly different result, so most of the time you simply dont need to specify all options. When copy/pasting these examples please make sure to change the id that gets selected either in the script or in addapt the html source code :)</p>
+
+<a href="http://aviathemes.com/aviaslider/">Example</a>
+<pre>
+$('#frontpage-slider').aviaSlider({	
+	blockSize: {height: 80, width:80},
+	transition: 'slide',
+	display: 'all',
+	transitionOrder: ['diagonaltop', 'diagonalbottom','topleft', 'bottomright', 'random']
+});
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=diagonal-blocks">Example</a>
+<pre>
+$('#diagonal-blocks').aviaSlider({	
+	blockSize: {height: 80, width:80},
+	transition: 'slide',
+	display: 'diagonaltop',
+	switchMovement: true
+});	
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=winding-blocks">Example</a>
+<pre>
+$('#winding-blocks').aviaSlider({	
+	blockSize: {height: 80, width:80},
+	transition: 'slide',
+	display: 'topleft',
+	switchMovement: true
+});								
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=randomized-blocks">Example</a>
+<pre>
+$('#randomized-blocks').aviaSlider({	
+	blockSize: {height: 80, width:80},
+	transition: 'slide',
+	display: 'random'
+});
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=droping-curtain">Example</a>
+<pre>
+$('#droping-curtain').aviaSlider({	
+	blockSize: {height: 'full', width:40},
+	display: 'topleft',
+	transition: 'drop',
+	betweenBlockDelay:80,
+	animationSpeed: 800,
+	switchMovement: true,
+	slideControlls: 'items',
+	appendControlls: '.aviaslider'
+});	
+
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=fading_curtain">Example</a>
+<pre>
+$('#fading_curtain').aviaSlider({	
+	blockSize: {height: 'full', width:40},
+	display: 'topleft',
+	transition: 'fade',
+	betweenBlockDelay:150,
+	animationSpeed: 600,
+	switchMovement: true
+});
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=fading-top-curtain">Example</a>
+<pre>
+$('#fading-top-curtain').aviaSlider({	
+	blockSize: {height: 40, width:'full'},
+	display: 'topleft',
+	transition: 'fade',
+	betweenBlockDelay:150,
+	animationSpeed: 600,
+	switchMovement: true
+});	
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=fullwidth-fade-slider">Example</a>
+<pre>
+$('#fullwidth-fade-slider').aviaSlider();
+</pre><hr/>
+<a href="http://aviathemes.com/aviaslider/index.html?slider=direction-fade-slider">Example</a>
+<pre>
+$('#direction-fade-slider').aviaSlider({
+	blockSize: {height: 3, width:'full'},
+	display: 'topleft',
+	transition: 'fade',
+	betweenBlockDelay:10,
+	animationSpeed: 400,
+	switchMovement: true
+});
+</pre><hr/>
+
+
+<h2>Additional Javascript</h2>
+<p>
+Just to note: the scriipt comes bundled with a custom image preloader that is defined in the jquery.aviaSlider.js and jquery.aviaSlider.min.js files. This preloader loads images of the slideshow before displaying them so you dont get any clumpsy animations with half loaded images.</p>
+<p>
+The script also calls the prettyPhoto Lightbox plugin in custom.js at line 6:</p>
+
+<pre>
+jQuery('a[href$=jpg], a[href$=png], a[href$=gif], a[href$=jpeg]').prettyPhoto({theme: "light_square"});
+</pre>
+
+
+<p>if you dont want to use the lightbox just remove this line of code
+
+</p>
+
+<hr>
+		<h3 id="credits"><strong>G) Sources and Credits</strong> - <a href="#toc">top</a>		</h3>
+		<ul>
+			<li>External scripts and resources used:</li>
+			<li><a href="http://www.no-margin-for-errors.com/projects/prettyPhoto-jquery-lightbox-clone/">lightbox plugin</a></li>
+		</ul>
+<hr>
+		
+		<p>Once again, thank you so much for purchasing this piece of software. As I said at the beginning, I'd be glad to help you if you have any questions relating to this script. No guarantees, but I'll do my best to assist. <br>
+		</p>
+		<p>Best regards </p> 
+		
+		<p class="append-bottom alt large"><strong>Kriesi</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+</div><!-- end div .container -->
+</body>
+</html>

@@ -1,0 +1,11 @@
+.box_01:hover h1{
+    box-shadow:0px 0px 20px white;
+    margin-top: 0px;
+    border-radius:5px 5px 0px 0px;
+}
+
+.box_01:hover .fields{
+    margin-top: 40px;
+    opacity:1;
+    visibility: visible;
+}

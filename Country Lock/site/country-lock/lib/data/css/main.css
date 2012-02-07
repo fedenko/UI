@@ -1,0 +1,238 @@
+/* ------------------------------------------------------------------------------
+   
+   UNI-FORM DEFAULT by DRAGAN BABIC                         (v2) | Wed, 31 Mar 10
+   
+   ------------------------------------------------------------------------------
+   
+   Copyright (c) 2010, Dragan Babic
+   
+   Permission is hereby granted, free of charge, to any person
+   obtaining a copy of this software and associated documentation
+   files (the "Software"), to deal in the Software without
+   restriction, including without limitation the rights to use,
+   copy, modify, merge, publish, distribute, sublicense, and/or sell
+   copies of the Software, and to permit persons to whom the
+   Software is furnished to do so, subject to the following
+   conditions:
+   
+   The above copyright notice and this permission notice shall be
+   included in all copies or substantial portions of the Software.
+   
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+   EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+   OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+   HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+   WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+   OTHER DEALINGS IN THE SOFTWARE.
+   
+   ------------------------------------------------------------------------------ */
+   
+   
+.uniForm{}
+    
+    .uniForm legend{ font-weight: bold; font-size: 100%; margin: 0; padding: 1.5em 0; }
+  
+    .uniForm .ctrlHolder{ padding: 1em; border-bottom: 1px solid #efefef; }
+    .uniForm .ctrlHolder.focused{ background: #fffcdf; }
+    
+    .uniForm .inlineLabels .noLabel{}
+    
+    .uniForm .buttonHolder{ background: #efefef; text-align: right; margin: 1.5em 0 0 0; padding: 1.5em;
+                            /* CSS3 */
+                            border-radius:         4px;
+                            -webkit-border-radius: 4px;
+                            -moz-border-radius:    4px;
+                            -o-border-radius:      4px;
+                            -khtml-border-radius:  4px;
+                          }
+      .uniForm .buttonHolder .primaryAction{ padding: 10px 22px; line-height: 1; background: #254a86; border: 1px solid #163362; font-size: 12px; font-weight: bold; color: #fff;
+                                             /* CSS3 */
+                                             border-radius:         4px;
+                                             -webkit-border-radius: 4px;
+                                             -moz-border-radius:    4px;
+                                             -o-border-radius:      4px;
+                                             -khtml-border-radius:  4px;
+                                             box-shadow: 1px 1px 0 #fff;
+                                             -webkit-box-shadow: 1px 1px 0 #fff;
+                                             -moz-box-shadow: 1px 1px 0 #fff;
+                                             text-shadow: -1px -1px 0 rgba(0,0,0,.25);
+                                           }
+		.uniForm .buttonHolder .primaryAction:hover{
+	box-shadow:         0 0 9px rgba(0,163,255,1);
+	-webkit-box-shadow: 0 0 9px rgba(0,163,255,1);
+	-moz-box-shadow:    0 0 9px rgba(0,163,255,1);
+	}
+      .uniForm .buttonHolder .primaryAction:active{ position: relative; top: 1px; }
+      .uniForm .secondaryAction            { text-align: left; }
+      .uniForm button.secondaryAction      { background: transparent; border: none; color: #777; margin: 1.25em 0 0 0; padding: 0; }
+      
+        .uniForm .inlineLabels label em,
+        .uniForm .inlineLabels .label em{ font-style: normal; font-weight: bold; }
+        .uniForm label small{ font-size: .75em; color: #777; }
+        
+      .uniForm .textInput,
+      .uniForm textarea    { padding: 4px 2px; border: 1px solid #aaa; background: #fff; }
+      .uniForm textarea    { height: 12em; }
+      .uniForm select      {}
+      .uniForm .fileUpload {}
+      
+      .uniForm ul{}
+        .uniForm li{}
+          .uniForm ul li label{ font-size: .85em; }
+            
+            .uniForm .small {}
+            .uniForm .medium{}
+            .uniForm .large {} /* Large is default and should match the value you set for .textInput, textarea or select */
+            .uniForm .auto  {}
+            .uniForm .small,
+            .uniForm .medium,
+            .uniForm .auto{}
+      
+      /* Get rid of the 'glow' effect in WebKit, optional */
+      .uniForm .ctrlHolder .textInput:focus,
+      .uniForm .ctrlHolder textarea:focus{ outline: none; }
+      
+      .uniForm .formHint                    { font-size: .85em; color: #777; }
+      .uniForm .inlineLabels .formHint      { padding-top: .5em; }
+      .uniForm .ctrlHolder.focused .formHint{ color: #333; }
+      
+/* ----------------------------------------------------------------------------- */
+/* ############################### Messages #################################### */
+/* ----------------------------------------------------------------------------- */
+
+  /* Error message at the top of the form */
+  .uniForm #errorMsg{ background: #ffdfdf; border: 1px solid #f3afb5; margin: 0 0 1.5em 0; padding: 0 1.5em;
+                      /* CSS3 */
+                      border-radius:         4px;
+                      -webkit-border-radius: 4px;
+                      -moz-border-radius:    4px;
+                      -o-border-radius:      4px;
+                      -khtml-border-radius:  4px;
+                    }
+    .uniForm #errorMsg h3{} /* Feel free to use a heading level suitable to your page structure */
+    .uniForm #errorMsg ol{ margin: 0 0 1.5em 0; padding: 0; }
+      .uniForm #errorMsg ol li{ margin: 0 0 3px 1.5em; padding: 7px; background: #f6bec1; position: relative; font-size: .85em;
+                                /* CSS3 */
+                                border-radius:         4px;
+                                -webkit-border-radius: 4px;
+                                -moz-border-radius:    4px;
+                                -o-border-radius:      4px;
+                                -khtml-border-radius:  4px;
+                              }
+  
+  .uniForm .ctrlHolder.error,
+  .uniForm .ctrlHolder.focused.error{ background: #ffdfdf; border: 1px solid #f3afb5;
+                                      /* CSS3 */
+                                      border-radius:         4px;
+                                      -webkit-border-radius: 4px;
+                                      -moz-border-radius:    4px;
+                                      -o-border-radius:      4px;
+                                      -khtml-border-radius:  4px;
+                                    }
+    .uniForm .ctrlHolder.error input.error,
+    .uniForm .ctrlHolder.error select.error,
+    .uniForm .ctrlHolder.error textarea.error{ color: #af4c4c; margin: 0 0 6px 0; padding: 4px; }
+  
+  /* Success messages at the top of the form */
+  .uniForm #okMsg{ background: #c8ffbf; border: 1px solid #a2ef95; margin: 0 0 1.5em 0; padding: 1.5em; text-align: center;
+                   /* CSS3 */
+                   border-radius:         4px;
+                   -webkit-border-radius: 4px;
+                   -moz-border-radius:    4px;
+                   -o-border-radius:      4px;
+                   -khtml-border-radius:  4px;
+                 }
+    .uniForm #okMsg p{ margin: 0; }
+
+/* ----------------------------------------------------------------------------- */
+/* ############################### Columns ##################################### */
+/* ----------------------------------------------------------------------------- */
+
+    .uniForm .col{}
+    .uniForm .col.first{}
+    .uniForm .col.last{}
+    .uniForm .col{ margin-bottom: 1.5em; }
+    /* Use .first and .last classes to control the layout/spacing of your columns */
+    .uniForm .col.first{ width: 49%; float: left; clear: none;                   }
+    .uniForm .col.last { width: 49%; float: right; clear: none; margin-right: 0; }
+	
+	
+html{ color: #343434; background: #bcc2c6 url(../media/img/bg.png); font-size: 14px; line-height: 1.5; font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, Verdana, sans-serif; }
+body{}
+
+a:link,
+a:visited{ text-decoration: none; color: #254a86; }
+a:hover,
+a:focus  { text-decoration: underline; }
+
+h1,h2,h3,ul,ol,p{ margin: 1.5em 0; }
+
+h1{ margin: 42px auto 28px auto; width: 284px; }
+h2{ font-size: 1.25em; }
+.uniForm h2{ margin: 1em 0 1em 1.15em; }
+fieldset h3{ margin: 1.5em -28px; padding: 14px 28px; line-height: 1; background: #efefef; color: #343434; }
+
+.uniForm{ width: 55%; background: #fff; margin: 28px auto; padding: 28px;
+	/* CSS3 */
+	border-radius:         12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius:    12px;
+	-o-border-radius:      12px;
+	-khtml-border-radius:  12px;
+}
+
+.header{ margin: -28px -28px 28px -28px; padding: 1px 28px; background: #efefef; border-bottom: 1px solid #dfdfdf; position: relative;
+	/* CSS3 */
+	border-top-left-radius:          10px;
+	border-top-right-radius:         10px;
+	-webkit-border-top-left-radius:  10px;
+	-webkit-border-top-right-radius: 10px;
+	-moz-border-radius-topleft:      10px;
+	-moz-border-radius-topright:     10px;
+}
+.header h2{ margin: 1.5em 0 0 0; color: #343434; color: #777; }
+.header p { margin-top: 0; font-size: 12px; color: #777; }
+.header .cta{ position: absolute; bottom: 26px; right: 28px; text-align: right; font-weight: bold; background: #194789; padding: 7px 14px;
+	/* CSS3 */
+	border-radius:         4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius:    4px;
+	-o-border-radius:      4px;
+	-khtml-border-radius:  4px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.25);
+}
+.header .cta:link,
+.header .cta:visited{ color: #fff; }
+.header .cta:focus,
+.header .cta:hover{ text-decoration: none;
+	/* CSS3 */
+	box-shadow:         0 0 9px rgba(0,163,255,1);
+	-webkit-box-shadow: 0 0 9px rgba(0,163,255,1);
+	-moz-box-shadow:    0 0 9px rgba(0,163,255,1);
+}
+.header .cta:active{ bottom: 25px; }
+
+.browse{ margin: 0; position: fixed; top: 28px; right: 28px; width: 84px; padding: 28px 28px 14px 28px; font-size: 12px; background: #97a2b0;
+	/* CSS3 */
+	border-radius:         12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius:    12px;
+	-o-border-radius:      12px;
+	-khtml-border-radius:  12px;
+}
+.browse h2{ font-size: 12px; margin: 0 0 14px 0; }
+.browse ul{ margin: 0; padding: 0; }
+.browse li{ margin: 0 0 14px 0; padding: 0; list-style: none; }
+.download{ float: right; position: relative; top: 2px; }
+.intro { width: 55%; margin: 28px auto; text-align: center; font-size: 1.15em; }
+#footer{ width: 55%; margin: 28px auto; text-align: center; font-size: .75em; color: #777; }
+
+* html form.uniForm{ overflow: hidden; }
+* html .header{ zoom: 1; overflow: hidden;}
+* html .browse{ position: absolute; }
+
+div.valid{
+	background: url(http://www.colzdragon.com/media/img/ok.png) 100% 2.75em no-repeat;
+}

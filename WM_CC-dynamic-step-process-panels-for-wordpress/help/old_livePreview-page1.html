@@ -1,0 +1,294 @@
+<!--check this example online http://dynamicstepprocesspanelswordpress.quanticalabs.com-->
+<!--Inline javascript plugin has been used in some examples - http://wordpress.org/extend/plugins/inline-javascript/-->
+<!--example 1-->
+[dspp_old]
+[dspp_panel] 
+	[dspp_step href='#content1' label='1']Description[/dspp_step]
+	[dspp_step href='#content2' label='2']Implementation - way 1[/dspp_step]
+	[dspp_step href='#content3' label='3']Implementation - way 2[/dspp_step]
+	[dspp_content id='content1']
+		<div class="title">Step one - description</div>
+		This example show the simplest way to implement Dynamic Step Process Panels.
+		<br /><br />
+		Features:<br />
+		- 3 steps (width configurable in css),<br />
+		- first step selected,<br />
+		- step-by-step mode,<br />
+		- previous and next buttons,<br />
+		- step labels,<br />
+		- every step can be choosed again,<br />
+		- fade effect speed 1 second,<br />
+		- style green-blue
+	[/dspp_content]
+	[dspp_content id='content2']
+		<div class="title">Step two - implementation way 1</div>
+		All you got to do is insert appropiate html code with WordPress shortcodes. For this example looks like this:
+		<pre>&#91;dspp&#93;
+&#91;dspp_panel&#93;
+	&#91;dspp_step href="#content1" label="1"&#93;Description&#91;/dspp_step&#93;
+	&#91;dspp_step href="#content2" label="2"&#93;Implementation - way 1&#91;/dspp_step&#93;
+	&#91;dspp_step href="#content3" label="3"&#93;Implementation - way 2&#91;/dspp_step&#93;
+	&#91;dspp_content id="content1"&#93;content for step 1&#91;/dspp_content&#93;
+	&#91;dspp_content id="content2"&#93;content for step 2&#91;/dspp_content&#93;
+	&#91;dspp_content id="content3"&#93;content for step 3&#91;/dspp_content&#93;
+&#91;/dspp_panel&#93;</pre>
+	[/dspp_content]
+	[dspp_content id='content3']
+		<div class="title">Step three - implementation way 2</div>
+		You can also implement Dynamic Step Process Panels without <i>dspp_step</i> and <i>dspp_content</i> shortcodes. For this example the code looks like this:
+		<pre>&#91;dspp&#93;
+&lt;div id="processPanel" class="panel"&gt;
+	&lt;a href="#content1" label="1"&gt;
+		Description
+	&lt;/a&gt;
+	&lt;a href="#content2" label="2"&gt;
+		Implementation - way 1
+	&lt;/a&gt;
+	&lt;a href="#content3" label="3"&gt;
+		Implementation - way 2
+	&lt;/a&gt;
+	&lt;div id="content1"&gt;content for step 1&lt;/div&gt;
+	&lt;div id="content2"&gt;content for step 2&lt;/div&gt;
+	&lt;div id="content3"&gt;content for step 3&lt;/div&gt;
+&lt;/div&gt;</pre>
+	[/dspp_content]
+[/dspp_panel]
+
+<!--example 2-->
+[inline]
+<script type="text/javascript">
+var timesOpened = 0;
+function customOnOpen(event, step, content, stepNumber)
+{
+	$(".message").remove();
+	if(stepNumber==2)
+	{
+		timesOpened++;
+		content.prepend("<div class='message'>You've opened this step " + timesOpened + " time" + (timesOpened>1 ? "s":"") + ".</div>");
+	}
+}
+</script>
+[/inline]
+[dspp_old id='processPanel2' icons='false' kind='freeChoice' style='orange-gray' nextPrevButtons='false' onOpen='customOnOpen']
+[dspp_panel id='processPanel2' style='margin-top: 30px;']
+    [dspp_step href="#p2content1" class="p2Step1"]Description[/dspp_step]
+    [dspp_step href="#p2content2" class="p2Step2"]Implementation-way 1[/dspp_step] 
+    [dspp_step href="#p2content3" class="p2Step3"]Implementation-way 2[/dspp_step] 
+    [dspp_step href="#p2content4" class="p2Step4"]Enjoy![/dspp_step] 
+    [dspp_content id="p2content1"]
+		<div class="title">Step one - description</div>
+		This example show Dynamic Step Process Panels without label icons, and next previous buttons. You don't have to move step-by-step.
+		<br /><br />
+		Features:<br />
+		- 4 steps (width configurable in css),<br />
+		- free choice mode,<br />
+		- every step can be choosed again,<br />
+		- first step selected,<br />
+		- fade effect speed 1 second,<br />
+		- style orange-gray,<br />
+		- onOpen event implemented
+    [/dspp_content] 
+    [dspp_content id="p2content2"]
+		<div class="title">Step two - implementation way 1</div>
+		The classes p2Step1, p2Step2, p2Step3, p2Step4 are used just to specify the steps width. The <a href="http://wordpress.org/extend/plugins/inline-javascript/">Inline javascript plugin</a> has been used for inline javascript code.<br /><br />
+		<pre>&#91;inline&#93;
+&lt;script type="text/javascript"&gt;
+var timesOpened = 0;
+function customOnOpen(event, step, content, stepNumber)
+{
+	$(".message").remove();
+	if(stepNumber==2)
+	{
+		timesOpened++;
+		content.prepend("&lt;div class='message'&gt;You've opened this step " 
++ timesOpened + " time" + (timesOpened>1 ? "s":"") + ".&lt;/div&gt;");
+	}
+}
+&lt;/script&gt;
+&#91/inline&#93
+
+&#91;dspp id='processPanel2' icons='false' kind='freeChoice' style='orange-gray'
+nextPrevButtons='false' onOpen='customOnOpen'&#93;
+&#91;dspp_panel id="processPanel2" class="panel"&#93;
+	&#91;dspp_step href="#p2content1" class="p2Step1"&#93;Description&#91;/dspp_step&#93;
+	&#91;dspp_step href="#p2content2" class="p2Step2"&#93;Implementation - way 1&#91;/dspp_step&#93;
+	&#91;dspp_step href="#p2content3" class="p2Step3"&#93;Implementation - way 2&#91;/dspp_step&#93;
+	&#91;dspp_step href="#p2content4" class="p2Step4"&#93;Enjoy!&#91;/dspp_step&#93;
+	&#91;dspp_content id="p2content1"&#93;content for step 1&#91;/dspp_content&#93;
+	&#91;dspp_content id="p2content2"&#93;content for step 2&#91;/dspp_content&#93;
+	&#91;dspp_content id="p2content3"&#93;content for step 3&#91;/dspp_content&#93;
+	&#91;dspp_content id="p2content4"&#93;content for step 4&#91;/dspp_content&#93;
+&#91;/dspp_panel&#93;</pre>
+    [/dspp_content]
+    [dspp_content id="p2content3"]
+		<div class="title">Step three - implementation way 2</div>
+<pre>&#91;inline&#93;
+&lt;script type="text/javascript"&gt;
+var timesOpened = 0;
+function customOnOpen(event, step, content, stepNumber)
+{
+	$(".message").remove();
+	if(stepNumber==2)
+	{
+		timesOpened++;
+		content.prepend("&lt;div class='message'&gt;You've opened this step " 
++ timesOpened + " time" + (timesOpened>1 ? "s":"") + ".&lt;/div&gt;");
+	}
+}
+&lt;/script&gt;
+&#91/inline&#93
+
+&#91;dspp id='processPanel2' icons='false' kind='freeChoice' style='orange-gray'
+nextPrevButtons='false' onOpen='customOnOpen'&#93;
+&lt;div id="processPanel2" class="panel"&gt;
+	&lt;a href="#p2content1" class="p2Step1"&gt;
+		Description
+	&lt;/a&gt;
+	&lt;a href="#p2content2" class="p2Step2"&gt;
+		Implementation - html
+	&lt;/a&gt;
+	&lt;a href="#p2content3" class="p2Step3"&gt;
+		Implementation - js
+	&lt;/a&gt;
+	&lt;a href="#p2content4" class="p2Step4"&gt;
+		Enjoy!
+	&lt;/a&gt;
+	&lt;div id="p2content1"&gt;content for step 1&lt;/div&gt;
+	&lt;div id="p2content2"&gt;content for step 2&lt;/div&gt;
+	&lt;div id="p2content3"&gt;content for step 3&lt;/div&gt;
+	&lt;div id="p2content4"&gt;content for step 4&lt;/div&gt;
+&lt;/div&gt;</pre>
+    [/dspp_content] 
+    [dspp_content id="p2content4"]
+		<div class="title">Step four</div>
+		:)
+    [/dspp_content]
+[/dspp_panel]
+
+<!--example 3-->
+[dspp_old id='processPanel3' style='blue-maroon' event='mouseover' firstSelected='false' fadeSpeed='500']
+[dspp_panel class='panel clearfix' id='processPanel3' style='margin-top: 30px;width:778px;']
+    [dspp_step href="#p3content1" label="1" class="p3Step1"]Description[/dspp_step]
+    [dspp_step href="#p3content2" label="2" class="p3Step2"]Implementation[/dspp_step]
+    [dspp_step href="#p3content3" label="3" class="p3Step3"]Step three[/dspp_step]
+    [dspp_step href="#p3content4" label="4" class="p3Step4"]Step four[/dspp_step]
+    [dspp_content id="p3content1"]
+		<div class="title">Step one - description</div>
+		This example show Dynamic Step Process Panels without opened the first step at the begin.<br /><br />
+		Features:<br />
+		- 4 steps, <br />
+		- first step is not opened at the begin,<br />
+		- contents opens on mouseover,<br />
+		- step-by-step mode,<br />
+		- fade effect speed 0,5 second,<br />
+		- style blue-maroon,<br />
+		- previous and next buttons,<br />
+		- step labels<br />
+    [/dspp_content]
+    [dspp_content id="p3content2"]
+		<div class="title">Step two - implementation</div>
+		Available after purchase
+    [/dspp_content]
+    [dspp_content id="p3content3"]
+		<div class="title">Step three</div>
+		Some content for step three
+    [/dspp_content]
+    [dspp_content id="p3content4"]
+		<div class="title">Step four</div>
+		Some content for step four
+    [/dspp_content]
+[/dspp_panel]
+
+<!--example 4-->
+[inline]
+<script type="text/javascript">
+function checkEmail(email) 
+{
+	if(email=="")
+		return false;
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	if(reg.test(email) == false)
+		return false;
+	else
+		return true;
+}
+function formValidation(event, step, content, stepNumber)
+{
+	if(stepNumber==2)
+	{
+		$("#p9content1 .alert").remove();
+		if($("[name=name]").val()=="")
+		{
+			$("#p9content1").prepend("<div class='alert'>Please enter your name!</div>");
+			return false;
+		}
+	}
+	else if(stepNumber==3)
+	{
+		$("#p9content2 .alert").remove();
+		if(!checkEmail($("[name=email]").val()))
+		{
+			$("#p9content2").prepend("<div class='alert'>Please enter valid e-mail address!</div>");
+			return false;
+		}
+	}
+}
+$(document).ready(function(){
+	$("#processPanel9 #exampleForm").submit(function(){
+		$("#p9content3 .alert").remove();
+		if($("[name=check]").val()!="5")
+		{
+			$("#p9content3").prepend("<div class='alert'>Please enter correct result!</div>");
+			return false;
+		}
+	});
+});
+</script>
+[/inline]
+[dspp_old id='processPanel9' style='blue-orange' onOpen='formValidation']
+[dspp_panel class="panel clearfix" id="processPanel9" style="margin-top: 30px;"]
+    [dspp_step href="#p9content1" label="1"]Description[/dspp_step]
+    [dspp_step href="#p9content2" label="2"]Implementation-way 1[/dspp_step]
+    [dspp_step href="#p9content3" label="3"]Implementation-way 2[/dspp_step]
+	<form id="exampleForm" action="formProcessor.php" method="post">
+    [dspp_content tag='fieldset' id="p9content1"]
+		<div class="title">Step one - description</div>
+		<div style="width: 372px; float: left; margin-right: 10px;">
+			This example shows how to integrate Dynamic Step Process Panels with form.<br /><br />
+			Features:<br />
+			- 3 steps (width configurable in css), <br />
+			- custom form validation, <br />
+			- first step selected,<br />
+			- step-by-step mode,<br />
+			- previous and next buttons,<br />
+			- step labels,<br />
+			- every step can be choosed again,<br />
+			- fade effect speed 1 second,<br />
+			- style blue-orange
+		</div>
+		<div style="width: 372px; float: left;">
+			Please enter your name before you go to the second step:<br />
+			name: <input type="text" name="name" />
+		</div>
+    [/dspp_content]
+    [dspp_content tag='fieldset' id="p9content2"]
+		<div class="title">Step two - implementation way 1</div>
+		<div>
+			Please enter your e-mail before you go to the third step:<br />
+			e-mail: <input type="text" name="email" />
+		</div>
+		<div>
+		Source code available after purchase
+		</div>
+    [/dspp_content]
+    [dspp_content tag='fieldset' id="p9content3"]
+		<div class="title">Step three - implementation way 2</div>
+		<div>
+			2+3= <input type="text" name="check" />&nbsp;<input type="submit" value="Submit form" />
+		</div>
+		<div style="margin-top: 5px;">
+			Source code available after purchase
+		</div>
+    [/dspp_content]
+	</form>
+[/dspp_panel]

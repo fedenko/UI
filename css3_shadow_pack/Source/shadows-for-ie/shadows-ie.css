@@ -1,0 +1,967 @@
+
+/**** COMMON ELEMENT ****/
+.before div, .after div {
+	width: 100%;
+	height: 100%;
+	background: #666;
+}
+
+
+
+
+/*************************************** SHADOW STYLES ****************************************/
+
+
+/******************************************************/
+/****** WARP SHADOW ******/
+
+.WarpShadow {
+    position: relative;	
+}
+
+.WarpShadow .center {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 17px;
+	height: 20px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+	behavior: url(PIE.htc);
+}
+
+.WarpShadow .before, .WarpShadow .after {
+	position: absolute;
+	z-index: -1;	
+}
+
+.WarpShadow .before div, .WarpShadow .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='7', MakeShadow='true', ShadowOpacity='0.70')";
+}
+
+.WarpShadow .before {
+	right: 20px;	  	  
+}
+
+.WarpShadow .after {
+	left: 5px;	  
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.WSmall .before, .WSmall .after {
+	width: 150px;
+	bottom: 10px;
+}
+
+.smallBox.WSmall .before, .smallBox.WSmall .after {
+	width: 30px;
+}
+
+.WMedium .before, .WMedium .after {
+	width: 250px;
+	bottom: 8px;
+}
+
+.smallBox.WMedium .before, .smallBox.WMedium .after {
+	width: 80px;
+}
+
+.WLarge .before, .WLarge .after {
+	width: 350px;
+	bottom: 7px;
+}
+
+.smallBox.WLarge .before, .smallBox.WLarge .after {
+	width: 100px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.WLight .before, .WLight .after {
+	height: 3px;
+}
+
+.WNormal .before, .WNormal .after {
+	height: 7px;
+}
+
+.WDark .before, .WDark .after {
+	height: 10px;
+}
+
+
+
+
+
+
+
+/******************************************************/
+/****** RIGHT SIDE WARP SHADOW ******/
+
+.RightWarpShadow {
+	position: relative;	
+}
+
+.RightWarpShadow .center {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 15px;
+	height: 20px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+	behavior: url(PIE.htc);
+}
+
+.RightWarpShadow .before, .RightWarpShadow .after {
+	position: absolute;
+	z-index: -1;	
+}
+
+.RightWarpShadow .before div, .RightWarpShadow .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='7', MakeShadow='true', ShadowOpacity='0.70')";
+}
+
+.RightWarpShadow .before {
+	right: 20px;
+	bottom: 8px;
+}
+
+.RightWarpShadow .after {
+	left: 5px;
+	bottom: 13px;
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.RWSmall .before, .RWSmall .after {
+	width: 150px;	
+}
+
+.smallBox.RWSmall .before, .smallBox.RWSmall .after {
+	width: 30px;
+}
+
+.RWMedium .before, .RWMedium .after {
+	width: 250px;	
+}
+
+.smallBox.RWMedium .before, .smallBox.RWMedium .after {
+	width: 80px;
+}
+
+.RWLarge .before, .RWLarge .after {
+	width: 350px;	
+}
+
+.smallBox.RWLarge .before, .smallBox.RWLarge .after {
+	width: 100px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.RWLight .before, .RWLight .after {
+	height: 3px;
+}
+
+.RWNormal .before, .RWNormal .after {
+	height: 7px;
+}
+
+.RWDark .before, .RWDark .after {
+	height: 10px;
+}
+
+
+
+
+
+
+/******************************************************/
+/****** LEFT SIDE WARP SHADOW ******/
+
+.LeftWarpShadow {
+	position: relative;	
+}
+
+.LeftWarpShadow .center {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 15px;
+	height: 20px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+	behavior: url(PIE.htc);
+}
+
+.LeftWarpShadow .before, .LeftWarpShadow .after {
+	position: absolute;
+	z-index: -1;		
+}
+
+.LeftWarpShadow .before div, .LeftWarpShadow .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='7', MakeShadow='true', ShadowOpacity='0.70')";
+}
+
+.LeftWarpShadow .before {
+	  right: 20px;
+	  bottom: 13px;	 	  
+}
+
+.LeftWarpShadow .after {
+	  left: 5px;
+	  bottom: 8px;	  
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.LWSmall .before, .LWSmall .after {
+	width: 150px;
+}
+
+.smallBox.LWSmall .before, .smallBox.LWSmall .after {
+	width: 30px;
+}
+
+.LWMedium .before, .LWMedium .after {
+	width: 250px;
+}
+
+.smallBox.LWMedium .before, .smallBox.LWMedium .after {
+	width: 80px;
+}
+
+.LWLarge .before, .LWLarge .after {
+	width: 350px;
+}
+
+.smallBox.LWLarge .before, .smallBox.LWLarge .after {
+	width: 100px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.LWLight .before, .LWLight .after {
+	height: 3px;
+}
+
+.LWNormal .before, .LWNormal .after {
+	height: 7px;
+}
+
+.LWDark .before, .LWDark .after {
+	height: 10px;
+}
+
+
+
+
+
+
+/******************************************************/
+/****** LEFT SIDE PERSPECTIVE SHADOW ******/
+/*** (FOR BOXES OF SIZE GREATER THAN 150x150 px) ***/
+
+.LeftPerspectiveShadow {
+	position: relative;	
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	behavior: url(PIE.htc);
+}
+
+.LeftPerspectiveShadow .before {	
+	position: absolute;
+	z-index: -1;
+	bottom: 5px;
+	width: 120px;	
+}
+
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.LPSmall .before {
+	left: -37px;
+	height: 50px;
+}
+
+.LPMedium .before {
+	left: -50px;
+	height: 70px;
+}
+
+.LPLarge .before {
+	left: -60px;
+	height: 90px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.LPLight .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='4', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+.LPNormal .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='4', MakeShadow='true', ShadowOpacity='0.35')";
+}
+
+.LPDark .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='4', MakeShadow='true', ShadowOpacity='0.50')";
+}
+
+
+
+
+
+
+/******************************************************/
+/****** RIGHT SIDE PERSPECTIVE SHADOW ******/
+/*** (FOR BOXES OF SIZE GREATER THAN 150x150 px) ***/
+
+.RightPerspectiveShadow {
+	position: relative;	
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+	behavior: url(PIE.htc);
+}
+
+.RightPerspectiveShadow .before {
+	position: absolute;
+	z-index: -1;
+	bottom: 5px;
+	width: 120px;	
+}
+
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.RPSmall .before {
+	right: -30px;
+	height: 50px;
+}
+
+.RPMedium .before {
+	right: -42px;
+	height: 70px;
+}
+
+.RPLarge .before {
+	right: -55px;
+	height: 90px;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.RPLight .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='4', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+.RPNormal .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='4', MakeShadow='true', ShadowOpacity='0.35')";
+}
+
+.RPDark .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='4', MakeShadow='true', ShadowOpacity='0.50')";
+}
+
+
+
+
+
+
+/******************************************************/
+/****** BOTTOM PERSPECTIVE SHADOW ******/
+
+.BottomShadow {
+	position: relative;	
+}
+
+.BottomShadow .before, .BottomShadow .after {	
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	width: 30px;
+	height: 50px;
+}
+
+.BottomShadow .center {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;	
+	height: 40px;	
+}
+
+
+/*** SMALL SHADOW STYLES ***/
+
+/* LIGHT */
+.BSmall.BLight .center {
+	left: 40px;
+	box-shadow: 0 14px 20px #333;
+	behavior: url(PIE.htc);
+}
+
+.BSmall.BLight .before {
+	right: 45px;
+	bottom: -7px;
+}
+
+.BSmall.BLight .before div {		
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+.BSmall.BLight .after {
+	left: 25px;
+	bottom: -7px;
+}
+
+.BSmall.BLight .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+
+/* NORMAL */
+.BSmall.BNormal .center {
+	left: 40px;
+	box-shadow: 0 14px 20px #222;
+	behavior: url(PIE.htc);
+}
+
+.BSmall.BNormal .before {
+	right: 45px;
+	bottom: -7px;
+}
+
+.BSmall.BNormal .before div {		
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.BSmall.BNormal .after {
+	left: 25px;
+	bottom: -7px;
+}
+
+.BSmall.BNormal .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+
+/* DARK */
+.BSmall.BDark .center {
+	left: 40px;
+	box-shadow: 0 14px 20px #111;
+	behavior: url(PIE.htc);
+}
+
+.BSmall.BDark .before {
+	right: 45px;
+	bottom: -7px;
+}
+
+.BSmall.BDark .before div {		
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.40')";
+}
+
+.BSmall.BDark .after {
+	left: 25px;
+	bottom: -7px;
+}
+
+.BSmall.BDark .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.40')";
+}
+
+
+
+/*** MEDIUM SHADOW STYLES ***/
+
+/* LIGHT */
+.BMedium.BLight .center {	
+	left: 40px;
+	box-shadow: 0 20px 20px #333;
+	behavior: url(PIE.htc);
+}
+
+.BMedium.BLight .before {
+	right: 45px;
+	bottom: -15px;	
+}
+
+.BMedium.BLight .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+.BMedium.BLight .after {
+	left: 25px;
+	bottom: -15px;	
+}
+
+.BMedium.BLight .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+
+/* NORMAL */
+.BMedium.BNormal .center {
+	left: 40px;
+	box-shadow: 0 20px 20px #222;
+	behavior: url(PIE.htc);
+}
+
+.BMedium.BNormal .before {
+	right: 45px;
+	bottom: -15px;
+}
+
+.BMedium.BNormal .before div {		
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.BMedium.BNormal .after {
+	left: 25px;
+	bottom: -15px;
+}
+
+.BMedium.BNormal .after div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+
+/* DARK */
+.BMedium.BDark .center {
+	left: 40px;
+	box-shadow: 0 20px 20px #111;
+	behavior: url(PIE.htc);
+}
+
+.BMedium.BDark .before {
+	right: 45px;
+	bottom: -15px;
+}
+
+.BMedium.BDark .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.40')";
+}
+
+.BMedium.BDark .after {
+	left: 25px;
+	bottom: -15px;
+}
+
+.BMedium.BDark .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.40')";
+}
+
+
+
+/*** LARGE SHADOW STYLES ***/
+
+/* LIGHT */
+.BLarge.BLight .center {	
+	left: 40px;
+	box-shadow: 0 26px 20px #333;
+	behavior: url(PIE.htc);
+}
+
+.BLarge.BLight .before {
+	right: 40px;
+	bottom: -20px;
+}
+
+.BLarge.BLight .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+.BLarge.BLight .after {
+	left: 20px;
+	bottom: -20px;
+}
+
+.BLarge.BLight .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.20')";
+}
+
+
+/* NORMAL */
+.BLarge.BNormal .center {
+	left: 40px;
+	box-shadow: 0 26px 20px #222;
+	behavior: url(PIE.htc);
+}
+
+.BLarge.BNormal .before {
+	right: 40px;
+	bottom: -20px;
+}
+
+.BLarge.BNormal .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.BLarge.BNormal .after {
+	left: 20px;
+	bottom: -20px;
+}
+
+.BLarge.BNormal .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+
+/* DARK */
+.BLarge.BDark .center {
+	left: 40px;
+	box-shadow: 0 26px 20px #111;
+	behavior: url(PIE.htc);
+}
+
+.BLarge.BDark .before {
+	right: 40px;
+	bottom: -20px;
+}
+
+.BLarge.BDark .before div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.40')";
+}
+
+.BLarge.BDark .after {
+	left: 20px;
+	bottom: -20px;
+}
+
+.BLarge.BDark .after div {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='9', MakeShadow='true', ShadowOpacity='0.40')";
+}
+
+
+
+
+
+/******************************************************/
+/****** HOVER SHADOW ******/
+
+.HoverShadow {
+	position: relative;
+}
+
+.HoverShadow .after {	
+	position: absolute;
+	z-index: -1;
+	bottom: -40px;		
+	height: 20px;	
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.HSmall .after {
+	width: 80%;
+	left: 8%;		
+}
+
+.HSmall .after div {
+	border-radius: 40%/10px;
+	behavior: url(PIE.htc);
+}
+
+.HMedium .after {
+	width: 90%;
+	left: 3.5%;	
+}
+
+.HMedium .after div {
+	border-radius: 45%/10px;
+	behavior: url(PIE.htc);
+}
+
+.HLarge .after {
+	width: 100%;
+	left: -2.5%;	
+}
+
+.HLarge .after div {
+	border-radius: 50%/10px;
+	behavior: url(PIE.htc);
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.HLight .after {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='8', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.HNormal .after {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='8', MakeShadow='true', ShadowOpacity='0.50')";
+}
+
+.HDark .after {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='8', MakeShadow='true', ShadowOpacity='0.70')";
+}
+
+
+
+
+
+/******************************************************/
+/****** STAND SHADOW ******/
+
+.StandShadow {
+	position: relative;
+}
+
+.StandShadow .after {	
+	position: absolute;
+	z-index: -1;
+	bottom: -10px;		
+	height: 40px;
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.SSmall .after {
+	width: 105%;
+	left: -5%;	
+}
+
+.SSmall .after div {
+	border-radius: 52.5%/20px;
+	behavior: url(PIE.htc);
+}
+
+.SMedium .after {
+	width: 110%;
+	left: -6.5%;	
+}
+
+.SMedium .after div {
+	border-radius: 55%/20px;
+	behavior: url(PIE.htc);
+}
+
+.SLarge .after {
+	width: 115%;
+	left: -10%;	
+}
+
+.SLarge .after div {
+	border-radius: 57.5%/20px;
+	behavior: url(PIE.htc);
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.SLight .after {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='8', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.SNormal .after {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='8', MakeShadow='true', ShadowOpacity='0.50')";
+}
+
+.SDark .after {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='8', MakeShadow='true', ShadowOpacity='0.70')";
+}
+
+
+
+
+
+/******************************************************/
+/****** FOLD SHADOW ******/
+
+.FoldShadow {
+    position: relative;
+}
+
+.FoldShadow .after {	
+	position: absolute;
+	z-index: -2;	
+	left: 2%;
+	width: 96%;
+	height: 60px;	
+}
+
+.FoldShadow .after div {
+	border-radius: 48%/30px;
+	behavior: url(PIE.htc);
+}
+
+.FoldShadow .before {	
+	position: absolute;
+	z-index: -1;
+	left: 30%;
+	width: 40%;
+	height: 60px;	
+}
+
+.FoldShadow .before div {
+	border-radius: 15%/30px;
+	behavior: url(PIE.htc);
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.FSmall .after {
+	bottom: 28px;
+}
+
+.FSmall .before {
+	bottom: 68px;
+}
+
+.FMedium .after {
+	bottom: 24px;
+}
+
+.FMedium .before {
+	bottom: 64px;
+}
+
+.FLarge .after {	
+	bottom: 20px;	
+}
+
+.FLarge .before {
+	bottom: 60px;;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.FLight .after div {	
+	box-shadow: 0 40px 15px rgba(51, 51, 51, 0.5);
+	behavior: url(PIE.htc);
+}
+
+.FLight .before div {	
+	box-shadow: 0 50px 50px rgba(255, 255, 255, 0.4);
+	behavior: url(PIE.htc);
+}
+
+.FNormal .after div {	
+	box-shadow: 0 40px 15px rgba(51, 51, 51, 0.6);
+	behavior: url(PIE.htc);
+}
+
+.FNormal .before div {	
+	box-shadow: 0 50px 50px rgba(255, 255, 255, 0.5);
+	behavior: url(PIE.htc);
+}
+
+.FDark .after div {	
+	box-shadow: 0 40px 15px rgba(51, 51, 51, 0.7);
+	behavior: url(PIE.htc);
+}
+
+.FDark .before div {	
+	box-shadow: 0 50px 50px rgba(255, 255, 255, 0.6);
+	behavior: url(PIE.htc);
+}
+
+
+
+
+
+/******************************************************/
+/****** RIGHT SIDE CURL SHADOW ******/
+
+.RightCurlShadow {
+	position: relative;	
+}
+
+.RightCurlShadow .before {	
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	right: 15px;
+	width: 50px;	
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.RCSmall .before {	
+	height: 60%;
+}
+
+.RCMedium .before {	
+	height: 70%;
+}
+
+.RCLarge .before {	
+	height: 80%;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.RCLight .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='10', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.RCNormal .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='10', MakeShadow='true', ShadowOpacity='0.50')";
+}
+
+.RCDark .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='10', MakeShadow='true', ShadowOpacity='0.70')";
+}
+
+
+
+
+
+/******************************************************/
+/****** LEFT SIDE CURL SHADOW ******/
+
+.LeftCurlShadow {
+	position: relative;	
+}
+
+.LeftCurlShadow .before {	
+	position: absolute;
+	z-index: -1;
+	top: 10px;
+	left: -10px;
+	width: 50px;	
+}
+
+
+/*** SHADOW PROJECTION LENGTH ***/
+
+.LCSmall .before {	
+	height: 60%;
+}
+
+.LCMedium .before {	
+	height: 70%;
+}
+
+.LCLarge .before {	
+	height: 80%;
+}
+
+
+/*** SHADOW INTENSITY ***/
+
+.LCLight .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='10', MakeShadow='true', ShadowOpacity='0.30')";
+}
+
+.LCNormal .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='10', MakeShadow='true', ShadowOpacity='0.50')";
+}
+
+.LCDark .before div {	
+	-ms-filter: "progid:DXImageTransform.Microsoft.Blur(PixelRadius='10', MakeShadow='true', ShadowOpacity='0.70')";
+}

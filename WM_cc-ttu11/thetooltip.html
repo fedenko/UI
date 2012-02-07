@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>The Tooltip</title>
+<link rel="stylesheet" href="thetooltip.css" />
+<style type="text/css">
+
+body {
+margin:0 0 200px 0;
+font-family:Verdana,sans-serif;
+font-size:15px;
+color:#474747;
+background-color:#EDEDED;
+}
+
+header {
+width:960px;
+margin:50px auto 0 auto;
+border-bottom:#2D2D2D solid 1px;
+display:block;
+}
+
+#content {
+width:960px;
+margin:0 auto 0 auto;
+}
+
+h1 {
+font-size:20px;
+color:#1C1C1C;
+text-align:center;
+}
+
+h2 {
+margin:100px 0 15px 0;
+font-family:Georgia,serif;
+font-size:25px;
+font-weight:normal;
+font-style:italic;
+color:#1C1C1C;
+}
+
+p {
+line-height:1.6;
+}
+
+.example {
+margin:0 0 50px 0;
+padding:20px;
+border:#C0C0C0 dotted 1px;
+}
+
+.example h3 {
+margin:0 0 30px 0;
+padding:0 0 15px 0;
+border-bottom:#C0C0C0 solid 1px;
+font-family:Georgia,serif;
+font-size:17px;
+clear:both;
+}
+
+ul {
+margin:0;
+padding:0;
+list-style:none;
+display:block;
+}
+
+ul li {
+width:100%;
+border:#C0C0C0 dotted 1px;
+}
+
+ul li + li {
+border-top:none;
+}
+
+ul li a {
+padding:10px;
+display:block;
+}
+
+ul li.inlineblock a {
+display:inline-block;
+}
+
+ul li a:link,
+ul li a:visited {
+color:#474747;
+text-decoration:none;
+}
+
+.icon.help {
+width:19px;
+height:22px;
+margin:0 0 0 10px;
+padding:3px 0 0 6px;
+color:#FFFFFF;
+font-family:Arial,serif;
+font-size:20px;
+font-weight:bold;
+text-shadow:1px 0 0 #002147;
+text-decoration:none;
+line-height:1;
+background:#0047AB;
+background:-moz-linear-gradient(top,#007FFF,#0047AB);
+background:-webkit-gradient(linear,left top,left bottom,from(#007FFF),to(#0047AB));
+border:#FFFFFF solid 2px;
+-moz-border-radius:20px;
+-webkit-border-radius:20px;
+border-radius:20px;
+-moz-box-shadow:0 0 5px rgba(0,0,0,0.3);
+-webkit-box-shadow:0 0 5px rgba(0,0,0,0.3);
+box-shadow:0 0 5px rgba(0,0,0,0.3);
+display:inline-block;
+}
+
+.icon.user {
+margin:20px 0 0 0;
+background-color:red
+display:inline-block;
+}
+
+.icon.user .head {
+width:60px;
+height:60px;
+position:relative;
+margin:0 0 -10px 20px;
+background-color:#F7E7CE;
+border:#E5D6C1 solid 3px;
+-moz-border-radius:60px;
+-webkit-border-radius:60px;
+border-radius:60px;
+}
+
+.icon.user .body {
+width:100px;
+height:30px;
+background-color:#1560BD;
+border:#0F457F solid 3px;
+-moz-border-radius:100px;
+-webkit-border-radius:100px;
+border-radius:100px;
+-moz-border-radius-bottomleft:0;
+-moz-border-radius-bottomright:0;
+-webkit-border-bottom-left-radius:0;
+-webkit-border-bottom-right-radius:0;
+border-bottom-left-radius:0;
+border-bottom-right-radius:0;
+}
+
+form {
+padding:20px;
+color:#FFFFFF;
+background-color:#2D2D2D;
+border:#000000 solid 1px;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+border-radius:10px;
+display:inline-block;
+}
+
+form label {
+margin:0 0 0 0;
+font-weight:bold;
+line-height:2;
+display:inline-block;
+float:left;
+clear:left;
+}
+
+form .icon.help {
+display:block;
+float:right;
+clear:right;
+}
+
+form .icon.help .tooltip {
+font-weight:normal;
+}
+
+form input,
+a.submit {
+width:220px;
+margin:5px 0 15px 0;
+padding:10px;
+font-size:17px;
+border:#000000 solid 1px;
+border-radius:0;
+display:block;
+float:left;
+clear:both;
+}
+
+form input[type=submit] {
+width:220px;
+bottom:0;
+margin:15px 0 0 0;
+padding:10px;
+color:#445400;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+text-align:center;
+text-shadow:0 1px 0 rgba(255,255,255,0.5);
+background-color:#8DB600;
+border:none;
+-moz-border-radius:30px;
+-webkit-border-radius:30px;
+border-radius:30px;
+-moz-box-shadow:0 1px 2px rgba(0,0,0,0.5);
+-webkit-box-shadow:0 1px 2px rgba(0,0,0,0.5);
+box-shadow:0 1px 2px rgba(0,0,0,0.5);
+display:block;
+cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+
+<header>
+
+<h1>The Tooltip</h1>
+
+</header>
+
+
+
+<div id="content">
+
+<h2>Color Schemes</h2>
+
+<ul>
+<li><a href="#">apple green<span class="tooltip applegreen">Hi! I'm the apple green tooltip</span></a></li>
+<li><a href="#">bronze<span class="tooltip bronze">Hi! I'm the bronze tooltip</span></a></li>
+<li><a href="#">lavender<span class="tooltip lavender">Hi! I'm the lavender tooltip</span></a></li>
+<li><a href="#">linen<span class="tooltip linen">Hi! I'm the linen tooltip</span></a></li>
+<li><a href="#">mustard<span class="tooltip mustard">Hi! I'm the mustard tooltip</span></a></li>
+<li><a href="#">olivine<span class="tooltip olivine">Hi! I'm the olivine tooltip</span></a></li>
+<li><a href="#">pastel red<span class="tooltip pastelred">Hi! I'm the pastel red tooltip</span></a></li>
+<li><a href="#">silver<span class="tooltip silver">Hi! I'm the silver tooltip</span></a></li>
+<li><a href="#">sky blue<span class="tooltip skyblue">Hi! I'm the sky blue tooltip</span></a></li>
+<li><a href="#">slate<span class="tooltip slate">Hi! I'm the slate tooltip</span></a></li>
+<li><a href="#">sunset<span class="tooltip sunset">Hi! I'm the sunset tooltip</span></a></li>
+<li><a href="#">tangerine<span class="tooltip tangerine">Hi! I'm the tangerine tooltip</span></a></li>
+<li><a href="#">turquoise<span class="tooltip turquoise">Hi! I'm the turquoise tooltip</span></a></li>
+<li><a href="#">melon<span class="tooltip melon">Hi! I'm the melon tooltip</span></a></li>
+<li><a href="#">mint<span class="tooltip mint">Hi! I'm the mint tooltip</span></a></li>
+<li><a href="#">bistre<span class="tooltip bistre">Hi! I'm the bistre tooltip</span></a></li>
+<li><a href="#">byzantium<span class="tooltip byzantium">Hi! I'm the byzantium tooltip</span></a></li>
+<li><a href="#">forest green<span class="tooltip forestgreen">Hi! I'm the forest green tooltip</span></a></li>
+<li><a href="#">midnight blue<span class="tooltip midnightblue">Hi! I'm the midnight blue tooltip</span></a></li>
+<li><a href="#">rosewood<span class="tooltip rosewood">Hi! I'm the rosewood tooltip</span></a></li>
+</ul>
+
+
+
+<h2>Positioning</h2>
+
+<ul>
+<li class="inlineblock"><a href="#">left (default)<span class="tooltip silver">This is a tooltip with left positioning</span></a></li>
+<li class="inlineblock"><a href="#">center<span class="tooltip center silver">This is a tooltip with center positioning</span></a></li>
+<li class="inlineblock"><a href="#">right<span class="tooltip right silver">This is a tooltip with right positioning</span></a></li>
+</ul>
+
+
+
+<h2>Examples</h2>
+
+<div class="example">
+
+<h3>Image preview</h3>
+
+<p>Preview <a href="http://dummyimage.com/600x340/1c1c1c/ffffff.jpg&amp;text=This+is+an+image">this image<span class="tooltip center applegreen"><img src="http://dummyimage.com/300x170/1c1c1c/ffffff.jpg&amp;text=This+is+an+image" alt="" /></span></a>.</p>
+
+</div>
+
+
+
+<div class="example">
+
+<h3>Speech bubble</h3>
+
+<span class="tooltip speechbubble bronze">Hello, how are you doing?</span>
+
+<div class="icon user"><div class="head"></div><div class="body"></div></div>
+
+</div>
+
+
+
+<div class="example">
+
+<h3>Sign up form with help tooltips</h3>
+
+<form>
+
+<label>Choose a username</label><a href="#" class="icon help">?<span class="tooltip center mustard">Your username is the name that other users will see. You can change this later.</span></a>
+
+<input type="text" value="" placeholder="John Doe" />
+
+<label>Set your password</label><a href="#" class="icon help">?<span class="tooltip center mustard">Keep your password secret. Mix letters and numbers to make it stronger.</span></a>
+
+<input type="password" value="" placeholder="Password" />
+
+<input type="submit" value="Sign Up" />
+
+</form>
+
+</div>
+
+
+
+<div class="example">
+
+<h3>Inside text</h3>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad <a href="">minim veniam<span class="tooltip forestgreen">The Tooltip feels good here</span></a>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in <a href="#">culpa qui officia<span class="tooltip right midnightblue">That's right! Lorem ipsum is here too</span></a> deserunt mollit anim id est laborum.</p>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

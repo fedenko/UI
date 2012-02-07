@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ccc;
+	font: 12px Helvetica, Arial, sans-serif;
+}
+
+#title {
+	font: 48px 'OFL Sorts Mill Goudy TT', Helvetica, Arial, sans-serif;
+	width: 600px;
+	height: 200px;
+	background-color: #daad8c;
+    background-image: -moz-linear-gradient(top, #daad8c, #a86636); /* FF3.6 */
+    background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #daad8c),color-stop(1, #a86636)); /* Saf4+, Chrome */
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#daad8c', EndColorStr='#a86636'); /* IE6,IE7 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#daad8c', EndColorStr='#a86636')"; /* IE8 */
+	color: #2d2d2d;
+	margin: 40px auto 0 auto;
+	line-height: 200px;
+	text-align: center;
+	text-shadow: 0 1px 1px #fff, 0 -1px 1px #000;	
+}
+
+#container {
+	width: 1000px;
+	padding: 40px;
+	margin: 80px auto 0 auto;
+	overflow: hidden;
+}
+
+.left, .right {
+	width: 380px;
+	height: 180px;
+	margin-bottom: 80px;
+	background: #fff;
+	padding: 10px;
+}
+
+.left {
+	float: left;
+	clear: both;
+}
+
+.right {
+	float: right;
+}
+
+.left img, .right img {
+	width: 100%;
+	height: 100%;
+}

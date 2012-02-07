@@ -1,0 +1,11 @@
+.accordion
+{	
+	background-color:#FFF;
+	border:4px solid #FFF;
+}
+
+
+.accordion .panel
+{	
+	background-color:#EEE;
+}

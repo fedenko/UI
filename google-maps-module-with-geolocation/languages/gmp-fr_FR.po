@@ -1,0 +1,68 @@
+# LANGUAGE French translation for Google Maps Module with Geolocation plugin for WordPress.
+# Copyright (C) 2011 Mwea
+msgid ""
+msgstr ""
+"Project-Id-Version: gmp 1.0\n"
+"Report-Msgid-Bugs-To: http://mweasblog.com/\n"
+"POT-Creation-Date: 2011-06-08 16:25+0100\n"
+"PO-Revision-Date: 2011-11-15 19:37+0100\n"
+"Last-Translator: Titouan Chary <titouan.chary@gmail.com>\n"
+"Language-Team: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n>1\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+
+#: admin-map.php:68,
+#: 69
+msgid "Add Location"
+msgstr "Ajouter une adresse"
+
+#: admin-map.php:74
+msgid "Hint: Submit the full location: number, street, city, country. For big cities and famous places, the country is optional. &laquo;&#160;Bastille Paris&#160;&raquo; or &laquo;&#160;Opera Sydney&#160;&raquo; will work."
+msgstr "Astuce : Ajoutez une adresse complète : numéro, rue, ville, pays. Pour les grandes villes et les endroits connus, le pays est optionnel. &laquo;&#160;Bastille Paris&#160;&raquo; ou &laquo;&#160;Opera Sydney&#160;&raquo; fonctionneront."
+
+#: admin-map.php:82
+msgid "Description"
+msgstr "Description"
+
+#: admin-map.php:87,88
+msgid "Google Maps Settings"
+msgstr "Réglages de la carte Google"
+
+#: admin-map.php:90
+msgid "Enter API Key"
+msgstr "Entrez votre clé API"
+
+#: admin-map.php:95
+msgid "If you don&#8217;t have a Google Maps API Key, %1$sclick here%2$s."
+msgstr "Si vous n&#8217;avez pas de clé API Google Maps, %1$scliquez ici%2$s."
+
+#: admin-map.php:101
+msgid "Give back a link to the Author"
+msgstr "Remerciez l&#8217;auteur"
+
+#: admin-map.php:107
+msgid "WordPress Plugin by %s"
+msgstr "Plugin WordPress par %s"
+
+#: admin-map.php:108
+msgid "Shows a link saying &laquo;&#160;%s&#160;&raquo; below Map."
+msgstr "Montrer un lien disant &laquo;&#160;%s&#160;&raquo; sous la carte."
+
+#: admin-map.php:109
+msgid "If unchecked, then no link will be displayed."
+msgstr "Si non coché, le lien ne sera pas affiché."
+
+#: admin-map.php:115
+msgid "Link is there, but hidden."
+msgstr "Le lien est là, mais non visible."
+
+#: admin-map.php:116
+msgid "Will not work if the above checkbox is not checked."
+msgstr "Ne fonctionnera pas si la coche au-dessus n&#8217;est pas cochée."
+

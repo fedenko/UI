@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+
+<!--
+#######################################
+	- THE HEAD PART -
+######################################
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>freshD - Parallax</title>
+
+	<link rel="icon" type="image/png" href="images/sitelogo.png" />
+
+    <!-- commented, remove this line to use IE & iOS favicons -->           
+    <link rel="shortcut icon" href="images/favicon.ico" /> 
+
+   
+    <!-- get jQuery from the google apis -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
+    <!-- CSS reset -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+
+	
+      <!-- jQuery f// parallax  -->
+    <script type="text/javascript" src="parallax/js/freshline/jquery.freshline.Parallax.min.js"></script>
+	<script type="text/javascript" src="parallax/js/jquery.zclip.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="parallax/css/settings.css" media="screen" />
+	
+	<!-- FONT IMPORT -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	
+	
+
+        
+</head>
+
+
+<!--
+#######################################
+	- THE BODY PART -
+######################################
+-->
+<body>
+   
+	<!-- SOME SETTINGS FOR THE DEMO -->
+    <div id="back_dark">&nbsp;</div>
+	<div id="wrapper">
+	<div id="before">
+    </div><div id="red_arrow"></div><div id="world_after_background"></div>
+
+	
+	
+	<!-- 
+	##############################################################################################################################################################		
+		-	HOW TO EDIT THE DATA SETTINGS WITHOUT THE EDITOR (we recommend to use the Editor !!)
+		#########################################################################################
+		
+		data-startx : The Layer Item Position Horizontal when Mouse is moved to the left side of the Document
+		data-endx : The Layer Item Position Horizontal when Mouse is moved to the right side of the Document
+		
+		data-starty : The Layer Item Position Vertical when Mouse is moved to the top side of the Document
+		data-endy : The Layer Item Position Vertical when Mouse is moved to the bottom side of the Document
+		
+		// The _ie8 values are for IE8 Browsers, as Alternative Values. IE8 Can not Skew, and in that case start/end positions can be different in that Browser.
+		
+		data-startskew / data-endskew : The Horizontal Skew (deformation of Item) depending on Mouse Position ( Best Values from -30 to 30 )
+		
+		data-zoomxoffset : The Horizontal Offset depending on the Vertical Zoom Values when mouse is moved to the left side 
+		data-zoomxendoffset :  The Horizontal Offset depending on the Vertical Zoom Values when mouse is moved to the right side 
+		
+		// The _ie8 values are for IE8 Browsers, as Alternative Values. IE8 Can not Skew, and in that case start/end positions can be different in that Browser.
+	##############################################################################################################################################################
+	-->
+	
+	<!--
+	################################################
+		- THE PARALLAX WORLD -		
+		Zooming Best values in range from 70 - 150
+	################################################
+	-->
+	<div id="world_after" class="parallax_world" data-zoommin="100" data-zoommax="120">
+									
+		
+				
+		<!--
+		##############################
+			 canvas  Settings  
+		##############################
+		-->
+
+        <div id="canvas" class="parallax_world_class fadeup" data-startx="69" data-endx="240" data-startx_ie8="69" data-endx_ie8="240" data-starty="49" data-endy="61" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="0" data-zoomxendoffset="-3" data-zoomxoffset_ie8="0" data-zoomxendoffset_ie8="-3">
+					<img src="images/painted/assets/background.png">
+		</div>
+
+		<!--
+		##############################
+			 bottom  Settings  
+		##############################
+		-->
+
+        <div id="bottom" class="parallax_world_class fadeleft" data-startx="145" data-endx="-103" data-startx_ie8="145" data-endx_ie8="-103" data-starty="460" data-endy="513" data-starty_ie8="460" data-endy_ie8="513" data-startskew="40" data-endskew="-30" data-zoomxoffset="20" data-zoomxendoffset="1" data-zoomxoffset_ie8="20" data-zoomxendoffset_ie8="1">				
+				<img src="images/painted/assets/bottom.png">
+		</div>
+
+		<!--
+		##############################
+			 freshD  Settings  
+		##############################
+		-->
+
+        <div id="freshD" class="parallax_world_class faderight" data-startx="165" data-endx="-26" data-startx_ie8="165" data-endx_ie8="-26" data-starty="25" data-endy="-20" data-starty_ie8="25" data-endy_ie8="-20" data-startskew="0" data-endskew="0" data-zoomxoffset="10" data-zoomxendoffset="10" data-zoomxoffset_ie8="0" data-zoomxendoffset_ie8="0">
+					<img src="images/painted/assets/freshd.png">						
+		</div>
+
+		<!--
+		##############################
+			 fish  Settings  
+		##############################
+		-->
+
+        <div id="fish" class="parallax_world_class fadedown" data-startx="342" data-endx="122" data-startx_ie8="342" data-endx_ie8="122" data-starty="76" data-endy="35" data-starty_ie8="122" data-endy_ie8="76" data-startskew="0" data-endskew="0" data-zoomxoffset="15" data-zoomxendoffset="11" data-zoomxoffset_ie8="50" data-zoomxendoffset_ie8="0">									
+					<img src="images/painted/assets/fish.png">
+		</div>
+
+		<!--
+		##############################
+			 red_smoke  Settings  
+		##############################
+		-->
+
+        <div id="red_smoke" class="parallax_world_class faderight" data-startx="135" data-endx="-115" data-startx_ie8="135" data-endx_ie8="-115" data-starty="185" data-endy="205" data-starty_ie8="185" data-endy_ie8="205" data-startskew="0" data-endskew="0" data-zoomxoffset="-3" data-zoomxendoffset="-3" data-zoomxoffset_ie8="-55" data-zoomxendoffset_ie8="0">				
+					<img src="images/painted/assets/red_smoke.png">
+		</div>
+
+		<!--
+		##############################
+			 blue_smoke  Settings  
+		##############################
+		-->
+
+        <div id="blue_smoke" class="parallax_world_class faderight" data-startx="335" data-endx="90" data-startx_ie8="335" data-endx_ie8="90" data-starty="95" data-endy="100" data-starty_ie8="95" data-endy_ie8="100" data-startskew="0" data-endskew="0" data-zoomxoffset="25" data-zoomxendoffset="12" data-zoomxoffset_ie8="-55" data-zoomxendoffset_ie8="0">				
+					<img src="images/painted/assets/blue_smoke.png">
+		</div>
+
+		<!--
+		##############################
+			 signo  Settings  
+		##############################
+		-->
+
+        <div id="signo" class="parallax_world_class faderight" data-startx="228" data-endx="423" data-startx_ie8="228" data-endx_ie8="423" data-starty="457" data-endy="500" data-starty_ie8="457" data-endy_ie8="500" data-startskew="0" data-endskew="0" data-zoomxoffset="-4" data-zoomxendoffset="4" data-zoomxoffset_ie8="55" data-zoomxendoffset_ie8="0">
+					<img src="images/painted/assets/signo.png">						
+					
+		</div>
+
+		<!--
+		##############################
+			 bassist  Settings  
+		##############################
+		-->
+
+        <div id="bassist" class="parallax_world_class fadedown" data-startx="304" data-endx="36" data-startx_ie8="304" data-endx_ie8="36" data-starty="141" data-endy="167" data-starty_ie8="141" data-endy_ie8="167" data-startskew="0" data-endskew="0" data-zoomxoffset="44" data-zoomxendoffset="22" data-zoomxoffset_ie8="0" data-zoomxendoffset_ie8="0"> 
+					<img src="images/painted/assets/bassist.png">
+		</div>
+
+		<!--
+		##############################
+			 front  Settings  
+		##############################
+		-->
+
+        <div id="front" class="parallax_world_class fadeup" data-startx="190" data-endx="-133" data-startx_ie8="190" data-endx_ie8="-133" data-starty="568" data-endy="633" data-starty_ie8="568" data-endy_ie8="633" data-startskew="0" data-endskew="0" data-zoomxoffset="29" data-zoomxendoffset="-4" data-zoomxoffset_ie8="5" data-zoomxendoffset_ie8="0">						
+					<img src="images/painted/assets/bottom_front.png">
+		</div>
+
+		
+		
+		
+	</div><!-- End after -->
+</div>	<!-- End wrapper -->
+
+
+
+	<!--
+	##############################
+	 - ACTIVATE THE BANNER HERE -
+	##############################
+	-->
+	<script type="text/javascript">
+		
+		$(window).load(function() {
+			$.noConflict();						 
+			jQuery('#world_after').fhparallax({
+				editor:'on',
+				path:'parallax/js/ZeroClipboard.swf',
+				automatic:0,
+				mobile_auto_start:"yes"
+			})				
+	});
+	</script>
+    
+            
+</body>
+</html>

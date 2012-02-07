@@ -1,0 +1,286 @@
+/* reset browser styles */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, 
+figcaption, figure, footer, header, hgroup, menu, summary, time, mark, audio, video, hr {
+        margin:0;
+        padding:0;
+        border:0;
+        outline:0;
+        font-size:100%;
+        vertical-align:baseline;
+        background:transparent;
+}
+body { line-height:1; }
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu { 
+        display:block;
+}
+a {text-decoration: none; }
+
+#test {
+    font-size: 23px;
+    line-height: 28px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 20px 0 0 0;
+    margin:30px;
+}
+
+#test .subtag { 
+    width: 754px; 
+    margin: 0 auto;
+}
+
+.gs-container {
+    color:#1B1B1B;
+    position: relative; 
+    width: 754px;
+    box-shadow: 0 0 14px #CCCCCC;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.gs-container.loading { 
+    background: transparent url(../images/ajax-loader.gif) 370px 250px no-repeat; 
+}
+
+.first { top:0; left:0; }
+.second { top:0; right:0; }
+.third { bottom:0; left:0; }
+.fourth { bottom:0; right:0; }
+
+.image-samples {
+    width: 754px;
+    height: 550px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.image-samples ul{
+    list-style: none;
+    width: 754px;
+    height: 570px;
+    top:0;
+    left:0;
+    overflow: hidden;    
+    background: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.image-samples li{
+    position: absolute;
+    font-size: 15px;
+    list-style: none;
+    float: left;
+    width: 360px;
+    padding: 10px 0 15px 10px;
+}
+.image-samples li a { 
+    display: block;
+    -webkit-border-radius: 10px;     
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.image-samples ul li img { 
+    margin: 0;box-shadow: 0 0 14px #CCCCCC;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.image-samples ul li h3,#test .project-detail-nav h3{
+    color: #F1684E;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 13px;
+}
+.image-loader {
+    width: 754px;
+    height: 550px;
+    position: absolute;
+    top:0;
+    left:0;
+}
+.image-loader div{
+    position: relative;
+    width: 754px;
+    height: 550px;
+    overflow: hidden;
+}
+.image-loader div img, .image-loader div div {
+    position: absolute;
+    top: 10px !important;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    left: 13px !important;
+    width: 730px;
+    height: 532px;
+/*     display: none; */
+}
+
+.navButtons {
+    position: absolute;
+    background: url(../images/sprite.png) no-repeat;
+    border: none;
+    text-indent: -9999px;
+    width: 20px;
+    height: 35px;
+    top:250px;
+    display: block;
+    cursor: pointer;
+}
+
+.navButtons.prev {
+    left: -30px; 
+    background-position: -55px 0;
+}
+
+.navButtons.next {
+    right: -30px; 
+    background-position: top right;
+}
+
+.project-nav {
+    height: 60px;
+    position: relative;
+    padding: 10px;
+}
+
+.project-overview-nav {
+    overflow: hidden;
+    height: 32px;
+    position: relative;
+}
+
+.project-overview-nav em { 
+    padding: 8px 20px 0 95px; 
+    display: block;
+    float: left;
+}
+.project-overview-nav .nav a{    
+    width: 27px;
+    height: 32px;
+    text-align: center;
+    float: left;
+    margin:5px 10px 0 0;
+    padding: 0;
+    background: url(../images/sprite.png) -24px -37px no-repeat;
+    display: block;
+    font-size: 18px;
+    color: #221E1D;
+}
+.project-overview-nav a.activeSlide,.project-overview-nav a:hover{    
+    background: url(../images/sprite.png) -24px 0px no-repeat;
+}
+
+.project-overview-nav .nav:after {content: "."; display: block; height: 0; clear: both; visibility: hidden;}
+.project-overview-nav .nav {display: inline-block;}
+/* Hides from IE-mac \*/
+* html .project-overview-nav .nav{height: 1%;}
+/* End hide from IE-mac */
+
+.project-detail-nav {
+    width: 754px;
+    height: 70px;
+    margin: 0 auto;
+    font-size: 15px;
+    line-height: 18px;
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+}
+.project-detail-nav p {
+    text-transform: none;
+    color:#b3b3b3;
+}
+.project-detail-nav div { 
+    float: left;
+    margin-right: 40px;
+    width: 190px;
+    margin-left: 10px;
+}
+.project-detail-nav .nav { 
+    float: left;
+    width: 252px;
+    height: 50px;
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+.project-detail-nav .nav a{
+    width: 10px;
+    height: 10px;
+    margin: 20px 0 0 0;
+    display: inline-block;
+    text-indent: -9999px;
+    background: url(../images/sprite.png) -3px -25px no-repeat;
+}
+.project-detail-nav .nav a.activeSlide{
+    background-position: -3px 0px;
+}
+.project-detail-nav .close { 
+    display: block;
+    float: right;
+    margin-right: 25px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    font-size: 10px;
+    color: #221E1D;    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    text-transform: none;
+}
+
+.project-detail-nav .close img{ 
+    position: absolute;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.project-detail-nav .close span{
+    position: absolute;
+    background-color: white;
+    z-index: 10;
+    bottom: -36px;
+    font-size: 12px;
+    display: block;
+    width: 68px;
+    opacity: 0.6;
+    border-bottom-right-radius: 10px 10px;
+    border-bottom-left-radius: 10px 10px;
+    -webkit-border-bottom-left-radius: 10px;
+    -moz-border-bottom-left-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    -moz-border-bottom-right-radius: 10px;
+}
+
+.project-detail-nav a:hover { text-decoration: underline; }
+
+.projects-content {
+    display:none;
+}
+
+ul.project-overview-nav li {
+        display: inline;
+        margin-right: 10px;
+}
+
+ul.project-overview-nav a {
+        padding: 10px;
+        color: #000;
+        text-decoration: none;
+}
+
+ul.project-overview-nav a:hover { background-color: #f6f6f6; }
+ul.project-overview-nav a.selected { background-color: #fff; }
+ul.project-overview-nav a:focus { outline: none; }
+

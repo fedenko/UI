@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<link rel="stylesheet" media="screen" type="text/css" href="liimeBar.css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="jquery.liimeBar.min.js"></script>
+<script type="text/javascript">
+$(function() {
+  $('body').liimeBar({
+    hideBar: true,
+    hideButton: true,
+    scrollSpeed: 20,
+    barColour: '#888888',
+    barOpacity: 0.3,
+    buttonColour: '#000000',
+    buttonOpacity: 0.3,
+    loopCheck: false
+  });
+});
+</script>
+		<title>liimeBar help file</title>
+		<style type="text/css">
+			body{
+				background: #F5F5F5;
+				font: 12px Helvetica,Arial,sans-serif;
+			}
+			#wrapper {
+				width:900px; 
+				margin:30px auto 30px auto;
+				border: 1px #CCCCCC solid;
+				background: #FCFCFC;
+				padding:5px 30px 30px 30px;
+			}
+			hr {
+				width:900px;
+				margin:10px 0;
+				background: #DDDDDD;
+				border: none;
+				height:1px;
+			}
+			h1,h2 {
+				color:#888888;
+			}
+			h2 {
+				text-indent: 10px;
+				margin-bottom: 10px;
+			}
+			.green {
+				color:#98C160;
+			}
+			.grey {
+				color:#666767;
+			}
+			.textbox{		
+				padding:0 0 0 12px;
+				font-size: 14px;
+				color:#333333;
+			}
+		</style>
+	</head>
+	<body>
+			<div id="wrapper">
+					<h1 class="title"><span class="green">liime</span><span class="grey">Bar</span> help file</h1>
+				<hr />
+					<h2>Installation</h2>
+					<div class="textbox">If you have no jQuery already on your page then simply move the liimeBar.css, jquery.liimeBar.min.js and the jquery.mousewheel.min.js files to your website root then copy and paste this code in between the <pre style="margin:0;width:20px;display:inline;">&lt;head>&lt;/head></pre> tags.</div>
+<pre style='color:#000020;background:#F5F5F5;'><span style='color:#308080; '>&lt;</span><span style='color:#200080; font-weight:bold; '>link</span> rel<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>stylesheet</span><span style='color:#800000; '>"</span> media<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>screen</span><span style='color:#800000; '>"</span> type<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>text/css</span><span style='color:#800000; '>"</span> href<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>liimeBar.css</span><span style='color:#800000; '>"</span> <span style='color:#308080; '>/</span><span style='color:#308080; '>></span>
+<span style='color:#308080; '>&lt;</span>script type<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>text/javascript</span><span style='color:#800000; '>"</span> src<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js</span><span style='color:#800000; '>"</span><span style='color:#308080; '>></span><span style='color:#308080; '>&lt;</span><span style='color:#308080; '>/</span>script<span style='color:#308080; '>></span>
+<span style='color:#308080; '>&lt;</span>script type<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>text/javascript</span><span style='color:#800000; '>"</span> src<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>jquery.mousewheel.min.js</span><span style='color:#800000; '>"</span><span style='color:#308080; '>></span><span style='color:#308080; '>&lt;</span><span style='color:#308080; '>/</span>script<span style='color:#308080; '>></span>
+<span style='color:#308080; '>&lt;</span>script type<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>text/javascript</span><span style='color:#800000; '>"</span> src<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>jquery.liimeBar.min.js</span><span style='color:#800000; '>"</span><span style='color:#308080; '>></span><span style='color:#308080; '>&lt;</span><span style='color:#308080; '>/</span>script<span style='color:#308080; '>></span>
+<span style='color:#308080; '>&lt;</span>script type<span style='color:#308080; '>=</span><span style='color:#800000; '>"</span><span style='color:#1060b6; '>text/javascript</span><span style='color:#800000; '>"</span><span style='color:#308080; '>></span>
+$<span style='color:#308080; '>(</span><span style='color:#200080; font-weight:bold; '>function</span><span style='color:#308080; '>(</span><span style='color:#308080; '>)</span> <span style='color:#406080; '>{</span>
+  $<span style='color:#308080; '>(</span><span style='color:#1060b6; '>'body'</span><span style='color:#308080; '>)</span><span style='color:#308080; '>.</span>liimeBar<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span>
+    hideBar<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>,</span>
+    hideButton<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>,</span>
+    scrollSpeed<span style='color:#406080; '>:</span> <span style='color:#008c00; '>20</span><span style='color:#308080; '>,</span>
+    barColour<span style='color:#406080; '>:</span> <span style='color:#1060b6; '>'#888888'</span><span style='color:#308080; '>,</span>
+    barOpacity<span style='color:#406080; '>:</span> <span style='color:#008000; '>0.3</span><span style='color:#308080; '>,</span>
+    buttonColour<span style='color:#406080; '>:</span> <span style='color:#1060b6; '>'#000000'</span><span style='color:#308080; '>,</span>
+    buttonOpacity<span style='color:#406080; '>:</span> <span style='color:#008000; '>0.3</span><span style='color:#308080; '>,</span>
+    loopCheck<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>true</span>
+  <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+<span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+<span style='color:#308080; '>&lt;</span><span style='color:#308080; '>/</span>script<span style='color:#308080; '>></span>
+</pre>
+<div class="textbox">Or if you do then simply insert the following inside your ready function and insert the scripts in your page head.</div>
+<pre style='color:#000020;background:#F5F5F5;'>$<span style='color:#308080; '>(</span><span style='color:#1060b6; '>'body'</span><span style='color:#308080; '>)</span><span style='color:#308080; '>.</span>liimeBar<span style='color:#308080; '>(</span><span style='color:#406080; '>{</span>
+    hideBar<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>,</span>
+    hideButton<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>false</span><span style='color:#308080; '>,</span>
+    scrollSpeed<span style='color:#406080; '>:</span> <span style='color:#008c00; '>20</span><span style='color:#308080; '>,</span>
+    barColour<span style='color:#406080; '>:</span> <span style='color:#1060b6; '>'#888888'</span><span style='color:#308080; '>,</span>
+    barOpacity<span style='color:#406080; '>:</span> <span style='color:#008000; '>0.3</span><span style='color:#308080; '>,</span>
+    buttonColour<span style='color:#406080; '>:</span> <span style='color:#1060b6; '>'#000000'</span><span style='color:#308080; '>,</span>
+    buttonOpacity<span style='color:#406080; '>:</span> <span style='color:#008000; '>0.3</span><span style='color:#308080; '>,</span>
+    loopCheck<span style='color:#406080; '>:</span> <span style='color:#0f4d75; '>true</span>
+  <span style='color:#406080; '>}</span><span style='color:#308080; '>)</span><span style='color:#406080; '>;</span>
+</pre>
+				<hr />
+<h2>Configuration</h2>
+					<div class="textbox">Please take a quick look at the <a target="_blank" href="http://www.liime.net/projects/liimeBar/demo.html">demo</a> to get a feel of what the different parameters work then if you like read the descriptions below. <br /><br />hideBar: If set to true then the scroll bar will be invisible <br />hideButton: If set to true the scroll button will fade out when is it not active<br />scrollSpeed (1-50): This is the speed the page will scroll when using the mouse wheel, 1 being the slowest.<br />barColour: The colour of the scroll bar in hex colour code. Remember the quotes and the &lsquo;#&rsquo;!<br />barOpacity (0-1): The opacity of the scroll bar, 0 being transparent.<br />buttonColour: The colour of the scroll button.<br />buttonOpacity (0-1): The opacity of the scroll button.<br />loopCheck: If your page is going to change height after loading (such as expanding boxes, ajax content etc.) then setting this to true will enable the scroll bar to check the height of the page ever 500ms and update to the current height.</div>
+
+				<hr />
+<h2>Need more help?</h2>
+	<div class="textbox">If you are struggling with something or have any suggestions for updates then feel free to email me at Andy@liime.net.</div>
+			</div>
+	</body>
+</html>

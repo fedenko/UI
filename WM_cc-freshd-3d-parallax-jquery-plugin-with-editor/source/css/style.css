@@ -1,0 +1,202 @@
+/*----------------------------------------------------------------------------- 
+
+proFashion
+
+Screen Stylesheet 
+
+version:   	1.0 
+date:      	07/27/11 
+author:		flashhorvath
+email:     	info@flashhorvath.com 
+website:   	http://www.version-four.com
+-----------------------------------------------------------------------------*/
+
+/***********/
+/* BASICS */
+/*********/
+html {
+	width: 100%;
+
+}
+
+
+/*************************/
+/*   BODY STYLE         */
+/***********************/
+body {
+	width: 100%;
+	background-color:#cdd0d5;	
+	overflow-x:hidden;
+	
+}
+
+#world {		
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top:-50px;
+	width:760px;
+	height:486px;	
+	position:relative;
+	z-index:100;
+}
+
+#world_after{		
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top:-50px;
+	width:360px;
+	height:486px;	
+	position:relative;
+	z-index:100;
+}
+
+#world_bulb{		
+	margin-left:auto;
+	margin-right:auto;	
+	margin-top:-50px;
+	width:860px;
+	height:486px;	
+	position:relative;
+	z-index:100;
+}
+
+
+/************************/
+/* FUNCTIONAL DIVIDERS */
+/**********************/
+ 
+ 
+.clear{
+		clear:both;
+}
+
+#sitelogo {
+	width:366px;
+	height:120px;
+	background:url(../images/sitelogo.png) no-repeat;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+}
+
+
+
+.big_divider {
+	margin-top:40px;
+}
+
+
+
+
+/*********************************************************************
+	-	 FROM THERE IS ONLY DEMO PARTS, YOU CAN DELETE FROM HERE -
+*********************************************************************/
+
+/****************/
+/* DEMO BASICS */
+/***************/
+body {margin:0;background:#000 url(../images/demo/pattern_white.png);}
+
+
+#back_dark{
+position:fixed;
+top:0;
+bottom:0;
+width:50%;
+background:#000 url(../images/demo/pattern_black.png);
+right:0;
+}
+
+#wrapper{
+	width:968px;
+	margin: 0 auto;	
+	height:622px;
+	position:relative;
+}
+
+#afterwrapper{
+height:20px;
+width:968px;
+position:relative;
+margin:0 auto;
+}
+
+#world_after{
+	height:622px;
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	width:592px;
+	z-index:1;
+}
+
+#world_after_background{
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	overflow:hidden;
+	width:592px;
+	background:#000 url(../images/demo/pattern_black.png) !important;
+	
+}
+
+#afterwrapper .after{
+position:absolute;
+	top:0;
+	right:0;
+	overflow:hidden;
+	width:592px;
+	background:#000 url(../images/demo/pattern_black.png) !important;
+	z-index:1;
+	height:20px;
+}
+#before{
+	width:376px;
+	position:absolute;
+	left:0;
+	top:0;
+	height:582px;
+	background: url(../images/demo/left_sample.png) center 32px no-repeat;
+}
+
+#red_arrow{
+	width:194px;
+	height:85px;
+	background:url(../images/demo/red_arrow.png);
+	position: absolute;
+	top: 210px;
+	left: 258px;
+	z-index:2;
+}
+
+#demo-content {
+	font-family: 'Oswald', sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+	width:968px;
+	background-color:#fff;
+	-webkit-box-shadow: 0px -15px 35px -30px;
+	-moz-box-shadow: 0px -15px 35px -30px;
+	box-shadow: 0px -15px 35px -30px;
+	-webkit-border-radius:10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position:relative;
+	
+}
+
+.pos2{ left:145px !important;}
+
+.pos3{ left:33px !important;}
+
+.pos4{ left:281px !important;}
+
+.width2 {	width:740px !important;	}
+
+.width3 {	width:628px !important;	}
+
+.width4 {	width:876px !important;	}
+

@@ -1,0 +1,410 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>CSS3 Shadow Pack Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;CSS3 Shadow Pack&rdquo; Documentation by &ldquo;Nilok Bose&rdquo; v2.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;CSS3 Shadow Pack&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 20/12/2010<br>
+					By: Nilok Bose<br>
+					Email: <a href="mailto:cosmocoder@gmail.com">cosmocoder@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my item. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/cosmocoder">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#intro">Introduction</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>				
+			<li><a href="#ieshadow">Instructions for IE and Safari</a></li>				
+		</ol>
+		
+		<hr>
+		
+		<h3 id="intro"><strong>A) Introduction</strong> - <a href="#toc">top</a></h3>
+		<p>The main source code for "CSS3 Shadow Pack" is contained in the file called "shadows.css". There are 11 different shadow styles and 
+		   each style in turn comes in 3 intensity variations and 3 length variations, thus providing you with 99 variations in total !
+		</p>
+		
+		<p>Applying a particular shadow style to a html container is very simple. You just have to add the appropriate class names to the 
+		   container. This aspect has been divided into 3 parts. First and foremost you have to add the class name that identifies a particular 
+		   shadow style. Then you have to add another class name for the shadow projection length you want for that particular shadow style. Finally 
+		   add another class name for the shadow intensity that you want.
+		</p>
+		
+		<p>For eg. suppose that you want to add a warp shadow to <code>&lt;div id="container"&gt;&lt;/div&gt;</code> Also say you want that to 
+		   have a large projection length (relatively speaking) and a medium intensity. Then the class names that you would add would look this:
+		</p>
+		
+		<pre>&lt;div id="container" class="WarpShadow WLarge WNormal"&gt;&lt;/div&gt;</pre>
+		
+		<p>That would produce a nice looking warp shadow on that div. The class names for all the shadow styles will be stated in the next section.   
+		</p>
+		
+		<p>Since these shadows are created by using <code>:after</code> and <code>:before</code> pseudo elements, therefore they will only work on
+		   elements that support those pseudo elements. Hence if you try to apply these shadows directly to an <code>img</code> tag, it will not
+		   work ( except in Opera which supports <code>:after</code> and <code>:before</code> for <code>img</code> tag ). This also holds true for
+		   form input elements. So if you find that these shadows are not working when you apply them to a certain html tag, then just wrap that
+		   tag with a <code>div</code> and apply the shadow to that <code>div</code> instead. With all that being said, these shadows will work
+		   directly on the majority of html tags that are in common use.
+		</p>
+		
+		<p>As to browser support, these shadows will work in Firefox 3.5+, Safari 3.2+, Chrome 3.0+, Opera 10.50+, and IE8+. Support for IE has been 
+		   provided as of v2.0 .  The files/scripts used to produce the shadows in IE are contained in the folder named "shadows-for-ie". Applying the 
+		   shadow styles in IE is the same as in the other browsers and the details will be given below. Also note that 3 new shadow styles 
+		   included in v2.0 - "Hover Shadow", "Stand Shadow", "Fold Shadow", require a bit of javascript help to work in Safari. These javascript files
+		   have been included in their respective demo folders.
+		</p>
+		
+		<hr>
+		
+		
+		<h3 id="cssFiles"><strong>B) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>As mentioned earlier the shadow styles are all defined in "shadows.css", which is contained in the folder called "Source". This file 
+		   has been divided into sections using css comments, and the individual sections constitute the shadow styles. Further each section also 
+		   contains style blocks defining the shadow projection lengths and intensity variations.
+		</p> 
+
+		<p>The major sections are:</p>  
+
+<pre>	/******* WARP SHADOW ********/
+
+	some code
+
+	/******* RIGHT SIDE WARP SHADOW ********/
+	
+	some code
+	
+	/******* LEFT SIDE WARP SHADOW ********/
+	
+	some code
+	
+	/******* LEFT SIDE PERSPECTIVE SHADOW ********/
+	
+	some code
+	
+	/******* RIGHT SIDE PERSPECTIVE SHADOW ********/
+	
+	some code
+	
+	/******* BOTTOM PERSPECTIVE SHADOW ********/
+	
+	some code 
+	
+	/******* HOVER SHADOW ********/
+	
+	some code
+	
+	/******* STAND SHADOW ********/
+	
+	some code
+	
+	/******* FOLD SHADOW ********/
+	
+	some code
+	
+	/******* RIGHT SIDE CURL SHADOW ********/
+	
+	some code
+	
+	/******* LEFT SIDE CURL SHADOW ********/	
+</pre>
+		
+		<p>If you would like to edit a specific section of the file, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</p> 
+		
+		<p>Given below are the available class names for each shadow style and their corresponding projection lengths and intensity :</p>
+		
+				
+		<table>
+			<thead>
+				<tr>
+					<th>SHADOW STYLE</th>
+					<th>MAIN CLASS NAME</th>
+					<th>SMALL</th>
+					<th>MEDIUM</th>
+					<th>LARGE</th>
+					<th>LIGHT</th>
+					<th>NORMAL</th>
+					<th>DARK</th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td>Warp Shadow</td>
+					<td>WarpShadow</td>
+					<td>WSmall</td>
+					<td>WMedium</td>
+					<td>WLarge</td>
+					<td>WLight</td>
+					<td>WNormal</td>
+					<td>WDark</td>
+				</tr>
+				
+				<tr>
+					<td>Right Side Warp Shadow</td>
+					<td>RightWarpShadow</td>
+					<td>RWSmall</td>
+					<td>RWMedium</td>
+					<td>RWLarge</td>
+					<td>RWLight</td>
+					<td>RWNormal</td>
+					<td>RWDark</td>
+				</tr>
+				
+				<tr>
+					<td>Left Side Warp Shadow</td>
+					<td>LeftWarpShadow</td>
+					<td>LWSmall</td>
+					<td>LWMedium</td>
+					<td>LWLarge</td>
+					<td>LWLight</td>
+					<td>LWNormal</td>
+					<td>LWDark</td>
+				</tr>
+				
+				<tr>
+					<td>Left Side Perspective Shadow</td>
+					<td>LeftPerspectiveShadow</td>
+					<td>LPSmall</td>
+					<td>LPMedium</td>
+					<td>LPLarge</td>
+					<td>LPLight</td>
+					<td>LPNormal</td>
+					<td>LPDark</td>
+				</tr>
+				
+				<tr>
+					<td>Right Side Perspective Shadow</td>
+					<td>RightPerspectiveShadow</td>
+					<td>RPSmall</td>
+					<td>RPMedium</td>
+					<td>RPLarge</td>
+					<td>RPLight</td>
+					<td>RPNormal</td>
+					<td>RPDark</td>
+				</tr>
+				
+				<tr>
+					<td>Bottom Perspective Shadow</td>
+					<td>BottomShadow</td>
+					<td>BSmall</td>
+					<td>BMedium</td>
+					<td>BLarge</td>
+					<td>BLight</td>
+					<td>BNormal</td>
+					<td>BDark</td>
+				</tr>
+				
+				<tr>
+					<td>Hover Shadow</td>
+					<td>HoverShadow</td>
+					<td>HSmall</td>
+					<td>HMedium</td>
+					<td>HLarge</td>
+					<td>HLight</td>
+					<td>HNormal</td>
+					<td>HDark</td>
+				</tr>
+				
+				<tr>
+					<td>Stand Shadow</td>
+					<td>StandShadow</td>
+					<td>SSmall</td>
+					<td>SMedium</td>
+					<td>SLarge</td>
+					<td>SLight</td>
+					<td>SNormal</td>
+					<td>SDark</td>
+				</tr>
+				
+				<tr>
+					<td>Fold Shadow</td>
+					<td>FoldShadow</td>
+					<td>FSmall</td>
+					<td>FMedium</td>
+					<td>FLarge</td>
+					<td>FLight</td>
+					<td>FNormal</td>
+					<td>FDark</td>
+				</tr>
+				
+				<tr>
+					<td>Right Side Curl Shadow</td>
+					<td>RightCurlShadow</td>
+					<td>RCSmall</td>
+					<td>RCMedium</td>
+					<td>RCLarge</td>
+					<td>RCLight</td>
+					<td>RCNormal</td>
+					<td>RCDark</td>
+				</tr>
+				
+				<tr>
+					<td>Left Side Curl Shadow</td>
+					<td>LeftCurlShadow</td>
+					<td>LCSmall</td>
+					<td>LCMedium</td>
+					<td>LCLarge</td>
+					<td>LCLight</td>
+					<td>LCNormal</td>
+					<td>LCDark</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<p>An important thing to note is that the 3 warp shadow varieties have an extra class name called <strong>smallBox</strong>, that is to be 
+		   applied to html containers having widths between 150px and 350px. If that class name is not applied to such boxes then the shadows will 
+		   inevitably look bad. So please keep that in mind. This point has also been indicated in comments in "shadows.css". Similarly the Left 
+		   and Right Side Perspective shadows will only work for boxes having size greater than 150 x 150 px . But no special class name has been 
+		   provided here. This fact has also been indicated in the css file using comments. In fact all the shadow styles provided will look good on 
+		   large boxes, that have width greater than 400px or so. Use your discretion in applying a proper shadow style to a box of a particular 
+		   size.
+		</p>
+		
+		<p>When you apply a shadow style to particular container, then <strong>DO NOT</strong> forget to set a z-index on its immediate parent container.
+		   On failing to do so will make the shadows invisible, especially if the parent has a background set. This happens because the pseudo elements
+		   <code>:after</code> and <code>:before</code> have a z-index of -1, in order for the shadows to remain below the container to which they are applied.
+		   So for eg. if you want to apply a shadow to say <code>&lt;div id="someShadow"&gt;&lt;/div&gt;</code>, and its parent is say <code>&lt;div id="wrapper"&gt;&lt;/div&gt;</code>
+		   then you would set the follwing style on div#wrapper
+		</p>
+<pre>
+	#wrapper {
+	    position: relative;
+	    z-index: 0;
+	}
+</pre>
+
+		<p>Note that a position declaration is required to set a z-index on a container. If you already have a position set on the parent container then 
+		   of course there is no need to do it again. Also setting a <code>z-index: 0</code> is enough to make the shadows visible, but if your project 
+		   requires setting a higher z-index on div#wrapper then that is alright too. It must be mentioned here that if the container to which you are 
+		   applying the shadow is a direct child of the body element, then there is no need to set a z-index on the body element as shown above, and the shadows 
+		   will show just fine.
+		</p>		   
+		  
+		
+		<p>
+		   Another important thing worth mentioning is that, the html container to which you apply the shadow, must have a suitable bottom 
+		   margin ( left/right margin if you use Left/Right Perspective Shadow or Left/Right Curl Shadow ). This is needed because then otherwise the succeeding
+		   container will ignore the presence of the shadow of its previous container and overlap it. Depending on its z-index, the succeeding
+		   container will either go above or below the shadow of its previous container. This is in fact a standard feature of css box-shadows.
+		   So you must apply a proper bottom margin to the conatiner to which you apply the shadow. You may also instead add a suitable top margin
+		   to the succeeding container. Its your choice !
+		</p>
+		
+		<p>An example of applying these class names has already been given above. For further illustrations please check the provided demo files and 
+		   their source code to get a proper grasp of this.
+		</p>
+		
+		<p>Also note that you must not add more than one class name for shadow projection lengths or intensity. The same goes for shadow styles 
+		   also.
+		</p>
+		
+		<p>Great care has been taken to make the shadows look good in all modern CSS3 capable browsers. But still there can be slight rendering 
+		   differences between browsers in some case. The shadow projection lengths and intensity variations have been designed in such a way so 
+		   that they look good in most situations. But you may of course feel the need to tweak the parameters to your taste. Feel free to do so ! 
+		</p>
+		
+		<p>On a final note, if you find that you are not using more than one or two shadow styles for a particular project, then it would be better 
+		   if you copied just those shadow styles to your main style sheet. In doing so you will save some bandwidth, instead of including the whole
+		   shadows.css file, and also the page will render slighltly faster.
+		</p>
+		
+		
+		<hr>
+		
+		<h3 id="ieshadow"><strong>C) Instructions for IE and Safari</strong> - <a href="#toc">top</a></h3>
+		
+		<p>As mentioned earlier the method for applying shadows in IE are quite similar to other browsers. You will of course have to declare the class names as 
+		   mentioned above. The only difference is that some extra scripts have to be included to make the shadows work in IE. The shadows work in IE through
+		   a combination of javascript, proprietary IE filters, and <a href="http://css3pie.com">CSS3 PIE</a>. For javascript, the <a href="http://jquery.com/">jQuery</a> library is used.
+           So to make the shadows work in IE you have to include the following code block in the <code>&lt;head&gt;</code> section of your html file.
+		</p>
+<pre>
+	&lt;!--[if IE 8]&gt;
+		&lt;link rel="stylesheet" href="../../shadows-for-ie/shadows-ie.css" /&gt;
+		&lt;script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"&gt;&lt;/script&gt;
+		
+		&lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.min.js"&gt;&lt;/script&gt;
+		&lt;script src="../../shadows-for-ie/jquery.transform-0.9.3.min.js"&gt;&lt;/script&gt;
+		&lt;script src="../../shadows-for-ie/shadows-ie.js"&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+</pre>
+
+		<p>The files used here are:<p>
+		
+		<ol>
+			<li>shadows-ie.css - The main css file that contain the shadow style declarations suitable for IE</li>
+			<li>Dean Edwards' IE9.js - This file makes IE behave like a standards compliant browser and provides support for some features that 
+			    are present in other modern browsers, but are absent in IE. Strictly speaking this file is not absolutely necessary in this case, but 
+				it produces one feature that is helpful for inlcuding CSS3 PIE, that is explained below.</li>
+			<li>jQuery - A javascript framework that makes coding javascript much easier. Here the latest version at the moment of writing is being
+			    referenced from Google servers.</li>
+			<li><a href="http://plugins.jquery.com/project/2d-transform">jQuery 2d Transform Plugin</a> - This plugin makes css3 transforms work in IE 
+			    through the use of IE filters.</li>
+			<li>shadows-ie.js - The javascript file that contains the code for making all the shadow styles work in IE. If you only want to use 
+			    one or two shadow styles in your project then you can delete the portions from this file that you don't need. This file has been 
+				commented to divide the sections for different shadow styles.</li>
+			<li>CSS3 PIE - This file has not been explicitly referenced like the above files. Instead it is referenced from within the shadows-ie.css.
+			    if you go through that css file then you will find declarations like <code>behavior: url(PIE.htc);</code>. That is how CSS3 PIE is referenced.
+				This htc file makes a lot of css3 features work in IE, that includes box-shadows. Note here that generally the url path of a htc file declared 
+				like above is made relative to the html file, and not relative to the css file from where it is referenced. Dean Edwards' IE9.js corrects this 
+				non-standard behaviour in IE, and hence you can delcare the htc file path relative to shadows-ie.css . So if you choose not to include IE9.js 
+				then you must keep this fact in mind.</li>
+		</ol>
+		
+		<p>As you can clearly see, the above files have been referenced through conditional comments, so that they are only loaded in IE. Further the conditional
+		   comments stipulate that these files be only loaded for IE8. These shadows do not work in IE7 due to a z-index bug, which make the shadows appear on top 
+		   of the conatiner to which they are applied. Also the upcoming IE9 is expected to support advanced css3 features, but whether it will be able to reproduce
+		   these shadows properly remains to be seen.
+		</p>
+		
+		<p>As for Safari, it has been already mentioned that it requires the help of javascript to make 3 new shadow styles work. This is due to the fact that Safari has 
+		   a bug in the use of percentage values in elliptical border-radius. Here also the help of jQuery is taken. The javascript files for these 3 shadow styles 
+		   are included in the respective demo folders. Note here that since jQuery is required for these 3 cases to make the shadows work in Safari, so for these cases 
+		   jQuery should not be included within conditional comments, as is done for IE. See the demo files to understand how the files have been referenced.
+		</p>  
+      		   
+		
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this item. As I said at the beginning, I'd be glad to help you if you have any questions relating to this item. No guarantees, but I'll do my best to assist. If you have a more general question relating to the items on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Nilok Bose</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

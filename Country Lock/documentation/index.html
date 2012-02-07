@@ -1,0 +1,120 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Country Lock Documentation</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href=".blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">Country Lock Documentation by HelixNebula v1.2b</h3>
+		
+		<hr>
+		
+		<h1 class="center"><img src="assets/images/logo.png" /></h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top" id="contact">
+					<strong>Created:</strong> 1/16/2011<br>
+					<strong>Version:</strong> 1.4 Beta<br>
+					<strong>By:</strong> <a href="http://codecanyon.net/user/HelixNebula">Helix Nebula</a><br>
+					<strong>Email:</strong> <a href="mailto:realm.colzdragon@gmail.com">realm.colzdragon@gmail.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing Country Lock! If you have any questions that are beyond the scope of this help file, please feel free to email me via my user page contact form <a href="http://themeforest.net/user/HelixNebula">here</a>. Thank you!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#installation">Installation</a></li>
+			<li><a href="#usage">Usage</a></li>
+			<li><a href="#credits">Sources and Credits</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="installation"><strong>A) Installation</strong> - <a href="#toc">top</a></h3>
+		<p>To install Country Lock, you must first upload the contents of the site folder, so that country-lock resides in the home folder of your site ( As seen in the below picture ). Make sure the files are chmodded to 644.
+		Try and access the country-lock folder by accessing http://www.yourdomain.com/country-lock. If you can't access it, make sure you've uploaded it to the home folder of your site.</p>
+		
+		<img src="assets/images/install/1.png" alt="Website home" />
+		
+		<p>Next you may rename the country-lock folder you just uploaded to whatever you wish. I am not going to rename it. Go to http://www.yourdomain.com/thefoldernameyouchose/ and put the name of the folder you chose to rename country-lock to in the box. If you did not rename it, simply put "country-lock".</p>
+		
+		<img src="assets/images/install/2.png" alt="Setting the folder path" />
+		
+		<p>Next enter in the password you wish to use and press Install and your done! If you encounter any issues with installation not addressed in this section, you can <a href="#contact">try and contact me.</a></p> 
+
+		<hr>
+
+		<h3 id="usage"><strong>B) Usage</strong> - <a href="#toc">top</a></h3>
+
+		<p>Go to http://www.yourdomain.com/country-lock/ and select which countries you wish to manage. In this example, I will be selecting the United States and Russia.</p> 
+		
+		<img src="assets/images/usage/1.png" alt="Selecting the countries" />
+		
+		<p>Next, select whether you wish to <b>blacklist</b> the selected countries or <b>whitelist</b> them. As the note says: Blacklisting blocks the specified countries from a page we will see later, and whitelisting <b>only</b> allows the specified countries, once again, into the page we will see later. In this example, I want to blacklist these two countries.</p>
+		
+		<img src="assets/images/usage/2.png" alt="Selecting the type of restriction" />
+		
+		<p>Finally, press generate and copy-and-paste the code shown.</p>
+		
+		<img src="assets/images/usage/3.png" alt="Copying the code" />
+		
+		<p>Next, find the file you want to be restricted/exceptioned ( Blacklist/whitelist ) and make sure the extension is .php, if it isn't, rename it by right-clicking it, clicking "Rename" and replacing the .html with .php. If there is no extension shown, you should be able to change it by using the free FTP client <a href="http://filezilla-project.org/">FileZilla</a>.</p>
+		
+		<img src="assets/images/usage/4_a.png" alt="Renaming the file" />
+		<img src="assets/images/usage/4_b.png" alt="Renaming the file" />
+		
+		<p>Now open the file you've just renamed in your favorite text-editor ( I prefer <a href="http://notepad-plus-plus.org/">Notepad++</a> ) and paste the code at the <b>very top</b> of the file, like so:</p>
+		
+		<img src="assets/images/usage/5.png" alt="Editing the file" />
+		
+		<p>Finally, save and upload your file, and test it out! I live in the united states, so I should be blocked.</p>
+		
+		<img src="assets/images/usage/6.png" alt="Testing it out" />
+		
+		<hr>
+		
+		<h3 id="credits"><strong>C) Sources and Credits</strong> - <a href="#toc">top</a></h3>
+		
+		<p>I've used the following scripts as listed.
+		
+		<ul>
+			<li>Jquery was provided by <a href="http://jquery.com/">http://jquery.com/</a> under the MIT license.</li>
+			<li>Jquery.min was provided by <a href="http://sizzlejs.com/">http://sizzlejs.com/</a> under the MIT license.</li>
+			<li>Uni-form was provided by <a href="http://sprawsm.com/uni-form/">http://sprawsm.com/uni-form/</a> under the MIT license.</li>
+			<li>Blueprint CSS was provided by <a href="http://www.blueprintcss.org/">http://www.blueprintcss.org/</a> under a custom license.</li>
+			<li>FAMFAMFAM Silk icons were provided by <a href="http://www.famfamfam.com/">http://www.famfamfam.com/</a> under the <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0</a> license.</li>
+		</ul>
+		
+		<hr>
+		
+		<p>Once again, thank you so much for purchasing this script! As I said at the beginning, I'd be glad to help you if you have any questions relating to Country Lock. No guarantees, but I'll do my best to assist. If you have a more general question relating to the scripts on Codecanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p> 
+		
+		<p class="append-bottom alt large"><strong>Cole Sargent</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+		
+		<center><a href="http://www.twitter.com/HelixN/">Twitter</a> / <a href="http://steamcommunity.com/id/HelixNebula/">Steam</a></center>
+	</div><!-- end div .container -->
+</body>
+</html>

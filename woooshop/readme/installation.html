@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+	body {
+		text-shadow: 1px 1px 0px #fff;
+		font-family: Georgia, "Times New Roman", Times, serif;
+		background: url(img/bg.png) top left;
+		color: #4e5155;
+	}
+	
+	h1, h2, h3 {
+		font-weight: normal;
+		font-style: italic;
+	}
+	
+	p {
+		line-height: 160%;
+	}
+	
+	.wrapper {
+		background-color: #faffef;
+		width: 600px;
+		-moz-border-radius: 20px;
+		-webkit-border-radius: 20px;
+		margin: 100px auto;
+		padding: 60px;
+		position: relative;
+	}
+	
+	table {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+	table tr td {
+		border-bottom: 1px solid #b9d87b;
+	}
+	
+	.logo {
+		display: block;
+		background: url(img/woooshop.png) top left no-repeat;
+		width: 281px;
+		height: 90px;
+		position: absolute;
+		top:-64px;
+		left: 0;
+	}
+
+	ol pre {
+		font-size: 11px;
+	}
+	
+	ol li {
+		line-height: 160%
+	}
+	</style>
+	<title>WoooShop | Installation</title>
+</head>
+	<body>
+		<div class="wrapper">
+			<a class="logo" href="/"></a>
+			<div class="site">
+				
+				<ol>
+					<li>Extract 'wooo' folder into your root directory</li>
+					<li>Create a database and import wooo.sql</li>
+					<li>Open wooo/config.php and setup your configuration</li>
+					<li>Add the following scripts and styles to the xhtml-head of your existing website:<br/>
+						<ul>
+						<li>/wooo/css/woooshop.css</li>
+						<li>/wooo/js/jquery-1.4.2.min.js</li>
+						<li>/wooo/js/bloooming.woooshop.js</li>
+						<li>/wooo/js/jquery.stylish-select.min.js</li>
+						</ul>
+					</li>
+					<li>Now you should see the cart on the right corner of your website</li>
+					<li>Go to your-site.com/wooo/login.html and setup your products <br/>
+						Default login is <b>admin/test</b>
+					</li>
+					<li>Setup your payment gateway</li>
+					<li>Use the 'add to cart' buttons as described below.</li>
+				</ol>
+				<br/><br/>
+				
+				
+				<h3>Simple button, no options</h3>
+				<pre>&lt;span class="wooo"&gt;1&lt;/span&gt;</pre>
+				
+				<h3>Button with price</h3>
+				<pre>&lt;span class="wooo" price="true"&gt;1&lt;/span&gt;</pre>
+				
+				<h3>Button with options</h3>
+				<pre>&lt;span class="wooo" options="true"&gt;1&lt;/span&gt;</pre>
+				
+				
+				
+				<h3>Button with all options</h3>
+				<pre>&lt;span class="wooo" options="true" price="true" text="shop now"&gt;1&lt;/span&gt;</pre>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,344 @@
+ /*
+ * Sticklr v1.0
+ * Sticky Side Panel CSS + jQuery Plugin
+ *
+ * Copyright 2011 amatyr4n
+ * http://codecanyon.net/user/amatyr4n
+ *
+ * licensed under Envato licenses
+ * http://wiki.envato.com/support/legal-terms/licensing-terms/
+ */
+ 
+.sticklr, 
+.sticklr * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    color: #555;
+    vertical-align: baseline;
+}
+
+.sticklr, 
+.sticklr > li > ul {
+    list-style-type: none;
+}
+
+.sticklr {
+    position: fixed;
+    top: 40%;
+    left: 0;
+    background-color: #f7f7f7;
+    background-color: rgba(240, 240, 240, 0.75);
+    border: 1px solid #b7b7b7;
+    border-left: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    width: 25px;
+    overflow: visible;
+    z-index: 90;
+}
+
+.sticklr-right {
+    left: auto;
+    right: 0;
+    border-right: none;
+    border-left: 1px solid #b7b7b7;
+}
+
+.sticklr > li {
+    position: relative;
+}
+
+.sticklr > li > a {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 4px;
+    background-color: #f0f0f0;
+    background-color: rgba(240, 240, 240, 0.75);
+    background-position: 4px 4px;
+    background-repeat: no-repeat;
+}
+
+.sticklr > li {
+    border-bottom: 1px solid #f7f7f7;
+    border-right: 1px solid #f7f7f7;    
+    border-top: 1px solid #ccc;
+}
+
+.sticklr > li:first-child {
+    border-top: 1px solid #f7f7f7;
+}
+
+.sticklr > li:last-child {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.sticklr > li > a:hover {
+    background-color: #eaeaea;
+}
+
+.sticklr > li > ul {
+    display: none;
+    position: absolute;
+    left: 25px;
+    top: -2px;
+    width: 180px;
+    overflow: hidden;
+    background-color: #f7f7f7;
+    background-color: rgba(240, 240, 240, 0.75);
+    border: 1px solid #b7b7b7;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    box-shadow: 0 0 5px #ccc;
+    -moz-box-shadow: 0 0 5px #ccc;
+    -webkit-box-shadow: 0 0 5px #ccc;
+    z-index: 95;
+}
+
+.sticklr-right > li > ul {
+    left: auto;
+    right: 25px;
+}
+
+.sticklr > li > ul:nth-child(3) {
+    left: 206px;
+}
+
+.sticklr > li > ul:nth-child(4) {
+    left: 387px;
+}
+
+.sticklr > li > ul:nth-child(5) {
+    left: 568px;
+}
+
+.sticklr > li > ul:nth-child(6) {
+    left: 749px;
+}
+
+.sticklr > li > ul:nth-child(7) {
+    left: 930px;
+}
+
+.sticklr-right > li > ul:nth-child(3) {
+    left: auto;
+    right: 206px;
+}
+
+.sticklr-right > li > ul:nth-child(4) {
+    left: auto;
+    right: 387px;
+}
+
+.sticklr-right > li > ul:nth-child(5) {
+    left: auto;
+    right: 568px;
+}
+
+.sticklr-right > li > ul:nth-child(6) {
+    left: auto;
+    right: 749px;
+}
+
+.sticklr-right > li > ul:nth-child(7) {
+    left: auto;
+    right: 930px;
+}
+
+.sticklr > li:hover > ul {
+    display: block;
+	float: left;
+}
+
+.sticklr.sticklr-js > li:hover > ul {
+    display: none;
+}
+
+.sticklr > li > ul > li {
+    border-bottom: 1px solid #f7f7f7;
+    border-right: 1px solid #f7f7f7;    
+    border-top: 1px solid #ccc;
+    min-width: 180px;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.sticklr > li > ul > li:first-child {
+    border-top: 1px solid #f7f7f7;
+}
+
+.sticklr > li > ul > li:last-child {
+    border-bottom: 1px solid #f7f7f7;
+}
+
+.sticklr > li > ul > li {
+	border: none !ie;
+}
+
+.sticklr > li > ul > li > a {
+    display: block;
+    padding: 8px 10px 8px 32px;
+    background-color: #f0f0f0;
+    background-color: rgba(240, 240, 240, 0.75);
+    background-position: 10px;
+    background-repeat: no-repeat;
+    color: #555;
+    min-height: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+	background-color: transparent !ie;
+}
+
+.sticklr > li > ul > li > a:hover {
+    background-color: #eaeaea;
+}
+
+.sticklr > li > ul > li.sticklr-title > a {
+    padding-left: 10px;
+    background-color: #e6e6e6;
+    cursor: default;
+    font-weight: bold;
+	background-color: transparent !ie;
+}
+
+.sticklr > li > ul > li.sticklr-title > a:hover {
+    background-color: #e6e6e6;
+	background-color: transparent !ie;
+}
+
+.sticklr > li > ul > li > table {
+	border-collapse:collapse;
+	border-spacing: 0;
+}
+
+.sticklr > li > ul > li > form {
+    padding: 8px 10px;
+}
+
+.sticklr > li > ul > li input,
+.sticklr > li > ul > li select, 
+.sticklr > li > ul > li textarea,
+.sticklr > li > ul > li button  {
+    margin: 4px 0;
+    padding: 4px;
+}
+
+.sticklr > li > ul > li input[type="text"],
+.sticklr > li > ul > li input[type="password"],
+.sticklr > li > ul > li textarea {
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 3px #ccc;
+    -moz-box-shadow: inset 0 0 3px #ccc;
+    -webkit-box-shadow: inset 0 0 3px #ccc;
+    min-width: 150px;
+    width: auto;
+}
+
+.sticklr > li > ul > li input[type="submit"] {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 3px #ccc;
+    -moz-box-shadow: 0 0 3px #ccc;
+    -webkit-box-shadow: 0 0 3px #ccc;
+}
+
+.sticklr-arrow {
+    position: absolute;
+    left: 25px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid #b7b7b7;
+    border-right: none;
+}
+
+.sticklr-right .sticklr-arrow {
+    left: auto;
+    right: 25px;
+    border-right: 5px solid #b7b7b7;
+    border-left: none;
+}
+
+/* icons */
+
+.icon-zoom {
+    background-image: url('img/pc.de/zoom.png');
+}
+
+.icon-tag {
+    background-image: url('img/pc.de/tag.png');
+}
+
+.icon-sitemap {
+    background-image: url('img/pc.de/sitemap.png');
+}
+
+.icon-calendar {
+    background-image: url('img/pc.de/calendar.png');
+}
+
+.icon-delicious {
+    background-image: url('img/pc.de/delicious.png');
+}
+
+.icon-email {
+    background-image: url('img/pc.de/email.png');
+}
+
+.icon-login {
+    background-image: url('img/pc.de/login.png');
+}
+
+.icon-twitter {
+    background-image: url('img/pc.de/twitter.png');
+}
+
+.icon-user {
+    background-image: url('img/pc.de/user.png');
+}
+
+.icon-amazon {
+    background-image: url('img/icondock/amazon.png');
+}
+
+.icon-dribbble {
+    background-image: url('img/icondock/dribbble.png');
+}
+
+.icon-facebook {
+    background-image: url('img/icondock/facebook.png');
+}
+
+.icon-flickr {
+    background-image: url('img/icondock/flickr.png');
+}
+
+.icon-google {
+    background-image: url('img/icondock/google.png');
+}
+
+.icon-lastfm {
+    background-image: url('img/icondock/lastfm.png');
+}
+
+.icon-reddit {
+    background-image: url('img/icondock/reddit.png');
+}
+
+.icon-technorati {
+    background-image: url('img/icondock/technorati.png');
+}
+
+.icon-yahoo {
+    background-image: url('img/icondock/yahoo.png');
+}

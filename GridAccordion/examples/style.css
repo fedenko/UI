@@ -1,0 +1,41 @@
+body
+{
+	background:url(example_assets/bg_pattern.jpg) repeat;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#999;
+	margin: 0px;
+}
+
+
+.accordion
+{
+	width:1200px;
+	margin:100px auto;
+	list-style:none;
+	padding:0px;
+}
+
+
+/*
+hides the images and text from within the accordion;
+
+this style will be applied only before the 
+accordion is instantiated or if the user doesn't have
+javascript enabled;
+
+feel free to replace this style with your own
+*/
+.accordion img, .accordion .caption
+{
+	position:absolute;
+	left:-9999px;
+}
+
+
+/*this is for example_api*/
+#custom_controls
+{
+	width:200px;
+	margin:0px auto;
+}

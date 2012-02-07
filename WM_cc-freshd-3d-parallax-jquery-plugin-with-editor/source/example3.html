@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<!--
+#######################################
+	- THE HEAD PART -
+######################################
+-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+<title>freshD - Parallax</title>
+
+	<link rel="icon" type="image/png" href="images/sitelogo.png" />
+
+    <!-- commented, remove this line to use IE & iOS favicons -->           
+    <link rel="shortcut icon" href="images/favicon.ico" /> 
+
+   
+    <!-- get jQuery from the google apis -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	
+    <!-- CSS reset -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
+	
+    <!-- jQuery f// parallax  -->
+    <script type="text/javascript" src="parallax/js/freshline/jquery.freshline.Parallax.min.js"></script>
+	<script type="text/javascript" src="parallax/js/jquery.zclip.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="parallax/css/settings.css" media="screen" />
+	
+	
+	<!-- FONT IMPORT -->
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	
+	        
+</head>
+
+
+
+
+<!--
+#######################################
+	- THE BODY PART -
+######################################
+-->
+<body>
+
+	<div id="sitelogo"></div>
+	
+	
+	<!-- 
+	##############################################################################################################################################################		
+		-	HOW TO EDIT THE DATA SETTINGS WITHOUT THE EDITOR (we recommend to use the Editor !!)
+		#########################################################################################
+		
+		data-startx : The Layer Item Position Horizontal when Mouse is moved to the left side of the Document
+		data-endx : The Layer Item Position Horizontal when Mouse is moved to the right side of the Document
+		
+		data-starty : The Layer Item Position Vertical when Mouse is moved to the top side of the Document
+		data-endy : The Layer Item Position Vertical when Mouse is moved to the bottom side of the Document
+		
+		// The _ie8 values are for IE8 Browsers, as Alternative Values. IE8 Can not Skew, and in that case start/end positions can be different in that Browser.
+		
+		data-startskew / data-endskew : The Horizontal Skew (deformation of Item) depending on Mouse Position ( Best Values from -30 to 30 )
+		
+		data-zoomxoffset : The Horizontal Offset depending on the Vertical Zoom Values when mouse is moved to the left side 
+		data-zoomxendoffset :  The Horizontal Offset depending on the Vertical Zoom Values when mouse is moved to the right side 
+		
+		// The _ie8 values are for IE8 Browsers, as Alternative Values. IE8 Can not Skew, and in that case start/end positions can be different in that Browser.
+	##############################################################################################################################################################
+	-->
+	
+	<!--
+	################################################
+		- THE PARALLAX WORLD -		
+		Zooming Best values in range from 70 - 150
+	################################################
+	-->
+	
+
+	<div id="world_bulb"  class="parallax_world" data-zoommin="100" data-zoommax="120">
+	
+	
+	
+<!--
+##############################
+     white_box  Settings  
+##############################
+-->
+
+        <div id="white_box" class="parallax_world_class fadeup" data-startx="49" data-endx="220" data-startx_ie8="49" data-endx_ie8="220" data-starty="49" data-endy="61" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="0" data-zoomxendoffset="-3" data-zoomxoffset_ie8="0" data-zoomxendoffset_ie8="-3">
+					<img src="images/bulb/assets/white_box.png">
+		</div>
+
+<!--
+##############################
+     bg_picture  Settings  
+##############################
+-->
+
+        <div id="bg_picture" class="parallax_world_class fadeup" data-startx="109" data-endx="360" data-startx_ie8="109" data-endx_ie8="360" data-starty="79" data-endy="116" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="3" data-zoomxendoffset="-23" data-zoomxoffset_ie8="3" data-zoomxendoffset_ie8="-23">
+					<img src="images/bulb/assets/bulb.jpg">
+		</div>
+
+<!--
+##############################
+     whatisyour  Settings  
+##############################
+-->
+
+        <div id="whatisyour" class="parallax_world_class fadeup" data-startx="715" data-endx="365" data-startx_ie8="715" data-endx_ie8="365" data-starty="204" data-endy="342" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="64" data-zoomxendoffset="19" data-zoomxoffset_ie8="64" data-zoomxendoffset_ie8="19">
+					<img src="images/bulb/assets/whatisyour.png">
+		</div>
+
+<!--
+##############################
+     corner  Settings  
+##############################
+-->
+
+        <div id="corner" class="parallax_world_class fadeup" data-startx="856" data-endx="595" data-startx_ie8="856" data-endx_ie8="595" data-starty="79" data-endy="111" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="80" data-zoomxendoffset="46" data-zoomxoffset_ie8="80" data-zoomxendoffset_ie8="46">
+					<img src="images/bulb/assets/corner.png">
+		</div>
+
+<!--
+##############################
+     light1  Settings  
+##############################
+-->
+
+        <div id="light1" class="parallax_world_class fadeup" data-startx="484" data-endx="167" data-startx_ie8="484" data-endx_ie8="167" data-starty="61" data-endy="127" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="7" data-zoomxendoffset="46" data-zoomxoffset_ie8="7" data-zoomxendoffset_ie8="46">
+					<img src="images/bulb/assets/light_1.png">
+		</div>
+
+<!--
+##############################
+     light2  Settings  
+##############################
+-->
+
+        <div id="light2" class="parallax_world_class fadeup" data-startx="404" data-endx="115" data-startx_ie8="404" data-endx_ie8="115" data-starty="119" data-endy="167" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="-10" data-zoomxendoffset="-52" data-zoomxoffset_ie8="-10" data-zoomxendoffset_ie8="-52">
+					<img src="images/bulb/assets/light_2.png">
+		</div>
+
+<!--
+##############################
+     light4  Settings  
+##############################
+-->
+
+        <div id="light4" class="parallax_world_class fadeup" data-startx="524" data-endx="219" data-startx_ie8="524" data-endx_ie8="219" data-starty="346" data-endy="445" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="0" data-zoomxendoffset="-28" data-zoomxoffset_ie8="0" data-zoomxendoffset_ie8="-28">
+					<img src="images/bulb/assets/light_4.png">
+		</div>
+
+<!--
+##############################
+     light3  Settings  
+##############################
+-->
+
+        <div id="light3" class="parallax_world_class fadeup" data-startx="495" data-endx="20" data-startx_ie8="495" data-endx_ie8="20" data-starty="294" data-endy="408" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="7" data-zoomxendoffset="74" data-zoomxoffset_ie8="7" data-zoomxendoffset_ie8="74">
+					<img src="images/bulb/assets/light_3.png">
+		</div>
+
+<!--
+##############################
+     d  Settings  
+##############################
+-->
+
+        <div id="d" class="parallax_world_class fadeup" data-startx="732" data-endx="200" data-startx_ie8="732" data-endx_ie8="200" data-starty="247" data-endy="476" data-starty_ie8="49" data-endy_ie8="61" data-startskew="0" data-endskew="0" data-zoomxoffset="66" data-zoomxendoffset="-11" data-zoomxoffset_ie8="66" data-zoomxendoffset_ie8="-11">
+					<img src="images/bulb/assets/d.png">
+		</div>
+
+
+
+		
+	
+		
+		
+	</div><!-- End after -->
+
+
+	<!--
+	##############################
+	 - ACTIVATE THE BANNER HERE -
+	##############################
+	-->
+	<script type="text/javascript">
+		
+		$(window).load(function() {
+			$.noConflict();						 
+			jQuery('#world_bulb').fhparallax({
+				editor:'off',
+				path:'parallax/js/ZeroClipboard.swf',
+				automatic:2000,
+				mobile_auto_start:"yes"
+			})				
+	});
+	</script>    
+</body>
+</html>

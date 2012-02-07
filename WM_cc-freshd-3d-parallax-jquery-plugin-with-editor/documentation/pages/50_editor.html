@@ -1,0 +1,51 @@
+<link href="../css/documentation.css" rel="stylesheet" type="text/css" />
+<p><span class="value"><font size="1">01</font></span> <strong>Starting the Editor</strong></p>
+<p>If you use the non minified version of our plugin you can start the editor by switching a parameter button to <span class="value">'on'</span>:</p>
+<p class="xmlexample">&lt;script type=&quot;text/javascript&quot;&gt;<br />
+    <br />
+&nbsp;&nbsp;&nbsp;$(window).load(function() {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$.noConflict(); <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;jQuery('#world').fhparallax({<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="value">editor:'on'</span>,<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;path:'parallax/js/ZeroClipboard.swf',<br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}) <br />
+&nbsp;&nbsp;&nbsp;});<br />
+&lt;/script&gt;</p>
+<p><br />
+After loading the website containing the plugin you will see the editor with the components described in the next chapter.</p><br />
+<p class="tipp">You have to accomplish the steps from <span class="red"><strong>04</strong></span><strong> Changing the Z-Index</strong> to the end twice. One time in a webbrowser (Firefox, Chrome, Opera, Safari, IE9), the other time in IE8 because this one does not play by the Standards.</p><br />
+<p><span class="value"><font size="1">02</font></span> <strong>Components</strong></p>
+<p>The editor shows a real time preview of your 3D world focused in the middle of your screen:</p>
+<p><img src="../images/editor_components.jpg" /></p>
+<br /><br />
+<p>After selecting an object/layer you get this options additionally:</p>
+<p><img src="../images/item_select.jpg" /></p>
+<p>&nbsp;</p>
+<p><span class="value"><font size="1">03</font></span><strong> Prequesities</strong></p>
+<p>First slice your picture the way that you get all the seperate parts of the moving <strong>3D World</strong>. Then put in the picture sources in the HTML in seperate DIVs like this one:</p>
+<p class="xmlexample">&lt;!-- <span class="value">TEMPLATE LAYER ITEM</span> --&gt;<br />
+  &lt;div id=&quot;<span class="value">WRITE-YOUR-ID-HERE</span>&quot; class=&quot;parallax_world_class <span class="value">YOUR-STARTUP-ANIMATION</span>&quot; data-startx=&quot;0&quot; data-endx=&quot;0&quot; data-startx_ie8=&quot;0&quot; data-endx_ie8=&quot;0&quot; data-starty=&quot;0&quot; data-endy=&quot;0&quot; data-starty_ie8=&quot;0&quot; data-endy_ie8=&quot;0&quot; data-startskew=&quot;0&quot; data-endskew=&quot;0&quot; data-zoomxoffset=&quot;0&quot; data-zoomxoffset_ie8=&quot;0&quot; data-zoomxendoffset=&quot;0&quot; data-zoomxendoffset_ie8=&quot;0&quot;&gt;      <br />
+  &lt;img src=&quot;<span class="value">YOUR-IMAGE-SOURCE</span>&quot;&gt;<br />
+&lt;/div&gt;</span></p>
+<p>Never mind the values other than the img src,  the ID of the DIV (this is the name that appears in the editor) and the Startanimation. You can change everything else later on with the editor.</p></br>
+<p class="tipp">When designing a new <strong>3D World</strong> take one example as boilerplate and change the image sources of that boilerplate DIVs that come as close as possible to the new <strong>3D World.</strong></p></br>
+<p><span class="value"><font size="1">04</font></span><strong> Changing Z-Index</strong></p>
+<p>You now see all items in your in the editor as images on the right side and as layernames on the left menu side. </p>
+<p> The item which lies on top on the right side must be the first layer on the menu side. The second layer on the menu side lies in the right side directly under the first layer on the menu side. It is not as complicated as it may sound ;) .</p></br>
+<p><span class="value"><font size="1">05</font></span><strong> Calibration Steps</strong></p>
+<p>Choose one layer and another menu at the bottom pops up. Here you can change the position of it concerning the 4 fix points used in our plugin.</p>
+<p>First set the start &amp; end position and maybe skew angle of the Left &amp; Right maximum position of the maximum zoom (the most nearest distance to the viewer). Then the same for the Left &amp; Right maximum position of the minimum zoom (the most farest distance to the viewer).</p>
+<p>From Left to Right:</p>
+<ol>
+  <li>Left / Nearest</li>
+  <li>Right / Nearest</li>
+  <li>Left / Farest</li>
+  <li>Right / Farest</li>
+</ol>
+<p>Use the big pad to scroll the items in place.</p>
+<p>Skew describes the angle of which the viewer looks on the item.</p></br>
+<p class="tipp"><u>From our experience:</u> To make a very exact animation, go  2 times through  each steps. <u>First order:</u> 1,2,3,4 <u>Second Time:</u> 1,3,2,4</p></br>
+<p><span class="value"><font size="1">06</font></span><strong> Get the Result (HTML)</strong></p>
+<p>Now press the &quot;Show HTML&quot; button and get the resulting HTML. </p>
+<p>Copy &amp; Paste the result to your original HTML. Meaning exchange the content of your DIV that surrounds your <strong>3D World</strong>.</p>
+<p>If you call your website locally you can copy the resulting and selected HTML manually. On a server you can press the &quot;Copy to clipboard&quot; button.</p>

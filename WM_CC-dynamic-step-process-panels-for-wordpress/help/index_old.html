@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Dynamic Step Process Panels- Help page</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<link type="text/css" rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+	<div class="mainSection">
+		<div class="header"></div>
+		<div class="center floatContent">
+			<div class="content">
+				<div class="projectTitle">Dynamic Step Process Panels for WordPress</div>
+				<div class="contentHeader">This is old documentation! Check actual <a href="index.html" title="Actual documentation">here</a>!</div>
+				<div class="contentHeader"><a name="menu1"></a>About</div>
+				Dynamic Step Process Panels is a lightweight jQuery plugin. It allows that any content can be represented in any number of tabs / steps. Can be used to:
+				<ul type="square">
+					<li>presentating bulleted content,</li>
+					<li>multisteps forms,</li>
+					<li>provide a description of products,</li>
+					<li>viewing photos,</li>
+					<li>anything that comes to your mind :).</li>
+				</ul>
+				Implementation involves writing the WP shortcodes or html code of an appropriate structure (<a href="#menu3" title="WP shortcodes structure">WP shortcodes structure</a>, <a href="#menu4" title="HTML structure">HTML structure</a>).
+				<div class="contentHeader"><a name="menu2"></a>Implementation</div>
+				Implementation requires 2 steps:
+				<ul type="square">
+					<li>
+						Step 1 - put Dynamic Step Process Panels shortcode into your page:
+						<pre class="code">[dspp_old]</pre>
+					</li>
+					<li>Step 2 - write <a href="#menu3" title="WP shortcodes structure">WP shortcodes</a> or <a href="#menu4" title="HTML structure">HTML structure</a> to create steps and its contents.</li>
+				</ul>
+				<div class="contentHeader"><a name="menu3"></a>WP shortcodes structure</div>
+				The first thing you need to do is to write the appropriate WP shortcodes. Below is a sample code. More examples with descriptions can be found in <a href="#menu10" title="Examples">live preview examples</a>.
+				<div class="contentHeaderSmall">Steps embedded directly in the page</div>
+				This example shows how to write WP shortcodes structure for Dynamic Step Process Panels consisting of 3 steps.
+				<pre class="code">[dspp_old]
+[dspp_panel]
+	[dspp_step href="#content1" label="1"]Step 1 title[/dspp_step]
+	[dspp_step href="#content2" label="2"]Step 2 title[/dspp_step]
+	[dspp_step href="#content3" label="3"]Step 3 title[/dspp_step]
+	[dspp_content id="content1"]content for step 1[/dspp_content]
+	[dspp_content id="content2"]content for step 2[/dspp_content]
+	[dspp_content id="content3"]content for step 3[/dspp_content]
+[/dspp_panel]</pre>
+				<div class="contentHeaderSmall">Steps displayed as a popup</div>
+				The second way to display the steps is to show them in the popup. WP shortcodes structure is very similar. You should also create a button or link, after you click the popup will open.
+				<pre class="code">
+&lt;!--create button/link which opened the popup--&gt;
+&lt;!--link must have the href attribute with the same value as the id of the process panel with '-popup' suffix--&gt;
+
+&lt;a href="#processPanelPopup-popup"&gt;open popup&lt;/a&gt;
+
+&lt;!--now create the process panel structure--&gt;
+
+[dspp_old id='processPanelPopup']
+
+&lt;!--popup have to be positioned absolute, the class popup provides it--&gt;
+
+[dspp_panel id='processPanelPopup' class='panel popup']
+	[dspp_step href="#content1" label="1"]Step 1 title[/dspp_step]
+	[dspp_step href="#content2" label="2"]Step 2 title[/dspp_step]
+	[dspp_step href="#content3" label="3"]Step 3 title[/dspp_step]
+	[dspp_content id="content1"]content for step 1[/dspp_content]
+	[dspp_content id="content2"]content for step 2[/dspp_content]
+	[dspp_content id="content3"]content for step 3[/dspp_content]
+[/dspp_panel]
+				</pre>
+				<div class="contentHeader"><a name="menu4"></a>HTML structure</div>
+				The first thing you need to do is to write the appropriate HTML code. Below is a sample code. More examples with descriptions can be found in <a href="#menu10" title="Examples">live preview examples</a>.
+				<div class="contentHeaderSmall">Steps embedded directly in the page</div>
+				This example shows how to write html structure for Dynamic Step Process Panels consisting of 3 steps.
+				<pre class="code">[dspp_old]
+&lt;div id="processPanel" class="panel"&gt;
+	&lt;a href="#content1" label="1"&gt;
+		Step 1 title
+	&lt;/a&gt;
+	&lt;a href="#content2" label="2"&gt;
+		Step 2 title
+	&lt;/a&gt;
+	&lt;a href="#content3" label="3"&gt;
+		Step 3 title
+	&lt;/a&gt;
+	&lt;div id="content1"&gt;content for step 1&lt;/div&gt;
+	&lt;div id="content2"&gt;content for step 2&lt;/div&gt;
+	&lt;div id="content3"&gt;content for step 3&lt;/div&gt;
+&lt;/div&gt;</pre>
+				<div class="contentHeaderSmall">Steps displayed as a popup</div>
+				The second way to display the steps is to show them in the popup. Html structure is very similar. You should also create a button or link, after you click the popup will open.
+				<pre class="code">
+&lt;!--create button/link which opened the popup--&gt;
+&lt;!--link must have the href attribute with the same value as the id of the process panel with '-popup' suffix--&gt;
+
+&lt;a href="#processPanelPopup-popup"&gt;open popup&lt;/a&gt;
+
+&lt;!--now create the process panel structure--&gt;
+&lt;!--popup have to be positioned absolute, the class popup provides it--&gt;
+
+[dspp_old id="processPanelPopup"]
+&lt;div id="processPanelPopup" class="panel popup"&gt;
+	&lt;a href="#content1"&gt;
+		Step 1 title
+	&lt;/a&gt;
+	&lt;a href="#content2"&gt;
+		Step 2 title
+	&lt;/a&gt;
+	&lt;a href="#content3"&gt;
+		Step 3 title
+	&lt;/a&gt;
+	&lt;div id="content1"&gt;content for step 1&lt;/div&gt;
+	&lt;div id="content2"&gt;content for step 2&lt;/div&gt;
+	&lt;div id="content3"&gt;content for step 3&lt;/div&gt;
+&lt;/div&gt;
+				</pre>
+				<div class="contentHeader"><a name="menu5"></a>Aviable parameters</div>
+				There is some parameters that can defined behaviour or look of the steps panel. It can be used in [dspp_old] shortcode.<br />
+				<br />example: [dspp_old id='processPanel2' kind='freeChoice' style='blue-gray' icons='false' event='mouseover']
+				<table cellspacing="1px;" cellpadding="0px;" style="background-color: #E1E5E9;margin-top: 15px;">
+				<tr>
+					<th>Parameter</th>
+					<th style="width: 100px;">Default value</th>
+					<th style="width: 100px;">Possible values</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>processPanel</td>
+					<td>-</td>
+					<td>Specifies the identifier of the steps panel. If you want to use many panels on one site, you should specify by each an unique id parameter.</td>
+				</tr>
+				<tr>
+					<td>kind</td>
+					<td>stepByStep</td>
+					<td>stepByStep<br />freeChoice</td>
+					<td>Specifies the behaviour of the steps panel. Parameter stepByStep forces the user to open steps one after another. Parameter freeChoice allow free choice.</td>
+				</tr>
+				<tr>
+					<td>style</td>
+					<td>green-blue</td>
+					<td>
+						green-blue<br />
+						blue-gray<br />
+						blue-green<br />
+						blue-maroon<br />
+						blue-orange<br />
+						green-gray<br />
+						green-maroon<br />
+						green-orange<br />
+						maroon-blue<br />
+						maroon-gray<br />
+						maroon-green<br />
+						maroon-orange<br />
+						orange-blue<br />
+						orange-gray<br />
+						orange-green<br />
+						orange-maroon<br />
+					</td>
+					<td>Specifies the coloristic version of the step panel.<br />16 predefined base / hover color styles available.</td>
+				</tr>
+				<tr>
+					<td>firstSelected</td>
+					<td>true</td>
+					<td>true<br />false</td>
+					<td>Specifies that the first step is open on start or not.</td>
+				</tr>
+				<tr>
+					<td>icons</td>
+					<td>true</td>
+					<td>true<br />false</td>
+					<td>Specifies that the icons under the step labels shows or not.</td>
+				</tr>
+				<tr>
+					<td>imgFolder</td>
+					<td>img</td>
+					<td>-</td>
+					<td>Specifies the path to folder which contains the <i>sprite_with_icons.png</i>, <i>sprite_without_icons.png</i> and <i>sprite_buttons.png</i> images.</td>
+				</tr>
+				<tr>
+					<td>chooseAgain</td>
+					<td>true</td>
+					<td>true<br />false</td>
+					<td>Specifies that the step can be chosen again.</td>
+				</tr>
+				<tr>
+					<td>nextPrevButtons</td>
+					<td>true</td>
+					<td>true<br />false</td>
+					<td>Specifies that the next and previous buttons will show.</td>
+				</tr>
+				<tr>
+					<td>nextPrevButtonsPosition</td>
+					<td>bottom</td>
+					<td>bottom<br />top</td>
+					<td>Specifies the next and previous buttons position.</td>
+				</tr>
+				<tr>
+					<td>nextButtonTitle</td>
+					<td>Next step</td>
+					<td>-</td>
+					<td>Specifies the <i>next button</i> caption.</td>
+				</tr>
+				<tr>
+					<td>prevButtonTitle</td>
+					<td>Previous step</td>
+					<td>-</td>
+					<td>Specifies the <i>previous button</i> caption.</td>
+				</tr>
+				<tr>
+					<td>fadeSpeed</td>
+					<td>1000</td>
+					<td>-</td>
+					<td>Specifies the fade effect speed (in miliseconds) when the step is changed. Set to 0 if you want to disable effect.</td>
+				</tr>
+				<tr>
+					<td>event</td>
+					<td>click</td>
+					<td>click<br />mouseover</td>
+					<td>Specifies the type of event to be used for open step content.</td>
+				</tr>
+				<tr>
+					<td>packed</td>
+					<td>true</td>
+					<td>true<br />false</td>
+					<td>
+						If set to true, the packed version of javascript will be loaded (jquery.processPanel.packed.js).<br />
+						If set to false, scripts will be loaded separately and won't be packed (jquery-1.4.2.min.js, jquery.processPanel.js).
+					</td>
+				</tr>
+				<tr>
+					<td>jquery</td>
+					<td>true</td>
+					<td>true<br />false</td>
+					<td>
+						It works only when parameter <i>packed</i> is set to false.<br />
+						If set to true jquery-1.4.2.min.js will be loaded.</br />
+						If set to false jquery-1.4.2.min.js won't be loaded.
+					</td>
+				</tr>
+				</table>
+				<div class="contentHeader"><a name="menu6"></a>Events</div>
+				There is also some predefined events that you can use to expand step panel functionality.
+				In fact events are specific parameters and the implementation of its look similar (check <a href="#menu12" title="How to use custom events">How to use custom events</a>).
+				<br />Notice: If you want to prevent default event functionality, use <i>return false;</i> instruction inside your custom event function.
+				<table cellspacing="1px;" cellpadding="0px;" style="background-color: #E1E5E9;margin-top: 15px;">
+				<tr>
+					<th>Event</th>
+					<th style="width: 100px;">Aviable arguments</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>beforeLoad</td>
+					<td style="width: 100px;">-</td>
+					<td>This event is triggered before step panel will be initialized.</td>
+				</tr>
+				<tr>
+					<td>onLoad</td>
+					<td style="width: 100px;">-</td>
+					<td>This event is triggered after step panel has been initialized.</td>
+				</tr>
+				<tr>
+					<td>onOpen</td>
+					<td style="width: 100px;">event<br />step<br />content<br />stepNumber</td>
+					<td>This event is triggered before opening step content.</td>
+				</tr>
+				<tr>
+					<td>afterOpen</td>
+					<td style="width: 100px;">event<br />step<br />content<br />stepNumber</td>
+					<td>This event is triggered after opening step content.</td>
+				</tr>
+				<tr>
+					<td>onHoverIn</td>
+					<td style="width: 100px;">event<br />step<br />stepNumber</td>
+					<td>This event is triggered when step is hovered.</td>
+				</tr>
+				<tr>
+					<td>onHoverOut</td>
+					<td style="width: 100px;">event<br />step<br />stepNumber</td>
+					<td>This event is triggered when step hover is out.</td>
+				</tr>
+				<tr>
+					<td>onOpenPopup</td>
+					<td style="width: 100px;">event<br />button<br />panel</td>
+					<td>This event is triggered before opening process panel displayed as a popup.</td>
+				</tr>
+				<tr>
+					<td>onClosePopup</td>
+					<td style="width: 100px;">event<br />button<br />panel</td>
+					<td>This event is triggered after opening process panel displayed as a popup.</td>
+				</tr>
+				</table>
+				<div class="contentHeader"><a name="menu12"></a>How to use custom events</div>
+				To use custom events you've got to write javascript function and point it in appropiate event parameter.<br />
+				Example: alert a message about successfully loaded panel.
+				<pre class="code">&lt;script type="text/javascript"&gt;
+function alertMessage(message)
+{
+	alert(message);
+}
+&lt;/script&gt;
+[dspp_old onLoad='alertMessage("Panel loaded successfully!")']
+[dspp_panel]
+	[dspp_step href="#content1" label="1"]Step 1 title[/dspp_step]
+	[dspp_step href="#content2" label="2"]Step 2 title[/dspp_step]
+	[dspp_step href="#content3" label="3"]Step 3 title[/dspp_step]
+	[dspp_content id="content1"]content for step 1[/dspp_content]
+	[dspp_content id="content2"]content for step 2[/dspp_content]
+	[dspp_content id="content3"]content for step 3[/dspp_content]
+[/dspp_panel]
+				</pre>
+				You can also implement own function in another way - by write it body right in parameter.<br />
+				Example:
+				<pre class="code">
+[dspp_old onLoad='function(){alert("Panel successfully loaded!");}']
+[dspp_panel]
+	[dspp_step href="#content1" label="1"]Step 1 title[/dspp_step]
+	[dspp_step href="#content2" label="2"]Step 2 title[/dspp_step]
+	[dspp_step href="#content3" label="3"]Step 3 title[/dspp_step]
+	[dspp_content id="content1"]content for step 1[/dspp_content]
+	[dspp_content id="content2"]content for step 2[/dspp_content]
+	[dspp_content id="content3"]content for step 3[/dspp_content]
+[/dspp_panel]
+</pre>
+				<div class="contentHeader"><a name="menu13"></a>Other shortcodes parameters</div>
+				You can also use parameters in <i>dspp_panel</i>, <i>dspp_step</i> and <i>dspp_content</i> shortcodes. Below the list of available:
+				<ul type="square">
+				<li>dspp_panel</li>
+				<table cellspacing="1px;" cellpadding="0px;" style="background-color: #E1E5E9;margin-top: 15px;">
+				<tr>
+					<th>Parameter</th>
+					<th style="width: 100px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>tag</td>
+					<td>div</td>
+					<td>Defines the html tag of the steps panel node.</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>processPanel</td>
+					<td>Defines the id attribute of the steps panel.</td>
+				</tr>
+				<tr>
+					<td>class</td>
+					<td>panel</td>
+					<td>Defines the class attribute of the steps panel.</td>
+				</tr>
+				<tr>
+					<td>style</td>
+					<td>-</td>
+					<td>Defines the style attribute of the steps panel. Using this parameter you can define inline styles for the panel.</td>
+				</tr>
+				</table>
+				<li>dspp_step</li>
+				<table cellspacing="1px;" cellpadding="0px;" style="background-color: #E1E5E9;margin-top: 15px;">
+				<tr>
+					<th>Parameter</th>
+					<th style="width: 100px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>tag</td>
+					<td>a</td>
+					<td>Defines the html tag of the step node.</td>
+				</tr>
+				<tr>
+					<td>class</td>
+					<td>-</td>
+					<td>Defines the class attribute of the step.</td>
+				</tr>
+				<tr>
+					<td>href</td>
+					<td>-</td>
+					<td>Defines the href attribute of the step.</td>
+				</tr>
+				<tr>
+					<td>label</td>
+					<td>-</td>
+					<td>Defines the label attribute of the step.</td>
+				</tr>
+				</table>
+				<li>dspp_content</li>
+				<table cellspacing="1px;" cellpadding="0px;" style="background-color: #E1E5E9;margin-top: 15px;">
+				<tr>
+					<th>Parameter</th>
+					<th style="width: 100px;">Default value</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>tag</td>
+					<td>a</td>
+					<td>Defines the html tag of the step content node.</td>
+				</tr>
+				<tr>
+					<td>id</td>
+					<td>-</td>
+					<td>Defines the id attribute of the step content.</td>
+				</tr>
+				<tr>
+					<td>class</td>
+					<td>-</td>
+					<td>Defines the class attribute of the step content.</td>
+				</tr>
+				</table>
+				</ul>
+				<div class="contentHeader"><a name="menu7"></a>CSS styles</div>
+				You can find style sheets for coloristic versions in <i>colors</i> wp-content/plugins/dynamic_step_process_panels/colors/ folder.<br />
+				The Dynamic Step Process Panels plugin has several important css classes.<br />
+				The classes <i>dspp_step</i>, <i>dspp_step-green-blue</i> (depends on color version), <i>dspp_step1</i> (depends on step number), <i>dspp_step1-green-blue</i> (only for first step, depends on color version) are added automaticaly on load to every step element.<br />
+				So you can define the width of each step using .dspp_step1, .dspp_step2, .dspp_step3 etc. classes. For example:
+				<pre class="code">
+.dspp_step1
+{
+	width: 100px;
+}
+.dspp_step2
+{
+	width: 110px;
+}
+.dspp_step3
+{
+	width: 150px;
+}
+</pre>
+				When you use many step panels on one site you should use custom classes to specify style of each step. For example:
+<pre class="code">
+.myStep1, .myStep2, .myStep3
+{
+	width: 100px;
+}
+</pre>
+				Remember to attach the classes to steps:
+<pre class="code">
+[dspp_step href="#content1" class="myStep1"]Step 1 title[/dspp_step]
+[dspp_step href="#content2" class="myStep2"]Step 2 title[/dspp_step]
+[dspp_step href="#content3" class="myStep3"]Step 3 title[/dspp_step]
+</pre>
+				Here are some classes that define style of step panel, steps and contents. You can find them in <i>wp-content/plugins/dynamic_step_process_panels/style.css</i> file.
+				<ul type="square">
+					<li>Panel that is the container for the steps and their content</li>
+					<pre class="code">
+.dspp_panel
+{
+	background-color: #ffffff;
+	border: 1px solid #dbe6ee;
+	padding: 10px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+}
+					</pre>
+					<li>Step class that is added to every step autamatically</li>
+					<pre class="code">
+.dspp_step
+{
+	float: left;
+	position: relative;
+	margin-left: -20px;
+	width: 351px;
+	height: 43px;
+	font-size: 16px;
+	padding-left: 20px;
+	padding-top: 18px;
+	background-image: url("img/sprite_with_icons.png");
+	background-repeat: no-repeat;
+	outline: none;
+}
+					</pre>
+					<li>Step label class</li>
+					<pre class="code">
+.dspp_stepLabel
+{
+	position: absolute;
+	top: 19px;
+	right: 30px;
+}
+					</pre>
+					<li>Last step label class</li>
+					<pre class="code">
+.dspp_stepLabelLast
+{
+	position: absolute;
+	top: 19px;
+	right: 25px;
+}
+</pre>
+					<li>Content class</li>
+					<pre class="code">
+.dspp_content
+{
+	clear: both;
+	padding: 10px;
+	line-height: 150%;
+}
+					</pre>
+					<li>Next and previous buttons classes</li>
+					<pre class="code">
+.dspp_nextPrevButtons
+{
+	clear: both;
+	width: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.dspp_nextPrevButtons .dspp_button:first-child
+{
+	margin-right: 10px;
+}
+.dspp_nextPrevButtons .dspp_button
+{
+	float: left;
+	display: block;
+	width: 150px;
+	height: 34px;
+	padding-top: 12px;
+	text-align: center;
+	background-image: url("img/sprite_buttons.png");
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+.dspp_nextPrevButtons .dspp_inactiveButton
+{
+	background-position: -10px -310px;
+	color: #ffffff;
+}
+					</pre>
+				</ul>
+				<div class="contentHeader"><a name="menu8"></a>Content via AJAX</div>
+				You can load the content for some steps from files via AJAX technology. In this case, in href attribute of the step you must enter the address to the file from which content will be loaded and the element identifier, in which content will be placed. For example:
+				<pre class="code">[dspp_old]
+[dspp_panel]
+	[dspp_step href="step1Content.html#content1" label="1"]Description[/dspp_step]
+	[dspp_step href="step2Content.html#content2" label="2"]HTML[/dspp_step]
+	[dspp_step href="#content3" label="3"]JavaScript[/dspp_step]
+	[dspp_content id="content1"][/dspp_content]
+	[dspp_content id="content2"][/dspp_content]
+	[dspp_content id="content3"]static content for step 3[/dspp_content]
+[/dspp_panel]</pre>
+				In the above example content for first step is loaded from file <i>step1Content.html</i> to <i>dspp_content</i> with attribute <i>id="content1"</i>. Content for second step is loaded from file <i>step2Content.html</i> to <i>dspp_content</i> with attribute <i>id="content2"</i>. Content for third step is static, placed in <i>dspp_content</i> with attribute <i>id="content3"</i>.<br />
+				For more check example 2 in <i>livePreview-page2(displayed as a popup).html</i> file (<a href="#menu10" title="Examples">examples</a>).
+				<div class="contentHeader"><a name="menu9"></a>Many panels on one site</div>
+				Check <a href="#menu10" title="Examples">live preview examples</a> source code - there is many panels on one site.
+				<div class="contentHeader"><a name="menu10"></a>Examples</div>
+				To see examples with sample code check below files:
+				<ul type="square">
+					<li><a href="old_livePreview-page1.html" title="Live preview page 1">live preview - page 1</a></li>
+					<li><a href="old_livePreview-page2(displayed as a popup).html" title="Live preview page 2">live preview - page 2 (panels displayed as a popup)</a></li>
+				</ul>
+				<div class="contentHeader"><a name="menu11"></a>Support</div>
+				If you have any questions, please contact me: <a href="mailto:QuanticaLabs@gmail.com">QuanticaLabs@gmail.com</a>
+			</div>
+			<div class="menu">
+				<a href="#menu1" class="menu">About</a>
+				<a href="#menu2" class="menu">Implementation</a>
+				<a href="#menu3" class="menu">WP shortcodes structure</a>
+				<a href="#menu4" class="menu">HTML structure</a>
+				<a href="#menu5" class="menu">Aviable parameters</a>
+				<a href="#menu6" class="menu">Events</a>
+				<a href="#menu12" class="menu">How to use custom events</a>
+				<a href="#menu13" class="menu">Other shortcodes parameters</a>
+				<a href="#menu7" class="menu">CSS styles</a>
+				<a href="#menu8" class="menu">Content via AJAX</a>
+				<a href="#menu9" class="menu">Many panels on one site</a>
+				<a href="#menu10" class="menu">Examples</a>
+				<a href="#menu11" class="menu">Support</a>
+			</div>
+		<div class="footer"></div>
+	</div>
+	</body>
+</html>

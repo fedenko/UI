@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>Comment Anything &mdash; Facebook Style</title>
+    <style>
+        body{
+            padding: 10px 20px;
+            margin: 0;
+            text-align: center;
+            font-size: 12px;
+            color: #333;
+            font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+            background: #fff;
+            border-top: 30px solid #3B5998;
+        }
+
+        h1{
+            font-weight: normal;
+            font-family: Georgia,serif;
+        }
+
+        #wrap{
+            width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        #author{
+            color: #666;
+            font-size: 10px;
+            line-height: 12px;
+        }
+
+        h3{
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ddd;
+            background: #eee;
+            padding-left: 5px;
+        }
+
+        p{
+            padding-left: 5px;
+        }
+
+        tt{
+            background: #ffc;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h1>Comment Anything &mdash; Facebook Style</h1>
+
+        <p id="author">
+            <em>Author: Kulikov Alexey &lt;<a href="mailto:a.kulikov@gmail.com">a.kulikov@gmail.com</a>&gt;</em><br />
+            <em>Date: 01.04.2010</em>
+        </p>
+
+
+        <h3>Introduction</h3>
+
+        <p>This small but very powerful script allows any novice webmaster to add a facebook-like commenting feature to pretty much anything on the website. Apart from technical excellence and blistering speed it features almost complete customization. Blend it easily into any existing website in minutes.</p>
+
+        <h3>Feature List</h3>
+        <ol>
+            <li>Ajax Based Comment Anything, no page reloads whatsoever</li>
+            <li>Dead easy implementation &mdash; just add javascript and a &lt;div&gt; to load data into</li>
+            <li>Total Spam protection</li>
+            <li>Obfuscated commentor's eMail addresses &mdash; avoid all spam</li>
+            <li>100% Customizable view and layout (including all language data)</li>
+            <li><a href="http://gravatar.com" target="_blank">Gravatar</a> support</li>
+            <li>Automatically resizing textarea for improved usability</li>
+            <li>Input elements text placeholders for better usability</li>
+            <li>Go minimal by disabling name and email inputs</li>
+        </ol>
+
+        <h3>What is included in the Package</h3>
+        <ul>
+            <li><tt>index.php</tt> &mdash; a fully functioning example of a dummy article and a comment box on one page <strong>using a PHP loader</strong> &mdash; where the whole comment block is prepared with php and rendered directly into the page's HTML(with options)</li>
+            <li><tt>index.html</tt> &mdash; a fully functioning example of a dummy article and a comment box on one page <strong>using a JavaScript loader</strong> &mdash; where the whole comment block is loaded via ajax (with options)</li>
+            <li><tt>commentanything/*</tt>  &mdash; the PHP back-end, JS and CSS data that do all the *magic*</li>
+        </ul>
+
+        <h3>Option a. Installation via PHP Loader</h3>
+        <ol>
+            <li>Copy ALL the files (except <tt>index.html</tt> and <tt>index.php</tt>) to your project root directory.</li>
+            <li>
+                When you open <tt>index.php</tt>, there are two clearly marked sections that need your attention:
+                <ul>
+                    <li><tt>SCRIPTS AND STYLES</tt> &mdash; this section has to be included in the &lt;HEAD&gt; element of your web project.</li>
+                    <li>
+                        <tt>COMMENTS PLACEHOLDER</tt> &mdash; this section will create all the neccessary HTML which will be populated with comments and the comment add form all facebook style. In order to distinguuish between different pages that are commented, you have to set the  &laquo;<tt>$object_id</tt>&raquo; parameter to some name, make sure you use some unique names to identify your content. Good examples are article_1, article_2, article_3 et cetera.
+                        <img src="phploader.png" style="margin: 5px 0;" />
+                    </li>
+                </ul>
+            </li>
+            <li>The copy procedure shall be done now, please proceed to configuration.</li>
+        </ol>
+
+        <h3>Option b. Installation via JavaScript Loader</h3>
+        <p>The JavaScript loader is different to the PHP loader in that it will make an ajax call to the server once the page has loaded and fetch all the comments. This may be a desired behaviour in case you do not want the comments to be indexed by search engines or spam bots.</p>
+        <ol>
+            <li>Copy ALL the files (except <tt>index.html</tt> and <tt>index.php</tt>) to your project root directory.</li>
+            <li>
+                When you open <tt>index.html</tt>, there are two clearly marked sections that need your attention:
+                <ul>
+                    <li><tt>SCRIPTS AND STYLES</tt> &mdash; this section has to be included in the &lt;HEAD&gt; element of your web project.</li>
+                    <li>
+                        <tt>COMMENTS PLACEHOLDER</tt> &mdash; this DIV will be populated with the comments and the comment add form all facebook style. In order to distinguuish between different pages that are commented, this DIV has an attribute called &laquo;<tt>object</tt>&raquo; &mdash; make sure you use some unique names to identify your content. Good examples are article_1, article_2, article_3 et cetera.
+                        <img src="help.gif" style="margin: 5px 0;" />
+                    </li>
+                </ul>
+            </li>
+            <li>The copy procedure shall be done now, please proceed to configuration.</li>
+        </ol>
+
+        <h3>Configuration</h3>
+        <ol>
+            <li>It is essential to set your database connection details in order for the script to perform as expected, open <tt>commentanything/config.inc.php</tt> and enter the following settings (these shall be provided by your hosting provider)
+                <ul>
+                    <li><tt>$DB_HOST</tt> &mdash; the database host (usually "localhost")</li>
+                    <li><tt>$DB_USER</tt> &mdash; the database user</li>
+                    <li><tt>$DB_PASS</tt> &mdash; database access password</li>
+                    <li><tt>$DB_NAME</tt> &mdash; database name where the comments shall be stored</li>
+                </ul>
+            </li>
+            <li>Feel free to edit other settings inside <tt>commentanything/config.inc.php</tt> such as language and display settings to fit your needs.</li>
+            <li>The look and feel of the comments box can be adjusted in the css file <tt>commentanything/css/main.css</tt></li>
+        </ol>
+
+        <h3>Troubleshooting</h3>
+
+        <p>Shall you have any problems setting up, please do not hesitate to contact me under <a href="mailto:a.kulikov@gmail.com">a.kulikov@gmail.com</a>, I am available daily and will gladly resolve your issues.</p>
+
+        <h3>Credits</h3>
+
+        Author: Kulikov Alexey, April 01, 2010 &mdash; Vienna, Austria
+    </div>
+</body>

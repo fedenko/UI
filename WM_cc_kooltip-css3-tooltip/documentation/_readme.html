@@ -1,0 +1,133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>Kooltip - CSS3 tooltip - Documentation</title>
+<!-- Framework CSS -->
+<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+<style type="text/css" media="screen">
+p, table, hr, .box {
+	margin-bottom:25px;
+}
+.box p {
+	margin-bottom:10px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h3 class="center alt">&ldquo;Kooltip - CSS3 tooltip&rdquo; Documentation by &ldquo;pixelboi8&rdquo; v1.0</h3>
+    <hr>
+    <h1 class="center">&ldquo;Kooltip - CSS3 tooltip&rdquo;</h1>
+    <div class="borderTop">
+        <div class="span-6 colborder info prepend-1">
+            <p class="prepend-top"> <strong> Created: 07/05/2011<br>
+                By: pixelboi8<br>
+                Email: <a href="mailto:pixelboi8@gmail.com">pixelboi8@gmail.com</a></strong> </p>
+        </div>
+        <!-- end div .span-6 -->
+        
+        <div class="span-12 last">
+            <p class="prepend-top append-0">Thank you for purchasing my product. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/pixelboi8">here</a>. Thanks so much!</p>
+        </div>
+    </div>
+    <!-- end div .borderTop -->
+    
+    <hr>
+    <h2 id="toc" class="alt">Table of Contents</h2>
+    <ol class="alpha">
+        <li><a href="#about">About</a></li>
+        <li><a href="#htmlStructure">HTML Structure</a></li>
+        <li><a href="#css">CSS Files and Structure</a></li>
+    </ol>
+    <hr>
+    <h3 id="about"><strong>A) About</strong> - <a href="#toc">top</a></h3>
+    <p><strong>Kooltip </strong>is a pure CSS tooltip.</p>
+    <h3>Features</h3>
+    <ul>
+        <li>Pure CSS, no images, no js</li>
+        <li>2 vertical  &amp; 9 horizontal positions</li>
+        <li>12 color styles (icyblue, skyblue, purple, magenta, red, orange, yellow, olivegreen, grassgreen, brown, grey and black)</li>
+        <li>10 predefinied width styles (50px - 500px) &amp; auto width (default)</li>
+        <li>Tooltip title</li>
+        <li>5 CSS animation styles (fade, slide-left, slide-right, slide-up, slide-down) for supported browsers (Safari 4+, Chrome 4+, Opera 10.5+, Firefox 4+)</li>
+    </ul>
+    <h3>Browser compatibility</h3>
+    <ul>
+        <li><strong>Internet Explorer 8+</strong> (Internet Explorer  8 doesn't support rounded borders and shadows. Internet Explorer 9 supports them (except text-shadow), but rounded borders and gradients don't like each other (buggy), that's why ie version doesn't contain gradients. (IE10+ supports css gradients too.).</li>
+        <li><strong>Chrome 4+</strong></li>
+        <li><strong>Firefox 3.5+</strong> (FF3.5 supports shadows, FF3.6+  supports gradients too).</li>
+        <li><strong>Opera 10+</strong> (Opera 11.1+  supports css gradients).</li>
+        <li><strong>Safari 4+</strong></li>
+    </ul>
+    <h3>Required files</h3>
+    <ul>
+        <li>kooltip.css - css file</li>
+    </ul>
+    <hr>
+    <h3 id="htmlStructure"><strong>A) HTML Structure</strong> - <a href="#toc">top</a></h3>
+    <p>You need to place the following code to the BODY section of the page:.<br>
+    </p>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom center w200 slide-up"&gt;Lorem ipsum&lt;/span&gt;icyblue tooltip&lt;/a&gt;</pre>
+<p>        The link with &quot;kooltip&quot; classname is the parent element. Parent element can be link, span, div, li, etc.  This contains the span tag with  &quot;tooltip&quot; classname. Inside span tag  comes the desired tooltip text. </p>
+<p>You can add title for tooltip, adding a span tag with  &quot;title&quot; classname inside &quot;tooltip&quot; span.</p>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip magenta bottom left-center w150 slide-down"&gt;<strong>&lt;span class="title"&gt;KOOLTIP&lt;/span&gt;</strong>Donec eu libero sit amet quam egestas semper Donec eu libero sit amet quam egestas semper.&lt;/span&gt;magenta tooltip&lt;/a&gt;
+</pre>
+<p>Using tricks you can use kooltip for input elements, buttons, images (use a container/parent  element e.g. div or span)</p>
+<pre><strong>&lt;span class="kooltip"&gt;</strong>&lt;span class="tooltip orange top left slide-down"&gt;Enter your name (required)&lt;/span&gt;&lt;input name="kooltip1" type="text" value="" /&gt;<strong>&lt;/span&gt;</strong><br></pre>
+<hr>
+    <h3 id="css"><strong>C) </strong><strong>CSS Files and Structure</strong>  - <a href="#toc">top</a></h3>
+<p>Kooltip uses the<strong> kooltip.css</strong> file.<br>
+    To call the CSS file first you need to place the   following lines to the HEAD section of the page: (use the correct path to the file!)</p>
+<pre>&lt;link href=&quot;assets/css/kooltip.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;</pre>
+    <h3><strong>Setting color</strong></h3>
+    <p>You need to place the color classname next to the &quot;tooltip&quot; classname. Possible classnames: &quot;icyblue&quot;, &quot;skyblue&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;red&quot;, &quot;olivegreen&quot;, &quot;grassgreen&quot;, &quot;brown&quot;, &quot;black&quot;, &quot;grey&quot;, &quot;purple&quot;, &quot;magenta&quot;.</p>
+    <p>For example:</p>
+    <pre>
+&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip <strong>icyblue</strong> bottom center w200 slide-up&quot;&gt;....&lt;/a&gt;
+</pre>
+    <h3 id="number"><strong>Setting width</strong></h3>
+<p>Kooltip has auto width by default, but you can set predefinied width classes. There are 10 predefinied styles: &quot;w50&quot; (has the inner width of 50px), &quot;w100&quot;  (has the inner width of 100px), &quot;w150&quot;, &quot;w200&quot;, &quot;w250&quot;, &quot;w300&quot;, &quot;w350&quot;, &quot;w400&quot;,  &quot;w450&quot;, &quot;w500&quot;.</p>
+<p>Tooltip with auto width: (default).</p>
+<pre>
+&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom center slide-up&quot;&gt;....</pre>
+    <p>Tooltip with 300px width: (add &quot;w300&quot; classname to span tag).</p>
+    <pre>
+&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom center <strong>w300</strong> slide-up&quot;&gt;....</pre>
+    <h3><strong>Horizontal  positioning</strong></h3>
+    <p>There are 2 classname for horizontal positioning: &quot;top&quot; and &quot;bottom&quot;    (add &quot;top&quot; or &quot;bottom&quot; classname to span tag).</p>
+    <pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue <strong>bottom</strong> center w300 slide-up&quot;&gt;....</pre>
+    <pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue <strong>top</strong> center w300 slide-up&quot;&gt;....</pre>
+    <h3><strong>Vertical positioning</strong></h3>
+    <p>There are 9 classname for vertical positioning: &quot;center&quot;, &quot;center-left&quot;, &quot;center-right&quot;, &quot;left&quot;,&quot;left-center&quot;, &quot;left-right&quot;, &quot;right&quot;, &quot;right-center&quot;, &quot;right-left&quot;.</p>
+<p>For example: center position</p>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom <strong>center</strong> w300 slide-up&quot;&gt;...</pre>
+<p><strong><u>Important note:</u> If you set &quot;center&quot;, &quot;left-center&quot;, &quot;right-center&quot; classnames for vertical positioning, you <u>must</u> set width classname for correct positioning. These position doesn't work with auto width!!!</strong><br>
+    </p>
+<p><strong>CORRECT:</strong></p>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom <strong>center</strong> <strong>w300</strong> slide-up&quot;&gt;....
+
+&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom <strong>left</strong><strong></strong> slide-up&quot;&gt;....</pre>
+<strong>INCORRECT:</strong><br>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom <strong>center</strong> slide-up&quot;&gt;....
+</pre>
+<h3><strong>CSS animations:</strong></h3>
+<p>You can set 5 classnames for animate tooltips: &quot;fade&quot;, &quot;slide-up&quot;, &quot;slide-down&quot;, &quot;slide-left&quot;, &quot;slide-right&quot;.</p>
+<p>For example: slide-up</p>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom center <strong>slide-up</strong>&quot;&gt;....</pre>
+For example: fade<br>
+<br>
+<pre>&lt;a href="#" class="kooltip"&gt;&lt;span class="tooltip icyblue bottom center <strong>fade</strong>&quot;&gt;....</pre>
+<hr>
+<p>Once again, thank you so much for purchasing this product. As I said at the beginning, I'd be glad to help you if you have any questions relating to this product. No guarantees, but I'll do my best to assist. If you have a more general question relating to the product on CodeCanyon, you might consider visiting the forums and asking your question in the "Item Discussion" section.</p>
+<p class="append-bottom alt large"><strong>pixelboi8</strong></p>
+<p><a href="#toc">Go To Table of Contents</a></p>
+<hr class="space">
+</div>
+<!-- end div .container -->
+</body>
+</html>

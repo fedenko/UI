@@ -1,0 +1,199 @@
+@font-face {
+    font-family: 'ChunkFiveRegular';
+    src: url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.eot');
+    src: url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfontd41d.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.woff') format('woff'),
+        url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.ttf') format('truetype'),
+        url('../fonts/ChunkFive-fontfacekit/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.box_01{
+    width: 340px;
+    position: relative;
+    display: block;
+    height: 200px;
+}
+
+.box_01 h1{
+    font-family:'ChunkFiveRegular', Helvetica,Arial;
+    font-size: 30px;
+    padding:5px 10px 10px ;
+    color:white;
+    text-align: center;
+    box-shadow:0px 0px 5px grey;
+    height: 25px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    border-radius:0px 0px 5px 5px;
+    z-index: 5;
+    position: absolute;
+    display: block;
+    width:320px;
+    margin-top: 29px;
+    height: 30px;
+}
+
+
+.box_01 .arrow-left{
+    border-style:solid;
+    border-width:22px;
+    height:0;
+    width:0px;
+    text-indent: -9999px;
+    float:left;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    left: 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 14px;
+    left: -32px;
+}
+
+.box_01 .arrow-left-top{
+    border-style: solid;
+    border-width: 7px;
+    height: 0;
+    width: 0px;
+    text-indent: -9999px;
+    float: right;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 44px;
+    left: -1px;
+}
+
+.box_01 .arrow-left-bottom{
+    border-style: solid;
+    border-width: 7px;
+    height: 0;
+    width: 0px;
+    text-indent: -9999px;
+    float: right;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 15px;
+    left: -1px;
+}
+
+.box_01 .arrow-right{
+
+    border-style:solid;
+    border-width:22px;
+    height:0;
+    width:0px;
+    text-indent: -9999px;
+    float:right;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 14px;
+    right: -32px;
+}
+.box_01 .arrow-right-top{
+
+    border-style: solid;
+    border-width: 7px;
+    height: 0;
+    width: 0px;
+    text-indent: -9999px;
+    float: right;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 44px;
+    right: -1px;
+}
+.box_01 .arrow-right-bottom{
+
+    border-style: solid;
+    border-width: 7px;
+    height: 0;
+    width: 0px;
+    text-indent: -9999px;
+    float: right;
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 0px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+    top: 15px;
+    right: -1px;
+}
+
+.box_01 .fields{
+    z-index: 0;
+    display: block;
+    position: absolute;
+    right: 10px;
+    width:280px;
+    padding: 20px;
+    border-radius:0px 0px 10px 10px;
+    margin-top: 0px;
+    opacity:0;
+    
+
+    font-family:Helvetica, Arial;
+    font-size: 12px;
+
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+
+.box_01 .login{
+    width: 270px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box_01 .form_button{
+    width: 280px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-family:'ChunkFiveRegular', Helvetica, Arial;
+    text-transform: uppercase;
+    font-size: 15px;
+}

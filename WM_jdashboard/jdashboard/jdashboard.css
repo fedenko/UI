@@ -1,0 +1,207 @@
+/*!
+ * jDashboard.css - jQuery Plugin v1.0.0
+ * http://www.codecanyon.net/user/sarthemaker
+ *
+ * Copyright 2010, Sarathi Hansen
+ *
+ * Date: October 29, 2010
+ */
+
+/* Dashboard Column */
+td.jdash-column { vertical-align: top; }
+
+/* Dashboard Sector */
+div.jdash-sector {
+	margin: 15px;
+	background: #FCFCFC;
+	border: 1px dashed #BBBBBB;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	display: none;
+}
+
+
+/*
+ * Dashboard Item
+ */
+
+/* Dashboard Item */
+div.jdash-item {
+	background: white;
+	position: relative;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #CCCCCC;
+	margin: 15px;
+	z-index: 5;
+}
+/* Dashboard Item - While Dragging */
+div.jdash-item.dragging { z-index: 10; }
+
+
+/*
+ * Dashboard Item Header
+ */
+
+/* Item Head */
+h1.jdash-head {
+	border-radius: 4px 4px 0 0;
+	-moz-border-radius: 4px 4px 0 0;
+	-webkit-border-radius: 4px 4px 0 0;
+	border-bottom: 1px solid #CCCCCC;
+	font-size: 14px;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	padding: 0;
+	margin: 0;
+	background: #EEEEEE url("images/header.png") repeat-x;
+}
+
+/* Item Head - Collapsed */
+div.jdash-item.collapse h1.jdash-head {
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-bottom: 0;
+}
+
+/* Item Title */
+div.jdash-head-title {
+	padding: 6px 12px;
+	cursor: move;
+	color: #555555;
+}
+/* Item Title - While Hovering */
+div.jdash-head-title:hover { color: black; }
+/* Item Title - While Hovering - Sub Title */
+div.jdash-head-title:hover span.sub-title { color: #666666; }
+
+/* Item Collapse - Expanded */
+div.jdash-head-collapse {
+	display: none;
+	border-left: 1px solid #CCCCCC;
+	height: 25px;
+	width: 30px;
+	background: url("images/arrow-up.png") no-repeat center 10px;
+	cursor: default;
+}
+/* Item Collapse - Collapsed */
+div.jdash-item.collapse div.jdash-head-collapse {
+	background: url("images/arrow-down.png") no-repeat center 11px;
+}
+
+/* Item Collapse - Hover */
+div.jdash-item:hover div.jdash-head-collapse { display: block; }
+
+/* Item Toolbar */
+div.jdash-toolbar {
+	padding: 6px 2px;
+	margin: 0 7px;
+	font-weight: normal;
+	color: #555555;
+	border-top: 1px solid #DDDDDD;
+	font-family: Calibri, Verdana, Arial, sans-serif;
+	font-size: 12px;
+	text-shadow: none;
+}
+
+/* Item Body */
+div.jdash-body {
+	font-size: 12px;
+	font-family: Calibri, Verdana, Arial, sans-serif;
+	color: #444444;
+	padding: 15px;
+	overflow: hidden;
+	border-radius: 0 0 4px 4px;
+	-moz-border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 4px 4px;
+	background: white;
+}
+
+/* Lists */
+div.jdash-item ul {
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	list-style-type: square;
+	font-size: 13px;
+}
+div.jdash-item ul li {
+	margin: 4px 0;
+	padding: 0;
+}
+
+/* Paragraphs */
+div.jdash-item p { margin: 10px 0; }
+div.jdash-item p:first-child { margin-top: -10px; }
+div.jdash-item p:last-child { margin-bottom: 0; }
+
+/* Links */
+div.jdash-item a {
+	color: #4F81BD;
+	text-decoration: none;
+}
+div.jdash-item a:hover { text-decoration: underline; }
+
+/* Heading 2 */
+div.jdash-item h2 {
+	color: #333333;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 13px;
+	margin: 4px 0;
+}
+
+/* Textboxes */
+div.jdash-item input[type="text"], div.jdash-item textarea {
+	padding: 5px 6px;
+	border: 1px solid #CCCCCC;
+	color: black;
+	-moz-border-radius: 2px;
+	font-size: 12px;
+	width: 200px;
+	margin: 0;
+	font-family: Verdana, Geneva, sans-serif;
+	color: #555555;
+}
+div.jdash-item textarea { height: 80px; }
+div.jdash-item input[type="text"]:focus, div.jdash-item textarea:focus {
+	color: black;
+	border-color: #999999;
+}
+
+/* Buttons */
+div.jdash-item button::-moz-focus-inner { border: none; }
+div.jdash-item button {
+	-moz-border-radius: 2px;
+	background: #D7D7D7 url("images/button.png") repeat-x;
+	border: 1px solid #C0C0C0;
+	padding: 4px 9px;
+	font-size: 12px;
+	font-family: Calibri, Verdana, Arial, sans-serif;
+	color: black;
+	cursor: pointer;
+}
+div.jdash-item button:active {
+	border-color: #888888;
+	background: #9E9E9E url("images/button-pressed.png") repeat-x;
+	color: #EEEEEE;
+}
+
+/* Button in Header */
+h1.jdash-head button { -moz-box-shadow: #F5F5F5 1px 1px 0; }
+
+/* Plus-Minus Class */
+div.jdash.plus-minus div.jdash-head-collapse {
+	background: url("images/minus.png") no-repeat center 9px;
+}
+div.jdash.plus-minus div.jdash-item.collapse div.jdash-head-collapse {
+	background-image: url("images/plus.png");
+}
+
+/* Padded Class */
+div.jdash.padded div.jdash-item h1.jdash-head {
+	-moz-border-radius: 4px;
+	border: 1px solid #CCCCCC !important;
+}
+div.jdash.padded div.jdash-item, div.jdash.padded div.jdash-sector { padding: 4px; }

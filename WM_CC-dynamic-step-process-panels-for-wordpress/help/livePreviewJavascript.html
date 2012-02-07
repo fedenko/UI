@@ -1,0 +1,63 @@
+<!--example 2-->
+<!--in admin panel onOpen event:-->
+function(event, step, content, stepNumber)
+{
+	$(".message").remove();
+	if(stepNumber==2)
+	{
+		timesOpened++;
+		content.prepend("<div class='message'>You've opened this step " + timesOpened + " time" + (timesOpened>1 ? "s":"") + ".</div>");
+	}
+}
+<!--implementation on page:-->
+<script type="text/javascript">var timesOpened = 0;</script>
+[dspp id='your_panel_id']
+
+<!--example 4-->
+<!--in admin panel onOpen event:-->
+function(event, step, content, stepNumber)
+{
+	if(stepNumber==2)
+	{
+		$("#content1_your_panel_id .alert").remove();
+		if($("[name=name]").val()=="")
+		{
+			$("#content1_your_panel_id").prepend("<div class='alert'>Please enter your name!</div>");
+			return false;
+		}
+	}
+	else if(stepNumber==3)
+	{
+		$("#content2_your_panel_id .alert").remove();
+		if(!checkEmail($("[name=email]").val()))
+		{
+			$("#content2_your_panel_id").prepend("<div class='alert'>Please enter valid e-mail address!</div>");
+			return false;
+		}
+	}
+
+}
+<!--implementation on page:-->
+<script type="text/javascript">
+function checkEmail(email) 
+{
+	if(email=="")
+		return false;
+	var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+	if(reg.test(email) == false)
+		return false;
+	else
+		return true;
+}
+jQuery(document).ready(function($){
+	$("#processPanel_your_panel_id #exampleForm").submit(function(){
+		$("#content3_your_panel_id .alert").remove();
+		if($("[name=check]").val()!="5")
+		{
+			$("#content3_your_panel_id").prepend("<div class='alert'>Please enter correct result!</div>");
+			return false;
+		}
+	});
+});
+</script>
+[dspp id='your_panel_id']

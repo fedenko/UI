@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>The Tooltip - documentation</title>
+<style type="text/css">
+
+body {
+margin:0;
+font-family:"Helvetica Neue",Helvetica,Arial;
+font-size:15px;
+color:#2D2D2D;
+background-color:#E3E3E3;
+}
+
+hr {
+height:1px;
+margin:20px 0 50px 0;
+background-color:#474747;
+border:none;
+}
+
+
+
+/**************************************************//* TEXT *//**************************************************/
+
+h1 {
+margin:50px 0 25px 0;
+font-size:33px;	
+}
+
+h2 {
+margin:40px 0 20px 0;
+font-size:25px;	
+}
+
+h3 {
+margin:30 0 15px 0;
+font-size:18px;	
+}
+
+h1 + h1,
+h1 + h2,
+h1 + h3,
+h1 + h4,
+h1 + h5,
+h1 + h6,
+h2 + h2,
+h2 + h3,
+h2 + h4,
+h2 + h5,
+h2 + h6,
+h3 + h3,
+h3 + h4,
+h3 + h5,
+h3 + h6,
+h4 + h4,
+h4 + h5,
+h4 + h6,
+h5 + h5,
+h5 + h6,
+h6 + h6 {
+margin-top:0;
+}
+
+p {
+margin:10px 0 10px 0;
+line-height:1.6;
+}
+
+p + p {
+margin-top:0;
+}
+
+blockquote {
+width:200px;
+margin:0;
+padding:0 0 0 15px;
+border-left:#DBDBDB solid 5px;
+display:block;
+}
+
+blockquote p,
+blockquote cite {
+font-size:17px;	
+}
+
+pre {
+width:890px;
+margin:10px 30px 10px 0px;
+padding:10px;
+font-family:"Courier New",Courier,monospace;
+color:#000000;
+background-color:#EDEDED;
+border:#474747 solid 1px;
+white-space:pre-wrap;
+white-space:-moz-pre-wrap !important;
+white-space:-pre-wrap;
+white-space:-o-pre-wrap;
+word-wrap:break-word;
+}
+
+
+
+/**************************************************//* LISTS *//**************************************************/
+
+ul {
+margin:10px 0 20px 35px;
+padding:0;
+line-height:1.6;
+list-style:disc outside;
+}
+
+ul li {
+margin:0 0 5px 0;	
+}
+
+ol {
+margin:10px 0 20px 35px;
+padding:0;
+line-height:1.6;
+list-style:decimal outside;	
+}
+
+ol li {
+margin:0 0 5px 0;
+}
+
+ol.alpha li {
+list-style:upper-alpha outside;
+}
+
+dl {
+margin:10px 0 20px 15px;
+padding:0;
+list-style:circle outside;	
+}
+
+dl dd {
+margin:0 0 5px 25px;
+}
+
+
+
+/**************************************************//* TABLES *//**************************************************/
+
+table {
+margin:20px 0 20px 0;
+font-size:14px;
+border:#474747 solid 1px;
+border-collapse:collapse;
+}
+
+table caption {
+padding:10px;
+font-size:18px;
+text-align:center;
+border:#474747 solid 1px;
+}
+
+table thead {
+font-weight:bold;
+background-color:#EDEDED;
+}
+
+table tfoot {
+background-color:#C9C9C9;	
+}
+
+table tr td {
+padding:10px;
+line-height:1.6;
+border:#474747 solid 1px;
+vertical-align:top;
+}
+
+
+
+/**************************************************//* OTHERS *//**************************************************/
+
+header {
+width:1000px;
+margin:30px auto 0 auto;
+background-color:#FFFFFF;
+overflow:auto;
+}
+
+header h1 {
+margin:20px 30px 20px 30px;
+display:block;
+overflow:auto;
+}
+
+#info {
+width:940px;
+margin:0 auto 0 auto;
+padding:20px 30px 20px 30px;
+background-color:#EDEDED;	
+border-top:#B3B3B3 solid 1px;
+border-bottom:#B3B3B3 solid 1px;
+overflow:auto;
+}
+
+#content {	
+width:940px;
+margin:0 auto 0 auto;
+padding:20px 30px 20px 30px;
+background-color:#FFFFFF;
+}
+
+footer {
+width:940px;
+margin:0 auto 50px auto;
+padding:20px 30px 20px 30px;
+font-size:20px;
+background-color:#EDEDED;	
+border-top:#B3B3B3 solid 1px;
+border-bottom:#B3B3B3 solid 1px;
+overflow:auto;
+}
+
+footer p {
+margin:0;
+float:left;
+}
+
+footer a {
+float:right;
+}
+
+#metadata {
+width:300px;
+margin:0;
+line-height:1.4;
+float:left;
+overflow:auto;
+}
+
+#metadata dt {
+width:100px;
+margin:0 0 1px 0;
+font-weight:bold;
+float:left;
+clear:left;
+}
+
+#metadata dd {
+width:200px;
+margin:0 0 1px 0;
+float:right;
+clear:right;
+}
+
+#reference {
+width:600px;
+margin:0;
+padding:0 0 0 10px;
+border-left:#474747 solid 5px;
+float:right;	
+}
+
+</style>
+</head>
+<body>
+
+
+<div id="top"></div>
+
+
+<header>
+
+<h1>The Tooltip Documentation</h1>
+
+<div id="info">
+
+<dl id="metadata">
+<dt>version</dt><dd>1.1</dd>
+<dt>author</dt><dd>DADU</dd>
+<dt>email</dt><dd><a href="mailto:support@dadu.be">support@dadu.be</a></dd>
+<dt>website</dt><dd><a href="thetooltip.dadu.be">thetooltip.dadu.be</a></dd>
+</dl>
+
+<p id="reference">Thank you for purchasing The Tooltip. If you have any questions that are beyond the scope of this documentation, please feel free to email via the DADU <a href="http://codecanyon.net/user/DADU/">user page contact form</a>. Thanks a lot!</p>
+
+</div>
+</header>
+
+
+<div id="content">
+
+<h2>Table of Contents</h2>
+
+<ol class="alpha">
+<li><a href="#getting_started">getting started</a></li>
+<li><a href="#wordpress_website">adding The Tooltip to a Wordpress website</a></li>
+<li><a href="#changing_default_width">changing the default width</a></li>
+<li><a href="#positioning">positioning</a></li>
+<li><a href="#speech_bubble">using The Tooltip as a speech bubble</a></li>
+<li><a href="#classname_overview">classname overview</a></li>
+</ol>
+
+<hr />
+
+
+
+<h2 id="getting_started">A) Getting started - <a href="#top">top</a></h2>
+
+<h3>Unzip &amp; place</h3>
+<ol>
+    <li>Unzip your downloaded <i>thetooltip.zip</i> file.</li>
+    <li>Place <i>thetooltip.css</i> in the directory of your website or project.</li>
+</ol>
+
+<h3>Link thetooltip.css to your HTML document</h3>
+<ol>
+    <li>
+    <p>Copy the following code:</p>
+    <pre>&lt;link rel="stylesheet" type="text/css" href="thetooltip.css" /&gt;</pre>
+    </li>
+    <li>
+    Paste it within the <i>&lt;head&gt;&lt;/head&gt;</i> tags of your HTML document.
+    </li>
+</ol>
+
+<h3>Creating a tooltip</h3>
+
+<p>It is really easy to create a tooltip:</p>
+
+<ol>
+    <li>
+    <p>Copy the following code:</p>
+    <pre>&lt;a href=""&gt;anchor&lt;span class="tooltip applegreen"&gt;The Tooltip works!&lt;/span&gt;&lt;/a&gt;</pre>
+    </li>
+    <li>
+    Paste it somewhere within the <i>&lt;body&gt;&lt;/body&gt;</i> tags of your HTML document.
+    </li>
+    <li>Change the <i>applegreen</i> classname to your desired color (choose one from the <a href="#classname_overview">classname overview</a>).</li>
+</ol>
+
+
+<h3>Creating a tooltip with an image inside</h3>
+
+<ol>
+    <li>
+    <p>Copy the following code:</p>
+    <pre>&lt;a href=""&gt;anchor&lt;span class="tooltip applegreen"&gt;&lt;img src="filename.jpg" alt="" /&gt;&lt;/span&gt;&lt;/a&gt;</pre>
+    </li>
+    <li>
+    Paste it somewhere within the <i>&lt;body&gt;&lt;/body&gt;</i> tags of your HTML document.
+    </li>
+    <li>Change the source of the image, <i>filename.jpg</i> to your image's path.</li>
+    <li>Make sure your image is smaller then the default width (300px) or <a href="#changing_default_width">change the default width</a> to match your image's width.<br />Alternatively, if you only want to use tooltips with images inside, you can <a href="#changing_default_width">change the default width</a> to <i>auto</i>.</li>
+</ol>
+
+<hr />
+
+
+
+<h2 id="wordpress_website">B) Adding The Tooltip to a Wordpress website - <a href="#top">top</a></h2>
+
+<p>To add The Tooltip to your Wordpress website, we will be working in your Wordpress theme's directory. By default this is located at <i>wordpress/wp-content/themes/themename/</i></p>
+
+<ol>
+	<li>Place <i>thetooltip.css</i> inside this directory.</li>
+	<li>Open <i>header.php</i></li>
+	<li>Add the following code between the <i>&lt;head&gt;&lt;/head&gt;</i> tags of this document:
+<pre>
+&lt;?php wp_enqueue_style('thetooltip',get_bloginfo('stylesheet_directory') . '/thetooltip.css'); ?&gt;
+</pre>
+	</li>
+	<li>Now we are ready to use The Tooltip.</li>
+	<li>Login to your Wordpress admin panel.</li>
+	<li>Open your post or page you want to add a tooltip to.</li>
+	<li>Make sure the <i>HTML</i> tab (next to the <i>Visual</i> tab) is activated in the text editor.</li>
+	<li>
+	<p>Copy the following code:</p>
+<pre>
+&lt;a href=""&gt;anchor&lt;span class="tooltip applegreen"&gt;The Tooltip works!&lt;/span&gt;&lt;/a&gt;
+</pre>
+	</li>
+	<li>Paste it in the text editor on the place you want a tooltip to appear.</li>
+</ol>
+
+
+
+<h2 id="positioning">C) Positioning - <a href="#top">top</a></h2>
+
+<p>The Tooltip can be positioned by adding one of the following classnames to it:</p>
+
+<ul>
+<li>left</li>
+<li>center</li>
+<li>right</li>
+</ul>
+
+<p>By default The Tooltip is positioned left. In this example we are adding the <i>center</i> classname:</p>
+
+<pre>&lt;a href=""&gt;anchor&lt;span class="tooltip center applegreen"&gt;This is a tooltip with center positioning&lt;/span&gt;&lt;/a&gt;</pre>
+
+<hr />
+
+
+
+<h2 id="changing_default_width">D) Changing the default width - <a href="#top">top</a></h2>
+
+<p>The Tooltip's default width is 300px. In this example, we are going to change the width from 300px to 500px:</p>
+
+<ol>
+<li>Open <i>thetooltip.css</i></li>
+<li>Locate <i>.tooltip</i></li>
+<li>Change <pre>width:300px;</pre> to <pre>width:500px;</pre></li>
+<li>Locate <i>.tooltip.center</i></li>
+<li>To ensure our tooltip centers when we would apply the <i>center</i> classname, we need to change margin-left too. Change <pre>margin-left:-165px;</pre> to <pre>margin-left:-265px;</pre>
+<p>Formula:</p>
+
+<pre>margin-left = - (width / 2) + padding</pre>
+
+<p>The Tooltip's<i>padding</i> is always 15. So in this example this comes down to:</p>
+
+<pre>-265 = - (500 / 2) + 15</pre>
+
+</li>
+<li>Save <i>thetooltip.css</i></li>
+</ol>
+
+<hr />
+
+
+
+<h2 id="speech_bubble">E) Using The Tooltip as a speech bubble - <a href="#top">top</a></h2>
+
+<p>What if you want to use The Tooltip as a speech bubble, so it would just be visible without the need to hover over an anchor element? It's simple. Just add the speechbubble classname to your tooltip. Example:</p>
+
+<pre>
+&lt;span class="tooltip speechbubble applegreen"&gt;This speech bubble is visible without a hover&lt;/span&gt;
+</pre>
+
+<p>Note that speech bubbles are not restricted to <i>span</i> elements. You could do the same with a <i>div</i> element and other block level elements.</p>
+
+<hr />
+
+
+
+<h2 id="classname_overview">F) Classname overview - <a href="#top">top</a></h2>
+
+<table>
+
+<thead>
+
+<tr>
+<td>classname</td>
+<td>function</td>
+<td>applies to</td>
+<td>example</td>
+</tr>
+
+</thead>
+
+
+<tbody>
+
+<tr>
+<td>tooltip</td>
+<td>Defines a tooltip. Use this in combination with one of the color classes.</td>
+<td>span</td>
+<td>&lt;span class="tooltip"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>left</td>
+<td>Positions a tooltip to the left, relative to it's parent anchor element. This is the default position for a tooltip.</td>
+<td>span</td>
+<td>&lt;span class="tooltip left"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>center</td>
+<td>Positions a tooltip in the center, relative to it's parent anchor element.</td>
+<td>span</td>
+<td>&lt;span class="tooltip center"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>right</td>
+<td>Positions a tooltip to the right, relative to it's parent anchor element.</td>
+<td>span</td>
+<td>&lt;span class="tooltip right"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>speechbubble</td>
+<td>Shows a tooltip as a speech bubble. A speech bubble is visible without the need to hover a parent anchor element.</td>
+<td>span</td>
+<td>&lt;span class="tooltip speechbubble"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>applegreen</td>
+<td>Applies the apple green color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip applegreen"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>bistre</td>
+<td>Applies the bistre color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip bistre"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>bronze</td>
+<td>Applies the bronze color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip bronze"&gt;&lt;/span&gt;;</td>
+</tr>
+
+<tr>
+<td>byzantium</td>
+<td>Applies the byzantium color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip byzantium"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>forestgreen</td>
+<td>Applies the forest green color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip forestgreen"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>lavendar</td>
+<td>Applies the lavendar color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip lavender"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>linen</td>
+<td>Applies the linen color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip linen"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>melon</td>
+<td>Applies the melon color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip melon"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>midnightblue</td>
+<td>Applies the midnight blue color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip midnightblue"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>mint</td>
+<td>Applies the mint color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip mint"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>mustard</td>
+<td>Applies the mustard color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip mustard"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>olivine</td>
+<td>Applies the olivine color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip olivine"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>pastelred</td>
+<td>Applies the pastel red color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip pastelred"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>rosewood</td>
+<td>Applies the rosewood color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip rosewood"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>silver</td>
+<td>Applies the silver color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip silver"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>skyblue</td>
+<td>Applies the sky blue color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip skyblue"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>slate</td>
+<td>Applies the slate color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip slate"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>sunset</td>
+<td>Applies the sunset color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip sunset"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>tangerine</td>
+<td>Applies the tangerine color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip tangerine"&gt;&lt;/span&gt;</td>
+</tr>
+
+<tr>
+<td>turquoise</td>
+<td>Applies the turquoise color scheme.</td>
+<td>span</td>
+<td>&lt;span class="tooltip turquoise"&gt;&lt;/span&gt;</td>
+</tr>
+
+</tbody>
+
+</table>
+
+<hr />
+
+
+</div>
+
+
+<footer>
+<p id="copyright">&copy; DADU</p>
+<a href="#top">top</a>
+</footer>
+
+
+</body>
+</html>

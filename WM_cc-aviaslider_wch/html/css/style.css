@@ -1,0 +1,257 @@
+/************************************************************************
+-) Slider: only the following lines are necceassary for slider styling,
+   rest of the css file styles the demo page
+*************************************************************************/
+.aviaslider{ 
+height:320px; 	/*this changes the height of the image slider*/
+width:640px;
+overflow: hidden;
+position: relative;
+background: #fff url(../images/layout/preload.gif) center center no-repeat;
+}
+
+.aviaslider li, .aviaslider .featured{
+display: block;
+width:100%;
+height:100%;
+position: absolute;
+top:0;
+left:0;
+z-index: 1;
+}
+
+.js_active .aviaslider li, .js_active .aviaslider .featured{
+display:none;
+}
+
+.aviaslider img, .aviaslider a img, .aviaslider a{
+border:none;
+text-decoration: none;
+}
+
+.slidecontrolls{
+margin:20px auto 0 auto;
+position: relative;
+float:left;
+}
+
+.slidecontrolls a{
+height:20px;
+width:18px;
+display:block;
+cursor: pointer;
+background: transparent url(../images/layout/controlls.gif) center bottom no-repeat;
+float:left;
+outline: none;
+}
+
+.slidecontrolls a:hover, .slidecontrolls .active_item{
+background: transparent url(../images/layout/controlls.gif) center top no-repeat;
+}
+
+.feature_excerpt{
+width:610px;
+position: absolute;
+display: block;
+bottom: 0;
+left:0;
+z-index: 2;
+padding:14px 15px;
+font-size: 11.5px;
+line-height:1.5em;
+cursor: pointer;
+background: #000;
+color: #fff;
+}
+
+.feature_excerpt strong{
+display: block;
+font-size: 15px;
+padding-bottom: 3px;
+}
+
+
+
+/************************************************************************
+-) DEMO PAGE STYLING
+*************************************************************************/
+
+/*Small reset*/
+body, ul, ol, h1,h2,h3,h4,h5,h6,form,li,p,input,select,legend,textarea{ margin:0; padding:0;}
+
+
+/************************************************************************
+-) BASIC CONTAINERS
+*************************************************************************/
+body{
+font-size:13px;
+font-family: Arial, Helevtica, Verdana, san-serif;
+line-height:23px;
+position:relative;
+background: url("../images/layout/bg.jpg") no-repeat scroll center 166px transparent;
+}
+
+.wrapper_fullwidth{ /*div for perfect centering of large scale background images*/
+width:100%;
+position:relative;
+z-index: 1;
+background: #000;
+height:40px;
+clear:both;
+font-size: 10px;
+color: #fff;
+}
+
+.center{ /*center content area */
+position: relative;
+margin:0 auto;
+width:640px;
+}
+
+
+#main{ /*main area, contains all content and sidebars*/
+float:left;
+position:relative;
+width:100%;
+padding-top:40px;
+float: left;
+padding-bottom:40px;
+}
+
+.content{
+position: relative;
+float:left;
+width:340px;
+overflow: hidden;
+}
+
+.fullwidth .content{
+width:100%;
+padding:0;
+margin:0;
+background: transparent none;
+}
+
+.sidebar{
+position: relative;
+width:300px;
+float:left;
+overflow: hidden;
+}
+
+.fullwidth .sidebar{
+display:none;
+}
+
+
+/************************************************************************
+-) HEAD
+*************************************************************************/
+
+.logo, .logo a{
+position: relative;
+margin:28px auto;
+width:283px;
+height:110px;
+text-indent: -9999px;
+}
+
+div .logo a{
+position: absolute;
+background: transparent url(../images/layout/logo.gif) top left no-repeat;
+z-index: 3;
+top:0;
+left:0;
+margin:0;
+outline: none;
+}
+
+.wrapper_fullwidth a{
+font-size: 10px;
+color: #fff;
+text-decoration: none;
+display: block;
+float:left;
+line-height: 40px;
+}
+
+.wrapper_fullwidth a:hover{
+color:#999;
+}
+
+.tw{background: transparent url(../images/layout/tw.gif) center left no-repeat; padding:0 0 0 25px; margin-right:20px;}
+.fb{background: transparent url(../images/layout/fb.gif) center left no-repeat; padding:0 0 0 25px;}
+.wrapper_fullwidth .kat{float:right; color:#777;}
+
+
+/************************************************************************
+-) CONTENT
+*************************************************************************/
+
+#main a img{
+border:none;
+}
+
+#main a:hover img{
+opacity:0.7;
+}
+
+.sidebar ul{
+list-style-position: outside;
+list-style-type: none;
+}
+
+#main h2, #main h3{
+display: block;
+width:310px;
+height:55px;
+text-indent: -9999px;
+}
+
+#heading_examples{
+background: transparent url(../images/layout/header_e.png) center left no-repeat;
+}
+
+#heading_features{
+background: transparent url(../images/layout/header_f.png) center left no-repeat;
+}
+
+#heading_browser{
+background: transparent url(../images/layout/header_bs.png) center left no-repeat;
+}
+
+#heading_docs{
+background: transparent url(../images/layout/header_dd.png) center left no-repeat;
+}
+
+.content{ 
+color:#666;
+}
+
+.content ul{
+padding-bottom:30px;
+}
+
+.content ul li{
+list-style-position: inside;
+}
+
+#download{
+display: block;
+width:290px;
+height:90px;
+background: transparent url(../images/layout/download.jpg) top left no-repeat;
+text-indent: -9999px;
+position: relative;
+left:-4px;
+outline: none;
+}
+
+#download:hover{
+background: transparent url(../images/layout/download.jpg) bottom left no-repeat;
+}
+#bottom{font-size: 11px; color:#aaa;}
+#bottom a{float:none; display:inline;}
+
+
+

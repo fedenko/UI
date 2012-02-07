@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accordion>
+
+	<panel captionWidth="200" captionHeight="35" captionTop="50" captionLeft="30">
+		<path>http://bqworks.com/products/grid-accordion/images/1.jpg</path>
+		<caption>This is just a simple caption.</caption>
+	</panel>
+	
+	<panel captionWidth="380" captionHeight="40" captionTop="300" captionLeft="30">
+		<path>http://bqworks.com/products/grid-accordion/images/2.jpg</path>
+		<caption><![CDATA[You can also add <b>HTML</b> elements like <a href="http://codecanyon.net">links</a> or <input type="button" value="Buttons"/>]]></caption>
+	</panel>
+	
+	<panel captionWidth="150" captionHeight="120" captionTop="270" captionLeft="600">
+		<path>http://bqworks.com/products/grid-accordion/images/3.jpg</path>
+		<caption><![CDATA[<u>Title</u><br/><br/>This is a list of items:<ul><li>first item</li><li>second item</li><li>third item</li></ul>]]></caption>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/4.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/5.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/6.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/7.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/8.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/9.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/10.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/11.jpg</path>
+	</panel>
+	
+	<panel>
+		<path>http://bqworks.com/products/grid-accordion/images/12.jpg</path>
+	</panel>
+	
+</accordion>

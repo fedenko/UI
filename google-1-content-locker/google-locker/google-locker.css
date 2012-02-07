@@ -1,0 +1,87 @@
+.google-locker.green{
+	background-color:#e0efe0;
+	border:1px solid #a8cfa8;
+	padding:15px 30px;
+	color:#000;
+	text-align:left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+.google-locker.red{
+	background-color:#efe0e0;
+	border:1px solid #cfa8a8;
+	padding:15px 30px;
+	color:#000;
+	text-align:left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+.google-locker.grey{
+	background-color:#EFEFEF;
+	border:1px solid #CFCFCF;
+	padding:15px 30px;
+	color:#000;
+	text-align:left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+.google-locker.blue{
+	background-color:#E0E5EF;
+	border:1px solid #A8B5CF;
+	padding:15px 30px;
+	color:#000;
+	text-align:left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+.google-locker.pink{
+	background-color: #F8E7F5;
+    border: 1px solid #DFB1DA;
+    color: #000000;
+    padding: 15px 30px;
+    text-align: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+.google-locker.yellow{
+	background-color: #fcfac5;
+    border: 1px solid #e1e569;
+    color: #000000;
+    padding: 15px 30px;
+    text-align: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+.google-locker.orange{
+	background-color: #fcdec5;
+    border: 1px solid #e59269;
+    color: #000000;
+    padding: 15px 30px;
+    text-align: left;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	margin:0 0 7px 0;
+}
+
+#google-locker-msg{
+	margin:0 0 10px 0;
+}

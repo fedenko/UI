@@ -1,0 +1,169 @@
+<!--check this example online http://dynamicstepprocesspanelswordpress.quanticalabs.com-->
+<!--Inline javascript plugin has been used in some examples - http://wordpress.org/extend/plugins/inline-javascript/-->
+[inline][/inline]
+<!--example 1-->
+[dspp_old id='processPanelFromGrayButton' icons='false' style='maroon-gray' kind='freeChoice']
+<a class="button_gray buttonPopup" href="#processPanelFromGrayButton-popup"></a><a class="button_green buttonPopup" href="#processPanelFromGreenButton-popup"></a><a class="button_blue buttonPopup" href="#processPanelFromBlueButton-popup"></a><a class="button_maroon buttonPopup" href="#processPanelFromMaroonButton-popup"></a><a class="button_orange buttonPopup" href="#processPanelFromOrangeButton-popup"></a>
+[dspp_panel id="processPanelFromGrayButton" class="panel popup"]
+	[dspp_step class="p4Step1" href="#p4content1"]Description[/dspp_step]
+	[dspp_step class="p4Step2" href="#p4content2"]Implementation[/dspp_step]
+	[dspp_step class="p4Step3" href="#p4content3"]Step three[/dspp_step]
+	[dspp_step class="p4Step4" href="#p4content4"]Step four[/dspp_step]
+	[dspp_step class="p4Step5" href="#p4content5"]Step five[/dspp_step]
+	[dspp_content id="p4content1"]
+		<div class="title">Step one - description</div>
+		This example show Dynamic Step Process Panels displayed as a popup. To close popup just click somewhere outside it.
+		<br /><br />
+		Features:<br />
+		- displayed as a popup,<br />
+		- 5 steps,<br />
+		- diffrent steps width,<br />
+		- free choice mode,<br />
+		- first step selected,<br />
+		- every step can be choosed again,<br />
+		- fade effect speed 1 second,<br />
+		- style maroon-gray,<br />
+		- previous and next buttons
+	[/dspp_content]
+	[dspp_content id="p4content2"]
+		<div class="title">Step two - Implementation</div>
+		Available after purchase
+		[/dspp_content] [dspp_content  id="p4content3"]
+		<div class="title">Step three</div>
+		Some content for step three
+		[/dspp_content] [dspp_content id="p4content4" style="text-align: center;"]
+		<div class="title">Step four</div>
+		Some content for step four
+		[/dspp_content] [dspp_content  id="p4content5" style="text-align: center;"]
+		<div class="title">Step five</div>
+		Some content for step five
+	[/dspp_content]
+[/dspp_panel]
+
+<!--example 2-->
+[dspp_old id='processPanelFromGreenButton' style='green-orange' nextButtonTitle='show next' prevButtonTitle='show previous']
+[dspp_panel class="panel popup" id="processPanelFromGreenButton"]
+	[dspp_step label="1" href="step1Content.html#p5content1" class="p5Step1"]Description[/dspp_step]
+	[dspp_step label="2" href="step2Content.html#p5content2" class="p5Step2"]Implementation[/dspp_step]
+	[dspp_step label="3" href="#p5content3" class="p5Step3"]Step three[/dspp_step]
+	[dspp_content id="p5content1"] [/dspp_content]
+	[dspp_content id="p5content2"] [/dspp_content]
+	[dspp_content id="p5content3"]
+		<div class="title">Step three</div>
+		Static content<br />
+		<div style="text-align: center;">
+		Some content for step three<br />
+		<img src="img/live_preview_img/quantica.jpg" />
+		</div>
+	[/dspp_content]
+[/dspp_panel]
+
+<!--example 3 (html example)-->
+[dspp_old id='processPanelFromBlueButton' style='blue-orange' chooseAgain='false' fadeSpeed='0']
+<div class="panel popup" id="processPanelFromBlueButton">
+	<a href="#p6content1" label="1" class="p6Step1">
+		Description
+	</a>
+	<a href="#p6content2" label="2" class="p6Step2">
+		Implementation
+	</a>
+	<a href="#p6content3" label="3" class="p6Step3">
+		Step three
+	</a>
+	<a href="#p6content4" label="4" class="p6Step4">
+		Step four
+	</a>
+	<div id="p6content1">
+		<div class="title">Step one - description</div>
+			This example show Dynamic Step Process Panels with option that disallow to choose the same step two times.<br /><br />
+			Features:<br />
+			- displayed as a popup, <br />
+			- 4 steps, <br />
+			- step-by-step mode,<br />
+			- steps can't be choosed again,<br />
+			- first step selected,<br />
+			- fade effect disabled,<br />
+			- style blue-orange,<br />
+			- previous and next buttons,<br />
+			- step labels<br />
+	</div>
+	<div id="p6content2">
+		<div class="title">Step two - implementation</div>
+		Available after purchase
+	</div>
+	<div id="p6content3" style="text-align: center;">
+		<div class="title">Step three</div>
+		Some content for step three<br />
+		<img src="img/live_preview_img/quantica.jpg" />
+	</div>
+	<div id="p6content4" style="text-align: center;">
+		<div class="title">Step four</div>
+		Some content for step four<br />
+		<img src="img/live_preview_img/quantica.jpg" />
+	</div>
+</div>
+
+<!--example 4 (html example)-->
+[dspp_old id='processPanelFromMaroonButton' kind='freeChoice' style='maroon-green' nextPrevButtonsPosition='top']
+<div class="panel popup" id="processPanelFromMaroonButton">
+	<div id="p7content1">
+		<div class="title">Step one - description</div>
+			Just another example.<br /><br />
+			Features:<br />
+			- displayed as a popup, <br />
+			- 2 steps, <br />
+			- free choice mode,<br />
+			- first step selected,<br />
+			- fade effect speed 1 second,<br />
+			- previous and next buttons,<br />
+			- previous and next buttons placed on the top,<br />
+			- style maroon-green,<br />
+			- step labels<br />
+	</div>
+	<div id="p7content2">
+		<div class="title">Step two - implementation</div>
+		Available after purchase
+	</div>
+	<a href="#p7content1" label="1" class="p7Step1">
+		Description
+	</a>
+	<a href="#p7content2" label="2" class="p7Step2">
+		Implementation
+	</a>
+</div>
+
+<!--example 5 (html example)-->
+[dspp_old id='processPanelFromOrangeButton' kind='freeChoice' style='orange-blue' nextPrevButtons='false' chooseAgain='false']
+<div class="panel popup" id="processPanelFromOrangeButton">
+	<a href="#p8content1" label="1" class="p8Step1">
+		Description
+	</a>
+	<a href="#p8content2" label="2" class="p8Step2">
+		Implementation
+	</a>
+	<a href="#p8content3" label="3" class="p8Step3">
+		Step three
+	</a>
+	<div id="p8content1">
+		<div class="title">Step one - description</div>
+			Just another example.<br /><br />
+			Features:<br />
+			- displayed as a popup, <br />
+			- 3 steps, <br />
+			- free choice mode,<br />
+			- first step selected,<br />
+			- steps can't be choosed again,<br />
+			- fade effect speed 1 second,<br />
+			- style orange-blue,<br />
+			- step labels<br />
+	</div>
+	<div id="p8content2">
+		<div class="title">Step two - implementation</div>
+		Available after purchase
+	</div>
+	<div id="p8content3" style="text-align: center;">
+		<div class="title">Step three</div>
+		Some content for step three<br />
+		<img src="img/live_preview_img/quantica.jpg" />
+	</div>
+</div>

@@ -1,0 +1,30 @@
+#map-container {margin-left:auto;margin-right:auto;width:70%;height:auto;min-height:400px;z-index:1;position:relative;padding-bottom:50px;}
+#contentmap {min-height:560px;position:relative;width:100%;height:auto;margin:auto; padding-top: 35px;}
+#map {border-bottom:1px solid silver;border-left:1px solid silver;border-top:1px solid silver;float:left;height:500px;margin-left:4px;width:59%; }
+#route {border:1px solid silver;float:right;min-height:560px;overflow-y:auto;width:40%; }
+#end {color:grey;background:#F5F5F5;border:1px solid #DDD;box-shadow:0 0 2px grey; }
+
+table {border-collapse:collapse;width:100%; }
+th,td {vertical-align:middle; }
+td {text-align:center;vertical-align:middle;font-size:12px; padding: 5px;}
+textarea {border:1px solid #DDD; }
+input:focus,textarea:focus,select:focus {-webkit-box-shadow:0 0 5px #64ffa9;-moz-box-shadow:0 0 5px #64ffa9;box-shadow:0 0 5px #64ffa9; }
+caption {font-weight:700; }
+tr {border-radius: 20px;}
+label {font-weight: bold;text-shadow: 0px 1px 0px white;color: rgba(115, 50, 115, 1);}
+
+.40 {width:40%;}
+.90 {width:90%}
+.iti {box-shadow: inset 0px -1px 0px rgba(115,115,115,.5),inset 0px 1px 10px rgba(115,115,115,.5),  0px 0px 5px rgba(55,20,55,.1);border-radius: 5px;background: #efefef;margin-bottom: 5px;padding: 5px;overflow: hidden;}
+.get {background: #F2F2F2;border:1px solid #DDD;box-shadow:0 0 6px #DEDEDE;color:#595959;display:block;outline:medium none;text-align:center;text-shadow:0 1px 0 #FFF;width:90%;-webkit-transition:.3s ease-in-out;-moz-transition:.3s ease-in-out;-webkit-box-align:center;-moz-box-align:center;margin:5px auto;padding:6px; }
+.get:hover {-webkit-transition:.3s ease-in-out;-moz-transition:.3s ease-in-out;background: #4A4A4A;font-weight:700;color:#FFF;text-shadow:0 1px 0 #595959;cursor:pointer; }
+.1{box-shadow: inset 0px 25px 25px rgba(50,50,50,.05), 2px -2px 6px #888;}
+.1-1{text-shadow: 0px -1px 0px white;}
+.2{box-shadow: inset 0px 25px 25px rgba(50,50,50,.05), -2px -2px 6px #888;}
+.3{box-shadow: inset 0px -25px 25px rgba(50,50,50,.1),2px 5px 6px #888;}
+.4{box-shadow: inset 0px -25px 25px rgba(50,50,50,.1),-2px 5px 6px #888;}
+
+.clearfix:after {clear: both;content: ' ';display: block;font-size: 0;line-height: 0;visibility: hidden;width: 0;height: 0;}
+.clearfix {display: inline-block;}
+* html .clearfix {height: 1%;}
+.clearfix {display: block;position:relative;}

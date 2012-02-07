@@ -1,0 +1,26 @@
+<link href="../css/documentation.css" rel="stylesheet" type="text/css" />
+<p>This is how you bind the Plugin to one DIV. Please use the (window).load: </p>
+<p class="xmlexample">&lt;!--<br />
+##############################<br />
+- ACTIVATE THE BANNER HERE -<br />
+##############################<br />
+--&gt;<br />
+&lt;script type=&quot;text/javascript&quot;&gt;<br />
+<br />
+$(window).load(function() {<br />
+$.noConflict(); <br />
+jQuery('#world').fhparallax({<br />
+editor:'off',<br />
+path:'parallax/js/ZeroClipboard.swf',<br />
+automatic:1000,<br />
+mobile_auto_start:&quot;yes&quot;<br />
+}) <br />
+});<br />
+&lt;/script&gt;</p><br>
+<p>You can set the following starting parameter:</p>
+<ul>
+  <li><span class="value">editor</span> (on,off) - If on starts the editor.</li>
+  <li><span class="value">path</span> (path to Clipboard helper) - The editor needs a helper flash file. This here is the path to this file. You do not need to change this if you use the original installation folders.</li>
+  <li><span class="value">automatic</span> - Set the time untill the World starts to move automatically if no mouseover has happened in milliseconds. 0 means no automatic movement.</li>
+  <li><span class="value">mobile_auto_start </span>(yes/no) - Since there is no mouseover with the Touchdevices you can set this parameter to yes to give the mobile devices the <strong>freshD</strong> feeling. It starts the automatic movement immidiately and has nothing to do with the other &quot;automatic&quot; parameter.</li>
+</ul>

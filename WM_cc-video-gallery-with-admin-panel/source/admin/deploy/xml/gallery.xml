@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+<settings>
+<totalWidth>915</totalWidth>
+<totalHeight>360</totalHeight>
+<autoplay>on</autoplay>
+<autoplayNextVideo>on</autoplayNextVideo>
+<thumb></thumb>
+
+<menuPosition>right</menuPosition>
+<scrollbar>off</scrollbar>
+
+<youtubeFeed>off</youtubeFeed>
+<youtubeFeed_user>digitalzoomstudio</youtubeFeed_user>
+<youtubeFeed_keywords></youtubeFeed_keywords>
+<youtubeFeed_playlistId></youtubeFeed_playlistId>
+<youtubeFeed_maxResults>40</youtubeFeed_maxResults>
+
+<suggestedQuality>hd720</suggestedQuality>
+
+<cueFirstVideo>on</cueFirstVideo><!--choose whether or not the first video should preload or not-->
+
+<shareButton>off</shareButton>
+<shareButtonWidth>32</shareButtonWidth>
+<shareButtonHeight>32</shareButtonHeight>
+
+<embedButton>off</embedButton>
+
+<logo>img/videologo.png</logo>
+<logoAlpha>0.7</logoAlpha>
+<logoLink>http://activeden.net/user/ZoomIt</logoLink>
+
+<streamServer>rtmp://flv.alkalema.tv/live/</streamServer>
+
+<!--rtmp://67.222.27.14/herbs360_vw-->
+
+
+<htmlEmbedCode><![CDATA[<<object width="640" height="385"><param name="movie" value="http://digitalzoomstudio.net/misc/videogallery/preview.swf"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><param name="base" value="http://digitalzoomstudio.net/misc/videogallery/"></param><embed src="http://digitalzoomstudio.net/misc/videogallery/preview.swf" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="640" height="385" base="http://digitalzoomstudio.net/misc/videogallery/"></embed></object>]]></htmlEmbedCode>
+<keep_logo_on_fullscreen>on</keep_logo_on_fullscreen>
+<shuffleOnStart>off</shuffleOnStart>
+<deeplinking>off</deeplinking>
+</settings>
+<item>
+<source>15872839</source>
+<thumb>http://b.vimeocdn.com/ts/963/523/96352302_100.jpg</thumb>
+<title>AeriCam VPX-GPS Stabilized  --For Pro Aerial Photography</title>
+<description><![CDATA[]]></description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>15852566</source>
+<thumb>http://b.vimeocdn.com/ts/961/719/96171951_100.jpg</thumb>
+<title>RC HeliCam--AeriCam 3 axis with Canon t2i-Raw, no stabilization</title>
+<description><![CDATA[]]></description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>15758616</source>
+<thumb>http://b.vimeocdn.com/ts/954/604/95460450_100.jpg</thumb>
+<title>AeriCam VPX-- RC HeliCam</title>
+<description><![CDATA[]]></description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>11157984</source>
+<thumb>http://b.vimeocdn.com/ts/605/337/60533790_100.jpg</thumb>
+<title>Aericam VPX Flying at Yankee Stadium</title>
+<description><![CDATA[Our customer flying the very first AeriCam VPX at Yankee Stadium for a high profile commercial with a 8.5lb SI-2k Mini camera.  Thus, he have successfully flown with the Sony EX1, Panasonic HPX 170 and the SI-2k Mini with very positive flying balance.<br />
+<br />
+Find out more about the AeriCam VPX at our AeriCam webisite. ]]></description>
+<menuDescription>Our customer flying the very first AeriCam VPX at Yankee Stadium for a high profile commercial with a 8.5lb SI-2k Mini camera.  Thus, he have successfully flown with the Sony EX1, Panasonic HPX 170 and the SI-2k Mini with very positive flying balance.<br />
+<br />
+Find out more about the AeriCam VPX at our AeriCam webisite. </menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>10317950</source>
+<thumb>http://b.vimeocdn.com/ts/536/802/53680211_100.jpg</thumb>
+<title>RC HeliCam Aerial Photography</title>
+<description><![CDATA[Flying over Pacifica California and San Francisco.]]></description>
+<menuDescription>Flying over Pacifica California and San Francisco.</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>9883432</source>
+<thumb>http://b.vimeocdn.com/ts/501/904/50190485_100.jpg</thumb>
+<title>Aerial Photography with helicam--Pacifica, San Francisco</title>
+<description><![CDATA[Costal shots of Rockaway beach in Pacifica and San Francisco.]]></description>
+<menuDescription>Costal shots of Rockaway beach in Pacifica and San Francisco.</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>9022259</source>
+<thumb>http://b.vimeocdn.com/ts/436/234/43623440_100.jpg</thumb>
+<title>AeriCam-Golf Course Aerial Photography</title>
+<description><![CDATA[Flying over a Golf Course on 86th st Brooklyn]]></description>
+<menuDescription>Flying over a Golf Course on 86th st Brooklyn</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>8842980</source>
+<thumb>http://b.vimeocdn.com/ts/422/877/42287705_100.jpg</thumb>
+<title>AeriCam Flight Demo</title>
+<description><![CDATA[Shot aerial video shots with AeriCam]]></description>
+<menuDescription>Shot aerial video shots with AeriCam</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>8326414</source>
+<thumb>http://b.vimeocdn.com/ts/385/153/38515356_100.jpg</thumb>
+<title>Aericam Flight Demo</title>
+<description><![CDATA[Flight demo for Pan, Tilt, Roll setup and Roll and tilt setup of Aericam.]]></description>
+<menuDescription>Flight demo for Pan, Tilt, Roll setup and Roll and tilt setup of Aericam.</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>8285711</source>
+<thumb>http://b.vimeocdn.com/ts/382/215/38221554_100.jpg</thumb>
+<title>3 Axis Gyro Stabilize Camera Mount---AeriCam</title>
+<description><![CDATA[Light weight 3 axis gyro stabilized camera mount remotely controlled, designed for RC Helicopter for aerial photography.  Also for applications such as RC Blimp Aerial Photography, Jibs, car mounts, Cable Cam and much more.]]></description>
+<menuDescription>Light weight 3 axis gyro stabilized camera mount remotely controlled, designed for RC Helicopter for aerial photography.  Also for applications such as RC Blimp Aerial Photography, Jibs, car mounts, Cable Cam and much more.</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>3784241</source>
+<thumb>http://b.vimeocdn.com/ts/571/992/5719921_100.jpg</thumb>
+<title>New York Aerial Photography - Coney Island</title>
+<description><![CDATA[Aerial View of New York City's Famous Coney Island.  Since it's will be replace by new developments, it's the last change to get some aerial video of the place.]]></description>
+<menuDescription>Aerial View of New York City's Famous Coney Island.  Since it's will be replace by new developments, it's the last change to get some aerial video of the place.</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>3344755</source>
+<thumb>http://b.vimeocdn.com/ts/231/788/2317887_100.jpg</thumb>
+<title>Aerial Photography San Francisco</title>
+<description><![CDATA[Aerial video of water and Beaches in various place around San Francisco.  Also shot with a custom built RC Helicopter, more at SkyShutter.com.]]></description>
+<menuDescription>Aerial video of water and Beaches in various place around San Francisco.  Also shot with a custom built RC Helicopter, more at SkyShutter.com.</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>3273324</source>
+<thumb>http://b.vimeocdn.com/ts/162/153/1621537_100.jpg</thumb>
+<title>Aerial video - San Francisco</title>
+<description><![CDATA[Aerial Video of different places in San Francisco shot with a Custom Built RC Helicopter Cam. By SkyShutter.com]]></description>
+<menuDescription>Aerial Video of different places in San Francisco shot with a Custom Built RC Helicopter Cam. By SkyShutter.com</menuDescription>
+<type>vimeo</type>
+</item>
+
+<item>
+<source>1796803</source>
+<thumb>http://b.vimeocdn.com/ts/630/200/63020008_100.jpg</thumb>
+<title>Aerial Photography New York </title>
+<description><![CDATA[]]></description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+</item>
+</content>

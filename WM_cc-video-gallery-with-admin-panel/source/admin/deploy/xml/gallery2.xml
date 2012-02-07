@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<content>
+<settings>
+<totalWidth>640</totalWidth>
+<totalHeight>460</totalHeight>
+<autoplay>on</autoplay>
+<autoplayNextVideo>onf</autoplayNextVideo>
+<thumb>img/placeholder.jpg</thumb>
+
+<menuPosition>down</menuPosition>
+<scrollbar>onf</scrollbar>
+
+<youtubeFeed>on</youtubeFeed>
+<youtubeFeed_user>hollywoodstreams</youtubeFeed_user>
+<youtubeFeed_keywords></youtubeFeed_keywords>
+<youtubeFeed_playlistId></youtubeFeed_playlistId>
+<youtubeFeed_maxResults>20</youtubeFeed_maxResults>
+
+<suggestedQuality>hd720</suggestedQuality>
+
+<cueFirstVideo>onf</cueFirstVideo><!--choose whether or not the first video should preload or not-->
+
+<shareButton>onf</shareButton>
+<shareButtonWidth>32</shareButtonWidth>
+<shareButtonHeight>32</shareButtonHeight>
+
+<embedButton>onf</embedButton>
+
+<logo></logo>
+<logoAlpha>0.7</logoAlpha>
+<logoLink>http://activeden.net/user/ZoomIt</logoLink>
+
+<streamServer>rtmp://yourserver.com</streamServer>
+
+
+
+
+<htmlEmbedCode><![CDATA[<object classid='clsid:D27CDB6E-AE6D-11cf-96B8-444553540000' width='800' height='330'>        <param name='movie' value='http://zoomslider.net/ygalleryone/preview.swf' />
+        <!--[if !IE]>--><object type='application/x-shockwave-flash' data='http://zoomslider.net/ygalleryone/preview.swf' width='800' height='330' base='http://zoomslider.net/ygalleryone/'>
+        <!--<![endif]-->
+          <p>Alternative content</p>
+        <!--[if !IE]>-->
+        </object>
+        <!--<![endif]-->
+      </object>
+	  ]]></htmlEmbedCode>
+	  
+<fadeOnLeave>on</fadeOnLeave>
+</settings>
+
+
+
+<!--set <youtubeFeed> to on if you want to use this-->
+<feed>
+<user></user>
+<keywords></keywords>
+
+<playlistId>ADC18FE37410D250</playlistId>
+<maxResults>20</maxResults>
+</feed>
+<!--*************************************************-->
+
+<!--you have no use for this if <shareButton> is off-->
+<socialItem icon='icons/1.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/2.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/3.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/4.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/5.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/6.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/7.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/8.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+<socialItem icon='icons/9.png' link='http://activeden.net/user/ZoomIt' tooltip='Share via Facebook'></socialItem>
+
+
+
+
+
+
+<item>
+<source>video/pages.flv</source>
+<thumb>thumbs/slides.jpg</thumb>
+<title>Slides Video</title>
+<description><![CDATA[<font size="20">cev</font><br></br>ceva aceva ceva ceva]]></description>
+<menuDescription>Something</menuDescription>
+<type>video</type>
+</item>
+
+<item>
+<source>qas5lWp7_R0</source>
+<title>Up 3D Trailer</title>
+<description><![CDATA[The only gallery which lets you combine your videos with YouTube Videos.]]></description>
+<menuDescription><![CDATA[Up trailer]]></menuDescription>
+<type>youtube</type>
+</item>
+
+
+<item>
+<source>video/thunder.flv</source>
+<thumb>thumbs/urban.jpg</thumb>
+<thumb>thumbs/chain.jpg</thumb>
+<title>Urban Video</title>
+<description>You can have multiple thumbs showcasing your video.</description>
+<menuDescription></menuDescription>
+<type>video</type>
+
+</item>
+
+<item>
+<source>2</source>
+<thumb>thumbs/urban.jpg</thumb>
+<thumb>thumbs/chain.jpg</thumb>
+<title>Urban Video</title>
+<description>You can have multiple thumbs showcasing your video.</description>
+<menuDescription></menuDescription>
+<type>vimeo</type>
+
+</item>
+
+
+
+
+
+</content>

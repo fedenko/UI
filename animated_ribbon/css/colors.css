@@ -1,0 +1,309 @@
+/************************Black ******************************/
+
+.black{
+    background: #2A2E31;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2a2e31), to(#000));
+    background-image: -moz-linear-gradient(top , #2a2e31, #000);
+    background-image: linear-gradient(top , #2a2e31, #000);
+    background-image: -o-linear-gradient(top , #2a2e31, #000);
+    background-image: -ms-linear-gradient(top , #2a2e31, #000);
+    color:white;
+    text-shadow:1px 1px #323232;
+
+    -pie-background: linear-gradient(#2a2e31, #000);
+    behavior: url(PIE/PIE.html);
+}
+/************************ Red ******************************/
+.red h1,.red .form_button{
+    background: #d20f0a;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d20f0a), to(#960505));
+    background-image: -moz-linear-gradient(top , #d20f0a, #960505);
+    background-image: linear-gradient(top , #d20f0a, #960505);
+    background-image: -o-linear-gradient(top , #d20f0a, #960505);
+    background-image: -ms-linear-gradient(top , #d20f0a, #960505);
+    color:white;
+    text-shadow:1px 1px #323232;
+
+    -pie-background: linear-gradient(#d20f0a, #960505);
+    behavior: url(PIE/PIE.html);
+}
+
+.red .arrow-left{
+    border-color: #8b0505 #8b0505 #8b0505 transparent;
+}
+
+.red .arrow-left-top{
+    border-color: #360000 #360000 transparent transparent;
+}
+.red .arrow-right-top{
+    border-color: #360000 transparent transparent #360000;
+}
+
+.red .arrow-right{
+    border-color:   #8b0505  transparent #8b0505 #8b0505;
+}
+
+.red .arrow-right-bottom{
+    border-color: transparent transparent #360000 #360000;
+}
+
+.red .arrow-left-bottom{
+    border-color:transparent #360000 #360000 transparent;
+}
+
+/************************Orange******************************/
+
+.orange h1,.orange .form_button{
+    background: #fbc357;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fbc357), to(#ea8615));
+    background-image: -moz-linear-gradient(top , #fbc357, #ea8615);
+    background-image: linear-gradient(top , #fbc357, #ea8615);
+    background-image: -o-linear-gradient(top , #fbc357, #ea8615);
+    background-image: -ms-linear-gradient(top , #fbc357, #ea8615);
+    color:white;
+    text-shadow:1px 1px #323232;
+    -pie-background: linear-gradient(#fbc357, #ea8615);
+    behavior: url(PIE/PIE.html);
+}
+.orange .arrow-left{
+    border-color: #f29e2b #f29e2b #f29e2b transparent;
+}
+
+.orange .arrow-left-top{
+    border-color: #804501 #804501 transparent transparent;
+}
+
+.orange .arrow-left-bottom{
+    border-color:transparent  #804501 #804501 transparent  ;
+}
+
+.orange .arrow-right{
+    border-color:   #f29e2b  transparent #f29e2b #f29e2b;
+}
+
+.orange .arrow-right-top{
+    border-color: #804501 transparent transparent #804501;
+}
+.orange .arrow-right-bottom{
+    border-color:  transparent transparent #804501 #804501;
+}
+
+/************************Blue******************************/
+.blue h1,.blue .form_button{
+    /*Background Settings*/
+    background: #519bf7;
+    background-image: -webkit-gradient(linear, left top, left bottom,
+        color-stop(0, #519bf7),
+        to(#2068e3));
+    background-image: -moz-linear-gradient(top , #519bf7, #2068e3);
+    background-image: linear-gradient(top , #519bf7, #2068e3);
+    background-image: -o-linear-gradient(top , #519bf7, #2068e3);
+    background-image: -ms-linear-gradient(top , #519bf7, #2068e3);
+    color:white;
+    text-shadow:1px 1px #323232;
+    -pie-background: linear-gradient(#519bf7, #2068e3);
+    behavior: url(PIE/PIE.html);
+}
+.blue .arrow-left{
+    border-color: #4089f0 #4089f0 #4089f0 transparent;
+}
+
+.blue .arrow-left-top{
+    border-color: #0e387f #0e387f transparent transparent;
+}
+.blue .arrow-left-bottom{
+    border-color: transparent #0e387f #0e387f transparent ;
+}
+
+.blue .arrow-right{
+    border-color:   #4089f0  transparent #4089f0 #4089f0;
+}
+
+.blue .arrow-right-top{
+    border-color: #0e387f transparent transparent #0e387f;
+}
+.blue .arrow-right-bottom{
+    border-color:  transparent transparent #0e387f #0e387f;
+}
+
+/************************Yellow******************************/
+.yellow h1,.yellow .form_button{
+    background: #fce94f;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fce94f), to(#c4a000));
+    background-image: -moz-linear-gradient(top , #fce94f, #c4a000);
+    background-image: linear-gradient(top , #fce94f, #c4a000);
+    background-image: -o-linear-gradient(top , #fce94f, #c4a000);
+    background-image: -ms-linear-gradient(top , #fce94f, #c4a000);
+    color:white;
+    text-shadow:1px 1px #323232;
+    -pie-background: linear-gradient(#fce94f, #c4a000);
+    behavior: url(PIE/PIE.html);
+}
+.yellow .arrow-left{
+    border-color: #f3dc10 #f3dc10 #f3dc10 transparent;
+}
+
+.yellow .arrow-left-top{
+    border-color: #645200 #645200 transparent transparent;
+}
+.yellow .arrow-left-bottom{
+    border-color:transparent #645200 #645200 transparent ;
+}
+
+.yellow .arrow-right{
+    border-color:   #f3dc10  transparent #f3dc10 #f3dc10;
+}
+
+.yellow .arrow-right-top{
+    border-color: #645200 transparent transparent #645200;
+}
+
+.yellow .arrow-right-bottom{
+    border-color:  transparent transparent #645200 #645200;
+}
+
+/************************Violet******************************/
+.violet h1,.violet .form_button{
+    background: #c8b1d7;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c8b1d7), to(#7a6189));
+    background-image: -moz-linear-gradient(top , #c8b1d7, #7a6189);
+    background-image: linear-gradient(top , #c8b1d7, #7a6189);
+    background-image: -o-linear-gradient(top , #c8b1d7, #7a6189);
+    background-image: -ms-linear-gradient(top , #c8b1d7, #7a6189);
+    color:white;
+    text-shadow:1px 1px #323232;
+
+    -pie-background: linear-gradient(#c8b1d7, #7a6189);
+    behavior: url(PIE/PIE.html);
+}
+
+.violet .arrow-left{
+    border-color: #b08ec6 #b08ec6 #b08ec6 transparent;
+}
+
+.violet .arrow-left-top{
+    border-color: #470869 #470869 transparent transparent;
+}
+
+.violet .arrow-left-bottom{
+    border-color:transparent #470869 #470869 transparent ;
+}
+
+.violet .arrow-right{
+    border-color:   #b08ec6  transparent #b08ec6 #b08ec6;
+}
+
+.violet .arrow-right-top{
+    border-color: #470869 transparent transparent #470869;
+}
+.violet .arrow-right-bottom{
+    border-color:  transparent transparent #470869 #470869;
+}
+/************************Green******************************/
+.green h1,.green .form_button{
+    background: #8ae234;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8ae234), to(#4e9a06));
+    background-image: -moz-linear-gradient(top , #8ae234, #4e9a06);
+    background-image: linear-gradient(top , #8ae234, #4e9a06);
+    background-image: -o-linear-gradient(top , #8ae234, #4e9a06);
+    background-image: -ms-linear-gradient(top , #8ae234, #4e9a06);
+    color:white;
+    text-shadow:1px 1px #323232;
+    -pie-background: linear-gradient(#8ae234, #4e9a06);
+    behavior: url(PIE/PIE.html);
+}
+.green .arrow-left{
+    border-color: #68c210 #68c210 #68c210 transparent;
+}
+
+.green .arrow-left-top{
+    border-color: #336502 #336502 transparent transparent;
+}
+.green .arrow-left-bottom{
+    border-color:transparent #336502 #336502 transparent ;
+}
+
+.green .arrow-right{
+    border-color:   #68c210  transparent #68c210 #68c210;
+}
+
+.green .arrow-right-top{
+    border-color: #336502 transparent transparent #336502;
+}
+.green .arrow-right-bottom{
+    border-color:  transparent transparent #336502 #336502;
+}
+
+/************************Pink******************************/
+.pink h1,.pink .form_button{
+    background: #ff89c8;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff89c8), to(#e10178));
+    background-image: -moz-linear-gradient(top , #ff89c8, #e10178);
+    background-image: linear-gradient(top , #ff89c8, #e10178);
+    background-image: -o-linear-gradient(top , #ff89c8, #e10178);
+    background-image: -ms-linear-gradient(top , #ff89c8, #e10178);
+    color:white;
+    text-shadow:1px 1px #323232;
+    -pie-background: linear-gradient(#ff89c8, #e10178);
+    behavior: url(PIE/PIE.html);
+}
+.pink .arrow-left{
+    border-color: #c3578f #c3578f #c3578f transparent;
+}
+
+.pink .arrow-left-top{
+    border-color: #53002c #53002c transparent transparent;
+}
+.pink .arrow-left-bottom{
+    border-color: transparent #53002c #53002c transparent ;
+}
+
+.pink .arrow-right{
+    border-color:   #c3578f  transparent #c3578f #c3578f;
+}
+
+.pink .arrow-right-top{
+    border-color: #53002c transparent transparent #53002c;
+}
+
+.pink .arrow-right-bottom{
+    border-color:  transparent transparent #53002c #53002c;
+}
+
+
+/************************Beige******************************/
+.beige h1,.beige .form_button{
+    background: #c9c195;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c9c195), to(#847d55));
+    background-image: -moz-linear-gradient(top , #c9c195, #847d55);
+    background-image: linear-gradient(top , #c9c195, #847d55);
+    background-image: -o-linear-gradient(top , #c9c195, #847d55);
+    background-image: -ms-linear-gradient(top , #c9c195, #847d55);
+    color:white;
+    text-shadow:1px 1px #323232;
+    -pie-background: linear-gradient(#c9c195, #847d55);
+    behavior: url(PIE/PIE.html);
+}
+.beige .arrow-left{
+    border-color: #c4bb8d #c4bb8d #c4bb8d transparent;
+}
+
+.beige .arrow-left-top{
+    border-color: #4f4822 #4f4822 transparent transparent;
+}
+
+.beige .arrow-left-bottom{
+    border-color:transparent #4f4822 #4f4822 transparent ;
+}
+
+.beige .arrow-right{
+    border-color:   #c4bb8d  transparent #c4bb8d #c4bb8d;
+}
+
+.beige .arrow-right-top{
+    border-color: #4f4822 transparent transparent #4f4822;
+}
+
+.beige .arrow-right-bottom{
+    border-color:  transparent transparent #4f4822 #4f4822;
+}

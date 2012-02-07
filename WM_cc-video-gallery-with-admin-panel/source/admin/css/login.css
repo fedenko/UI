@@ -1,0 +1,211 @@
+
+body{
+  background:#eee;
+}
+.login
+{
+    background:#fefefe;
+    border: 1px solid #C3D4DB;
+	border-top:1px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px 5px 0 0;
+    -moz-box-shadow:rgba(0,0,0,0.15) 0 0 1px;
+    -webkit-box-shadow:rgba(0,0,0,0.15) 0 0 1px;
+    box-shadow:rgba(0,0,0,0.15) 0 0 1px;
+    color:#444;
+    font:normal 12px/14px Arial, Helvetica, Sans-serif;
+    margin:0 auto 30px;
+	overflow:hidden;
+	
+	height:218px;
+    width:332px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-109px 0 0 -166px;
+}
+.loginBody
+{
+    background:#fefefe;
+    border-top:1px solid #dde0e8;
+    border-bottom:1px solid #dde0e8;
+    padding:10px 20px;
+}
+
+.login footer
+{
+    background:#f7f7f7;
+    border-top:1px solid #fff;
+    padding:7px 26px 8px;
+    overflow:hidden;
+	height:36px;
+}
+.login label
+{
+    display:block;
+    font:14px/22px Arial, Helvetica, Sans-serif;
+    margin:10px 0 0 6px;
+}
+.login footer label{
+	float:left;
+	margin:4px 0 0;
+	position:relative;
+}
+.login footer p{
+	position:absolute;
+	top:2px;
+	left:20px;
+	width:500px;
+}
+.login footer input[type=checkbox]{
+	vertical-align:sub;
+	*vertical-align:middle;
+	margin-right:10px;
+}
+.login input[type=text],
+.login input[type=password],
+.txtField,
+.cjComboBox
+{
+    border:3px solid #F7F9FA;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+    -webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+    box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+    margin:3px 0 4px;
+    padding:8px 6px;
+    width:100%;
+    display:block;
+	-moz-box-sizing:    border-box;   -webkit-box-sizing: border-box;    box-sizing:        border-box;	
+}
+.login input[type=text]:focus,
+.login input[type=password]:focus,
+.txtField:focus,
+.cjComboBox:focus
+{
+    border:3px solid #FCE5E3;
+    -moz-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+    -webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+    box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+	color:#333;
+}
+.cjComboBox
+{
+    width:294px;
+}
+.cjComboBox.small
+{
+    padding:3px 2px 3px 6px;
+    width:100px;
+    border-width:3px !important;
+}
+.txtField.small
+{
+    padding:3px 6px;
+    width:200px;
+    border-width:3px !important;
+}
+
+.rLink{padding:0 6px 0 0; font-size:11px; float:right;}
+.login a{color:#999;}
+.login a:hover, .login a:focus{text-decoration:underline;}
+.login a:active{color:#f84747;}
+.btnLogin
+{
+    -moz-border-radius:2px;
+    -webkit-border-radius:2px;
+    border-radius:15px;
+    cursor: pointer;
+    font:bold 11px/14px Verdana, Tahomma, Geneva;
+    color:#fff;
+    -moz-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+    -webkit-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+    box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+    margin-left:12px;
+    float:right;
+	padding:3px 21px;
+	position:relative;
+	top:5px;
+    border:1px solid #ff1a00;
+	background: #ff3019;
+background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404));
+background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+background: -o-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+background: -ms-linear-gradient(top, #ff3019 0%,#cf0404 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+background: linear-gradient(top, #ff3019 0%,#cf0404 100%);
+}
+
+.btnLogin:hover,
+.btnLogin:focus,
+.btnLogin:active{
+    background: #cf0404;
+background: -moz-linear-gradient(top, #cf0404 0%, #ff3019 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cf0404), color-stop(100%,#ff3019));
+background: -webkit-linear-gradient(top, #cf0404 0%,#ff3019 100%);
+background: -o-linear-gradient(top, #cf0404 0%,#ff3019 100%);
+background: -ms-linear-gradient(top, #cf0404 0%,#ff3019 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf0404', endColorstr='#ff3019',GradientType=0 );
+background: linear-gradient(top, #cf0404 0%,#ff3019 100%);
+}
+.btnLogin:active
+{
+    text-shadow:rgba(0,0,0,0.3) 0 -1px 0px; 
+}
+footer#main{
+	position:fixed;
+	left:0;
+	bottom:10px;
+	text-align:center;
+	font:normal 11px/16px Arial, Helvetica, sans-serif;
+	width:100%;
+}
+
+.loginpage .warning:empty{
+	display:none;
+}
+.loginpage .warning{
+	
+	height:15px;
+    width:310px;
+	position:absolute;
+	text-align:center;
+	color:#fff;
+	left:50%;
+	top:50%;
+	margin:150px 0 0 -166px;
+	padding:20px 10px;
+	background:#cf0404;
+	border-radius:10px;
+	border:1px solid #ddd;
+}
+
+.loginpage .userwarning:empty{
+	display:none;
+}
+.loginpage .userwarning{
+	
+	height:30px;
+    width:310px;
+	position:absolute;
+	text-align:center;
+	color:#111;
+	left:50%;
+	top:50%;
+	margin:-200px 0 0 -166px;
+	padding:20px 10px;
+	background: #d2ff52;
+background: -moz-linear-gradient(top, #d2ff52 0%, #91e842 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d2ff52), color-stop(100%,#91e842));
+background: -webkit-linear-gradient(top, #d2ff52 0%,#91e842 100%);
+background: -o-linear-gradient(top, #d2ff52 0%,#91e842 100%);
+background: -ms-linear-gradient(top, #d2ff52 0%,#91e842 100%);
+background: linear-gradient(top, #d2ff52 0%,#91e842 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d2ff52', endColorstr='#91e842',GradientType=0 );
+	border-radius:10px;
+	border:1px solid #ddd;
+}
